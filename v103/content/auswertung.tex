@@ -1,44 +1,53 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\subsection{runder Stab, einseitige Einspannung}
 
-Aus der gemessenen Länge $L_{\text{r}}= \qty{59,2}{\centi\meter}$ , des Durchmessers $d_{\text{r}}= \qty{1}{\centi\meter}$ und der bestimmten Masse $m_{\text{r}}= \qty{129,4}{\gram}$
- des Stabes wird die Dichte des Materials zu $\rho_{\text{r}} = \qty{2783,06}{\kilo\gram\per\cubic\meter}$ bestimmt.
-Aus dem Vergleich mit Literaturwerten \cite{Dichte} wird klar, dass es sich um Aluminium handelt.
 \begin{table}
   \centering
   \caption{Maße des runden und des eckigen Stabes}
   \sisetup{table-format=3.2}
-  \begin{tabular}{S[table-format=3.0]
+  \begin{tabular}{S
       S
-      S[table-format=1.0]
-      S[table-format=3.1]
-      S[table-format=3.1]
-      S[table-format=3.0]
       S
-      S[table-format=1.0]
-      S[table-format=3.1]
-      S[table-format=3.1]}
+      }
     \toprule
-    & \multicolumn{4}{c}{Runder Stab} & \multicolumn{4}{c}{Eckiger Stab} \\
-    \cmidrule(lr){0-5} \cmidrule(lr){6-10}
-    {$l\mathbin{/}\si{mm}$} & {$l_{Lit}\mathbin{/}\si{mm}$} & {$h\mathbin{/}\si{mm}$} & {$m\mathbin{/}\si{g}$} & {$m_{Lit}\mathbin{/}\si{g}$} & {$l\mathbin{/}\si{mm}$} & {$l_{Lit}\mathbin{/}\si{mm}$} & {$h\mathbin{/}\si{mm}$} & {$m\mathbin{/}\si{g}$} & {$m_{Lit}\mathbin{/}\si{g}$} \\
+    & \multicolumn{1}{c}{Runder Stab} & \multicolumn{1}{c}{Eckiger Stab} \\
     \midrule
-    500&591,18&10&167,2&164&592&551,92&10&129,4&120,9\\
+    {$l\mathbin{/}\si{mm}$} & 592,0 &602,0\\
+    {$l_{\text{Lit}}\mathbin{/}\si{mm}$} & 591,18 & 551,92\\
+    {$d$\,bzw.\,$h\mathbin{/}\si{mm}$}& 10,0 & 10,0 \\
+    {$m\mathbin{/}\si{g}$}& 129,4 & 167,2 \\
+    {$m_{\text{Lit}}\mathbin{/}\si{g}$}&120,9 & 164,0\\
     \bottomrule
   \end{tabular}
 \end{table}
 
+Aus den bestimmten Daten der Stäbe wird die Dichte des Materials nach der Formel:
+\begin{equation}
+  \rho=\frac{m}{V}
+\end{equation} mit $V$ = Volumen des Stabs, zu
+$\rho_{\text{r}} = \qty{2783,06}{\kilo\gram\per\cubic\meter}$, sowie  $\rho_{\text{e}}=\qty{2777,41}{\kilo\gram\per\cubic\meter}$ bestimmt.
+Aus dem Vergleich mit Literaturwerten \cite{Dichte} wird klar, dass es sich um Aluminium handelt.
 
-Außerdem wird das Flächenträgheitsmoment $I_{\text{r}}$  des Stabes bestimmt. Bei einem runden Querschnitt wird dafür die Formel \cite{flaeche}
-\begin{equation*}
+Außerdem wird das Flächenträgheitsmoment $I_{\text{r}}$  der Stäbe bestimmt. Bei einem runden Querschnitt wird dafür die Formel \cite{flaeche}
+\begin{equation}
   I_{\text{r}} = \frac{\pi (d/2)^4}{4}.
-\end{equation*} verwendet.
+\end{equation} verwendet.
 Das Flächenträgheitsmoment für den runden Stab beträgt also: 
 \begin{equation*}
   I_{\text{r}} = \qty{4,91e-10}{\meter\tothe{4}}.
 \end{equation*}
+
+Das Flächenträgheitsmoment des eckigen Stabes mit quadratischem Querschnitt berechnet sich nach der Formel \cite{flaeche}:
+\begin{equation}
+  I_{\text{e}} = \frac{b^4}{12}.
+\end{equation}
+Das Flächenträgheitsmoment für den eckigen Stab beträgt also: 
+\begin{equation*}
+  I_{\text{e}} = \qty{8,33e-10}{\meter\tothe{4}}.
+\end{equation*}.
+
+\subsection{runder Stab, einseitige Einspannung}
 
 \begin{table}[htbp]
   \centering
@@ -110,19 +119,9 @@ test
 
 \subsection{eckiger Stab, einseitige Einspannung}
 
-Wie auch beim runden Stab, wird aus der gemessenen Länge $L_{\text{e}}= \qty{60,2}{\centi\meter}$ der Breite $b_{\text{e}}=\qty{1}{\centi\meter}$ 
-und der Masse $m_{\text{e}}=\qty{167,2}{\gram}$
- die Dichte des Stabs durch $\rho_{\text{e}}=\qty{2777,41}{\kilo\gram\per\cubic\meter}$ bestimmt.
-Auch bei diesem Stab handelt es sich um Aluminium.
 
-Das Flächenträgheitsmoment des eckigen Stabes mit quadratischem Querschnitt berechnet sich nach der Formel \cite{flaeche}:
-\begin{equation*}
-  I_{\text{e}} = \frac{b^4}{12}.
-\end{equation*}
-Das Flächenträgheitsmoment für den eckigen Stab beträgt also: 
-\begin{equation*}
-  I_{\text{e}} = \qty{8,33e-10}{\meter\tothe{4}}.
-\end{equation*}.
+
+
 
 
 \begin{table}
