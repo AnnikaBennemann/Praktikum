@@ -2357,6 +2357,7 @@
     <bcf:citekey order="10">flaeche</bcf:citekey>
     <bcf:citekey order="11">flaeche</bcf:citekey>
     <bcf:citekey order="12">matplotlib</bcf:citekey>
+    <bcf:citekey order="13">Elastizität</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
