@@ -82,9 +82,17 @@ Das Flächenträgheitsmoment für den eckigen Stab beträgt also:
   \end{tabular}
 \end{table}
 
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.75]{content/plots/runde.pdf}
+  \caption{Lineare Regression: runder Stab, einseitige Einspannung}
+  \label{fig:LinRegrunde}
+\end{figure}
+
 Das Elastizitätsmodul kann mit der Hilfsfunktion $Lx^2-\frac{x^3}{3}$ und der Formel \autoref{eqn:Biegung} berechnet werden.
-Hierzu wird mit dem Pythonmodul Matplotlib \cite{matplotlib} der Y-Achsenabschnitt und die Steigung der linearen Regression $y = a*x + b$ und ihre Fehler berechnet.
-              Hier Werte
+Hierzu wird mit dem Pythonmodul Matplotlib \cite{matplotlib} der Y-Achsenabschnitt und die Steigung der linearen Regression $y = a*x + b$ und ihre Fehler berechnet.\\
+a = (0.0344 ± 0.0009)\\
+b = (-0.0844 ± 0.0462)\\
 Nach umstellen der Formel \autoref{eqn:Biegung} nach E
 \begin{align}
     a = \frac{F}{2 \cdot E \cdot I} \iff E =\frac{m \cdot g}{2 \cdot a \cdot I}\label{eqn:Elamodul.1}
@@ -92,17 +100,6 @@ Nach umstellen der Formel \autoref{eqn:Biegung} nach E
 erhält man folgende Werte für das Elastizitätsmodul:
 
 Mit der Gauß´schen Fehlerfortpflanzung berechnet man 
-
-
-\begin{figure}
-  \centering
-  \includegraphics{content/plots/runde.pdf}
-  \caption{Lineare Regression: runder Stab, einseitige Einspannung}
-  \label{fig:LinRegrunde}
-\end{figure}
-
-a = 0.03440932788036839 ± 0.0008601488905380944
-b = -0.08437719900299626 ± 0.04624542285827333
 
 \pagebreak
 
