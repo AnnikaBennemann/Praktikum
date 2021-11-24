@@ -94,7 +94,7 @@ erhält man folgende Werte für das Elastizitätsmodul:
 Mit der Gauß´schen Fehlerfortpflanzung berechnet man 
 
 
-\begin{figure}
+\begin{figure}[htbp]
   \centering
   \includegraphics{content/plots/runde.pdf}
   \caption{Lineare Regression: runder Stab, einseitige Einspannung}
@@ -108,7 +108,7 @@ b = -0.08437719900299626 ± 0.04624542285827333
 
 \subsection{runder Stab, beidseitige Auflage}
 test
-\begin{table}
+\begin{table}[htbp]
   \centering
   \caption{Messung der Biegung des runden Stabs bei beidseitiger Auflage}
   \label{tab:rundb}
@@ -138,12 +138,7 @@ test
   \end{tabular}
 \end{table}
 
-
-
-\pagebreak
-
-\subsection{eckiger Stab, einseitige Einspannung}
-\begin{figure}
+\begin{figure}[!htb]
   \centering
   \includegraphics{content/plots/rundb1.pdf}
   \caption{Lineare Regression: runder Stab, beidseitige Auflage, $0<x<L/2$}
@@ -154,10 +149,10 @@ rundb1:
 a = 0.0024963660231759333 ± 0.000427138613034415
 b = -0.004118075387476106 ± 0.05756132336959278
 
-\begin{figure}
+\begin{figure}[!htb]
   \centering
   \includegraphics{content/plots/rundb2.pdf}
-  \caption{Lineare Regression: runder Stab, beidseitige Auflage, $X>L/2$}
+  \caption{Lineare Regression: runder Stab, beidseitige Auflage, $x>L/2$}
   \label{fig:LinRegrundb2}
 \end{figure}
 
@@ -165,11 +160,11 @@ rundb2:
 a = 0.002373265473474495 ± 0.000196410962171616
 b = 0.009000034335808427 ± 0.02392505292907706
 
-\pagebreak
 
+\pagebreak
 \subsection{eckiger Stab, einseitige Einspannung}
 
-\begin{table}
+\begin{table}[htbp]
   \centering
   \caption{Messung der Biegung des eckigen Stabs bei einseitiger Einspannung}
   \label{tab:ecks}
@@ -200,12 +195,20 @@ b = 0.009000034335808427 ± 0.02392505292907706
   \end{tabular}
 \end{table}
 
+ecke:
+a = 0.03964137312008689 ± 0.0005449464253988792
+b = 0.10978829510495063 ± 0.029339311385139885
 
+\begin{figure}[!htb]
+  \centering
+  \includegraphics{content/plots/ecke.pdf}
+  \caption{Lineare Regression: eckiger Stab, einseitige Einspannung}
+  \label{fig:LinRegecke}
+\end{figure}
 
 \pagebreak
-
 \subsection{eckiger Stab, beidseitige Auflage}
-\begin{table}
+\begin{table}[htbp]
   \centering
   \caption{Messung der Biegung des eckigen Stabs bei beidseitiger Auflage}
   \label{tab:eckb}

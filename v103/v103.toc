@@ -23,12 +23,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3}eckiger Stab, einseitige Einspannung}{9}{subsection.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}eckiger Stab, einseitige Einspannung}{11}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.4}eckiger Stab, beidseitige Auflage}{10}{subsection.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}eckiger Stab, beidseitige Auflage}{12}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Diskussion}{13}{section.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}eckiger Stab, beidseitige Auflage}{12}{subsection.3.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Diskussion}{12}{section.4}%
+\contentsline {section}{\nonumberline Literatur}{13}{section*.14}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
