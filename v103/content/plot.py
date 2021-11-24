@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-x,y =np.genfromtxt("Runder_Stab_eins", unpack=True)
+x,y =np.genfromtxt("Runder_Stab_eins.txt", unpack=True)
 plt.plot(x,y)
 x=np.linspace(0, 525)
 y=np.linspace(0,4)

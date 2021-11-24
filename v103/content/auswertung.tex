@@ -80,6 +80,17 @@ Das Flächenträgheitsmoment für den eckigen Stab beträgt also:
   \end{tabular}
 \end{table}
 
+Das Elastizitätsmodul kann mit der Hilfsfunktion $Lx^2-\frac{x^3}{3}$ und der Formel \autoref{eqn:Biegung} berechnet werden.
+Hierzu wird mit dem Pythonmodul Matplotlib \cite{matplotlib} der Y-Achsenabschnitt und die Steigung der linearen Regression $y = a*x + b$ und ihre Fehler berechnet.
+              Hier Werte
+Nach umstellen der Formel \autoref{eqn:Biegung} nach E
+\begin{align}
+    a = \frac{F}{2 \cdot E \cdot I} \iff E =\frac{m \cdot g}{2 \cdot a \cdot I}\label{eqn:Elamodul.1}
+\end{align}
+erhält man folgende Werte für das Elastizitätsmodul:
+
+Mit der Gauß´schen Fehlerfortpflanzung berechnet man 
+
 \pagebreak
 
 \subsection{runder Stab, beidseitige Auflage}
@@ -114,6 +125,8 @@ test
     \bottomrule
   \end{tabular}
 \end{table}
+
+
 
 \pagebreak
 
