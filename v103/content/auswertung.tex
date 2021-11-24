@@ -14,7 +14,7 @@
     & \multicolumn{1}{c}{Runder Stab} & \multicolumn{1}{c}{Eckiger Stab} \\
     \midrule
     {$l\mathbin{/}\si{mm}$} & 592,0 &602,0\\
-    {$l_{\text{Lit}}\mathbin{/}\si{mm}$} & 591,18 & 551,92\\
+    {$l_{\text{Lit}}\mathbin{/}\si{mm}$} & 551,82 & 591,18\\
     {$d$\,bzw.\,$h\mathbin{/}\si{mm}$}& 10,0 & 10,0 \\
     {$m\mathbin{/}\si{g}$}& 129,4 & 167,2 \\
     {$m_{\text{Lit}}\mathbin{/}\si{g}$}&120,9 & 164,0\\
@@ -46,6 +46,8 @@ Das Flächenträgheitsmoment für den eckigen Stab beträgt also:
 \begin{equation*}
   I_{\text{e}} = \qty{8,33e-10}{\meter\tothe{4}}.
 \end{equation*}.
+
+\pagebreak
 
 \subsection{runder Stab, einseitige Einspannung}
 
@@ -80,6 +82,17 @@ Das Flächenträgheitsmoment für den eckigen Stab beträgt also:
   \end{tabular}
 \end{table}
 
+
+\begin{figure}
+  \centering
+  \includegraphics{content/plots/runde.pdf}
+  \caption{Lineare Regression: runder Stab, einseitige Einspannung}
+  \label{fig:LinRegrunde}
+\end{figure}
+
+a = 0.03440932788036839 ± 0.0008601488905380944
+b = -0.08437719900299626 ± 0.04624542285827333
+
 \pagebreak
 
 \subsection{runder Stab, beidseitige Auflage}
@@ -110,19 +123,35 @@ test
     450 & 0,21\\
     475 & 0,17\\
     500 & 0,12\\
-    525 & 3,48\\
     \bottomrule
   \end{tabular}
 \end{table}
 
+\begin{figure}
+  \centering
+  \includegraphics{content/plots/rundb1.pdf}
+  \caption{Lineare Regression: runder Stab, beidseitige Auflage, $0<x<L/2$}
+  \label{fig:LinRegrundb1}
+\end{figure}
+
+rundb1:
+a = 0.0024963660231759333 ± 0.000427138613034415
+b = -0.004118075387476106 ± 0.05756132336959278
+
+\begin{figure}
+  \centering
+  \includegraphics{content/plots/rundb2.pdf}
+  \caption{Lineare Regression: runder Stab, beidseitige Auflage, $X>L/2$}
+  \label{fig:LinRegrundb2}
+\end{figure}
+
+rundb2:
+a = 0.002373265473474495 ± 0.000196410962171616
+b = 0.009000034335808427 ± 0.02392505292907706
+
 \pagebreak
 
 \subsection{eckiger Stab, einseitige Einspannung}
-
-
-
-
-
 
 \begin{table}
   \centering
@@ -150,9 +179,11 @@ test
     450 & 3,05\\
     475 & 3,44\\
     500 & 3,75\\
+    525 & 4,11\\
     \bottomrule
   \end{tabular}
 \end{table}
+
 
 
 \pagebreak
