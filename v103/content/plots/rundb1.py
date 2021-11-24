@@ -16,7 +16,7 @@ errors = np.sqrt(np.diag(cov))
 print('a =', params[0], '±', errors[0])
 print('b =', params[1], '±', errors[1])
 
-x_plot = np.linspace(75,170,10)
+x_plot = np.linspace(35,170,10)
  
 plt.figure(1)
 plt.plot(z, y,'rx', label='Messdaten')

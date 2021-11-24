@@ -17,16 +17,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Auswertung}{6}{section.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}runder Stab, einseitige Einspannung}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}einseitige Einspannung}{6}{subsection.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}runder Stab, beidseitige Auflage}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}beidseitige Auflage}{9}{subsection.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}eckiger Stab, einseitige Einspannung}{11}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Diskussion}{14}{section.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}eckiger Stab, beidseitige Auflage}{12}{subsection.3.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Diskussion}{17}{section.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\nonumberline Literatur}{17}{section*.16}%
+\contentsline {section}{\nonumberline Literatur}{14}{section*.15}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

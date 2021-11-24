@@ -38,6 +38,42 @@
       \verb https://www.bau.uni-siegen.de/subdomains/bauinformatik/lehre/tm2/arbeitsblaetter/arbeitsblatt_08_flaechentraegheitsmomente_bsp.pdf
       \endverb
     \endentry
+    \entry{matplotlib}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a2f53dcc6bb05a06b8ad94176f80fe26}{%
+           family={Hunter},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \strng{fullhash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \strng{bibnamehash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \strng{authorbibnamehash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \strng{authornamehash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \strng{authorfullhash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computing in Science \& Engineering}
+      \field{number}{3}
+      \field{title}{{Matplotlib}: A {2D} Graphics Environment}
+      \field{version}{1.4.3}
+      \field{volume}{9}
+      \field{year}{2007}
+      \field{pages}{90\bibrangedash 95}
+      \range{pages}{6}
+      \verb{urlraw}
+      \verb http://matplotlib.org/
+      \endverb
+      \verb{url}
+      \verb http://matplotlib.org/
+      \endverb
+    \endentry
     \entry{Dichte}{online}{}
       \list{organization}{1}{%
         {ESG Edelmetall-Service GmbH und Co. KG}%

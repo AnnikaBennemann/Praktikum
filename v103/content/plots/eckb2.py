@@ -4,7 +4,7 @@ from scipy.optimize import curve_fit
 
  
  
-x, y = np.loadtxt('rundb2.txt', unpack=True,delimiter=',')
+x, y = np.loadtxt('eckb2.txt', unpack=True,delimiter=',')
 
 z = (4*(x**3) - (12*550*x**2) + 9*(550**2*x)-(550**3))*10**-6
  
@@ -29,4 +29,4 @@ plt.grid()
 plt.legend(loc='best')
  
  
-plt.savefig('rundb2.pdf')
+plt.savefig('eckb2.pdf')
