@@ -119,12 +119,12 @@ Das Flächenträgheitsmoment für den eckigen Stab beträgt also:
 \bigskip
 
 Die Masse des angehängten Gewichts beträgt beim runden Stab $m_{\text{rund}}=\qty{400}{\g}$ und beim eckigen Stab $m_{\text{eckig}}=\qty{600}{\g}$. Mit den Messwerten aus \autoref{tab:runds}
-kann das Elastizitätsmodul mithilfe der Hilfsfunktion $Lx^2-\frac{x^3}{3}$ und der Formel \autoref{eqn:Biegung} berechnet werden.
+kann das Elastizitätsmodul mithilfe der Hilfsfunktion $Lx^2-\frac{x^3}{3}$ und der \autoref{eqn:Biegung} berechnet werden.
 Hierzu wird mit dem Pythonmodul Matplotlib \cite{matplotlib} der Y-Achsenabschnitt und die Steigung der linearen Regression $y = a*x + b$, 
 sowie ihre Fehler berechnet.\\
 \begin{align*}
   a_{\text{rund}} =&(0.0344 ± 0.0009) & b_{\text{rund}}=& (-0.0844 ± 0.0462)\\
-  a_{\text{eckig}} =&(0.0396 ± 0,0005) & b_{\text{eckig}}=& (0.1098 ± 0.0293)\\
+  a_{\text{eckig}} =&(0.0396 ± 0.0005) & b_{\text{eckig}}=& (0.1098 ± 0.0293)\\
  \end{align*}
 \begin{figure}[!htb]
   \centering
@@ -148,7 +148,7 @@ Nach der Gauß´schen Fehlerfortpflanzung berechnet man den Fehler durch:
   \end{equation}
 Somit erhält man folgende Werte für das Elastizitätsmodul:
 \begin{align*}
-  E_{\text{rund}}=&(11,62\pm0,03)\si{\giga\pascal}\\
+  E_{\text{rund}}=&(116,16\pm3,04)\si{\giga\pascal}\\
   E_{\text{eckig}}=&(89,22\pm1,13)\si{\giga\pascal}\\
   \label{eqn:Eein} 
 \end{align*}
@@ -159,11 +159,6 @@ Somit erhält man folgende Werte für das Elastizitätsmodul:
   \caption{Lineare Regression: eckiger Stab, einseitige Einspannung}
   \label{fig:LinRegecke}
 \end{figure}
-
-
-
-
-
 
 
 
@@ -270,7 +265,7 @@ Somit erhält man folgende Werte für das Elastizitätsmodul:
 \end{figure}
 
 Bei den beidseitig eingespannten Stäben werden dieselben Massen $m_{\text{rund}}$ und $m_{\text{eckig}}$ angehangen.
-Zur Berechnung des Elastizitätsmoduls werden diesmal die Hilfsfunktion $3L^2x - 4x^3$ für den Bereich 1 $(0<x<L/2)$ und $4x^3-12Lx^2+9L^2x-L^3$ für den Bereich 2 $(x>L/2)$, sowie die Formel \autoref{eqn:Biegungb}
+Zur Berechnung des Elastizitätsmoduls werden diesmal die Hilfsfunktion $3L^2x - 4x^3$ und die \autoref{eqn:Biegungbl} für den Bereich 1 $(0<x<L/2)$ und die Hilfsfunktion $4x^3-12Lx^2+9L^2x-L^3$ ,sowie die \autoref{eqn:Biegungbr} für den Bereich 2 $(x>L/2)$
 verwendet. Analog zu \autoref{subsec:einEin} wird auch hier Matplotlib zur Berechnung der linearen Regression genutzt.
 
 \begin{align*}
@@ -280,7 +275,7 @@ verwendet. Analog zu \autoref{subsec:einEin} wird auch hier Matplotlib zur Berec
   a_{\text{eckig-2}} =&(0.0011 ± 0.0001) & b_{\text{eckig-2}}=& (0.0008 ± 0.0075)\\
  \end{align*}
 
- Durch Umstellen der Formeln \autoref{eqn:Biegungb} nach E erhält man nun das Elastizitätsmodul:
+ Durch Umstellen von \autoref{eqn:Biegungbl} und \autoref{eqn:Biegungbr} nach E erhält man nun analog zu \autoref{eqn:Elamodul.1} das Elastizitätsmodul:
  \begin{equation*}
   E = \frac{m\cdot g}{48\cdot I \cdot a}.
   \label{eqn:e-ein}
