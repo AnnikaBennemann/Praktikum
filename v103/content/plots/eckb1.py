@@ -4,7 +4,7 @@ from scipy.optimize import curve_fit
 
  
  
-x, y = np.loadtxt('rundb1.txt', unpack=True,delimiter=',')
+x, y = np.loadtxt('eckb1.txt', unpack=True,delimiter=',')
 
 z=(3*(550**2)*x-(4*x**3))*10**-6
  
@@ -16,7 +16,7 @@ errors = np.sqrt(np.diag(cov))
 print('a =', params[0], '±', errors[0])
 print('b =', params[1], '±', errors[1])
 
-x_plot = np.linspace(75,170,10)
+x_plot = np.linspace(35,170,10)
  
 plt.figure(1)
 plt.plot(z, y,'rx', label='Messdaten')
@@ -29,4 +29,4 @@ plt.grid()
 plt.legend(loc='best')
  
  
-plt.savefig('rundb1.pdf')
+plt.savefig('eckb1.pdf')
