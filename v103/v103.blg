@@ -1,20 +1,18 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [1] Config.pm:314> INFO - Logfile is 'v103.blg'
-[97] biber:340> INFO - === Wed Nov 24, 2021, 19:30:03
-[118] Biber.pm:415> INFO - Reading 'v103.bcf'
-[183] Biber.pm:952> INFO - Found 5 citekeys in bib section 0
-[195] Biber.pm:4340> INFO - Processing section 0
-[210] Biber.pm:4531> INFO - Looking for bibtex format file 'lit.bib' for section 0
-[212] bibtex.pm:1689> INFO - LaTeX decoding ...
-[216] bibtex.pm:1494> INFO - Found BibTeX data source 'lit.bib'
-[256] Biber.pm:4531> INFO - Looking for bibtex format file 'programme.bib' for section 0
-[259] bibtex.pm:1689> INFO - LaTeX decoding ...
-[264] bibtex.pm:1494> INFO - Found BibTeX data source 'programme.bib'
-[275] Utils.pm:395> WARN - I didn't find a database entry for 'sample' (section 0)
-[284] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[285] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[285] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[286] Biber.pm:4174> INFO - No sort tailoring available for locale 'de-DE'
-[296] bbl.pm:654> INFO - Writing 'v103.bbl' with encoding 'UTF-8'
-[298] bbl.pm:757> INFO - Output to v103.bbl
-[299] Biber.pm:128> INFO - WARNINGS: 1
+[85] biber:340> INFO - === Wed Nov 24, 2021, 22:27:42
+[103] Biber.pm:415> INFO - Reading 'v103.bcf'
+[179] Biber.pm:952> INFO - Found 5 citekeys in bib section 0
+[196] Biber.pm:4340> INFO - Processing section 0
+[211] Biber.pm:4531> INFO - Looking for bibtex format file 'lit.bib' for section 0
+[216] bibtex.pm:1689> INFO - LaTeX decoding ...
+[222] bibtex.pm:1494> INFO - Found BibTeX data source 'lit.bib'
+[260] Biber.pm:4531> INFO - Looking for bibtex format file 'programme.bib' for section 0
+[262] bibtex.pm:1689> INFO - LaTeX decoding ...
+[270] bibtex.pm:1494> INFO - Found BibTeX data source 'programme.bib'
+[290] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[291] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[293] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[293] Biber.pm:4174> INFO - No sort tailoring available for locale 'de-DE'
+[305] bbl.pm:654> INFO - Writing 'v103.bbl' with encoding 'UTF-8'
+[308] bbl.pm:757> INFO - Output to v103.bbl
