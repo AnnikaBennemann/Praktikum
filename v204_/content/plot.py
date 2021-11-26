@@ -57,6 +57,16 @@ plt.clf()
 
 plt.figure()
 plt.plot(t_stat, stat_7 - stat_8, label = 'Temperaturdifferenz Edelstahl')
+
+plt.xlabel('Zeit [s]')
+plt.ylabel('Temperatur [K]')
+
+plt.legend()
+
+plt.savefig('differenz_edel.pdf')
+plt.clf()
+
+plt.figure()
 plt.plot(t_stat, stat_2 - stat_1, label = 'Temperaturdifferenz Messing, breit')
 
 plt.xlabel('Zeit [s]')
@@ -64,7 +74,7 @@ plt.ylabel('Temperatur [K]')
 
 plt.legend()
 
-plt.savefig('differenz_stat.pdf')
+plt.savefig('differenz_mess.pdf')
 plt.clf()
 
 
