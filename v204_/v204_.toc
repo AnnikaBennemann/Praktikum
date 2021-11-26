@@ -19,10 +19,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1}statische Messung}{5}{subsection.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Diskussion}{7}{section.5}%
+\contentsline {section}{\numberline {5}Diskussion}{13}{section.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}statische Messung}{7}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.1}statische Messung}{13}{subsection.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}dynamische Messung}{7}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.2}dynamische Messung}{13}{subsection.5.2}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
