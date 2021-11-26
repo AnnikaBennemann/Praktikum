@@ -240,14 +240,14 @@ plt.legend()
 plt.savefig('dyn_2.pdf')
 plt.clf()
 
-plt.figure()
-plt.plot(t_dyn2, dyn2_8, label = 'innen')
-plt.xlabel('Zeit [s]')
-plt.ylabel('Temperatur [K]')
-plt.legend()
-#plt.grid()
-plt.savefig('dyn_2_close.pdf')
-plt.clf()
+#plt.figure()
+#plt.plot(t_dyn2, dyn2_8, label = 'innen')
+#plt.xlabel('Zeit [s]')
+#plt.ylabel('Temperatur [K]')
+#plt.legend()
+##plt.grid()
+#plt.savefig('dyn_2_close.pdf')
+#plt.clf()
 
 
 ### get amplitudes and phase shift
@@ -260,9 +260,9 @@ plt.clf()
 #
 #A7_m = ufloat(np.mean(A7), np.std(A7, ddof=1))
 #
-A8 = amplitudes(dyn2_8)
-##A8_max = np.array([ 85 185 279 377 477 575 673])
-##A8_min = np.array([ 13 115 216 317 419 520 620 720])
+#A8 = amplitudes(dyn2_8)
+##A8_max = np.array([ 85 185 279 377 477 575 673])Kommas dazu
+##A8_min = np.array([ 13 115 216 317 419 520 620 720])Kommas dazu
 ##A8 = dyn2_8[A8_max] - dyn2_8[A8_min]
 #
 #A8_1 = np.array([29.5, 34, 37.1, 38.3, 40, 43.9])
