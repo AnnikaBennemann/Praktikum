@@ -1,31 +1,51 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\subsection{statische Messung}
-\label{subsec:stat}
-
-T1 Messing dick fern
-T2 Messing dick nah
-T3 Messing dünn nah 
-T4 Messing dünn fern
-T5 Aluminium fern
-T6 Aluminium nah
-T7 Edelstahl nah
-T8 Edelstahl fern
-
-\begin{figure}[!htbp]
+\begin{table}
   \centering
-  \includegraphics{content/verlauf_mess.pdf}
+  \caption{Materialeigenschaften der Grundplatte. \cite{V204}}
+  \label{tab:1}
+  \sisetup{table-format=1.2}
+  \begin{tabular}{l S S S S S }
+    \toprule
+    {$\text{Material}$} & {$l \:/\: \si{\centi\metre}$} & {$b \:/\: \si{\centi\metre}$} & {$h \:/\: \si{\centi\metre}$} & {$\rho \:/\: \si{\kilo\gram\per\metre\tothe{3}}$} & {$c \:/\: \si{\joule\per\kilo\gram\per\kelvin} $} \\
+    \midrule
+    Messing  & 9 & 1.2 & 0.4 & 8520 & 385 \\
+    Messing  & 9 & 0.9 & 0.4 & 8520 & 385 \\
+    Aluminium  & 9 & 1.2 & 0.4 & 2800 & 830 \\
+    Edelstahl  & 9 & 1.2 & 0.4 & 8000 & 400 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+\subsection{statische Messung}
+\label{subsec:aus_stat}
+Wie in \autoref{subsec:durch_stat} beschrieben, wird eine statische Messung der Temperaturverläufe an den Stäben durchgeführt. 
+Die Daten werden in folgenden Diagrammen dargestellt und ausgewertet.
+
+\begin{figure}[H]
+  \begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[height=9cm]{content/verlauf_mess.pdf}
   \caption{Temperaturverlauf der Messingstäbe (fern)}
   \label{fig:mess}
-\end{figure}
-
-\begin{figure}[!htbp]
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{\textwidth}
   \centering
-  \includegraphics{content/verlauf_alu_edel.pdf}
+  \includegraphics[height=9cm]{content/verlauf_alu_edel.pdf}
   \caption{Temperaturverlauf des Aluminium- und Edelstahlstabs (fern)}
   \label{fig:alu_edel}
+  \end{subfigure}
+  \caption{Temperaturverläufe der Stäbe an den fernen Thermoelementen}
+  \label{fig:fern}
 \end{figure}
+Zunächst wurden die Temperaturen an den fernen Thermoelementen über einen Zeitraum von $\qty{650}{\second}$ aufgenommen.
+Die Temperaturverläufe aller $4$ untersuchten Stäbe weisen Gemeinsamkeiten auf. So sieht man im Vergleich der Graphen in \autoref{fig:fern},
+dass bei allen Metallen die Temperatur initial stark steigt und sich mit zunehmender Zeit einem Sättigungswert annähert.
+Der Temperaturanstieg ist bei Edelstahl allerdings deutlich langsamer als bei den übrigen Metallen und auch der Sättigungswert ist hier deutlich niedriger.
+Bei den beiden Messingstäben sind sehr ähnliche Temperaturverläufe zu beobachten, wobei die Kurve des breiten Stabs zu einem späteren Zeitpunkt abflacht als die des schmalen Stabs.
 
 
 \begin{table}[H]
@@ -43,27 +63,74 @@ T8 Edelstahl fern
     \bottomrule
   \end{tabular}
 \end{table}
+Zur Bewertung der Wärmeleitung der Stäbe wurde die Temperatur am Ende der statischen Messung erhoben und in einer Tabelle dargestellt.
+Aus den Werten in \autoref{tab:650s} lässt sich erkennen, dass Aluminium von den untersuchten Metallen die beste Wärmeleitfähigkeit besitzt
+und Edelstahl die Wärme am schlechtesten leitet.
+
+\begin{table}[H]
+  \centering
+  \caption{Wärmeströme zu verschiedenen Messzeiten}
+  \label{tab:dQ/dt}
+  \sisetup{table-format=3.3}
+  \begin{tabular}{S[table-format=3.0] S S S S}
+    \toprule
+    & \multicolumn {4}{c}{Wärmestrom $\Delta Q \mathbin{/}\Delta t \, [\si{\watt}]$}\\
+    \cmidrule(lr){2-5}
+    \multicolumn{1}{c}{Messzeitpunkt $t$ [$\si{s}$]}& \multicolumn{1}{c}{Messing, breit} & \multicolumn{1}{c}{Messing, schmal}  & \multicolumn{1}{c}{Aluminium} & \multicolumn{1}{c}{Edelstahl}\\
+    \midrule
+    50 &-1.235&-0.879&-2.067&-0.268\\
+    200 &-0.669&-0.520&-0.846&-0.395\\
+    350 &-0.476&-0.425&-0.645&-0.354\\
+    500 &-0.427&-0.404&-0.599&-0.332\\
+    650 &-0.409&-0.398&-0.592&-0.320\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+In der \autoref{tab:dQ/dt} sind die mithilfe von \autoref{eqn:Wärmemenge} berechneten Wärmeströme der
+verschiedenen Metalle zu fünf unterschiedlichen Messzeitpunkten zu sehen.
 
 \begin{figure}[!htbp]
+  \begin{subfigure}{\textwidth}
   \centering
   \includegraphics{content/differenz_edel.pdf}
   \caption{Verlauf der Temperaturdifferenz am Edelstahlstab}
   \label{fig:diff_edel}
-\end{figure}
-
-\begin{figure}[!htbp]
+\end{subfigure}
+\begin{subfigure}{\textwidth}
   \centering
   \includegraphics{content/differenz_mess.pdf}
   \caption{Verlauf der Temperaturdifferenz am breiten Messingstab}
   \label{fig:diff_mess}
+\end{subfigure}
+\caption{Verlauf der Temperaturdifferenzen zwischen den Thermoelementen}
+\label{fig:diff}
 \end{figure}
 
+In \autoref{fig:diff} sind die Verläufe der Temperaturdifferenzen zwischen den Thermoelementen auf dem breiten Messingstab, sowie dem Edelstahlstab dargestellt.
+Es lässt sich erkennen, dass die Differenz bei beiden Stäben zunächst stark ansteigt , dann aber einen Hochpunkt aufweist und danach wieder fällt,
+sich dann aber einem Sättigungswer annähert und die Kurven abflachen. 
+Beim Messingstab ist die Differenz allerdings ab dem Hochpunkt der Kurve deutlich niedriger als beim Edelstahlstab.
+Auch beträgt die Temperaturdifferenz am Hochpunkt der Kurve bei Edelstahl einen Wert von über 12 K, wobei der Wert am Hochpunkt der Messingkurve unter 7 K liegt.
+
+\subsection{Dynamische Messung}
+\label{aus_dyn}
+
+Wie in \autoref{subsec:durch_dyn} beschrieben, werden mehrere dynamische Messungen der Temperaturverläufe an den Stäben durchgeführt. 
+Die Daten werden in folgenden Diagrammen dargestellt und ausgewertet.
+
+Zunächst wurde die Messung nach dem Angström-Verfahren, siehe \autoref{sec:Durchführung} mit einer Periodendauer von $\qty{80}{\second}$ durchgeführt.
+Die Werte an den Thermoelementen am breiten Messingstab und am Aluminiumstab werden in \autoref{fig:mess_dyn} und \autoref{fig:alu_dyn} dargestellt.
+Anhand der Graphen wurden die Amplituden, sowie die Phasendifferenzen bestimmt.
+Außerdem wurde nach \autoref{eqn:kappa} die Wärmeleitfähigkeit $\kappa$ der verschiedenen Metalle berechnet. Die Ergebnisse sind in \autoref{tab:kappa} aufgelistet.
 \begin{figure}[!htbp]
   \centering
   \includegraphics{content/dyn_80_mess.pdf}
   \caption{Temperaturverlauf des breiten Messingstabs}
   \label{fig:mess_dyn}
 \end{figure}
+
+Messing: Amplitudenberechnung, Phasendifferenz
+Wärmeleitfähigkeit
 
 \begin{figure}[!htbp]
   \centering
@@ -72,6 +139,11 @@ T8 Edelstahl fern
   \label{fig:alu_dyn}
 \end{figure}
 
+Aluminium: Amplitudenberechnung, Phasendifferenz
+Wärmeleitfähigkeit
+
+
+
 \begin{figure}[!htbp]
   \centering
   \includegraphics{content/dyn_2.pdf}
@@ -79,5 +151,11 @@ T8 Edelstahl fern
   \label{fig:edel_dyn}
 \end{figure}
 
+Edelstahl: Amplitudenberechnung, Phasendifferenz
+Wärmeleitfähigkeit
 
+Tabelle : Amplituden A1 A2 Phasendifferenz
+
+daraus mittelwert, Fehler
+dann k mit fehlerberechnung nach gauß
 
