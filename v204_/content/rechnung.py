@@ -8,7 +8,7 @@ def amplitudes(temp):
     maxs, _ = find_peaks(temp, distance = 15)
     mins, _ = find_peaks(-temp, distance = 30)
  
-    print(f'{temp}{maxs,mins}')
+    print(f'{maxs,mins}')
    
     
     
@@ -135,7 +135,7 @@ dt_12 = ufloat(np.mean(dt_12_), np.std(dt_12_, ddof=1)) #Mittelwert Phasendiffer
 A1_m = ufloat(np.mean(A1), np.std(A1, ddof = 1)) #Mittelwerte Amplituden mit Abweichungen
 A2_m = ufloat(np.mean(A2), np.std(A2, ddof = 1))
 
-print(f'Phasendifferenz Messing {dt_12}, Amp fern {A1_m}, nah {A2_m}')
+print(f'Phasendifferenz Messing {dt_12:.3f}, Amp fern {A1_m:.3f}, nah {A2_m:.3f}')
 
 A6_max = np.array([ 21,  63, 103, 142, 182, 222, 262, 302, 342, 382]) #Werte aus Programmausgabe abgeschrieben
 A6_min = np.array([0, 42,  82, 123, 163, 202, 242, 282, 322, 362])#Werte aus Programmausgabe abgeschrieben
@@ -154,8 +154,8 @@ print('Amplituden Alu nah', A6)
 
 dt_56_ = (t_dyn1[A5_max] -  t_dyn1[A6_max]) #Phasendifferenz
 print(f'PhasendifferenzAlu {dt_56_}')
-dt_56 = ufloat(np.mean(dt_56_), np.std(dt_56_, ddof=1)) #Mittelwert Phasendifferenz
-print(f'Phasendifferenz Aluminium {dt_56}, Amp fern {A5_m}, nah {A6_m}')
+dt_56 = ufloat(np.mean(dt_56_), np.std(dt_56_, ddof=1))#Mittelwert Phasendifferenz
+print(f'Phasendifferenz Aluminium {dt_56:.3f}, Amp fern {A5_m:.3f}, nah {A6_m:.3f}')
 
 
 kappa_mess_ex = (rho_mess * c_mess * dx**2)/(2 * dt_12 * unp.log(A2_m/A1_m)) #Wärmeleitfähigkeit
@@ -165,8 +165,8 @@ kappa_alu_ex = (rho_alu * c_alu * dx**2)/(2 * dt_56 * unp.log(A6_m/A5_m))
 abw_me = 100 * (kappa_mess_ex - kappa_mess)/kappa_mess #Abweichung vom Literaturwert
 abw_al = 100 * (kappa_alu_ex - kappa_alu)/kappa_alu
 
-print(f'kappa Messing {kappa_mess_ex},  AbweichungLiteraturwert {abw_me}')
-print(f'kappa Aluminium {kappa_alu_ex}, AbweichungLiteraturwert {abw_al}')
+print(f'kappa Messing {kappa_mess_ex:.3f},  AbweichungLiteraturwert {abw_me:.3f}')
+print(f'kappa Aluminium {kappa_alu_ex:.3f}, AbweichungLiteraturwert {abw_al:.3f}')
 
 ###### dynamische Messung, 200s
 n_dyn2, dyn2_1, dyn2_2, dyn2_3, dyn2_4, dyn2_5, dyn2_6, dyn2_7, dyn2_8 = np.genfromtxt('dynamisch200.txt', unpack = True)
@@ -184,45 +184,39 @@ dyn2_8 += 273.15
 
 
 
+## get amplitudes and phase shift
+A7 = amplitudes(dyn2_7)
+
+A7_max = np.array([ 53, 153, 252, 352, 452, 552, 653])
+A7_min = np.array([  1, 102, 203, 303, 403, 503, 603])
+A7 = (dyn2_7[A7_max] - dyn2_7[A7_min])/2
+
+print(f'Amplitude Edelstahl_nah{A7}')
+
+A8 = amplitudes(dyn2_8)
+A8_max = np.array([ 85, 185, 279, 377, 477, 575, 673])
+A8_min = np.array([ 13, 115, 216, 317, 419, 520, 620])
+A8 = (dyn2_8[A8_max] - dyn2_8[A8_min])/2
+
+print (f'Amplitude Edelstahl_fern{A8}')
+
+A7_m = ufloat(np.mean(A7), np.std(A7, ddof=1))
+A8_m = ufloat(np.mean(A8), np.std(A8, ddof=1))
+
+dt_78_ = (t_dyn2[A8_max]-t_dyn2[A7_max])
+print(f'Phasendifferenz Edelstahl{dt_78_}')
+dt_78 = ufloat(np.mean(dt_78_), np.std(dt_78_, ddof=1))
+
+print(f'Mittelwert Phsadiff{dt_78:.3f} , Ampnah{A7_m:.3f}, Ampfern{A8_m:.3f}')
+
+kappa_edel_ex = (rho_edel * c_edel * dx**2)/(2 * 80 * unp.log(A7_m/A8_m))
+
+abw_ed = 100 * (kappa_edel_ex - kappa_edel)/kappa_edel
+
+print(f'kappa Edelstahl {kappa_edel_ex:.3f}, Abweichung Literatur {abw_ed:.3f}')
 
 
-
-### get amplitudes and phase shift
-
-#A7 = amplitudes(dyn2_7)
-#
-#A7_max = np.array([ 53, 153, 252, 352, 452, 552, 653])
-#A7_min = np.array([  1, 102, 203, 303, 403, 503, 603, 703])
-#A7 = dyn2_7[A7_max] - dyn2_7[A7_min]
-#
-#A7_m = ufloat(np.mean(A7), np.std(A7, ddof=1))
-#
-#A8 = amplitudes(dyn2_8)
-##A8_max = np.array([ 85 185 279 377 477 575 673])Kommas dazu
-##A8_min = np.array([ 13 115 216 317 419 520 620 720])Kommas dazu
-##A8 = dyn2_8[A8_max] - dyn2_8[A8_min]
-#
-#A8_1 = np.array([29.5, 34, 37.1, 38.3, 40, 43.9])
-#A8_2 = np.array([31.7, 37.7, 38, 39.1, 41,  44.9])
-#
-#A8 = A8_2 - A8_1
-#
-#A8_m = ufloat(np.mean(A8), np.std(A8, ddof=1))
-#print('a8', A8_m, '; a7', A7_m)
-#
-#dt_78_ = np.array([80, 100, 77, 89, 91])
-#
-#dt_78 = ufloat(np.mean(dt_78_), np.std(dt_78_))
-#
-#kappa_edel_ex = (rho_edel * c_edel * dx**2)/(2 * 80 * unp.log(A7_m/A8_m))
-#
-#abw_ed = 100 * (kappa_edel_ex - kappa_edel)/kappa_edel
-#print(f'delta t {dt_78}')
-#print(f'kappa Edelstahl {kappa_edel_ex}, Abweichung {abw_ed}')
-#
-#
-#### Wellenlänge und Frequenz
-
+### Wellenlänge und Frequenz
 #lam_1 = unp.sqrt((4 * np.pi * kappa_mess_ex * 80)/(rho_mess * c_mess))
 #lam_5 = unp.sqrt((4 * np.pi * kappa_alu_ex * 80)/(rho_alu * c_alu))
 #lam_7 = unp.sqrt((4 * np.pi * kappa_edel_ex * 200)/(rho_edel * c_edel))

@@ -240,8 +240,8 @@ dyn2_7 += 273.15
 dyn2_8 += 273.15
 
 plt.figure()
-plt.plot(t_dyn2, dyn2_7, label = 'fern')
-plt.plot(t_dyn2, dyn2_8, label = 'nah')
+plt.plot(t_dyn2, dyn2_7, label = 'nah')
+plt.plot(t_dyn2, dyn2_8, label = 'fern')
 
 plt.xlabel('Zeit [s]')
 plt.ylabel('Temperatur [K]')
