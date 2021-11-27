@@ -8,8 +8,8 @@ def amplitudes(temp):
     maxs, _ = find_peaks(temp, distance = 15)
     mins, _ = find_peaks(-temp, distance = 30)
  
-    print(maxs)
-    print(mins)
+    print(f'{temp}{maxs,mins}')
+   
     
     
     return maxs, mins
@@ -30,53 +30,6 @@ stat_5 += 273.15
 stat_6 += 273.15
 stat_7 += 273.15
 stat_8 += 273.15
-
-### Plots
-plt.figure()
-plt.plot(t_stat, stat_1, label = 'Messing, breit')
-plt.plot(t_stat, stat_4, label = 'Messing, schmal')
-
-plt.xlabel('Zeit [s]')
-plt.ylabel('Temperatur [K]')
-plt.legend()
-
-plt.savefig('verlauf_mess.pdf')
-plt.clf()
-
-plt.figure()
-plt.plot(t_stat, stat_5, label = 'Aluminium')
-plt.plot(t_stat, stat_8, label = 'Edelstahl')
-
-
-plt.xlabel('Zeit [s]')
-plt.ylabel('Temperatur [K]')
-plt.legend()
-
-plt.savefig('verlauf_alu_edel.pdf')
-plt.clf()
-
-plt.figure()
-plt.plot(t_stat, stat_7 - stat_8, label = 'Temperaturdifferenz Edelstahl')
-
-plt.xlabel('Zeit [s]')
-plt.ylabel('Temperatur [K]')
-
-plt.legend()
-
-plt.savefig('differenz_edel.pdf')
-plt.clf()
-
-plt.figure()
-plt.plot(t_stat, stat_2 - stat_1, label = 'Temperaturdifferenz Messing, breit')
-
-plt.xlabel('Zeit [s]')
-plt.ylabel('Temperatur [K]')
-
-plt.legend()
-
-plt.savefig('differenz_mess.pdf')
-plt.clf()
-
 
 ### Wärmestrom
 names = np.array(['Messing, breit', 'Messing, schmal', 'Aluminium', 'Edelstahl'])
@@ -145,85 +98,75 @@ dyn1_6 += 273.15
 dyn1_7 += 273.15
 dyn1_8 += 273.15
 
-plt.figure()
-plt.plot(t_dyn1, dyn1_1, label = 'fern')
-plt.plot(t_dyn1, dyn1_2, label = 'nah')
+### get amplitudes and phase shift
 
-plt.xlabel('Zeit [s]')
-plt.ylabel('Temperatur [K]')
-plt.legend()
+A1 = amplitudes(dyn1_1)
+A2 = amplitudes(dyn1_2)
 
-#plt.grid()
-plt.savefig('dyn_80_mess.pdf')
-plt.clf()
+A6 = amplitudes(dyn1_6)
+A5 = amplitudes(dyn1_5)
 
-plt.figure()
-plt.plot(t_dyn1, dyn1_4, label = 'fern')
-plt.plot(t_dyn1, dyn1_5, label = 'nah')
+A1_max = np.array([ 32, 72, 110, 149, 189, 228, 268, 308, 348, 388]) #Werte aus Programmausgabe abgeschrieben
+A1_maxx = dyn1_1[A1_max]
+print(f'A1_maxx={A1_maxx}')
 
-plt.xlabel('Zeit [s]')
-plt.ylabel('Temperatur [K]')
-plt.legend()
+A1_maxx = np.array([310.93, 317.75, 322.19, 324.93, 327.29, 329.32, 330.87, 332.27, 333.35, 334.16])#Werte aus Programmausgabe abgeschrieben
 
-#plt.grid()
-plt.savefig('dyn_80_alu.pdf')
-plt.clf()
+A1_min = np.array([ 0, 45,  87, 127, 167, 207, 247, 287, 327, 368])#Werte aus Programmausgabe abgeschrieben
+A1_minx = dyn1_1[A1_min]
+print(f'A1_minx={A1_minx}')
+
+A1_minx = ([300.51, 310.02, 316.05, 319.66, 322.07, 324.36, 326.05, 327.48, 328.84, 329.63])#Werte aus Programmausgabe abgeschrieben
+A1 = (A1_maxx-A1_minx)/2
+
+print(f'Amplituden Messing fern {A1}')
+
+A2_max = np.array([ 22,  64, 103, 143, 183, 223, 263, 303, 343, 383])#Werte aus Programmausgabe abgeschrieben
+A2_min = np.array([ 0, 42,  83, 123, 163, 203, 243, 282, 323, 363])#Werte aus Programmausgabe abgeschrieben
+A2 = (dyn1_2[A2_max] - dyn1_2[A2_min])/2 #Amplitudenberechnung
+
+print(f'Amplituden Messing nah {A2}')
+
+dt_12_ = (t_dyn1[A1_max] -  t_dyn1[A2_max]) #Phasendifferenz
+print(f'Phasendifferenzen Messing {dt_12_}')
+dt_12 = ufloat(np.mean(dt_12_), np.std(dt_12_, ddof=1)) #Mittelwert Phasendifferenz mit Abweichung
 
 
-#### get amplitudes and phase shift
-#
-#A1 = amplitudes(dyn1_1)
-#A2 = amplitudes(dyn1_2)
-#
-#A6 = amplitudes(dyn1_6)
-#A5 = amplitudes(dyn1_5)
-#
-#A1_max = np.array([ 32, 72, 110, 149, 189, 228, 268, 308, 348, 388])
-#A1_min = np.array([ 0, 45,  87, 127, 167, 207, 247, 287, 327, 368])
-#A1 = dyn1_1[A1_max] - dyn1_1[A1_min]
-#
-#
-#A2_max = np.array([ 22,  64, 103, 143, 183, 223, 263, 303, 343, 383])
-#A2_min = np.array([ 0, 42,  83, 123, 163, 203, 243, 282, 323, 363])
-#A2 = dyn1_2[A2_max] - dyn1_2[A2_min]
-#
-#dt_12_ = (t_dyn1[A1_max] -  t_dyn1[A2_max])/4
-#dt_12 = ufloat(np.mean(dt_12_), np.std(dt_12_, ddof=1))
-#
-#A1_m = ufloat(np.mean(A1), np.std(A1, ddof = 1))
-#A2_m = ufloat(np.mean(A2), np.std(A2, ddof = 1))
-#
-#print(f'Phasendifferenz Messing {dt_12}, Amp 1 {A1_m}, 2 {A2_m}')
-#
-#A6_max = np.array([ 21,  63, 103, 142, 182, 222, 262, 302, 342, 382]) #Amplituden selbst eingefügt
-#A6_min = np.array([ 42,  82, 123, 163, 202, 242, 282, 322, 362])
-#A6 = dyn1_6[A6_max] - dyn1_6[A6_min]
-#
-#A5_max = np.array([ 26,  65, 106, 146, 186, 226, 265, 306, 345, 385])
-#A5_min = np.array([ 44,  85, 125, 165, 205, 245, 285, 325, 365])
-#
-#A5 = (dyn1_5[A5_max] - dyn1_5[A5_min])
-#print('a5', A5)
-#
-#A6_m = ufloat(np.mean(A6), np.std(A6, ddof=1))
-#A5_m = ufloat(np.mean(A5), np.std(A5, ddof=1))
-#
-#print('a6', A6)
-#
-#dt_56_ = (t_dyn1[A5_max] -  t_dyn1[A6_max])/4
-#dt_56 = ufloat(np.mean(dt_56_), np.std(dt_56_, ddof=1))
-#print(f'Phasendifferenz Aluminium {dt_56}, Amp 5 {A5_m}, 6 {A6_m}')
-#
-#
-#kappa_mess_ex = (rho_mess * c_mess * dx**2)/(2 * dt_12 * unp.log(A2_m/A1_m))
-#kappa_alu_ex = (rho_alu * c_alu * dx**2)/(2 * dt_56 * unp.log(A6_m/A5_m))
-#
-#abw_me = 100 * (kappa_mess_ex - kappa_mess)/kappa_mess
-#abw_al = 100 * (kappa_alu_ex - kappa_alu)/kappa_alu
-#
-#print(f'kappa Messing {kappa_mess_ex}, Abweichung {abw_me}')
-#print(f'kappa Aluminium {kappa_alu_ex}, Abweichung {abw_al}')
-#
+A1_m = ufloat(np.mean(A1), np.std(A1, ddof = 1)) #Mittelwerte Amplituden mit Abweichungen
+A2_m = ufloat(np.mean(A2), np.std(A2, ddof = 1))
+
+print(f'Phasendifferenz Messing {dt_12}, Amp fern {A1_m}, nah {A2_m}')
+
+A6_max = np.array([ 21,  63, 103, 142, 182, 222, 262, 302, 342, 382]) #Werte aus Programmausgabe abgeschrieben
+A6_min = np.array([0, 42,  82, 123, 163, 202, 242, 282, 322, 362])#Werte aus Programmausgabe abgeschrieben
+A6 = (dyn1_6[A6_max] - dyn1_6[A6_min])/2
+
+A5_max = np.array([ 26,  65, 106, 146, 186, 226, 265, 306, 345, 385])#Werte aus Programmausgabe abgeschrieben
+A5_min = np.array([0, 44,  85, 125, 165, 205, 245, 285, 325, 365])#Werte aus Programmausgabe abgeschrieben
+
+A5 = (dyn1_5[A5_max] - dyn1_5[A5_min])/2 #Ampltiudenberechnung
+print('Amplituden Alu fern', A5)
+
+A6_m = ufloat(np.mean(A6), np.std(A6, ddof=1)) #Mittelwerte Amplituden
+A5_m = ufloat(np.mean(A5), np.std(A5, ddof=1))
+
+print('Amplituden Alu nah', A6)
+
+dt_56_ = (t_dyn1[A5_max] -  t_dyn1[A6_max]) #Phasendifferenz
+print(f'PhasendifferenzAlu {dt_56_}')
+dt_56 = ufloat(np.mean(dt_56_), np.std(dt_56_, ddof=1)) #Mittelwert Phasendifferenz
+print(f'Phasendifferenz Aluminium {dt_56}, Amp fern {A5_m}, nah {A6_m}')
+
+
+kappa_mess_ex = (rho_mess * c_mess * dx**2)/(2 * dt_12 * unp.log(A2_m/A1_m)) #Wärmeleitfähigkeit
+
+kappa_alu_ex = (rho_alu * c_alu * dx**2)/(2 * dt_56 * unp.log(A6_m/A5_m))
+
+abw_me = 100 * (kappa_mess_ex - kappa_mess)/kappa_mess #Abweichung vom Literaturwert
+abw_al = 100 * (kappa_alu_ex - kappa_alu)/kappa_alu
+
+print(f'kappa Messing {kappa_mess_ex},  AbweichungLiteraturwert {abw_me}')
+print(f'kappa Aluminium {kappa_alu_ex}, AbweichungLiteraturwert {abw_al}')
 
 ###### dynamische Messung, 200s
 n_dyn2, dyn2_1, dyn2_2, dyn2_3, dyn2_4, dyn2_5, dyn2_6, dyn2_7, dyn2_8 = np.genfromtxt('dynamisch200.txt', unpack = True)
@@ -239,33 +182,17 @@ dyn2_6 += 273.15
 dyn2_7 += 273.15
 dyn2_8 += 273.15
 
-plt.figure()
-plt.plot(t_dyn2, dyn2_7, label = 'fern')
-plt.plot(t_dyn2, dyn2_8, label = 'nah')
 
-plt.xlabel('Zeit [s]')
-plt.ylabel('Temperatur [K]')
-plt.legend()
-#plt.grid()
-plt.savefig('dyn_2.pdf')
-plt.clf()
 
-#plt.figure()
-#plt.plot(t_dyn2, dyn2_8, label = 'innen')
-#plt.xlabel('Zeit [s]')
-#plt.ylabel('Temperatur [K]')
-#plt.legend()
-##plt.grid()
-#plt.savefig('dyn_2_close.pdf')
-#plt.clf()
+
 
 
 ### get amplitudes and phase shift
 
 #A7 = amplitudes(dyn2_7)
 #
-#A7_max = np.array([ 53 153 252 352 452 552 653])
-#A7_min = np.array([  1 102 203 303 403 503 603 703])
+#A7_max = np.array([ 53, 153, 252, 352, 452, 552, 653])
+#A7_min = np.array([  1, 102, 203, 303, 403, 503, 603, 703])
 #A7 = dyn2_7[A7_max] - dyn2_7[A7_min]
 #
 #A7_m = ufloat(np.mean(A7), np.std(A7, ddof=1))
