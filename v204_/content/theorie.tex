@@ -28,7 +28,16 @@ und der Kontinnuitätsgleichung kann eine eindimensionale Wärmeleitungsgleichun
 Diese gibt an den rämlichen- und zeitlichen Verlauf der Temperaturverteilung an und $\frac{\kappa}{\rho c}$ ist die Temperaturleitfähigkeit $\sigma_t$ von dem Material.
 Sie gibt die "Geschwindigkeit" der Wärmemenge an.
 Die Temperatur ist kann man als Funktion mit einer zeitlichen Abhängigkeit beschreiben.
-Bei einem periodischen Temperaturwechsel bildet sich eine räumliche und zeitliche Temperaturwelle, welche eine Funktion der Form:
+Bei einem periodischen Temperaturwechsel bildet sich eine räumliche und zeitliche Temperaturwelle, welche eine Funktion der Form
 \begin{equation}
    T(x,t) = T_{max} e^{-\sqrt{\frac{\omega \rho c}{2 \kappa}}x} cos(\omega t - \sqrt{\frac{\omega \rho c}{2 \kappa}})
+   \label{eqn:periTempWel}
 \end{equation} 
+hat.
+Aus der Phasengeschwindigkeit $\upsilon$ \autoref{eqn:upsilon} lässt sich mit der Dämpfung die Wärmeleitfähigkeit $\kappa$ \autoref{eqn:kappa} formen. 
+Wobei die Dämpfung sich aus der Amplitudenverhältnis $\frac{dA_{nah}}{dA_{fern}}$ berechnen lässt, wobei diese Amplituden an zwei Thermoelementen mit dem Abstand $\Delta x$ gemessen wird.
+\begin{align}
+    \upsilon = \frac{\omega}{k} = \sqrt{\frac{2\kappa \omega}{\rho c}}
+    \label{eqn:upsilon}\\
+    \kappa =\frac{\rho c (\Delta x)^2}{2\Delta t \: ln(A_{nah}/A_{fern})}\label{eqn:kappa}
+\end{align}
