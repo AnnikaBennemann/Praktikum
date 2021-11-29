@@ -165,6 +165,7 @@ Außerdem wurde nach \autoref{eqn:kappa} die Wärmeleitfähigkeit $\kappa$ der v
 Aus den Werten in \autoref{tab:AuP} kann mithilfe von \autoref{eqn:kappa} die Wärmeleitfähigkeit berechnet werden.
 Der Fehler wird nach der Gauß'schen Fehlerfortpflanzung mit: 
 \begin{equation}
+  \label{eqn:Gauß}
   \Delta \kappa = \sqrt{\biggl(\frac{\partial \kappa}{\partial \Delta t}\biggr)^2\cdot (\Delta (\Delta t))^2+
   \biggl(\frac{\partial \kappa}{\partial A_\text{nah}}\biggr)^2\cdot (\Delta  A_\text{nah} )^2+
   \biggl(\frac{\partial \kappa}{\partial A_\text{fern}}\biggr)^2\cdot (\Delta  A_\text{fern})^2} 
@@ -192,28 +193,32 @@ Diese beträgt:
 		\toprule
 		&{$A_{nah}$ [K]} & {$A_{fern}$ [K]} &{$\Delta t [\si{\second}]$}\\
 		\cmidrule(lr) {2-4}
-		& 11.51 & 8.075 & 10 \\
-    & 9.43 & 5.505 & 4 \\
-    &8.46 & 4.64 & 6 \\
-    & 8.19 & 4.18 & 8 \\
-    & 8.12 & 4.28 & 8 \\
-    & 8.05 & 4.19 & 8 \\
-    & 7.965 & 4.095 & 6 \\
-    & 7.98 & 4.19 & 8 \\
-    & 7.805 & 3.95 & 6 \\
-    & 7.817 & 3.915 & 6 \\
+		& 12.57 & 2.81& 64 \\
+    & 11.39& 2.56 & 64\\
+    &10.85& 2.17 & 54\\
+    & 10.585 & 2.065 & 50 \\
+    & 10.365& 1.885& 50\\
+    & 10.205& 1.665& 46\\
+    & 10.158& 1.595 & 40\\
     \cmidrule(lr) {2-4}
-    {Mittelwert}&7.1 &2.920 &12.4 \\
+    {Mittelwert}&10.879&2.107 &52.571 \\
 		\bottomrule
 	\end{tabular}
 \end{table}	
 
-Amplitude Edelstahl_nah[12.57  11.39  10.85  10.585 10.365 10.205 10.185]
-Amplitude Edelstahl_fern[2.81  2.56  2.17  2.065 1.885 1.665 1.595]
-Phasendifferenz Edelstahl[64. 64. 54. 50. 50. 46. 40.]
-Mittelwert Phsadiff52.571+/-8.923 , Ampnah10.879+/-0.857, Ampfern2.107+/-0.449
-kappa Edelstahl 10.966+/-1.519, Abweichung Literatur -45.171+/-7.595
+Auch zur Berechnung der Wärmeleitfähigkeit von Messing und Aluminium wird nun auch die Wärmeleitfähigkeit von Edelstahl berechnet.
+\begin{align*}
+  \kappa_{\text{Edelstahl}}&=\qty{10.97 +- 1.52}{\watt\per\meter\per\kelvin}\\
+  \end{align*}
 
-daraus mittelwert, Fehler
-dann k mit fehlerberechnung nach gauß
+Wellenlänge, Frequenz
+Nach \autoref{eqn:welle} lassen sich die Wellenlängen der Temperaturwellen bestimmen. Wobei $T=\frac{1}{f}$ die Periodendauer und $f$ die Frequenz der Welle beschreibt.
+\begin{equation*}
+  \label{eqn:welle}
+  \lambda = \sqrt{\frac{4 \pi \kappa T}{\rho c}}
+\end{equation*}
+
+
+
+
 
