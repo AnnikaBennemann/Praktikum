@@ -19,7 +19,7 @@
 \end{table}
 
 
-\subsection{statische Messung}
+\subsection{Statische Messung}
 \label{subsec:aus_stat}
 Wie in \autoref{subsec:durch_stat} beschrieben, wird eine statische Messung der Temperaturverläufe an den Stäben durchgeführt. 
 Die Daten werden in folgenden Diagrammen dargestellt und ausgewertet.
@@ -212,11 +212,25 @@ Auch zur Berechnung der Wärmeleitfähigkeit von Messing und Aluminium wird nun 
   \end{align*}
 
 Wellenlänge, Frequenz
-Nach \autoref{eqn:welle} lassen sich die Wellenlängen der Temperaturwellen bestimmen. Wobei $T=\frac{1}{f}$ die Periodendauer und $f$ die Frequenz der Welle beschreibt.
-\begin{equation*}
-  \label{eqn:welle}
-  \lambda = \sqrt{\frac{4 \pi \kappa T}{\rho c}}
-\end{equation*}
+Nach \autoref{eqn:welle} lassen sich die Wellenlängen der Temperaturwellen bestimmen.
+\begin{table}
+  \centering
+  \caption{Wellenlängen der Temperaturwellen.}
+  \label{tab:Wellenlänge}
+  \sisetup{table-format=1.3}
+  \begin{tabular}{l
+      S@{${}\pm{}$}
+      S
+      }
+      \toprule
+      \multicolumn{1}{l}{Material}&\multicolumn{2}{p{3cm}}{Wellenlänge$\, [\si{\m}]$} \\
+      \midrule
+      Messing & 0.203 & 0.048\\
+      Aluminium & 0.329 & 0.093\\ 
+      Edelstahl & 0.093 & 0.006\\
+      \bottomrule
+  \end{tabular}
+\end{table}
 
 
 
