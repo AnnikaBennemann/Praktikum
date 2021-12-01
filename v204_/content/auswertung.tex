@@ -27,14 +27,14 @@ Die Daten werden in folgenden Diagrammen dargestellt und ausgewertet.
 \begin{figure}[H]
   \begin{subfigure}{\textwidth}
   \centering
-  \includegraphics[height=9cm]{content/verlauf_mess.pdf}
+  \includegraphics[height=8cm]{content/verlauf_mess.pdf}
   \caption{Temperaturverlauf der Messingstäbe (fern)}
   \label{fig:mess}
   \end{subfigure}
   \hfill
   \begin{subfigure}{\textwidth}
   \centering
-  \includegraphics[height=9cm]{content/verlauf_alu_edel.pdf}
+  \includegraphics[height=8cm]{content/verlauf_alu_edel.pdf}
   \caption{Temperaturverlauf des Aluminium- und Edelstahlstabs (fern)}
   \label{fig:alu_edel}
   \end{subfigure}
@@ -87,18 +87,18 @@ und Edelstahl die Wärme am schlechtesten leitet.
   \end{tabular}
 \end{table}
 In der \autoref{tab:dQ/dt} sind die mithilfe von \autoref{eqn:Wärmemenge} berechneten Wärmeströme der
-verschiedenen Metalle zu fünf unterschiedlichen Messzeitpunkten zu sehen.
+verschiedenen Metalle zu fünf unterschiedlichen frei gewählten Messzeitpunkten zu sehen.
 
 \begin{figure}[!htbp]
   \begin{subfigure}{\textwidth}
   \centering
-  \includegraphics{content/differenz_edel.pdf}
+  \includegraphics[height=9.5cm]{content/differenz_edel.pdf}
   \caption{Verlauf der Temperaturdifferenz am Edelstahlstab}
   \label{fig:diff_edel}
 \end{subfigure}
 \begin{subfigure}{\textwidth}
   \centering
-  \includegraphics{content/differenz_mess.pdf}
+  \includegraphics[height=9.5cm]{content/differenz_mess.pdf}
   \caption{Verlauf der Temperaturdifferenz am breiten Messingstab}
   \label{fig:diff_mess}
 \end{subfigure}
@@ -107,33 +107,37 @@ verschiedenen Metalle zu fünf unterschiedlichen Messzeitpunkten zu sehen.
 \end{figure}
 
 In \autoref{fig:diff} sind die Verläufe der Temperaturdifferenzen zwischen den Thermoelementen auf dem breiten Messingstab, sowie dem Edelstahlstab dargestellt.
-Es lässt sich erkennen, dass die Differenz bei beiden Stäben zunächst stark ansteigt , dann aber einen Hochpunkt aufweist und danach wieder fällt,
-sich dann aber einem Sättigungswer annähert und die Kurven abflachen. 
+Es lässt sich erkennen, dass die Kurve der Differenz bei beiden Stäben zunächst stark bis zu einem Hochpunkt ansteigt. Danach fällt sie bis sie sich einem Sättigungswert annähert.
 Beim Messingstab ist die Differenz allerdings ab dem Hochpunkt der Kurve deutlich niedriger als beim Edelstahlstab.
-Auch beträgt die Temperaturdifferenz am Hochpunkt der Kurve bei Edelstahl einen Wert von über 12 K, wobei der Wert am Hochpunkt der Messingkurve unter 7 K liegt.
+Die Temperaturdifferenz am Hochpunkt der Kurve bei Edelstahl erreicht einen Wert von über 12 K, wobei der Wert am Hochpunkt der Messingkurve unter 7 K liegt.
 
 \subsection{Dynamische Messung}
-\label{aus_dyn}
-
+\label{subsec:aus_dyn}
 Wie in \autoref{subsec:durch_dyn} beschrieben, werden mehrere dynamische Messungen der Temperaturverläufe an den Stäben durchgeführt. 
-Die Daten werden in folgenden Diagrammen dargestellt und ausgewertet.
 
-Zunächst wurde die Messung nach dem Angström-Verfahren, siehe \autoref{sec:Durchführung} mit einer Periodendauer von $\qty{80}{\second}$ durchgeführt.
+
+\subsubsection{Messung mit Periodendauer 80s}
+\label{subsec:aus_dyn80}
+
+Zunächst wurde die Messung nach dem Angström-Verfahren mit einer Periodendauer von $\qty{80}{\second}$ durchgeführt.
 Die Werte an den Thermoelementen am breiten Messingstab und am Aluminiumstab werden in \autoref{fig:mess_dyn} und \autoref{fig:alu_dyn} dargestellt.
-Anhand der Graphen wurden die Amplituden, sowie die Phasendifferenzen aus den Abständen der Wellenhochpunkte beider Wellen bestimmt.
-Außerdem wurde nach \autoref{eqn:kappa} die Wärmeleitfähigkeit $\kappa$ der verschiedenen Metalle berechnet. Die Ergebnisse sind in \autoref{tab:kappa} aufgelistet.
-\begin{figure}[!htbp]
+
+
+\begin{figure}[H]
   \centering
-  \includegraphics{content/dyn_80_mess.pdf}
+  \includegraphics[height=9.5cm]{content/dyn_80_mess.pdf}
   \caption{Temperaturverlauf des breiten Messingstabs}
   \label{fig:mess_dyn}
 \end{figure}
-\begin{figure}[!htbp]
+\begin{figure}[H]
   \centering
-  \includegraphics{content/dyn_80_alu.pdf}
+  \includegraphics[height=9.5cm]{content/dyn_80_alu.pdf}
   \caption{Temperaturverlauf des Aluminiumstabs}
   \label{fig:alu_dyn}
 \end{figure}
+
+\noindent Anhand der Graphen wurden die Amplituden, sowie die Phasendifferenzen aus den Abständen der Wellenhochpunkte beider Wellen bestimmt.
+ Die Rechnungen wurde mithilfe der Phythonmodule Matplotlib \cite{matplotlib}, Numpy \cite{numpy}, Scipy \cite{scipy} und Uncertainties\cite{uncertainties} durchgeführt.
 	
 \begin{table}[H]
 	\centering
@@ -162,28 +166,37 @@ Außerdem wurde nach \autoref{eqn:kappa} die Wärmeleitfähigkeit $\kappa$ der v
 	\end{tabular}
 \end{table}	
 
-Aus den Werten in \autoref{tab:AuP} kann mithilfe von \autoref{eqn:kappa} die Wärmeleitfähigkeit berechnet werden.
-Der Fehler wird nach der Gauß'schen Fehlerfortpflanzung mit: 
+\pagebreak 
+\noindent Aus den Werten in \autoref{tab:AuP} kann mithilfe von \autoref{eqn:kappa} die Wärmeleitfähigkeit berechnet werden.
+Der Fehler wird nach der Gauß'schen Fehlerfortpflanzung mit 
 \begin{equation}
   \label{eqn:Gauß}
   \Delta \kappa = \sqrt{\biggl(\frac{\partial \kappa}{\partial \Delta t}\biggr)^2\cdot (\Delta (\Delta t))^2+
   \biggl(\frac{\partial \kappa}{\partial A_\text{nah}}\biggr)^2\cdot (\Delta  A_\text{nah} )^2+
   \biggl(\frac{\partial \kappa}{\partial A_\text{fern}}\biggr)^2\cdot (\Delta  A_\text{fern})^2} 
  \end{equation}
+ bestimmt.
 
-Diese beträgt:
+\noindent Die Wärmeleitfähigkeit beträgt somit:
 \begin{align*}
   \kappa_{\text{Messing}}&=\qty{133.95 +- 63.92}{\watt\per\meter\per\kelvin}\\
   \kappa_{\text{Aluminium}}&=\qty{250.72 +- 140.93}{\watt\per\meter\per\kelvin}
 \end{align*}
 
-\begin{figure}[!htbp]
+\subsubsection{Messung mit Periodendauer 200s}
+\label{subsubsec:aus_dyn200}
+
+Analog zu \autoref{subsec:aus_dyn80} wurde die Messung nach dem Angström-Verfahren mit einer Periodendauer von $\qty{200}{\second}$ durchgeführt.
+Die Werte an den Thermoelementen am Edelstahlstab werden in \autoref{fig:edel_dyn} dargestellt.
+
+\begin{figure}[H]
   \centering
-  \includegraphics{content/dyn_2.pdf}
+  \includegraphics[height=9.5cm]{content/dyn_2.pdf}
   \caption{Temperaturverlauf des Edelstahlstabs}
   \label{fig:edel_dyn}
 \end{figure}
 
+Auch hier werden die Amplituden und Phasendifferenzen berechnet.
 \begin{table}[H]
 	\centering
 	\caption{Amplituden und Phasendifferenzen Edelstahl}
@@ -206,12 +219,11 @@ Diese beträgt:
 	\end{tabular}
 \end{table}	
 
-Auch zur Berechnung der Wärmeleitfähigkeit von Messing und Aluminium wird nun auch die Wärmeleitfähigkeit von Edelstahl berechnet.
+Die Wärmeleitfähigkeit von Edelstahl wird nun berechnet zu:
 \begin{align*}
   \kappa_{\text{Edelstahl}}&=\qty{10.97 +- 1.52}{\watt\per\meter\per\kelvin}\\
   \end{align*}
 
-Wellenlänge, Frequenz
 Nach \autoref{eqn:welle} lassen sich die Wellenlängen der Temperaturwellen bestimmen.
 \begin{table}
   \centering
@@ -231,6 +243,8 @@ Nach \autoref{eqn:welle} lassen sich die Wellenlängen der Temperaturwellen best
       \bottomrule
   \end{tabular}
 \end{table}
+
+Die Frequenzen $f=1/T$ betragen $f_{80s}=\qty{0.0125}{\second\tothe{-1}}$ und $f_{200s}=\qty{0.005}{\second\tothe{-1}}$.
 
 
 
