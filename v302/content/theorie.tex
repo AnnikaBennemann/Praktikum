@@ -1,4 +1,115 @@
 \section{Theorie}
 \label{sec:Theorie}
+Ziel dieses Versuches ist es mithilfe verschiedener Brückenschaltunge unbekannte Widerstände, Kapazitäten und Induktivitäten zu bestimmen.
+Außerdem soll das Verhalten der Brückenspannung in Abhängigkeit von der Frequenz mithilfe der Wien-Robinson-Brücke untersucht werden.
 
-\cite{sample}
+\subsection{Allgemein}
+\label{subsec:allgemein}
+Eine Brückenschaltung ist eine bestimmte Verschaltung von verschiedenen elektrischen Bauelementen, sie hat allgemein die in \autoref{fig:brücke} dargestellte Form.\\
+%   HIER BILD ! EINFÜGEN
+Innerhalb der Schaltung wird zwischen zwei Punkten eine Potentialdifferenz in Abhängigkeit von den vorliegenden Wiederstandsverhältnissen analysiert.
+Dies Potentialdifferenz wird auch als Brückenspannung bezeichnet.
+Die Grundlage für die mathematischen Berechnungen sind die zwei Kirchhoffschen Gesetze.\\
+Das erste Gesetz ist die Knotenregel
+%Formel und Bild.
+Sie besagt, dass in einem Verzweigungspunkt die Summe aller zufließenden elektrischen Ströme gleich der Summe der abfließenden elektrischen Ströme ist. 
+Das zweite Gesetz ist auch bekannt als die Maschenregel
+%Formel und Bild.
+Nach diesem ist in einem in sich geschlossenem Stromkreis bzw. einer geschlossenen Masche die Summe der Spannungen gleich null. 
+Dabei ist das Vorzeichen der einzelnen Summanden positiv, wenn die Stromrichtung vom betrachteten Bauteil mit dem Uhrzeigersinn läuft.\\
+Sobald in der Brückenschaltung Kapazitäten $C$ und Induktivitäten $L$ zusätzlich zu ohmschen Widerstänenden $R$ enthalten sind, muss mit Impedanzen gerechnet werden.
+Dies ist zurückzuführen auf den Blind- und Wirkwiderstand eines Kondensators bzw. einer Spule.
+Die Wiederstandsoperatoren sind 
+% Formel 11
+\\
+Ein spezieller Falle einer Brückenschaltung ist die abgeglichene Brücke, wo die Brückenspannung unabhängig von der anliegenden Speisepannung verschwindet, wenn 
+%Formel 12
+gilt.\\
+Die folgenden Brückenschaltungen sind Beispiele für abgeglichene Brücken.
+
+\subsection{Wheatstonesche Brücke}
+\label{subsec:wheatstone}
+%Abbildung 4 rein
+Diese Schaltung besteht nur aus ohmschen Widerständen und wird zu Bestimmung eines unbekannten Widerstand $R_x$ verwendet.
+Durch Anwendung der Kirchhoffschengesetze folgt für den unbekannten Widerstand
+%Formel wheat
+Für $R_3$ und $R_4$ wird ein Potentiometer benutzt, weil die Abgleichbedingung nur vom Verhältnis der beiden Widerstände anbhängig ist und nicht von deren Größe.
+
+\subsection{Kapazitätsmessbrücke}
+\label{subsec:kapazitäts}
+%Abb 6
+Die Wärmeverluste des realen Kondensators werden in der Schaltung durch einen (fiktiven) ohmschen Widerstand berücksichtigt, der mit der Kapazität in Reihe geschaltet wird.
+Im Gegensatz zu der Wheatstoneschen Brücke werden somit zwei unbekannte Größen bestimmt $C_x$ und $R_x$.
+Außerdem wird noch eine weitere bekannte Kapazität $C_2$ eingebaut und $R_2$ ist nun ein veränderbarer Widerstand.
+Der Widerstandsoperator hat die Form
+%Formel
+dadurch gilt für die Kapazität
+%bla
+und für den Widerstand
+%blabla
+Bei manchen Kondensatoren sind die dielektrischen Verluste so gering, dass der (fiktive) ohmsche Widerstand gegen null geht, somit gilt $R_2 \approx 0$.
+
+
+\subsection{Induktivitätsmessbrücke}
+\label{subsec:induktivität}
+%Abb 8
+Diese Schaltung ähnelt der Kapazitätsmessbrücke mit dem einzigen Unterschied, dass anstelle von Kapazitäten nun Induktivitäten verwendet werden.
+Auch bei der Induktivitätsmessbrücke gibt es Wärmeverluste, aufgrund der magnetischen Feldenergie.
+Deswegen wird ein (fiktiver) ohmscher Widerstand mit der Induktivität in Reihe geschaltet.
+Der Widerstandsoperator wird abgebildet durch
+%bli.
+Die Abgleichbedingung für die Induktivität ist
+%SP
+und für den Widerstand gilt
+%oben
+Die Spule mit der bekannten Induktivität $L_2$ sollte möglichst geringe Verluste besitzen, da diese sonst die Ergebnisse verfälschen. 
+Deswegen wird häufig eine andere Brückenschaltung zur Bestimmung der Induktivität benutzt.
+Zum Beispiel die Maxwell-Brücke, die im folgenden näher beschrieben wird.
+
+\subsection{Maxwell Brücke}
+\label{subsec:maxwell}
+%Abb9
+Anstelle einer bekannten Induktivität wird in dieser Schaltung eine bekannte Kapazität $C_4$ mit geringen Verlusten genutzt.
+Der Aufbau ist in \autoref{fig:maxwell} dargestellt.
+Die verstellbaren $R_3$ und $R_4$ werden nun in Reihe und parallel zu $C_4$ geschaltet.
+Außerdem ist $R_2$ nun ein fester bekannter Widerstand.
+Die Widerstandsoperatoren sind
+%bli
+und
+%blubb
+Daraus folgt
+%lll
+für die Induktivität und für Widerstand
+%bieb
+
+\subsection{Wien-Robinson-Brücke}
+\label{subsec:wien-robinson}
+%abb 10
+Im Gegensatz zu den anderen Brückenschaltungen ist diese nur bei bestimmten Frequenzen abgleichbar.
+Die Schaltung enthält nur bekannte Größen, die möglichst geringe Verluste und Tolernzen besitzen.
+Sie besteht nur aus festen ohmschen Widerständen und Kapazitäten.
+Die Wien-Robinson-Brücke ist eine Bandsperre und somit ein elektronischer Frequenzfilter.
+Eine Bandsperre schwächt ein bestimmtes Frequenzband um die Grenzfrequenz
+%Formel nü_0=w_0/2pi=1/cR2pi
+ab und lässt diese nicht passieren.
+Die Übertragung lässt sich berechenen aus dem Spannungsverhätnis von Brückenspannung und Speisepannung
+%f(omega)=Formel 19 in wurzelform
+mit 
+%omega gleich nü/Nü_0
+Die Brückenspannung verschwindet bei $\omega_0 = \frac{1}{RC}$.
+Eine Sinusschwingung sollte keine Oberwellen enthalten. 
+Der Klirrfaktor gibt den Anteil der Oberwellen im Verhältnis zur Grundwelle einer Sinusschwingung an.
+Die Kleinheit des Klirrfaktors
+\begin{equation}
+    k =  \sqrt{} siehe 228
+\end{equation}
+ist dementsprechend ein Maß für die Qualität eines Sinusgenerators.
+Mitsamt der Annahme, dass die Summe der Oberwellen nur aus der zweiten Oberwelle besteht, lässt sich dies zu 
+\begin{equation}
+    k = \frac{U_2}{U_1}
+    \label{eqn:keinf}
+\end{equation}
+vereinfachen.
+Die Zweite Oberwelle wird bestimmt durch
+%letzte Formel.
+
