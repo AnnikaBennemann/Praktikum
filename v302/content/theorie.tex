@@ -177,7 +177,7 @@ Außerdem ist $R_2$ nun ein fester bekannter Widerstand.
 Die Widerstandsoperatoren sind
 
 \begin{align}
-    Z_1 &= R_x + j\omega L_x & \text{und} & \frac{1}{Z_4}&=\frac{1}{R_4}+j\omega C_4
+    Z_1 &= R_x + j\omega L_x & \text{und}&  &\frac{1}{Z_4}=\frac{1}{R_4}+j\omega C_4
     \label{eqn:widerop_max}
 \end{align}
 
@@ -212,7 +212,8 @@ Die Wien-Robinson-Brücke ist eine Bandsperre und somit ein elektronischer Frequ
 Eine Bandsperre schwächt ein bestimmtes Frequenzband um die Grenzfrequenz
 %Formel nü_0=w_0/2pi=1/cR2pi
 \begin{equation}
-        
+    \nu_0 = \frac{\omega_0}{2\pi} = \frac{1}{CR2\pi}
+    \label{eqn:grenzfrequenz}
 \end{equation}
 
 ab und lässt diese nicht passieren.
@@ -220,7 +221,10 @@ Die Übertragung lässt sich berechenen aus dem Spannungsverhätnis von Brücken
 %f(omega)=Formel 19 in wurzelform
 mit 
 %omega gleich nü/Nü_0
-Die Brückenspannung verschwindet bei $\omega_0 = \frac{1}{RC}$.
+Die Brückenspannung verschwindet bei 
+\begin{equation}
+    \omega_0 = \frac{1}{RC}.
+\end{equation}
 Eine Sinusschwingung sollte keine Oberwellen enthalten. 
 Der Klirrfaktor gibt den Anteil der Oberwellen im Verhältnis zur Grundwelle einer Sinusschwingung an.
 Die Kleinheit des Klirrfaktors
