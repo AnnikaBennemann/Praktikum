@@ -10,6 +10,7 @@ build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
 # hier weitere Abhängigkeiten für build/vXXX.pdf deklarieren:
 build/v302.pdf: build/plot.pdf 
 
+
 build/v302.pdf: FORCE | build
 	# to find header and bib files in the main directory
 	TEXINPUTS=..: \
