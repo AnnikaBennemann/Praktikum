@@ -17,6 +17,21 @@
   \end{tabular}
 \end{table} 
 
+Für die Berechnung des Mittelwerts 
+\begin{equation*}
+  R_{\text{xm}} = 240.62
+\end{equation*}
+und der Standardabweichung
+\begin{equation*}
+  \sigma_{\text{xm}} = 0.14
+\end{equation*}
+von $R_x$ wurde das Pythonmodul Numpy \cite{numpy} herangezogen.
+Der Fehler des Mittelwerts berechnet sich analog zu
+\begin{equation*}
+  \Delta R_{\text{xm}}= 0.08.
+\end{equation*}
+
+
 \begin{table}[H]
   \centering
   \caption{Messwerte der Kapazitätsmessbrücke.}
@@ -32,14 +47,16 @@
   \end{tabular}
 \end{table}
 
+
+
 \begin{table}[H]
   \centering
   \caption{Messwerte der Induktivitätsmessbrücke.}
   \label{tab:indu}
   \sisetup{table-format=3.0}
   \begin{tabular}{c S S S S S[table-format=3.2] S[table-format=3.2]}
-   \toprule
-  &{$L_2$ [\si{\milli\hertz}]}&{$R_2$ [\si{\ohm}]} & {$R_3$ [\si{\ohm}]} & {$R_4$ [\si{\ohm}]}&{$R_x$ [\si{\ohm}]} & {$L_x$ [\si{\milli\hertz}]}\\
+  \toprule
+  &{$L_2$ [\si{\milli\henry}]}&{$R_2$ [\si{\ohm}]} & {$R_3$ [\si{\ohm}]} & {$R_4$ [\si{\ohm}]}&{$R_x$ [\si{\ohm}]} & {$L_x$ [\si{\milli\henry}]}\\
   \midrule
   &&&&&&\\
   \bottomrule
