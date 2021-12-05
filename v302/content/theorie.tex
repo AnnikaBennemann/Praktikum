@@ -210,7 +210,7 @@ Die Schaltung enthält nur bekannte Größen, die möglichst geringe Verluste un
 Sie besteht nur aus festen ohmschen Widerständen und Kapazitäten.
 Die Wien-Robinson-Brücke ist eine Bandsperre und somit ein elektronischer Frequenzfilter.
 Eine Bandsperre schwächt ein bestimmtes Frequenzband um die Grenzfrequenz
-%Formel nü_0=w_0/2pi=1/cR2pi
+
 \begin{equation}
     \nu_0 = \frac{\omega_0}{2\pi} = \frac{1}{CR2\pi}
     \label{eqn:grenzfrequenz}
@@ -219,17 +219,25 @@ Eine Bandsperre schwächt ein bestimmtes Frequenzband um die Grenzfrequenz
 ab und lässt diese nicht passieren.
 Die Übertragung lässt sich berechenen aus dem Spannungsverhätnis von Brückenspannung und Speisepannung
 %f(omega)=Formel 19 in wurzelform
+\begin{equation}
+    f(\Omega) = \Biggl \lvert \frac{U_{Br}}{U_S} \Biggr \rvert = \sqrt{\frac{fehlt was}{j}}
+\end{equation}
+
 mit 
-%omega gleich nü/Nü_0
+
+\begin{equation}
+    \Omega = \frac{\nu}{\nu_0}  .
+\end{equation}
+
 Die Brückenspannung verschwindet bei 
 \begin{equation}
-    \omega_0 = \frac{1}{RC}.
+    \omega_0 = \frac{1}{RC} .
 \end{equation}
 Eine Sinusschwingung sollte keine Oberwellen enthalten. 
 Der Klirrfaktor gibt den Anteil der Oberwellen im Verhältnis zur Grundwelle einer Sinusschwingung an.
 Die Kleinheit des Klirrfaktors
 \begin{equation}
-    k =  \sqrt{} siehe 228
+    k =  \frac{\sqrt{\sum_{i=2}^N U_i^2}}{U_1}
 \end{equation}
 ist dementsprechend ein Maß für die Qualität eines Sinusgenerators.
 Mitsamt der Annahme, dass die Summe der Oberwellen nur aus der zweiten Oberwelle besteht, lässt sich dies zu 
@@ -240,4 +248,6 @@ Mitsamt der Annahme, dass die Summe der Oberwellen nur aus der zweiten Oberwelle
 vereinfachen.
 Die Zweite Oberwelle wird bestimmt durch
 %letzte Formel.
-
+\begin{equation}
+    U_2 = \frac{U_{Br}}{U_S} = \frac{U_{Br}(\nu = \nu_0)}{f(2)}
+\end{equation}
