@@ -5,25 +5,25 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.1}Allgemein}{3}{subsection.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2}einseitige Einspannung}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.2}Einseitige Einspannung}{3}{subsection.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3}beidseitige Auflage}{4}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.3}Beidseitige Auflage}{4}{subsection.1.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Durchführung}{5}{section.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}einseitige Einspannung}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.1}Einseitige Einspannung}{6}{subsection.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}beidseitige Auflage}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Beidseitige Auflage}{6}{subsection.2.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Auswertung}{7}{section.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}einseitige Einspannung}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}Einseitige Einspannung}{8}{subsection.3.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2}beidseitige Auflage}{11}{subsection.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Diskussion}{15}{section.4}%
+\contentsline {section}{\numberline {4}Diskussion}{16}{section.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Anhang}{16}{section.5}%
+\contentsline {section}{\numberline {5}Anhang}{17}{section.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\nonumberline Literatur}{21}{section*.19}%
 \defcounter {refsection}{0}\relax 
