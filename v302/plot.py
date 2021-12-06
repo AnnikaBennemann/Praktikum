@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import uncertainties.unumpy as unp
-import uncertainties
+import uncertainties as un
 
 from uncertainties.unumpy import (nominal_values as noms,
                                   std_devs as stds)
@@ -59,10 +59,10 @@ print('Standardabweichung', np.std(Rx))
 print('Fehler des Mittelwertes ' ,np.std(Rx)/np.sqrt(3))
 
 #################################b
-R2=ufloat(192,0.02*192)
+R2=un.ufloat(192,0.02*192)
 R3= 691
 R4= 309
-R34= (R3/R4 , 0.05)
-C2= ufloat(992, 0.02)
+R34= un.ufloat(R3/R4,0.05*R3/R4)
+C2= un.ufloat(992, 0.02)
 Rx=R2*R34
 print('Rx',Rx)

@@ -1,0 +1,20 @@
+[0] Config.pm:311> INFO - This is Biber 2.16
+[1] Config.pm:314> INFO - Logfile is 'v204_.blg'
+[128] biber:340> INFO - === Wed Dec  1, 2021, 12:59:45
+[150] Biber.pm:415> INFO - Reading 'v204_.bcf'
+[236] Biber.pm:952> INFO - Found 7 citekeys in bib section 0
+[250] Biber.pm:4340> INFO - Processing section 0
+[265] Biber.pm:4531> INFO - Looking for bibtex format file 'lit.bib' for section 0
+[269] bibtex.pm:1689> INFO - LaTeX decoding ...
+[279] bibtex.pm:1494> INFO - Found BibTeX data source 'lit.bib'
+[339] Utils.pm:395> WARN - Entry 'EdelWäLeit' (lit.bib): Invalid format '24.11.2021' of date field 'urldate' - ignoring
+[345] Biber.pm:4531> INFO - Looking for bibtex format file 'programme.bib' for section 0
+[347] bibtex.pm:1689> INFO - LaTeX decoding ...
+[356] bibtex.pm:1494> INFO - Found BibTeX data source 'programme.bib'
+[395] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[395] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[395] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[396] Biber.pm:4174> INFO - No sort tailoring available for locale 'de-DE'
+[413] bbl.pm:654> INFO - Writing 'v204_.bbl' with encoding 'UTF-8'
+[416] bbl.pm:757> INFO - Output to v204_.bbl
+[417] Biber.pm:128> INFO - WARNINGS: 1
