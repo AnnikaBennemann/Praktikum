@@ -51,12 +51,10 @@ Dabei ist das Vorzeichen der einzelnen Summanden positiv, wenn die Stromrichtung
 Sobald in der Brückenschaltung Kapazitäten $C$ und Induktivitäten $L$ zusätzlich zu ohmschen Widerstänenden $R$ enthalten sind, muss mit Impedanzen gerechnet werden.
 Dies ist zurückzuführen auf den Blind- und Wirkwiderstand eines Kondensators bzw. einer Spule.
 Die Widerstandsoperatoren sind 
-
 \begin{align}
     Z_C &= -\frac{j}{\omega} C , & Z_L &= j\omega L  &\text{und}& &Z_R = R .
     \label{eqn:operatoren}
 \end{align}
-
 Ein spezieller Fall einer Brückenschaltung ist die abgeglichene Brücke, wo die Brückenspannung unabhängig von der anliegenden Speisepannung verschwindet, wenn 
 \begin{equation}
     Z_1 Z_4 = Z_2 Z_3
@@ -74,15 +72,12 @@ Die folgenden Brückenschaltungen sind Beispiele für abgeglichene Brücken.
     \caption{Schaltbild der wheatstoneschen Brücke.\cite[219]{V302}}
     \label{fig:wheat}
 \end{figure}
-
 Diese Schaltung besteht nur aus ohmschen Widerständen und wird zu Bestimmung eines unbekannten Widerstand $R_x$ verwendet.
 Durch Anwendung der Kirchhoffschengesetze folgt für den unbekannten Widerstand
-
 \begin{equation}
     R_x = R_2 \frac{R_3}{R_4}.
     \label{eqn:wheat}
 \end{equation}
-
 Für $R_3$ und $R_4$ wird ein Potentiometer benutzt, weil die Abgleichbedingung nur vom Verhältnis der beiden Widerstände anbhängig ist und nicht von deren Größe.
 
 \subsection{Kapazitätsmessbrücke}
@@ -94,31 +89,24 @@ Für $R_3$ und $R_4$ wird ein Potentiometer benutzt, weil die Abgleichbedingung 
     \caption{Schaltbild der Kapazitätsmessbrücke.\cite[220]{V302}}
     \label{fig:kapazität}
 \end{figure}
-
 Die Wärmeverluste des realen Kondensators werden in der Schaltung durch einen (fiktiven) ohmschen Widerstand berücksichtigt, der mit der Kapazität in Reihe geschaltet wird.
 Im Gegensatz zu der Wheatstoneschen Brücke werden somit zwei unbekannte Größen bestimmt $C_x$ und $R_x$.
 Außerdem wird noch eine weitere bekannte Kapazität $C_2$ eingebaut und $R_2$ ist nun ein veränderbarer Widerstand.
 Der Widerstandsoperator hat die Form
-
 \begin{equation}
     Z_{C_{real}} = R - \frac{j}{\omega C}
     \label{eqn:widerop_kap}
 \end{equation}
-
 dadurch gilt für die Kapazität
-
 \begin{equation}
     C_x = C_2 \frac{R_4}{R_3}
     \label{eqn:kapazität_kap}
 \end{equation}
-
 und für den Widerstand
-
 \begin{equation}
     R_x = R_2 \frac{R_3}{R_4}
     \label{eqn:widerstand_kap}
 \end{equation}
-
 Bei manchen Kondensatoren sind die dielektrischen Verluste so gering, dass der (fiktive) ohmsche Widerstand gegen null geht, somit gilt $R_2 \approx 0$.
 
 
@@ -131,31 +119,24 @@ Bei manchen Kondensatoren sind die dielektrischen Verluste so gering, dass der (
     \caption{Schaltbild der Induktivitätsmessbrücke.\cite[221]{V302}}
     \label{fig:induktivität}
 \end{figure}
-
 Diese Schaltung ähnelt der Kapazitätsmessbrücke mit dem einzigen Unterschied, dass anstelle von Kapazitäten nun Induktivitäten verwendet werden.
 Auch bei der Induktivitätsmessbrücke gibt es Wärmeverluste, aufgrund der magnetischen Feldenergie.
 Deswegen wird ein (fiktiver) ohmscher Widerstand mit der Induktivität in Reihe geschaltet.
 Der Widerstandsoperator wird abgebildet durch
-
 \begin{equation}
     Z_{L_{real}} = R + j\omega L
     \label{eqn:widerop_ind}
 \end{equation}
-
 Die Abgleichbedingung für die Induktivität ist
-
 \begin{equation}
     L_x = L_2 \frac{R_3}{R_4}
     \label{eqn:induktivität_ind}
 \end{equation}
-
 und für den Widerstand gilt
-
 \begin{equation}
     R_x = R_2 \frac{R_3}{R_4}
     \label{eqn:widerstand_ind}
 \end{equation}
-
 Die Spule mit der bekannten Induktivität $L_2$ sollte möglichst geringe Verluste besitzen, da diese sonst die Ergebnisse verfälschen. 
 Deswegen wird häufig eine andere Brückenschaltung zur Bestimmung der Induktivität benutzt.
 Zum Beispiel die Maxwell-Brücke, die im folgenden näher beschrieben wird.
@@ -169,32 +150,26 @@ Zum Beispiel die Maxwell-Brücke, die im folgenden näher beschrieben wird.
     \caption{Schaltbild der Maxwell Brücke.\cite[222]{V302}}
     \label{fig:maxwell}
 \end{figure}
-
 Anstelle einer bekannten Induktivität wird in dieser Schaltung eine bekannte Kapazität $C_4$ mit geringen Verlusten genutzt.
 Der Aufbau ist in \autoref{fig:maxwell} dargestellt.
 Die verstellbaren $R_3$ und $R_4$ werden nun in Reihe und parallel zu $C_4$ geschaltet.
 Außerdem ist $R_2$ nun ein fester bekannter Widerstand.
 Die Widerstandsoperatoren sind
-
 \begin{align}
     Z_1 &= R_x + j\omega L_x & \text{und}&  &\frac{1}{Z_4}=\frac{1}{R_4}+j\omega C_4
     \label{eqn:widerop_max}
 \end{align}
-
 Daraus folgt
-
 \begin{equation}
     L_x = R_2 R_3 C_4
     \label{eqn:induktivität_max}
 \end{equation}
-
-für die Induktivität und für Widerstand
-
+für die Induktivität und 
 \begin{equation}
     R_x = R_2 \frac{R_3}{R_4}
     \label{eqn:widerstand_max}
 \end{equation}
-
+für den Widerstand.
 \subsection{Wien-Robinson-Brücke}
 \label{subsec:wien-robinson}
 
@@ -204,31 +179,25 @@ für die Induktivität und für Widerstand
     \caption{Schaltbild der Wien-Robinson-Brücke.\cite[222]{V302}}
     \label{fig:wien-robinson}
 \end{figure}
-
 Im Gegensatz zu den anderen Brückenschaltungen ist diese nur bei bestimmten Frequenzen abgleichbar.
 Die Schaltung enthält nur bekannte Größen, die möglichst geringe Verluste und Tolernzen besitzen.
 Sie besteht nur aus festen ohmschen Widerständen und Kapazitäten.
 Die Wien-Robinson-Brücke ist eine Bandsperre und somit ein elektronischer Frequenzfilter.
 Eine Bandsperre schwächt ein bestimmtes Frequenzband um die Grenzfrequenz
-
 \begin{equation}
     \nu_0 = \frac{\omega_0}{2\pi} = \frac{1}{CR2\pi}
     \label{eqn:grenzfrequenz}
 \end{equation}
-
 ab und lässt diese nicht passieren.
 Die Übertragung lässt sich berechenen aus dem Spannungsverhätnis von Brückenspannung und Speisepannung
 %f(omega)=Formel 19 in wurzelform
 \begin{equation}
     f(\Omega) = \Biggl \lvert \frac{U_{Br}}{U_S} \Biggr \rvert = \sqrt{\frac{(\Omega^2 -1)^2}{9*((1-\Omega^2)^2+9*\Omega^2)}}
 \end{equation}
-
 mit 
-
 \begin{equation}
     \Omega = \frac{\nu}{\nu_0}  .
 \end{equation}
-
 Die Brückenspannung verschwindet bei 
 \begin{equation}
     \omega_0 = \frac{1}{RC} .
@@ -242,7 +211,7 @@ Die Kleinheit des Klirrfaktors
 ist dementsprechend ein Maß für die Qualität eines Sinusgenerators.
 Mitsamt der Annahme, dass die Summe der Oberwellen nur aus der zweiten Oberwelle besteht, lässt sich dies zu 
 \begin{equation}
-    k = \frac{U_2}{U_1}
+    k = \frac{U_2}{U_S}
     \label{eqn:keinf}
 \end{equation}
 vereinfachen.

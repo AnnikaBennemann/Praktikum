@@ -1,6 +1,10 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+Die Fehler der Widerstände $R$, Kapazitäten $C$ und der Induktivitäten $I$ betragen jeweils $\pm \qty{0.2}{\percent}$. Das Verhältnis $R3/R4$ am Potentiometer
+weist einen Fehler von $\pm \qty{0.5}{\percent}$ auf und die verstellbaren Widerstände eine Ungenauigkeit von $\pm \qty{3}{\percent}$. 
 
+\subsection{Wheatstonesche Brücke}
+\label{subsec:wheat_aus}
 \begin{table}[H]
   \centering
   \caption{Messwerte der Wheatstoneschen Brücke.}
@@ -31,7 +35,14 @@ Der Fehler des Mittelwerts berechnet sich analog zu
   \Delta R_{\text{xm}}= 0.08.
 \end{equation*}
 
-
+\noindent Die Fehlerfortpflanzung nach Gauß, gemäß
+\begin{equation*}
+  \Delta f = \sqrt{\biggl(\frac{\partial f}{\partial x}\biggr)^2\cdot (\Delta x)^2 + \biggl(\frac{\partial f}{\partial y}\biggr)^2\cdot (\Delta y)^2 +
+  \cdots + \biggl(\frac{\partial f}{\partial z}\biggr)^2\cdot (\Delta z)^2}
+\end{equation*}
+wird im folgenden auch mithilfe des Pythonmoduls Numpy \cite{numpy} berechnet.
+\subsection{Kapazitätsmessbrücke}
+\label{subsec:kap_aus}
 \begin{table}[H]
   \centering
   \caption{Messwerte der Kapazitätsmessbrücke.}
@@ -48,7 +59,10 @@ Der Fehler des Mittelwerts berechnet sich analog zu
 \end{table}
 
 
+  
 
+\subsection{Induktivitätsmessbrücke}
+\label{subsec:indu_aus}
 \begin{table}[H]
   \centering
   \caption{Messwerte der Induktivitätsmessbrücke.}
@@ -58,10 +72,11 @@ Der Fehler des Mittelwerts berechnet sich analog zu
   \toprule
   &{$L_2$ [\si{\milli\henry}]}&{$R_2$ [\si{\ohm}]} & {$R_3$ [\si{\ohm}]} & {$R_4$ [\si{\ohm}]}&{$R_x$ [\si{\ohm}]} & {$L_x$ [\si{\milli\henry}]}\\
   \midrule
-  &&&&&&\\
+  Wert 17& 27.5 & 59 & 609 & 391 & 91.90 & 42.83\\
   \bottomrule
   \end{tabular}
 \end{table}
+Die Fehler der 
 
 Wien-Robinson-Brücke
 \begin{figure}
