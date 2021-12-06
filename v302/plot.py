@@ -1,8 +1,14 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import uncertainties.unumpy as unp
+<<<<<<< HEAD
+import uncertainties as un
+||||||| 3fd3127
+import uncertainties
+=======
 import uncertainties as un
 from uncertainties.umath import *
+>>>>>>> 017c9493bf7b4375f29a9d0a852d1445d0e5ce81
 
 from uncertainties.unumpy import (nominal_values as noms,
                                   std_devs as stds)
@@ -66,6 +72,23 @@ abw = 100 * (Rx - Rtheo)/Rtheo
 print(f'Abw theorie {abw:.2f}')
 
 #################################b
+<<<<<<< HEAD
+R2=un.ufloat(192,0.02*192)
+R3= 691
+R4= 309
+R34= un.ufloat(R3/R4,0.05*R3/R4)
+C2= un.ufloat(992, 0.02)
+Rx=R2*R34
+print('Rx',Rx)
+||||||| 3fd3127
+R2=ufloat(192,0.02*192)
+R3= 691
+R4= 309
+R34= (R3/R4 , 0.05)
+C2= ufloat(992, 0.02)
+Rx=R2*R34
+print('Rx',Rx)
+=======
 print('bbbbbbbbbbbbbbbbbbb')
 print('Wert 9')
 R2=un.ufloat(192.00, 0.002*192.00)
@@ -151,3 +174,4 @@ print(f'Klirrfaktor {k}')
 
 
 
+>>>>>>> 017c9493bf7b4375f29a9d0a852d1445d0e5ce81
