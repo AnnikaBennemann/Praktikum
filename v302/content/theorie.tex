@@ -189,18 +189,17 @@ Eine Bandsperre schwächt ein bestimmtes Frequenzband um die Grenzfrequenz
     \label{eqn:grenzfrequenz}
 \end{equation}
 ab und lässt diese nicht passieren.
-Die Übertragung lässt sich berechenen aus dem Spannungsverhätnis von Brückenspannung und Speisepannung
-%f(omega)=Formel 19 in wurzelform
+Die Übertragung lässt sich berechenen aus dem Spannungsverhätnis von Brückenspannung und Speisespannung
 \begin{equation}
-    f(\Omega) = \Biggl \lvert \frac{U_{Br}}{U_S} \Biggr \rvert = \sqrt{\frac{fehlt was}{j}}
+    f(\Omega) = \Biggl \lvert \frac{U_{Br}}{U_S} \Biggr \rvert = \Biggl \lvert \sqrt{\frac{\left \Omega ^{2} -1 \right ^{2}}{9 \cdot \left 1 - \Omega ^{2} \right ^{2} + 9 \cdot \Omega ^{2}}}\Biggr \rvert
 \end{equation}
 mit 
 \begin{equation}
-    \Omega = \frac{\nu}{\nu_0}  .
+    \Omega = \frac{\nu}{\nu_0}.
 \end{equation}
 Die Brückenspannung verschwindet bei 
 \begin{equation}
-    \omega_0 = \frac{1}{RC} .
+    \omega_0 = \frac{1}{RC}.
 \end{equation}
 Eine Sinusschwingung sollte keine Oberwellen enthalten. 
 Der Klirrfaktor gibt den Anteil der Oberwellen im Verhältnis zur Grundwelle einer Sinusschwingung an.
@@ -216,7 +215,6 @@ Mitsamt der Annahme, dass die Summe der Oberwellen nur aus der zweiten Oberwelle
 \end{equation}
 vereinfachen.
 Die Zweite Oberwelle wird bestimmt durch
-%letzte Formel.
 \begin{equation}
-    U_2 = \frac{U_{Br}}{U_S} = \frac{U_{Br}(\nu = \nu_0)}{f(2)}
+    U_2 = \frac{U_{Br}(\nu = \nu_0)}{f(2)}
 \end{equation}
