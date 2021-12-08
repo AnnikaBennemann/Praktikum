@@ -7,58 +7,46 @@
     \caption{Ergebnisse der Messungen im Vergleich mit Theoriewerten.}
     \label{tab:end}
     \sisetup{table-format=3.2}
-    \begin{tabular}{S S S S[table-format=2.2] @{${}\pm{}$} S[table-format=1.2]}
+    \begin{tabular}{S S S S[table-format=2.2] @{${}\,\; \pm{}$} S[table-format=1.2]}
      \toprule
       \multicolumn{2}{c}{unbekannte Größe} & {Theoriewert} & \multicolumn{2}{c}{Abweichung [\si{\percent}]}\\
      \midrule
-        {Wert 10} & $R_x$ [\si{\ohm}] &\multicolumn{1}{S|} {239.00} & 0.68 & 0.03 \\
+        {Wert 10} & $R_x$ [\si{\ohm}] &\multicolumn{1}{S|} {239.00} & 0.68 &0.03 \\
     \midrule
-        {Wert 9} & $R_x$ [\si{\ohm}] &\multicolumn{1}{S|} {464.90} & 7.64 & 0.50 \\
-                 & $C_x$ [\si{\nano\farad}] &\multicolumn{1}{S|} {433.71} & 2.28 & 0.55 \\
-        {Wert 1} & $C_x$ [\si{\nano\farad}] &\multicolumn{1}{S|} {660.00} & 1.87 & 0.53 \\
+        {Wert 9} & $R_x$ [\si{\ohm}] &\multicolumn{1}{S|} {464.90} & 7.64 &0.50 \\
+                 & $C_x$ [\si{\nano\farad}] &\multicolumn{1}{S|} {433.71} & 2.28 &0.55 \\
+        {Wert 1} & $C_x$ [\si{\nano\farad}] &\multicolumn{1}{S|} {660.00} & 1.87 &0.53 \\
      \midrule
-        {Wert $17_{\text{I}}$} & $R_x$ [\si{\ohm}] &\multicolumn{1}{S|} {93.65} & 1.87 & 0.53 \\
-                 & $L_x$ [\si{\milli\henry}] &\multicolumn{1}{S|} {41.85} & 2.35 & 0.55 \\
+        {Wert $17_{\text{I}}$} & $R_x$ [\si{\ohm}] &\multicolumn{1}{S|} {93.65} & 1.87 &0.53 \\
+                 & $L_x$ [\si{\milli\henry}] &\multicolumn{1}{S|} {41.85} & 2.35 &0.55 \\
      \midrule
-        {Wert $17_{\text{M}}$} & $R_x$ [\si{\ohm}] &\multicolumn{1}{S|} {93.65} & 55.37 & 6.60 \\
-                    & $L_x$ [\si{\milli\henry}] &\multicolumn{1}{S|} {41.85} & 56.45 & 4.71 \\
+        {Wert $17_{\text{M}}$} & $R_x$ [\si{\ohm}] &\multicolumn{1}{S|} {93.65} & 55.37 &6.60 \\
+                    & $L_x$ [\si{\milli\henry}] &\multicolumn{1}{S|} {41.85} & 56.45 &4.71 \\
      \bottomrule
     \end{tabular}
   \end{table} 
 
 In \autoref{tab:end} sind die Theoriewerte der zu bestimmenden unbekannten Messgrößen aufgelistet.
 Außerdem wird die Abweichung zu den zuvor erfassten Messwerten (siehe \autoref{sec:Auswertung}) dargestellt.
-Die Berechnungen werden mithilfe der Pythonmodule Numpy \cite{numpy} und Uncertainties \cite{uncertainties} durchgeführt.
+Die Berechnungen werden mithilfe der Pythonmodule Numpy \cite{numpy} und Uncertainties \cite{uncertainties} durchgeführt.\\
 
-$Wheat R_x 240.62 +- 0.08
-Abweichung Theoriewert 0.68 +- 0.03
-Kapazität: wert 9 R_x 429.36 +- 2.31
-Abweichung Theoriewert 7.64 +- 0.5$ 
+\noindent Anhand \autoref{tab:end} lässt sich feststellen, dass die gemessenen Werte kaum von den Theoriewerten abweichen.
+Die Abweichungen sind durch geringe systematische Fehler zu erklären, zum Beispiel durch das manuelle Einstellen der verstellbaren Widerstände
+zur Minimierung der Brückenspannung.
+Die untersuchten Schaltungen eignen sich somit sehr gut zur Bestimmung der unbekannten Messgrößen.
+Die einzige Ausnahme stellen die Werte der Maxwell-Brücke dar.  Hier beträgt die Abweichung vom Referenzwert über \qty{50}{\percent}.
+Dies lässt sich dadurch erklären, dass die Brückenspannung bei diesem Aufbau minimal wird, wenn $R_4$ \qty{1000}{\ohm} beträgt.
+Normalerweise sollte sich $R_4$ bei minimaler Brückenspannung im Bereich zwischen \qty{200}{\ohm} und \qty{800}{\ohm} bewegen. Eine mögliche Ursache für diesen
+Ausreißer sind die teilweise sehr alten Bauteile. So zeigt das Oszilloskop zum Beispiel auch eine Spannung an, wenn keine Kabel angeschlossen sind.\\
+
+\noindent Sowohl durch \autoref{fig:wrb-plot} als auch durch die Bestimmung des Klirrfaktors wird deutlich, dass die Abweichungen von den Theoriewerten sehr gering sind.
+Der geringe Klirrfaktor sagt aus, dass durch den Funktionsgenerator ein sehr reines Sinussignal erzeugt wird, welches einen geringen Anteil an Oberwellen besitzt. 
+Anhand von \autoref{fig:wrb-plot} lässt sich jedoch zusätzlich erkennen, dass dies nur in der Nähe der Grenzfrequenz der Fall ist.
+Im Bereich um die Grenzfrequenz sind die Messwerte am genauesten. Je größer der Abstand zur Grenzfrequenz ist, desto größer werden die Abweichungen.
+Deswegen ist anzunehmen, dass der Klirrfaktor nur begrenzt als Indikator für die Güte des Funktionsgenerators herangezogen werden kann.
 
 
-%   Wert 9
-%   R2 192.0+/-0.4 R3 691.0 R4 309.0
-%   Rx 429.36+/-2.31
-%   Abw theorie -7.64+/-0.50
-%   Cx (4.4360+/-0.0239)e-07
-%   Abw theorie 2.28+/-0.55
-%   Wert 1
-%   R2 0 R3 605.0 R4 395.0
-%   Rx 0.00+/-0
-%   Cx (6.4767+/-0.0349)e-07
-%   Abw theorie -1.87+/-0.53
-%   cccccccccccccccccccc
-%   R2 59.00+/-0.12 R3 609.0 R4 391.0
-%   Rx 91.90+/-0.49
-%   Abw theorie -1.87+/-0.53
-%   Lx (4.2832+/-0.0231)e-02
-%   Abw theorie 2.35+/-0.55
-%   ddddddddddddddddddddd
-%   R2 500.0+/-1.0 R3 291+/-9 R4 1000+/-30
-%   Rx 145.50+/-6.18
-%   Abw theorie 55.37+/-6.60
-%   Lx (6.5475+/-0.1973)e-02
-%   Abw theorie 56.45+/-4.71
-%   eeeeeeeeeeeeeeeeeeeee
-%   U2 0.1341640786499874
-%   Klirrfaktor 0.01341640786499874
+
+
+
+

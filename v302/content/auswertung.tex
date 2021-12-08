@@ -23,18 +23,18 @@ Mit diesen Werten wird nach \autoref{eqn:wheat} der unbekannte Widerstand $R_x$ 
   \end{tabular}
 \end{table} 
 
-Für die Berechnung des Mittelwerts 
+\noindent Für die Berechnung des Mittelwerts 
 \begin{equation*}
-  R_{\text{xm}} = 240.62
+  R_{\text{xm}} = 240.62 \si{\ohm}
 \end{equation*}
 und der Standardabweichung
 \begin{equation*}
-  \sigma_{\text{xm}} = 0.14
+  \sigma_{\text{xm}} = 0.14 \si{\ohm}
 \end{equation*}
 von $R_x$ wird das Pythonmodul Numpy \cite{numpy} herangezogen.
 Der Fehler des Mittelwerts berechnet sich analog zu
 \begin{equation*}
-  \Delta R_{\text{xm}}= 0.08.
+  \Delta R_{\text{xm}}= 0.08 \si{\ohm}.
 \end{equation*}\\
 
 \noindent Die Fehlerfortpflanzung nach Gauß, gemäß
@@ -59,7 +59,7 @@ wird im folgenden mithilfe der Pythonmodule Uncertainties \cite{uncertainties} u
    \bottomrule
   \end{tabular}
 \end{table}
-Zur Bestimmung der unbekannten Kapazitäten und Widerständen wird eine Messung durchgeführt.
+Zur Bestimmung der unbekannten Kapazitäten und Widerständen wird eine Messung mit der Kapazitätsmessbrücke durchgeführt.
 Mit \autoref{eqn:kapazität_kap} und \autoref{eqn:widerstand_kap} werden $C_x$ und $R_x$ aus den Messwerten berechnet, siehe \autoref{tab:kap}.
  
 
@@ -70,7 +70,7 @@ Die gemessenen Werte für die Bestimmung von Wert 17 lauten:
   L_2 &= (27.50\pm 0.06 )\si{\milli\henry}\\
   R_2 &= (59.00\pm 1.77)\si{\ohm}\\
   R_3 &= (609.00\pm 3.05)\si{\ohm}\\
-  R_4 &= (391\pm 1.96)\si{\ohm}\\
+  R_4 &= (391.00\pm 1.96)\si{\ohm}\\
   \intertext{Daraus berechnen sich}
   R_x &= (91.90\pm 0.49)\si{\ohm}\\
   L_x &= (42.83\pm 0.23 )\si{\milli\henry}\\
@@ -82,10 +82,10 @@ nach \autoref{eqn:widerstand_ind} und \autoref{eqn:induktivität_ind}.
 Die Bestimmung von Wert 17 wird nocheinmal mithilfe der Maxwell Brücke durchgeführt.
 Nun betragen die Messwerte:
 \begin{align*}
-  R_2 &= (500\pm 10.00)\si{\ohm}\\
-  R_3 &= (291\pm 8.73)\si{\ohm}\\
-  R_4 &= (1000\pm 30.00)\si{\ohm}\\
-  C_4 &= (450\pm 0.9)\si{\nano\farad}
+  R_2 &= (500.00\pm 10.00)\si{\ohm}\\
+  R_3 &= (291.00\pm 8.73)\si{\ohm}\\
+  R_4 &= (1000.00\pm 30.00)\si{\ohm}\\
+  C_4 &= (450.00\pm 0.9)\si{\nano\farad}
   \intertext{Daraus berechnen sich}
   R_x &= (145.50\pm 6.18)\si{\ohm}\\
   L_x &= (65.48\pm 1.97 )\si{\milli\henry}\\
@@ -97,13 +97,14 @@ nach \autoref{eqn:widerstand_max} und \autoref{eqn:induktivität_max}.
 \label{subsec:wien-robinson_aus}
 Mit den verwendeten Bauteilen
 \begin{align*}
-  R &= (1000\pm 2.00)\si{\ohm}\\
-  R'&= (332\pm 0.66)\si{\ohm}\\
+  R &= (1000.00\pm 2.00)\si{\ohm}\\
+  R'&= (332.00\pm 0.66)\si{\ohm}\\
   \shortintertext{und}
-  C &= (660\pm 1.32)\si{\nano\farad}\\
+  C &= (660.00\pm 1.32)\si{\nano\farad},\\
 \end{align*}
-,sowie einer Eingangsspannung $U_S = \qty{10}{\volt}$ wird die Messung mit der Wien-Robinson-Brücke durchgeführt.
+sowie einer Eingangsspannung $U_S = \qty{10}{\volt}$ wird die Messung mit der Wien-Robinson-Brücke durchgeführt.
 Dabei wird die Frequenz von $U_S$ variiert und die Werte der Brückenspannung $U_{Br}$ in \autoref{tab:mess} notiert.
+Die Grenzfrequenz wird nach \autoref{eqn:grenzfrequenz} zu $\nu_0 = \qty{241.14}{\hertz}$ berechnet.
 \begin{table}[H]
   \centering
   \caption{Messwerte der Spannung bei variabler Frequenz.}
