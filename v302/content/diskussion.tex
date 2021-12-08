@@ -7,17 +7,27 @@
     \caption{Ergebnisse der Messungen im Vergleich mit Theoriewerten.}
     \label{tab:end}
     \sisetup{table-format=3.2}
-    \begin{tabular}{S S S@{${}\pm{}$} S[table-format=1.2]}
+    \begin{tabular}{S S S S[table-format=2.2] @{${}\pm{}$} S[table-format=1.2]}
      \toprule
       \multicolumn{2}{c}{unbekannte Größe} & {Theoriewert} & \multicolumn{2}{c}{Abweichung [\si{\percent}]}\\
      \midrule
-        {Wert 10} & \multicolumn{1}{c|}{R_x [\si{\ohm}]} & 239 & 0.68  & 0.03 \\
+        {Wert 10} & $R_x$ [\si{\ohm}] &\multicolumn{1}{S|} {239.00} & 0.68 & 0.03 \\
+    \midrule
+        {Wert 9} & $R_x$ [\si{\ohm}] &\multicolumn{1}{S|} {464.90} & 7.64 & 0.50 \\
+                 & $C_x$ [\si{\nano\farad}] &\multicolumn{1}{S|} {433.71} & 2.28 & 0.55 \\
+        {Wert 1} & $C_x$ [\si{\nano\farad}] &\multicolumn{1}{S|} {660.00} & 1.87 & 0.53 \\
+     \midrule
+        {Wert $17_{\text{I}}$} & $R_x$ [\si{\ohm}] &\multicolumn{1}{S|} {93.65} & 1.87 & 0.53 \\
+                 & $L_x$ [\si{\milli\henry}] &\multicolumn{1}{S|} {41.85} & 2.35 & 0.55 \\
+     \midrule
+        {Wert $17_{\text{M}}$} & $R_x$ [\si{\ohm}] &\multicolumn{1}{S|} {93.65} & 55.37 & 6.60 \\
+                    & $L_x$ [\si{\milli\henry}] &\multicolumn{1}{S|} {41.85} & 56.45 & 4.71 \\
      \bottomrule
     \end{tabular}
   \end{table} 
 
 In \autoref{tab:end} sind die Theoriewerte der zu bestimmenden unbekannten Messgrößen aufgelistet.
-Außerdem wird die Abweichung zu den zuvor erfassten Messwerten (siehe \autoref{sec:auswertung}) dargestellt.
+Außerdem wird die Abweichung zu den zuvor erfassten Messwerten (siehe \autoref{sec:Auswertung}) dargestellt.
 Die Berechnungen werden mithilfe der Pythonmodule Numpy \cite{numpy} und Uncertainties \cite{uncertainties} durchgeführt.
 
 $Wheat R_x 240.62 +- 0.08
@@ -25,13 +35,7 @@ Abweichung Theoriewert 0.68 +- 0.03
 Kapazität: wert 9 R_x 429.36 +- 2.31
 Abweichung Theoriewert 7.64 +- 0.5$ 
 
-%   aaaaaaaaaaaaaaaaaaa
-%   R_x  [240.4137931  240.74074074 240.69478908]
-%   Mittelwert  240.61644097535827
-%   Standardabweichung 0.14451645518791226
-%   Fehler des Mittelwertes  0.08343661430507164
-%   Abw theorie 0.68+/-0.03
-%   bbbbbbbbbbbbbbbbbbb
+
 %   Wert 9
 %   R2 192.0+/-0.4 R3 691.0 R4 309.0
 %   Rx 429.36+/-2.31
