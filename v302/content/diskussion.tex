@@ -1,7 +1,60 @@
 \section{Diskussion}
 \label{sec:Diskussion}
 
+
+\begin{table}[H]
+    \centering
+    \caption{Ergebnisse der Messungen im Vergleich mit Theoriewerten.}
+    \label{tab:end}
+    \sisetup{table-format=3.2}
+    \begin{tabular}{S S S@{${}\pm{}$} S[table-format=1.2]}
+     \toprule
+      \multicolumn{2}{c}{unbekannte Größe} & {Theoriewert} & \multicolumn{2}{c}{Abweichung [\si{\percent}]}\\
+     \midrule
+        {Wert 10} & \multicolumn{1}{c|}{R_x [\si{\ohm}]} & 239 & 0.68  & 0.03 \\
+     \bottomrule
+    \end{tabular}
+  \end{table} 
+
+In \autoref{tab:end} sind die Theoriewerte der zu bestimmenden unbekannten Messgrößen aufgelistet.
+Außerdem wird die Abweichung zu den zuvor erfassten Messwerten (siehe \autoref{sec:auswertung}) dargestellt.
+Die Berechnungen werden mithilfe der Pythonmodule Numpy \cite{numpy} und Uncertainties \cite{uncertainties} durchgeführt.
+
 $Wheat R_x 240.62 +- 0.08
 Abweichung Theoriewert 0.68 +- 0.03
 Kapazität: wert 9 R_x 429.36 +- 2.31
 Abweichung Theoriewert 7.64 +- 0.5$ 
+
+%   aaaaaaaaaaaaaaaaaaa
+%   R_x  [240.4137931  240.74074074 240.69478908]
+%   Mittelwert  240.61644097535827
+%   Standardabweichung 0.14451645518791226
+%   Fehler des Mittelwertes  0.08343661430507164
+%   Abw theorie 0.68+/-0.03
+%   bbbbbbbbbbbbbbbbbbb
+%   Wert 9
+%   R2 192.0+/-0.4 R3 691.0 R4 309.0
+%   Rx 429.36+/-2.31
+%   Abw theorie -7.64+/-0.50
+%   Cx (4.4360+/-0.0239)e-07
+%   Abw theorie 2.28+/-0.55
+%   Wert 1
+%   R2 0 R3 605.0 R4 395.0
+%   Rx 0.00+/-0
+%   Cx (6.4767+/-0.0349)e-07
+%   Abw theorie -1.87+/-0.53
+%   cccccccccccccccccccc
+%   R2 59.00+/-0.12 R3 609.0 R4 391.0
+%   Rx 91.90+/-0.49
+%   Abw theorie -1.87+/-0.53
+%   Lx (4.2832+/-0.0231)e-02
+%   Abw theorie 2.35+/-0.55
+%   ddddddddddddddddddddd
+%   R2 500.0+/-1.0 R3 291+/-9 R4 1000+/-30
+%   Rx 145.50+/-6.18
+%   Abw theorie 55.37+/-6.60
+%   Lx (6.5475+/-0.1973)e-02
+%   Abw theorie 56.45+/-4.71
+%   eeeeeeeeeeeeeeeeeeeee
+%   U2 0.1341640786499874
+%   Klirrfaktor 0.01341640786499874
