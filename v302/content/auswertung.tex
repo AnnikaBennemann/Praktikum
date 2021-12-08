@@ -5,6 +5,8 @@ weist einen Fehler von $\pm \qty{0.5}{\percent}$ auf und die verstellbaren Wider
 
 \subsection{Wheatstonesche Brücke}
 \label{subsec:wheat_aus}
+In der folgenden Tabelle werden die Werte der Referenzwiderstände $R_2$ sowie die Widerstände des Potentiometers $R_3$, $R_4$ aufgelistet.
+Mit diesen Werten wird nach \autoref{eqn:wheat} der unbekannte Widerstand $R_x$ berechnet.
 \begin{table}[H]
   \centering
   \caption{Messwerte der Wheatstoneschen Brücke.}
@@ -29,18 +31,18 @@ und der Standardabweichung
 \begin{equation*}
   \sigma_{\text{xm}} = 0.14
 \end{equation*}
-von $R_x$ wurde das Pythonmodul Numpy \cite{numpy} herangezogen.
+von $R_x$ wird das Pythonmodul Numpy \cite{numpy} herangezogen.
 Der Fehler des Mittelwerts berechnet sich analog zu
 \begin{equation*}
   \Delta R_{\text{xm}}= 0.08.
-\end{equation*}
+\end{equation*}\\
 
 \noindent Die Fehlerfortpflanzung nach Gauß, gemäß
 \begin{equation*}
   \Delta f = \sqrt{\biggl(\frac{\partial f}{\partial x}\biggr)^2\cdot (\Delta x)^2 + \biggl(\frac{\partial f}{\partial y}\biggr)^2\cdot (\Delta y)^2 +
   \cdots + \biggl(\frac{\partial f}{\partial z}\biggr)^2\cdot (\Delta z)^2}
 \end{equation*}
-wird im folgenden auch mithilfe des Pythonmoduls Numpy \cite{numpy} berechnet.
+wird im folgenden mithilfe der Pythonmodule Uncertainties \cite{uncertainties} und Numpy \cite{numpy} berechnet.
 \subsection{Kapazitätsmessbrücke}
 \label{subsec:kap_aus}
 \begin{table}[H]
@@ -48,37 +50,60 @@ wird im folgenden auch mithilfe des Pythonmoduls Numpy \cite{numpy} berechnet.
   \caption{Messwerte der Kapazitätsmessbrücke.}
   \label{tab:kap}
   \sisetup{table-format=3.0}
-  \begin{tabular}{c S S S S S[table-format=3.2] S[table-format=3.2]}
+  \begin{tabular}{c S S S S S[table-format=3.2]@{${}\pm{}$} S[table-format=1.2] S[table-format=3.2]@{${}\pm{}$} S[table-format=1.2]}
    \toprule
-  &{$C_2$ [\si{\nano\farad}]}&{$R_2$ [\si{\ohm}]} & {$R_3$ [\si{\ohm}]} & {$R_4$ [\si{\ohm}]}&{$R_x$ [\si{\ohm}]} & {$C_x$ [\si{\nano\farad}]}\\
+  &{$C_2$ [\si{\nano\farad}]}&{$R_2$ [\si{\ohm}]} & {$R_3$ [\si{\ohm}]} & {$R_4$ [\si{\ohm}]}&\multicolumn{2}{c}{$R_x$ [\si{\ohm}]} &\multicolumn{2}{c} {$C_x$ [\si{\nano\farad}]}\\
   \midrule
-   Wert 9 & 992 & 192 & 691 & 309 & 443.6 & 429.36\\
-   Wert 1 & 992 & 0 & 605 & 395 & 647.67 & 0 \\
+   Wert 9 & 992 & 192 & 691 & 309 & 429.36 & 2.31 & 443.60 & 2.39\\
+   Wert 1 & 992 & 0 & 605 & 395 & 0 & 0 & 647.67 & 3.49\\
    \bottomrule
   \end{tabular}
 \end{table}
-
-
-  
+Zur Bestimmung der unbekannten Kapazitäten und Widerständen wird eine Messung durchgeführt.
+Mit \autoref{eqn:kapazität_kap} und \autoref{eqn:widerstand_kap} werden $C_x$ und $R_x$ aus den Messwerten berechnet, siehe \autoref{tab:kap}.
+ 
 
 \subsection{Induktivitätsmessbrücke}
 \label{subsec:indu_aus}
-\begin{table}[H]
-  \centering
-  \caption{Messwerte der Induktivitätsmessbrücke.}
-  \label{tab:indu}
-  \sisetup{table-format=3.0}
-  \begin{tabular}{c S S S S S[table-format=3.2] S[table-format=3.2]}
-  \toprule
-  &{$L_2$ [\si{\milli\henry}]}&{$R_2$ [\si{\ohm}]} & {$R_3$ [\si{\ohm}]} & {$R_4$ [\si{\ohm}]}&{$R_x$ [\si{\ohm}]} & {$L_x$ [\si{\milli\henry}]}\\
-  \midrule
-  Wert 17& 27.5 & 59 & 609 & 391 & 91.90 & 42.83\\
-  \bottomrule
-  \end{tabular}
-\end{table}
-Die Fehler der 
+Die gemessenen Werte für die Bestimmung von Wert 17 lauten:
+\begin{align*}
+  L_2 &= (27.50\pm 0.06 )\si{\milli\henry}\\
+  R_2 &= (59.00\pm 1.77)\si{\ohm}\\
+  R_3 &= (609.00\pm 3.05)\si{\ohm}\\
+  R_4 &= (391\pm 1.96)\si{\ohm}\\
+  \intertext{Daraus berechnen sich}
+  R_x &= (91.90\pm 0.49)\si{\ohm}\\
+  L_x &= (42.83\pm 0.23 )\si{\milli\henry}\\
+\end{align*}
+nach \autoref{eqn:widerstand_ind} und \autoref{eqn:induktivität_ind}.
 
-Wien-Robinson-Brücke
+\subsection{Maxwell Brücke}
+\label{subsec:maxwell_aus}
+Die Bestimmung von Wert 17 wird nocheinmal mithilfe der Maxwell Brücke durchgeführt.
+Nun betragen die Messwerte:
+\begin{align*}
+  R_2 &= (500\pm 10.00)\si{\ohm}\\
+  R_3 &= (291\pm 8.73)\si{\ohm}\\
+  R_4 &= (1000\pm 30.00)\si{\ohm}\\
+  C_4 &= (450\pm 0.9)\si{\nano\farad}
+  \intertext{Daraus berechnen sich}
+  R_x &= (145.50\pm 6.18)\si{\ohm}\\
+  L_x &= (65.48\pm 1.97 )\si{\milli\henry}\\
+\end{align*}
+nach \autoref{eqn:widerstand_max} und \autoref{eqn:induktivität_max}.
+
+
+\subsection{Wien-Robinson-Brücke}
+\label{subsec:wien-robinson_aus}
+Mit den verwendeten Bauteilen
+\begin{align*}
+  R &= (1000\pm 2.00)\si{\ohm}\\
+  R'&= (332\pm 0.66)\si{\ohm}\\
+  \shortintertext{und}
+  C &= (660\pm 1.32)\si{\nano\farad}\\
+\end{align*}
+,sowie einer Eingangsspannung $U_S = \qty{10}{\volt}$ wird die Messung mit der Wien-Robinson-Brücke durchgeführt.
+Dabei wird die Frequenz von $U_S$ variiert und die Werte der Brückenspannung $U_{Br}$ in \autoref{tab:mess} notiert.
 \begin{table}[H]
   \centering
   \caption{Messwerte der Spannung bei variabler Frequenz.}
@@ -115,12 +140,20 @@ Wien-Robinson-Brücke
   \end{tabular}
 \end{table}
 
-\begin{figure}
+\noindent Mithilfe von den Pythonmodulen Matplotlib \cite{matplotlib} und Numpy \cite{numpy} werden die Verhältnisse $U_{Br}/U_S$ und $\nu/\nu_0$ berechnet und in einem Graphen gegeneinander aufgetragen.
+Zum Vergleich mit den theoretischen Daten wird außerdem die Funktion \ref{eqn:f(omega)} in dasselbe Koordinatensystem geplottet (\autoref{fig:wrb-plot}).
+\begin{figure}[H]
   \centering
   \includegraphics{plot.pdf}
-  \caption{keine Ahnung wie man das nennt...}
+  \caption{Vergleich der Messdaten mit den theoretischen Werten der frequenzabhängigen Spannungsverhältnisse an der Wien-Robinson-Brücke.}
   \label{fig:wrb-plot}
 \end{figure}
+Der Klirrfaktor berechnet sich nach \autoref{eqn:k_einf} zu
+\begin{equation*}
+  k=1.34 \cdot 10^{-2}.
+\end{equation*}
+
+
 
 
 
