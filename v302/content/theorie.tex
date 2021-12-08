@@ -191,13 +191,8 @@ Eine Bandsperre schwächt ein bestimmtes Frequenzband um die Grenzfrequenz
 ab und lässt diese nicht passieren.
 Die Übertragung lässt sich berechenen aus dem Spannungsverhätnis von Brückenspannung und Speisespannung
 \begin{equation}
-<<<<<<< HEAD
-    f(\Omega) = \Biggl \lvert \frac{U_{Br}}{U_S} \Biggr \rvert = \Biggl \lvert \sqrt{\frac{\left \Omega ^{2} -1 \right ^{2}}{9 \cdot \left 1 - \Omega ^{2} \right ^{2} + 9 \cdot \Omega ^{2}}}\Biggr \rvert
-||||||| 017c949
-    f(\Omega) = \Biggl \lvert \frac{U_{Br}}{U_S} \Biggr \rvert = \sqrt{\frac{fehlt was}{j}}
-=======
-    f(\Omega) = \Biggl \lvert \frac{U_{Br}}{U_S} \Biggr \rvert = \sqrt{\frac{(\Omega^2 -1)^2}{9*((1-\Omega^2)^2+9*\Omega^2)}}
->>>>>>> e38bef32a9e28bdee9f68f3752fa42bdd2f103ad
+    f(\Omega) = \Biggl \lvert \frac{U_{Br}}{U_S} \Biggr \rvert = \sqrt{\frac{(\Omega^2 -1)^2}{9((1-\Omega^2)^2+9\Omega^2)}}
+    \label{eqn:f(omega)}
 \end{equation}
 mit 
 \begin{equation}
@@ -217,10 +212,10 @@ ist dementsprechend ein Maß für die Qualität eines Sinusgenerators.
 Mitsamt der Annahme, dass die Summe der Oberwellen nur aus der zweiten Oberwelle besteht, lässt sich dies zu 
 \begin{equation}
     k = \frac{U_2}{U_S}
-    \label{eqn:keinf}
+    \label{eqn:k_einf}
 \end{equation}
 vereinfachen.
 Die Zweite Oberwelle wird bestimmt durch
 \begin{equation}
-    U_2 = \frac{U_{Br}(\nu = \nu_0)}{f(2)}
+    U_2 = \frac{U_{Br}(\nu = \nu_0)}{f(2)}.
 \end{equation}
