@@ -1,7 +1,7 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-
-\begin{table}
+In der folgenden \autoref{tab:1} werden die Materialeigenschaften der Grundplatte aufgelistet.
+\begin{table}[H]
   \centering
   \caption{Materialeigenschaften der Grundplatte. \cite{V204}}
   \label{tab:1}
@@ -11,7 +11,7 @@
     {$\text{Material}$} & {$l [\si{\centi\meter}]$} & {$b [ \si{\centi\metre}]$} & {$h[\si{\centi\metre}]$} & {$\rho [\si{\kilo\gram\per\metre\tothe{3}}$]} & {$c [\si{\joule\per\kilo\gram\per\kelvin}]$} \\
     \midrule
     Messing  & 9 & 1.2 & 0.4 & 8520 & 385 \\
-    Messing  & 9 & 0.9 & 0.4 & 8520 & 385 \\
+    Messing  & 9 & 0.7 & 0.4 & 8520 & 385 \\
     Aluminium  & 9 & 1.2 & 0.4 & 2800 & 830 \\
     Edelstahl  & 9 & 1.2 & 0.4 & 8000 & 400 \\
     \bottomrule
@@ -27,22 +27,22 @@ Die Daten werden in folgenden Diagrammen dargestellt und ausgewertet.
 \begin{figure}[H]
   \begin{subfigure}{\textwidth}
   \centering
-  \includegraphics[height=8cm]{content/verlauf_mess.pdf}
-  \caption{Temperaturverlauf der Messingstäbe (fern)}
+  \includegraphics[height=6cm]{content/verlauf_mess.pdf}
+  \caption{Temperaturverlauf der Messingstäbe.(fern)}
   \label{fig:mess}
   \end{subfigure}
   \hfill
   \begin{subfigure}{\textwidth}
   \centering
-  \includegraphics[height=8cm]{content/verlauf_alu_edel.pdf}
-  \caption{Temperaturverlauf des Aluminium- und Edelstahlstabs (fern)}
+  \includegraphics[height=6cm]{content/verlauf_alu_edel.pdf}
+  \caption{Temperaturverlauf des Aluminium- und Edelstahlstabs.(fern)}
   \label{fig:alu_edel}
   \end{subfigure}
-  \caption{Temperaturverläufe der Stäbe an den fernen Thermoelementen}
+  \caption{Temperaturverläufe der Stäbe an den fernen Thermoelementen.}
   \label{fig:fern}
 \end{figure}
-Zunächst wurden die Temperaturen an den fernen Thermoelementen über einen Zeitraum von $\qty{650}{\second}$ aufgenommen.
-Die Temperaturverläufe aller $4$ untersuchten Stäbe weisen Gemeinsamkeiten auf. So sieht man im Vergleich der Graphen in \autoref{fig:fern},
+\noindent Zunächst wurden die Temperaturen an den fernen Thermoelementen über einen Zeitraum von $\qty{650}{\second}$ aufgenommen.
+Die Temperaturverläufe aller $4$ untersuchten Stäbe weisen Gemeinsamkeiten auf. So zeigt der Graph in \autoref{fig:fern},
 dass bei allen Metallen die Temperatur initial stark steigt und sich mit zunehmender Zeit einem Sättigungswert annähert.
 Der Temperaturanstieg ist bei Edelstahl allerdings deutlich langsamer als bei den übrigen Metallen und auch der Sättigungswert ist hier deutlich niedriger.
 Bei den beiden Messingstäben sind sehr ähnliche Temperaturverläufe zu beobachten, wobei die Kurve des breiten Stabs zu einem späteren Zeitpunkt abflacht als die des schmalen Stabs.
@@ -50,7 +50,7 @@ Bei den beiden Messingstäben sind sehr ähnliche Temperaturverläufe zu beobach
 
 \begin{table}[H]
   \centering
-  \caption{Temperaturen der Stäbe nach 650s}
+  \caption{Temperaturen der Stäbe nach 650s.}
   \label{tab:650s}
   \begin{tabular}{l S[table-format=3.2]}
     \toprule
@@ -63,50 +63,60 @@ Bei den beiden Messingstäben sind sehr ähnliche Temperaturverläufe zu beobach
     \bottomrule
   \end{tabular}
 \end{table}
-Zur Bewertung der Wärmeleitung der Stäbe wurde die Temperatur am Ende der statischen Messung erhoben und in einer Tabelle dargestellt.
+\noindent Zur Bewertung der Wärmeleitung der Stäbe wurde die Temperatur am Ende der statischen Messung erhoben und in einer Tabelle dargestellt.
 Aus den Werten in \autoref{tab:650s} lässt sich erkennen, dass Aluminium von den untersuchten Metallen die beste Wärmeleitfähigkeit besitzt
 und Edelstahl die Wärme am schlechtesten leitet.
 
 \begin{table}[H]
   \centering
-  \caption{Wärmeströme zu verschiedenen Messzeiten}
+  \caption{Wärmeströme zu verschiedenen Messzeiten.}
   \label{tab:dQ/dt}
   \sisetup{table-format=3.3}
-  \begin{tabular}{S[table-format=3.0] S S S S}
+  \begin{tabular}{S[table-format=3.0] S S S S S S S}
     \toprule
-    & \multicolumn {4}{c}{Wärmestrom $\Delta Q \mathbin{/}\Delta t \, [\si{\watt}]$}\\
-    \cmidrule(lr){2-5}
-    \multicolumn{1}{c}{Messzeitpunkt $t$ [$\si{s}$]}& \multicolumn{1}{c}{Messing, breit} & \multicolumn{1}{c}{Messing, schmal}  & \multicolumn{1}{c}{Aluminium} & \multicolumn{1}{c}{Edelstahl}\\
+    & \multicolumn {3}{c}{Messing,breit}& \multicolumn {3}{c}{Messing,schmal}\\
+    \cmidrule(lr){2-4}\cmidrule(lr){5-7}
+    \multicolumn{1}{c}{Messzeitpunkt $t$ / $\si{s}$}& \multicolumn{1}{c}{$T_1\mathbin{/}K$} & \multicolumn{1}{c}{$T_2\mathbin{/}K$} & \multicolumn{1}{c}{$\frac{\Delta Q}{\Delta t}\mathbin{/}\si{W}$}  &\multicolumn{1}{c}{$T_3\mathbin{/}K$} & \multicolumn{1}{c}{$T_4\mathbin{/}K$} & \multicolumn{1}{c}{$\frac{\Delta Q}{\Delta t}\mathbin{/}\si{W}$}\\ 
     \midrule
-    50 &-1.235&-0.879&-2.067&-0.268\\
-    200 &-0.669&-0.520&-0.846&-0.395\\
-    350 &-0.476&-0.425&-0.645&-0.354\\
-    500 &-0.427&-0.404&-0.599&-0.332\\
-    650 &-0.409&-0.398&-0.592&-0.320\\
+    50 &26.25&33.08&-1.235&34.70&26.37&-0.879\\
+    200 &38.30&42.00&-0.669&42.06&37.13&-0.520\\
+    350 &42.53&45.16&-0.476&44.45&40.42&-0.425\\
+    500 &44.84&47.20&-0.427&46.23&42.40&-0.404\\
+    650 &46.55&48.81&-0.409&47.74&43.97&-0.398\\
+    \toprule
+    & \multicolumn {3}{c}{Aluminium}& \multicolumn {3}{c}{Edelstahl}\\
+    \cmidrule(lr){2-4}\cmidrule(lr){5-7}
+    \multicolumn{1}{c}{Messzeitpunkt $t$ / $\si{s}$}&{$T_5\mathbin{/}K$} & \multicolumn{1}{c}{$T_6\mathbin{/}K$} & \multicolumn{1}{c}{$\frac{\Delta Q}{\Delta t}\mathbin{/}\si{W}$}  &\multicolumn{1}{c}{$T_7\mathbin{/}K$} & \multicolumn{1}{c}{$T_8\mathbin{/}K$} & \multicolumn{1}{c}{$\frac{\Delta Q}{\Delta t}\mathbin{/}\si{W}$} \\
+    \midrule
+    50 &30.04&35.49&-2.067&29.89&21.51&-0.268\\
+    200 &42.94&45.17&-0.846&39.14&26.79&-0.395\\
+    350 &45.85&47.55&-0.645&41.44&30.39&-0.354\\
+    500 &47.70&49.28&-0.599&43.34&32.96&-0.332\\
+    650 &49.20&50.76&-0.592&45.01&35.00&-0.320\\
     \bottomrule
   \end{tabular}
 \end{table}
-In der \autoref{tab:dQ/dt} sind die mithilfe von \autoref{eqn:Wärmemenge} berechneten Wärmeströme der
+\noindent In der \autoref{tab:dQ/dt} sind die mithilfe von \autoref{eqn:Wärmemenge} berechneten Wärmeströme der
 verschiedenen Metalle zu fünf unterschiedlichen frei gewählten Messzeitpunkten zu sehen.
 
-\begin{figure}[!htbp]
+\begin{figure}[H]
   \begin{subfigure}{\textwidth}
   \centering
-  \includegraphics[height=9.5cm]{content/differenz_edel.pdf}
-  \caption{Verlauf der Temperaturdifferenz am Edelstahlstab}
+  \includegraphics[height=7cm]{content/differenz_edel.pdf}
+  \caption{Verlauf der Temperaturdifferenz am Edelstahlstab.}
   \label{fig:diff_edel}
 \end{subfigure}
 \begin{subfigure}{\textwidth}
   \centering
-  \includegraphics[height=9.5cm]{content/differenz_mess.pdf}
-  \caption{Verlauf der Temperaturdifferenz am breiten Messingstab}
+  \includegraphics[height=7cm]{content/differenz_mess.pdf}
+  \caption{Verlauf der Temperaturdifferenz am breiten Messingstab.}
   \label{fig:diff_mess}
 \end{subfigure}
-\caption{Verlauf der Temperaturdifferenzen zwischen den Thermoelementen}
+\caption{Verlauf der Temperaturdifferenzen zwischen den Thermoelementen.}
 \label{fig:diff}
 \end{figure}
 
-In \autoref{fig:diff} sind die Verläufe der Temperaturdifferenzen zwischen den Thermoelementen auf dem breiten Messingstab, sowie dem Edelstahlstab dargestellt.
+\noindent In \autoref{fig:diff} sind die Verläufe der Temperaturdifferenzen zwischen den Thermoelementen auf dem breiten Messingstab, sowie dem Edelstahlstab dargestellt.
 Es lässt sich erkennen, dass die Kurve der Differenz bei beiden Stäben zunächst stark bis zu einem Hochpunkt ansteigt. Danach fällt sie bis sie sich einem Sättigungswert annähert.
 Beim Messingstab ist die Differenz allerdings ab dem Hochpunkt der Kurve deutlich niedriger als beim Edelstahlstab.
 Die Temperaturdifferenz am Hochpunkt der Kurve bei Edelstahl erreicht einen Wert von über 12 K, wobei der Wert am Hochpunkt der Messingkurve unter 7 K liegt.
@@ -126,29 +136,29 @@ Die Werte an den Thermoelementen am breiten Messingstab und am Aluminiumstab wer
 \begin{figure}[H]
   \centering
   \includegraphics[height=9.5cm]{content/dyn_80_mess.pdf}
-  \caption{Temperaturverlauf des breiten Messingstabs}
+  \caption{Temperaturverlauf des breiten Messingstabs.}
   \label{fig:mess_dyn}
 \end{figure}
 \begin{figure}[H]
   \centering
   \includegraphics[height=9.5cm]{content/dyn_80_alu.pdf}
-  \caption{Temperaturverlauf des Aluminiumstabs}
+  \caption{Temperaturverlauf des Aluminiumstabs.}
   \label{fig:alu_dyn}
 \end{figure}
 
 \noindent Anhand der Graphen wurden die Amplituden, sowie die Phasendifferenzen aus den Abständen der Wellenhochpunkte beider Wellen bestimmt.
- Die Rechnungen wurde mithilfe der Phythonmodule Matplotlib \cite{matplotlib}, Numpy \cite{numpy}, Scipy \cite{scipy} und Uncertainties\cite{uncertainties} durchgeführt.
+ Die Rechnungen wurde mithilfe der Phythonmodule Matplotlib \cite{matplotlib}, Numpy \cite{numpy}, Scipy \cite{scipy} und Uncertainties\cite{uncertainties} durchgeführt, weswegen die Fehler verschwindend gering sind und vernachlässigbar sind.
 	
 \begin{table}[H]
 	\centering
-	\caption{Amplituden und Phasendifferenzen Messing und Aluminium}
+	\caption{Amplituden und Phasendifferenzen Messing und Aluminium.}
 	\label{tab:AuP}
   \sisetup{table-format=2.3}
 	\begin{tabular}{l S S S[table-format=2.0] S S S[table-format=2.0]}
 		\toprule
     & \multicolumn{3}{c} {Messing} & \multicolumn{3}{c} {Aluminium}\\
     \cmidrule(lr){2-4}\cmidrule(lr){5-7}
-		&{$A_{nah}$ [K]} & {$A_{fern}$ [K]} &{$\Delta t [\si{\second}]$}&{$A_{nah}$ [K]} & {$A_{fern}$ [K]} &{$\Delta t [\si{\second}]$}\\
+		&{$A_{nah}\mathbin{/}K$} & {$A_{fern}\mathbin{/}K$} &{$\Delta t \mathbin{/}\si{\second}$}&{$A_{nah}\mathbin{/}K$} & {$A_{fern}\mathbin{/}K$} &{$\Delta t \mathbin{/}\si{\second}$}\\
 		\cmidrule(lr) {2-4}\cmidrule(lr) {5-7}
 		&9.5&5.21&20   & 11.51 & 8.075 & 10 \\
     &7.91&3.865&16 & 9.43 & 5.505 & 4 \\
@@ -161,7 +171,7 @@ Die Werte an den Thermoelementen am breiten Messingstab und am Aluminiumstab wer
     &6.405&2.225&10& 7.805 & 3.95 & 6 \\
     &6.45&2.265&10 & 7.817 & 3.915 & 6 \\
     \cmidrule(lr) {2-4}\cmidrule(lr) {5-7}
-    {Mittelwert}&7.1 &2.920 &12.4 & 8.533 & 4.702 & 7.0\\
+    {Mittelwert}&7.100 &2.920 &12.400 & 8.533 & 4.702 & 7.000\\
 		\bottomrule
 	\end{tabular}
 \end{table}	
@@ -192,14 +202,14 @@ Die Werte an den Thermoelementen am Edelstahlstab werden in \autoref{fig:edel_dy
 \begin{figure}[H]
   \centering
   \includegraphics[height=9.5cm]{content/dyn_2.pdf}
-  \caption{Temperaturverlauf des Edelstahlstabs}
+  \caption{Temperaturverlauf des Edelstahlstabs.}
   \label{fig:edel_dyn}
 \end{figure}
 
 Auch hier werden die Amplituden und Phasendifferenzen berechnet.
 \begin{table}[H]
 	\centering
-	\caption{Amplituden und Phasendifferenzen Edelstahl}
+	\caption{Amplituden und Phasendifferenzen Edelstahl.}
 	\label{tab:AuPE}
   \sisetup{table-format=2.3}
 	\begin{tabular}{l S S S[table-format=2.0]}

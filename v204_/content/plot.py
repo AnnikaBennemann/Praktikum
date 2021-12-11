@@ -36,8 +36,8 @@ plt.figure()
 plt.plot(t_stat, stat_1, label = 'Messing, breit')
 plt.plot(t_stat, stat_4, label = 'Messing, schmal')
 
-plt.xlabel('Zeit [s]')
-plt.ylabel('Temperatur [K]')
+plt.xlabel('Zeit/s')
+plt.ylabel('Temperatur/K')
 plt.legend()
 
 plt.savefig('verlauf_mess.pdf')
@@ -48,8 +48,8 @@ plt.plot(t_stat, stat_5, label = 'Aluminium')
 plt.plot(t_stat, stat_8, label = 'Edelstahl')
 
 
-plt.xlabel('Zeit [s]')
-plt.ylabel('Temperatur [K]')
+plt.xlabel('Zeit/s')
+plt.ylabel('Temperatur/K')
 plt.legend()
 
 plt.savefig('verlauf_alu_edel.pdf')
@@ -58,8 +58,8 @@ plt.clf()
 plt.figure()
 plt.plot(t_stat, stat_7 - stat_8, label = 'Temperaturdifferenz Edelstahl')
 
-plt.xlabel('Zeit [s]')
-plt.ylabel('Temperatur [K]')
+plt.xlabel('Zeit/s')
+plt.ylabel('Temperatur/K')
 
 plt.legend()
 
@@ -69,8 +69,8 @@ plt.clf()
 plt.figure()
 plt.plot(t_stat, stat_2 - stat_1, label = 'Temperaturdifferenz Messing, breit')
 
-plt.xlabel('Zeit [s]')
-plt.ylabel('Temperatur [K]')
+plt.xlabel('Zeit/s')
+plt.ylabel('Temperatur/K')
 
 plt.legend()
 
@@ -149,8 +149,8 @@ plt.figure()
 plt.plot(t_dyn1, dyn1_1, label = 'fern')
 plt.plot(t_dyn1, dyn1_2, label = 'nah')
 
-plt.xlabel('Zeit [s]')
-plt.ylabel('Temperatur [K]')
+plt.xlabel('Zeit/s')
+plt.ylabel('Temperatur/K')
 plt.legend()
 
 #plt.grid()
@@ -161,8 +161,8 @@ plt.figure()
 plt.plot(t_dyn1, dyn1_4, label = 'fern')
 plt.plot(t_dyn1, dyn1_5, label = 'nah')
 
-plt.xlabel('Zeit [s]')
-plt.ylabel('Temperatur [K]')
+plt.xlabel('Zeit/s')
+plt.ylabel('Temperatur/K')
 plt.legend()
 
 #plt.grid()
