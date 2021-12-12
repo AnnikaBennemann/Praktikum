@@ -32,7 +32,7 @@ plt.grid()
 plt.legend(loc='best')
  
  
-plt.savefig('build/Entladekurve.pdf')
+plt.savefig('build/Entladekurve.pdf') 
 
 
 #bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
@@ -86,3 +86,16 @@ plt.legend(loc='best')
 
 plt.savefig('build/PhaseFrequenz.pdf')
 
+#polarplot
+print(U_c/U_0)
+A=U_c/9
+
+a = np.linspace(0,np.pi/2,200)
+plt.polar(phase/360*2*np.pi, A, 'rx', label='Messwerte')
+plt.polar(a, np.cos(a), 'k-', label='Theoriekurve')
+plt.legend(loc='best')
+plt.tight_layout
+
+
+
+plt.savefig('build/Polar.pdf')
