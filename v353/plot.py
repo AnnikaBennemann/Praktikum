@@ -89,10 +89,13 @@ plt.savefig('build/PhaseFrequenz.pdf')
 #polarplot
 print(U_c/U_0)
 A=U_c/9
-
+fig = plt.figure()
+ax = fig.add_subplot(111, polar=True)
 a = np.linspace(0,np.pi/2,200)
 plt.polar(phase/360*2*np.pi, A, 'rx', label='Messwerte')
 plt.polar(a, np.cos(a), 'k-', label='Theoriekurve')
+ax.set_thetamin(120)
+ax.set_thetamax(0)
 plt.legend(loc='best')
 plt.tight_layout
 
