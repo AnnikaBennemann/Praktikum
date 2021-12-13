@@ -43,7 +43,7 @@ die Frequenz wird auf \qty{110.7}{\hertz} eingestellt.
 \end{table}
 \end{minipage}
 
-\noindent Mit GLEICHUNG wird 
+\noindent Die Messwerte der Entladekurve dienen der Bestimmung der Zeitkonstante $RC$.  
 Hierzu wird mit dem Pythonmodul Matplotlib \cite{matplotlib} der Y-Achsenabschnitt und die Steigung der linearen Regression $y = a \cdot x + b$, 
 sowie die zugehörigen Fehler berechnet.\\
 \begin{figure}[H]
@@ -67,7 +67,7 @@ bestimmt.
 
 \subsection{Frequenzabhängige Amplitude und Phasenverschiebung} % (fold)
 \label{sub:Freque-A&P}
-
+Nach \autoref{sub:}
 \begin{table}[H]
   \centering
   \begin{tabular}{
@@ -96,7 +96,7 @@ bestimmt.
     20000  & 0.05 & 9.0  & 0.0125  \\
     \bottomrule
   \end{tabular}
-  \caption{ganz viel krams}
+  \caption{Messwerte der Kondensatorspannung und der angelegten Spannung, sowie der Abstand der Extrempunkte der Spannungskurven bei Variation der Frequenz.}
   \label{tab:Frequenz}
 \end{table}
 
@@ -120,22 +120,44 @@ bestimmt.
 \begin{align*}
   RC=(1.65 ± 0.25)\si{\milli\second}
 \end{align*}
-Keine Ahnung warum unsere werte so hässlich sind, vielleicht hätten wir das doch genauer ablesen sollen... Naja egal
 
 
 \begin{figure}[H]
   \centering
   \includegraphics{Polar.pdf}
-  \caption{bla.}
+  \caption{Polarplot der Messergebnisse, radial wird das Amplitudenverhältnis und im Polarwinkel die Phasenverschiebung dargestellt.}
   \label{fig:Polar_plot}
 \end{figure}
+In \autoref{fig:Polar_plot} wird der Zusammenhang zwischen Amplitundenverhältnis und Phase des RC-Kreises mit den vom Oszilloskop abgelesenen Messergebnissen (siehe \autoref{tab:Frequenz}) dargestellt.
+Dabei ist das Amplitudenverhältnis auf der radialen Achse und die Phasenverschiebung im Polarwinkel abgebildet.
  %subsection Frequenzabhängige Amplitude und Phasenverschiebung (end)
 
 \subsection{Ein RC-Kreis als Integrator} % (fold)
 \label{sub:Integrator}
 
+Die folgenden Abbildungen zeigen die aufgenommenen Spannungverläufe einer Sinus-, Rechteck-, und Dreieckspannung, sowie die jeweiligen Spannungsverläufe der Kondensatorspannung $U_C$.
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[width=4.5cm]{build/sinus.jpeg}
+		\caption{Sinusspannung.}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[width=4.5cm]{build/Rechteck.jpeg}
+		\caption{Rechteckspannung.}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[width=4.5cm]{build/Dreieck.jpeg}
+		\caption{Dreieckspannung.}
+	\end{subfigure}
+  \caption{Integration verschiedener Spannungsverläufe am RC-Kreis.}
+  \label{fig:Integration}
+\end{figure}
 % subsection Ein RC-Kreis eines Integrators (end)
 
 
 
-Siehe \autoref{fig:plot}!
+
