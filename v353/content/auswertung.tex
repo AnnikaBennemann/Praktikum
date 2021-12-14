@@ -48,18 +48,22 @@ Hierzu wird mit dem Pythonmodul Matplotlib \cite{matplotlib} der Y-Achsenabschni
 sowie die zugehörigen Fehler berechnet.\\
 \begin{figure}[H]
   \centering
-  \includegraphics{Entladekurve.pdf}
+  \includegraphics[scale=0.6]{Entladekurve.pdf}
   \caption{Logarithmierte Kondensatorspannung der Entladekurve gegenüber der Zeit.}
   \label{fig:Entladekurve_plot}
 \end{figure}
-Mit den Parametern der linearen Regression
+\noindent Mit den Parametern der linearen Regression
 \begin{align*}
 a &= (-0.99 ± 0.03)\si{\milli\second\tothe{-1}} \\
 b &= (2.82 ± 0.07)
 \end{align*}
-und \autoref{eqn:Zeitkonstante} wird die Zeitkonstante des Relaxationsverhaltens am RC-Kreis zu
+und 
+\begin{equation*}
+  RC= - \frac{1}{a}
+\end{equation*}
+wird die Zeitkonstante des Relaxationsverhaltens am RC-Kreis zu
 \begin{align*}
-  RC=(1.02 ± 0.03)\si{\milli\second}
+  RC_1=(1.02 ± 0.03)\si{\milli\second}
 \end{align*}
 bestimmt.
 
@@ -67,8 +71,10 @@ bestimmt.
 
 \subsection{Frequenzabhängige Amplitude und Phasenverschiebung} % (fold)
 \label{sub:Freque-A&P}
-Nach \autoref{sub:}
+\noindent Nach \autoref{sub:Freque_A&P_durch} wird eine Messung durchgeführt und die Messergebnisse in der folgenden Tabelle dargestellt.
 \begin{table}[H]
+  \caption{Messwerte der Kondensatorspannung und der angelegten Spannung, sowie der Abstand der Extrempunkte der Spannungskurven bei Variation der Frequenz.}
+  \label{tab:Frequenz}
   \centering
   \begin{tabular}{
     S[table-format=5.0] 
@@ -96,43 +102,44 @@ Nach \autoref{sub:}
     20000  & 0.05 & 9.0  & 0.0125  \\
     \bottomrule
   \end{tabular}
-  \caption{Messwerte der Kondensatorspannung und der angelegten Spannung, sowie der Abstand der Extrempunkte der Spannungskurven bei Variation der Frequenz.}
-  \label{tab:Frequenz}
 \end{table}
-
 \begin{figure}[H]
   \centering
-  \includegraphics{SpannungFrequenz.pdf}
+  \includegraphics[scale=0.6]{SpannungFrequenz.pdf}
   \caption{Spannungsverhältnis der Kondensatorspannung zur Generatorspannung gegenüber der Frequenz.}
   \label{fig:SpannungFrequenz_plot}
 \end{figure}
-
+\noindent Eine weitere Möglichkeit zur Bestimmung der Zeitkonstante $RC$ stellt \autoref{eqn:Amplitude} dar.
+Es wird ein Plot mit dem Verhältnis der Kondensatorspannung zur Generatorspannung erstellt und eine Regression nach \autoref{eqn:Amplitude} bestimmt.
+Die Zeitkonstante $RC$ ergibt sich demnach zu
 \begin{align*}
-  RC=(1.61 ± 0.06)\si{\milli\second}
+  RC_2=(1.61 ± 0.06)\si{\milli\second}.
 \end{align*}
 
 \begin{figure}[H]
   \centering
-  \includegraphics{PhaseFrequenz.pdf}
+  \includegraphics[scale=0.6]{PhaseFrequenz.pdf}
   \caption{Phasendifferenz der Kondensatorspannung zur Generatorspannung gegenüber der Frequenz.}
   \label{fig:PhaseFrequenz_plot}
 \end{figure}
+\noindent Eine dritte Möglichkeit der Bestimmung der Zeitkonstante besteht darin, die Phasendifferenz der Kurven und die zugehörigen Frequenzen in einem Plot gegeneinander
+aufzutragen. Außerdem wird eine Funktion der Regression nach \autoref{eqn:Phase_tan} eingefügt. Durch umstellen von \autoref{eqn:Phase_tan} kann die Zeitkonstante zu
 \begin{align*}
-  RC=(1.65 ± 0.25)\si{\milli\second}
+  RC_3=(1.65 ± 0.25)\si{\milli\second}
 \end{align*}
-
+bestimmt werden.
 
 \begin{figure}[H]
   \centering
-  \includegraphics{Polar.pdf}
+  \includegraphics[scale=0.6]{Polar.pdf}
   \caption{Polarplot der Messergebnisse, radial wird das Amplitudenverhältnis und im Polarwinkel die Phasenverschiebung dargestellt.}
   \label{fig:Polar_plot}
 \end{figure}
-In \autoref{fig:Polar_plot} wird der Zusammenhang zwischen Amplitundenverhältnis und Phase des RC-Kreises mit den vom Oszilloskop abgelesenen Messergebnissen (siehe \autoref{tab:Frequenz}) dargestellt.
-Dabei ist das Amplitudenverhältnis auf der radialen Achse und die Phasenverschiebung im Polarwinkel abgebildet.
+\noindent In \autoref{fig:Polar_plot} wird der Zusammenhang zwischen Amplitundenverhältnis und Phase des RC-Kreises mit den vom Oszilloskop abgelesenen Messergebnissen (siehe \autoref{tab:Frequenz}) dargestellt.
+Dabei ist das Amplitudenverhältnis auf der radialen Achse und die Phasenverschiebung im Polarwinkel abgebildet. Zu Referenzzwecken wird zusätzlich die Kosinusfunktion geplottet.
  %subsection Frequenzabhängige Amplitude und Phasenverschiebung (end)
 
-\subsection{Ein RC-Kreis als Integrator} % (fold)
+\subsection{RC-Kreis als Integrator} % (fold)
 \label{sub:Integrator}
 
 Die folgenden Abbildungen zeigen die aufgenommenen Spannungverläufe einer Sinus-, Rechteck-, und Dreieckspannung, sowie die jeweiligen Spannungsverläufe der Kondensatorspannung $U_C$.

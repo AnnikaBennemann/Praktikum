@@ -56,7 +56,7 @@ plt.plot(f, U_c/U_0,'rx', label='Messdaten')
 plt.plot(x, g(x,*params),'-', label='Fit')
 
 plt.xscale('log')
-plt.ylabel(r'$U_C \mathbin{/} U_0)$')
+plt.ylabel(r'$U_C \mathbin{/} U_0$')
 plt.xlabel(r'$f \mathbin{/} \si{\hertz}$')
 plt.grid()
 plt.legend(loc='best')
@@ -67,8 +67,8 @@ plt.savefig('build/SpannungFrequenz.pdf')
 
 
 def phi(f,AR,b):
-    return b*np.arctan(AR*2*np.pi*f)
-params, cov = curve_fit(phi,f,phase)
+    return b*np.arctan(-AR*2*np.pi*f)
+params, cov = curve_fit(phi,f,phase) 
 errors = np.sqrt(np.diag(cov))
 AR= ufloat(params[0], errors[0])*10**3
 
