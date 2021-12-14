@@ -1,2 +1,31 @@
 \section{Diskussion}
 \label{sec:Diskussion}
+\subsection{Bestimmung der Zeitkonstante} % (fold)
+\label{sub:Bestimmung der Zeitkonstante}
+Aus den drei Möglichkeiten zur Bestimmung der Zeitkonstante des Relaxationsverhalten des RC-Kreises folgen drei verschiedene Werte (siehe \autoref{sec:Auswertung}.).
+\begin{align*}
+    RC_1=&(1.02 ± 0.03)\si{\milli\second}\\
+    RC_2=&(1.61 ± 0.06)\si{\milli\second}\\
+    RC_3=&(1.65 ± 0.25)\si{\milli\second}
+\end{align*}
+
+Die Werte weichen nur wenig von einander ab. Die kleinste Abweichung, von $RC_2$ zu $RC_3$, beträgt $\qty{2.4}{\percent}$ und die größte Abweichung
+liegt mit $\qty{38.2}{\percent}$ zwischen $RC_1$ und $RC_3$.
+Anhand der Abbildungen in \autoref{sec:Auswertung} und den daraus berechneten Fehlern der Werte, lässt sich folgern, dass die Bestimmung der Zeitkonstante über die Entladekurve,
+sowie über den Zusammenhang von der Frequenz und dem Verhältnis der Spannungen weniger fehlerbehaftet ist, als über den Zusammenhang von Phase und Frequenz der Schwingung.
+Daraus lässt sich schließen, dass die reale Zeitkonstante in einer Umgebung von $RC_1$ und $RC_2$ liegt.
+Die Abweichungen von den Regressionsfunktionen können zum Beispiel durch das manuelle Ablesen der Werte aus der Entladekurve in der ersten Messung entstehen.
+Dies wird in der nachfolgenden Messung durch das maschinelle Auswerten der Kurven durch Python vermindert. 
+Weitere Messungenauigkeiten lassen sich auf die Ungenauigkeiten der verwendeten Geräte bzw. Bauteile erklären, wie zum Beispiel den Innenwiderstand der
+verwendeten Kabel.
+
+\subsection{RC-Kreis als Integrator} % (fold)
+\label{sub:RC-Kreis als Integrator}
+In \autoref{fig:Integration} ist zu sehen, dass die angelegten Spannungen durch den RC-Kreis integriert werden.
+So ensteht bei einer angelegten Sinusspannung am Kondensator eine Kosinusspannung. Dies bestätigt auch den in \autoref{fig:Polar_plot} zu sehenden
+Zusammenhang zwischen Amplitude und Phase der Schwingung. So ist dort das Verhältnis $U_C/U_0$ gleich dem Kosinus der Phasenverschiebung.
+Weiter bildet sich bei einer angelegten Rechteckspannung eine Dreieckspannung am Kondensator aus und bei einer angelegten Dreieckspannung
+erscheint die Kondensatorspannung in paraboloider Kurvenform auf dem Oszilloskop, was auch zu erwarten war.
+Somit lässt sich folgern, dass ein RC-Kreis sich unter den gegebenen Bedingungen optimal als Integrator eignet.
+Die genauen Werte aus \autoref{fig:Integration} lassen sich nicht mit den Messungen zuvor vergleichen, da für diese ein anderes Oszilloskop verwendet wurde.
+
