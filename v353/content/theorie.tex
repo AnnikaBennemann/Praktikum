@@ -18,7 +18,7 @@ Als Beispiel für das Relaxationsphänomen kann die Schaltung in \autoref{fig:Ko
     \centering
     \includegraphics[width=0.5\textwidth]{build/Abb_1.pdf}
     \caption {Auf- und Endladung eines Kondensators über einen Widerstand.\cite{V353}}
-    \label{fig:Freque_A&P_durch}
+    \label{fig:Kondensator}
 \end{figure}
 \noindent Diese stellt die Auf- und Entladung des Kondensators über einen Widerstand dar.
 Die Aufladevorgang beginnt beginnt, wenn der Schalter auf Position $2$ gestellt wird und der Entladevorgang beginnt, wenn der Schalter auf Position $1$ steht.
@@ -49,13 +49,13 @@ Der zeitliche Verlauf der Ladung lässt sich darstellen durch
 \label{sub:Aufladevorgang}
 Beim Aufladevorgang müssen die Randbedingungen
 \begin{align}
-    Q(0)&=0 &\text{und}& Q(\infty)=CU_0
+    Q(0)&=0 &\text{und}&& Q(\infty)=CU_0
 \end{align}
 gelten. Der Aufladevorgang kann dann durch die Gleichung
 \begin{equation}
     Q(t)= CU_0\Bigl(1-e^{\frac{-t}{RC}}\Bigr)
 \end{equation}
-dargestellt werden. Die Zeitkonstante ist auch hier wieder $RC$.
+dargestellt werden. Die Zeitkonstante wird auch hier wieder durch $RC$ ausgedrückt.
 Sie ist ein Maß für die Geschwindigkeit, mit der das System seinem Endzustand (hier Q(\infty)) entgegen strebt.
 Die Ladung auf dem Kondensator ändert sich um den Faktor
 \begin{equation}
@@ -71,7 +71,7 @@ und für den Zeitraum $\Delta T = RC$ gilt
 
 \subsection{Relaxationsphänomen bei einer periodischen Auslenkung} % (fold)
 \label{sub:Rela_peri}
-Ein weiteres Relaxationsphänomen ist zum Beispiel auch bei einer periodischen Auslenkung zu beobachten. Dies kann auch mit einem RC-Kreis untersucht werden.
+Ein weiteres Relaxationsphänomen ist zum Beispiel bei einer periodischen Auslenkung zu beobachten. Dieses kann auch mit einem RC-Kreis untersucht werden.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{build/Abb_2.pdf}
@@ -83,9 +83,9 @@ Ein weiteres Relaxationsphänomen ist zum Beispiel auch bei einer periodischen A
     U(t) = U_0 \text{cos}(\omega t)
     \label{eqn:Wechselspannung}
 \end{equation}
-angelegt mit einer Kreisfrequenz $\omega=2\pi f$.
-Das Verhalten des RC-Kreises ist abhängig von der Frequenz, so gilt, dass für $\omega << \frac{1}{RC}$ die Kondensatorspannung $U_C$ ungefähr die Wechselspannung $U(t)$ am Generator ist.
-Bei zunehmender Frequenz kommt es zu einer Phasenverschiebung $\phi$ zwischen den Spannung, wobei die Generatorspannung vor der Kondensatorspannung läuft.
+mit einer Kreisfrequenz $\omega=2\pi f$ angelegt.
+Das Verhalten des RC-Kreises ist abhängig von der Frequenz, so gilt, dass für $\omega << \frac{1}{RC}$ die Kondensatorspannung $U_C$ ungefähr der Wechselspannung $U(t)$ am Generator entspricht.
+Bei zunehmender Frequenz kommt es zu einer Phasenverschiebung $\phi$ zwischen den Spannungen, wobei die Generatorspannung der Kondensatorspannung vor läuft.
 Dies liegt daran, dass der Auflade- und Entladevorgang zu langsam wird und der Kondensator nicht komplett aufgeladen werden kann. 
 Dadurch wird die Amplitude
 \begin{equation}
@@ -93,24 +93,25 @@ Dadurch wird die Amplitude
     \label{eqn:Amplitude}
 \end{equation}
 kleiner.\\
-\noindent Die Phasenverschiebung nähert sich bei zunehmender Frequenz sich einem Wert von $\phi =\frac{\pi}{2}$ an und bei niedrigen Frequenzen geht sie gegen $0$.
+\noindent Die Phasenverschiebung nähert sich bei zunehmender Frequenz einem Wert von $\phi =\frac{\pi}{2}$ an und bei niedrigen Frequenzen geht sie gegen $0$.
 Sie kann auch beschrieben werden durch
 \begin{equation}
     \phi(\omega) = \text{arctan}(-\omega RC).
+    \label{eqn:arctan}
 \end{equation}
 % subsection Relaxationsphänomen bei einer periodischen Auslenkung (end)
 
 \subsection{RC-Kreis als Integrator} % (fold)
 \label{sub:Integrator4}
-Ein RC-Kreis kann außerdem eine zeitlich veränderliche Spannung unter bestimmten Voraussetzungen zu integrieren.
-So gilt, dass wenn die Frequenz $\omega >> \frac{1}{RC}$ ist, dann ist $U_C$ proportional zu $\int U(t)dt$.
+Ein RC-Kreis kann eine zeitlich veränderliche Spannung unter bestimmten Voraussetzungen integrieren.
+So gilt, dass wenn die Frequenz $\omega >> \frac{1}{RC}$ beträgt, $U_C$ proportional zu $\int U(t)dt$ ist.
 Wenn die Voraussetzungen
 \begin{align*}
-    \omega&>>\frac{1}{RC}&\lvert U_C\rvert&<< \lvert U_R\rvert & \lvert U_C\rvert &<< \lvert U\rvert
+    \omega&>>\frac{1}{RC},&\lvert U_C\rvert&<< \lvert U_R\rvert &\text{und}&& \lvert U_C\rvert &<< \lvert U\rvert
 \end{align*}
 gelten, dann kann näherungsweise
 \begin{align}
-    U(t) &= R\,C \,\frac{dU_C}{dt} &\text{oder} & U_C(t) = \frac{1}{RC} \int^t_0 U(t') dt'
+    U(t) &= R\,C \,\frac{dU_C}{dt} &\text{oder} && U_C(t)&= \frac{1}{RC} \int^t_0 U(t') dt'
 \end{align}
 geschrieben werden.
 % subsection  (end)

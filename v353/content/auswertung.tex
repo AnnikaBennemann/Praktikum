@@ -46,7 +46,7 @@ die Frequenz wird auf \qty{110.7}{\hertz} eingestellt.
 \noindent Die Messwerte der Entladekurve dienen der Bestimmung der Zeitkonstante $RC$.  
 Hierzu wird mit dem Pythonmodul Matplotlib \cite{matplotlib} der Y-Achsenabschnitt und die Steigung der linearen Regression $y = a \cdot x + b$, 
 sowie die zugehörigen Fehler berechnet.\\
-Auch im Folgenden werden zur Berechnung der Werte und Fehler und zum Erstellen der Plots die Pythonmodule Matplotlib, Uncertainties \cite{uncertainties}
+Auch im Folgenden werden zur Berechnung der Werte und Fehler und zum Erstellen der Plots die Pythonmodule Matplotlib \cite{matplotlib}, Uncertainties \cite{uncertainties}
 Numpy \cite{numpy} und Scipy \cite{scipy} verwendet.
 \begin{figure}[H]
   \centering
@@ -121,7 +121,7 @@ Die Zeitkonstante $RC$ ergibt sich demnach zu
   \label{fig:PhaseFrequenz_plot}
 \end{figure}
 \noindent Eine dritte Möglichkeit der Bestimmung der Zeitkonstante besteht darin, die Phasendifferenz der Kurven und die zugehörigen Frequenzen in einem Plot gegeneinander
-aufzutragen. Außerdem wird eine Funktion der Regression nach \autoref{eqn:Phase_tan} eingefügt. Durch umstellen von \autoref{eqn:Phase_tan} kann die Zeitkonstante zu
+aufzutragen. Außerdem wird eine Funktion der Regression nach \autoref{eqn:arctan} eingefügt. Durch umstellen von \autoref{eqn:arctan} kann die Zeitkonstante zu
 \begin{align*}
   RC_3=(1.65 ± 0.25)\si{\milli\second}
 \end{align*}
