@@ -46,24 +46,22 @@ die Frequenz wird auf \qty{110.7}{\hertz} eingestellt.
 \noindent Die Messwerte der Entladekurve dienen der Bestimmung der Zeitkonstante $RC$.  
 Hierzu wird mit dem Pythonmodul Matplotlib \cite{matplotlib} der Y-Achsenabschnitt und die Steigung der linearen Regression $y = a \cdot x + b$, 
 sowie die zugehörigen Fehler berechnet.\\
+Auch im Folgenden werden zur Berechnung der Werte und Fehler und zum Erstellen der Plots die Pythonmodule Matplotlib, Uncertainties \cite{uncertainties}
+Numpy \cite{numpy} und Scipy \cite{scipy} verwendet.
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.6]{Entladekurve.pdf}
+  \includegraphics[scale=0.7]{Entladekurve.pdf}
   \caption{Logarithmierte Kondensatorspannung der Entladekurve gegenüber der Zeit.}
   \label{fig:Entladekurve_plot}
 \end{figure}
 \noindent Mit den Parametern der linearen Regression
 \begin{align*}
 a &= (-0.99 ± 0.03)\si{\milli\second\tothe{-1}} \\
-b &= (2.82 ± 0.07)
-\end{align*}
-und 
-\begin{equation*}
-  RC= - \frac{1}{a}
-\end{equation*}
-wird die Zeitkonstante des Relaxationsverhaltens am RC-Kreis zu
-\begin{align*}
-  RC_1=(1.02 ± 0.03)\si{\milli\second}
+b &= (2.82 ± 0.07)\\
+\shortintertext{und}
+RC&= - \frac{1}{a}\\
+\intertext{wird die Zeitkonstante des Relaxationsverhaltens am RC-Kreis zu}
+RC_1&=(1.02 ± 0.03)\si{\milli\second}
 \end{align*}
 bestimmt.
 
@@ -105,7 +103,7 @@ bestimmt.
 \end{table}
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.6]{SpannungFrequenz.pdf}
+  \includegraphics[scale=0.7]{SpannungFrequenz.pdf}
   \caption{Spannungsverhältnis der Kondensatorspannung zur Generatorspannung gegenüber der Frequenz.}
   \label{fig:SpannungFrequenz_plot}
 \end{figure}
@@ -118,7 +116,7 @@ Die Zeitkonstante $RC$ ergibt sich demnach zu
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.6]{PhaseFrequenz.pdf}
+  \includegraphics[scale=0.7]{PhaseFrequenz.pdf}
   \caption{Phasendifferenz der Kondensatorspannung zur Generatorspannung gegenüber der Frequenz.}
   \label{fig:PhaseFrequenz_plot}
 \end{figure}
@@ -131,7 +129,7 @@ bestimmt werden.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.6]{Polar.pdf}
+  \includegraphics[scale=0.8]{Polar.pdf}
   \caption{Polarplot der Messergebnisse, radial wird das Amplitudenverhältnis und im Polarwinkel die Phasenverschiebung dargestellt.}
   \label{fig:Polar_plot}
 \end{figure}
