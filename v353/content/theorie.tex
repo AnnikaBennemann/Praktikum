@@ -30,6 +30,7 @@ Der Entladevorgang beginnt, wenn sich auf dem Kondensator die Ladung $Q$ befinde
 Dann liegt zwischen den Platten die Spannung
 \begin{equation}
     U_C = \frac{Q}{C}
+    \label{eqn:Kondensatorspannung}
 \end{equation}
 an und nach dem Ohmschen Gesetzt ergibt dies den Strom
 \begin{equation}
@@ -38,6 +39,7 @@ an und nach dem Ohmschen Gesetzt ergibt dies den Strom
 Der zeitliche Verlauf der Ladung lässt sich darstellen durch
 \begin{equation}
     Q(t) = Q(0) e^{\frac{-1}{RC}}
+    \label{eqn:Ladung_zeitlich}
 \end{equation}
 ,wobei $RC$ eine Zeitkonstante ist, die im nächsten Kapitel näher erläutert wird.
 % subsection Entladevorgang (end)
@@ -69,11 +71,47 @@ und für den Zeitraum $\Delta T = RC$ gilt
 
 \subsection{Relaxationsphänomen bei einer periodischen Auslenkung} % (fold)
 \label{sub:Rela_peri}
-
+Ein weiteres Relaxationsphänomen ist zum Beispiel auch bei einer periodischen Auslenkung zu beobachten. Dies kann auch mit einem RC-Kreis untersucht werden.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{build/Abb_2.pdf}
+    \caption {Beispiel für eine Schaltung zur Diskussion von Relaxationsphänomen unter periodischen Auslenkung.\cite{v353}}
+    \label{fig:Abb_2}
+\end{figure}
+\noindent Es wird eine Schaltung wie in \autoref{fig:Abb_2} aufgebaut und eine Wechselspannung
+\begin{equation}
+    U(t) = U_0 \text{cos}(\omega t)
+    \label{eqn:Wechselspannung}
+\end{equation}
+angelegt mit einer Kreisfrequenz $\omega=2\pi f$.
+Das Verhalten des RC-Kreises ist abhängig von der Frequenz, so gilt, dass für $\omega << \frac{1}{RC}$ die Kondensatorspannung $U_C$ ungefähr die Wechselspannung $U(t)$ am Generator ist.
+Bei zunehmender Frequenz kommt es zu einer Phasenverschiebung $\phi$ zwischen den Spannung, wobei die Generatorspannung vor der Kondensatorspannung läuft.
+Dies liegt daran, dass der Auflade- und Entladevorgang zu langsam wird und der Kondensator nicht komplett aufgeladen werden kann. 
+Dadurch wird die Amplitude
+\begin{equation}
+    \frac{A(\omega)}{U_0} = \frac{1}{\sqrt{1+\omega^2R^2C^2}}
+    \label{eqn:Amplitude}
+\end{equation}
+kleiner.\\
+\noindent Die Phasenverschiebung nähert sich bei zunehmender Frequenz sich einem Wert von $\phi =\frac{\pi}{2}$ an und bei niedrigen Frequenzen geht sie gegen $0$.
+Sie kann auch beschrieben werden durch
+\begin{equation}
+    \phi(\omega) = \text{arctan}(-\omega RC).
+\end{equation}
 % subsection Relaxationsphänomen bei einer periodischen Auslenkung (end)
 
 \subsection{RC-Kreis als Integrator} % (fold)
 \label{sub:Integrator4}
-
+Ein RC-Kreis kann außerdem eine zeitlich veränderliche Spannung unter bestimmten Voraussetzungen zu integrieren.
+So gilt, dass wenn die Frequenz $\omega >> \frac{1}{RC}$ ist, dann ist $U_C$ proportional zu $\int U(t)dt$.
+Wenn die Voraussetzungen
+\begin{align*}
+    \omega&>>\frac{1}{RC}&\lvert U_C\rvert&<< \lvert U_R\rvert & \lvert U_C\rvert &<< \lvert U\rvert
+\end{align*}
+gelten, dann kann näherungsweise
+\begin{align}
+    U(t) &= R\,C \,\frac{dU_C}{dt} &\text{oder} & U_C(t) = \frac{1}{RC} \int^t_0 U(t') dt'
+\end{align}
+geschrieben werden.
 % subsection  (end)
 
