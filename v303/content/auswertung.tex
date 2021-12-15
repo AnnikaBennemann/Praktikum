@@ -1,6 +1,44 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+\subsection{Phasenabhängigkeit der Spannung} % (fold)
+\label{sub:Phasenabhängigkeit der Spannung}
+
+
+Am Reference Ausgang des Oszillators ist eine variable Spannung abzugreifen. Am Oszillator Ausgang des Oszillators kann hingegen eine Spannung von $\qty{32}{\volt}$
+am Oszilloskop abgelesen werden.
+Dieser Wert dient als Referenzwert für $U_{out}$ in den folgenden Messungen.
+
+
+Einstellungen am Lock-In-Verstärker: Gain am Preamplifier: 20
+\begin{figure}
+  \centering
+  \includegraphics{build/plot1.pdf}
+  \caption{Spannungsverlauf am Oszilloskop, in Abhängigkeit von der Phase bei der Messung ohne Noise Generator}
+  \label{fig:plot1}
+\end{figure}
+Uout= 3.2+/-0.8
+b= 1.10+/-0.15
+c= 0.2+/-0.5
+
+
+Einstellungen am Lock-In-Verstärker: Gain am Preamplifier: 50
+Noise Amplitude $10^-3$
+Signal Attentuator $10^-5$
+
+\begin{figure}
+  \centering
+  \includegraphics{build/plot2.pdf}
+  \caption{Spannungsverlauf am Oszilloskop, in Abhängigkeit von der Phase bei der Messung mit zwischengeschaltetem Noise Generator}
+  \label{fig:plot2}
+\end{figure}
+
+Uout= 3.4+/-0.6
+b= 1.02+/-0.13
+c= 0.3+/-0.4
+
+\subsection{Rauschunterdrückung bei einer Photodetektorschaltung} % (fold)
+\label{sub:Rauschunterdrückung bei einer Photodetektorschaltung}
 
 
 \begin{table}[H]
@@ -42,34 +80,12 @@
     \bottomrule
   \end{tabular}
   \caption{Messwerte der Spannung am Photodetektor, sowie Abstand der LED vom Detektor.}
-  \label{tab:Entladekurve}
+  \label{tab:Diode}
 \end{table}
-
-\begin{figure}
-  \centering
-  \includegraphics{build/plot1.pdf}
-  \caption{Plot.}
-  \label{fig:plot1}
-\end{figure}
-Uout= 3.2+/-0.8
-b= 1.10+/-0.15
-c= 0.2+/-0.5
-\begin{figure}
-  \centering
-  \includegraphics{build/plot2.pdf}
-  \caption{Plot.}
-  \label{fig:plot2}
-\end{figure}
-
-Uout= 3.4+/-0.6
-b= 1.02+/-0.13
-c= 0.3+/-0.4
-
-
 \begin{figure}
   \centering
   \includegraphics{build/plot3.pdf}
-  \caption{Plot.}
+  \caption{Spannungsverlauf am Oszilloskop, in Abhängigkeit vom Abstand der LED zum Photodetektor}
   \label{fig:plot3}
 \end{figure}
 
@@ -77,4 +93,3 @@ Regression mit der Funktion $a \cdot \frac{1}{x} +b$ durchgeführt, allerdings e
 a= (3.10+/-0.10)e+03
 b= -20.1+/-1.7
 
-Siehe \autoref{fig:plot}!

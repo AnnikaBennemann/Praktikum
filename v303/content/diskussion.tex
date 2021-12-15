@@ -1,2 +1,27 @@
 \section{Diskussion}
 \label{sec:Diskussion}
+
+Der Referenzwert für $U_{out}$ beträgt $\qty{32}{\volt}$.
+Die aus den Messungen bestimmten Werte für $U_out$ betragen
+\begin{align*}
+    U_{out} &= 3.2 \pm 0.8 \si{\volt}\\
+    \intertext{für die Messung ohne Noise-Generator und}
+    U_{out} &= 3.4 \pm 0.6 \si{\volt}
+\end{align*}
+für die Messung mit zwischengeschaltetem Noise-Generator.
+Die Messwert weichen um eine Größenordnung vom Referenzwert ab. Daraus lässt sich folgern, dass der Referenzwert eventuell falsch abgelesen wurde.
+Eine andere Fehlerquelle stellt das Oszilloskop dar. Die Bildschirmfotos stellen nur eine Momentaufnahme der teilweise stark flackernden und schwankenden 
+Amplituden dar. Die Werte der Amplituden können somit stark fehlerbehaftet sein. Normalerweise sollte die Kurve bei der Messung ohne Noise-Generator nicht
+schwanken.
+
+Da die Kurven in \autoref{fig:plot1} und \autoref{fig:plot2} sehr ähnlich verlaufen und die Werte für $U_{out}$ nur um $\qty{0.2}{\volt}$ voneinander abweichen,
+lässt sich schließen, dass ein Lock-In-Verstärker gut geeignet ist um verrauschte Signale zu bereinigen und zu vermessen.
+
+
+In \autoref{fig:plot3} ist zu sehen, dass die Lichtintensität der Diode mit dem Faktor $\frac{1}{x}$ abnimmt, obwohl das Eingangssignal durch Umgebungslicht verrauscht wird, was auch zu erwarten war.
+Die auf dem Photodetektor detektierte Spanung wird jedoch auch in großem Abstand der Diode nicht null, da der Raum in dem die Messung stattfand nicht komplett dunkel war.
+Ab einem Abstand von $\qty{130}{\centi\meter}$ ändert sich die detektierte Spannung jedoch nicht mehr, sodass dies als maximaler Abstand angenommen werden kann
+bis zu dem das Licht der Diode vom Detektor erfasst werden kann.
+Bis zu einem Abstand von $\qty{25}{\centi\meter}$ fallen die Werte nicht mit einem Faktor $\frac{1}{x}$. Dies kann darauf zurückzuführen sein,
+dass die LED nicht exakt so ausgerichtet ist, dass das Licht senkrecht zum Detektor auftrifft. Dies scheint mit zunehmendem Abstand geringere Auswirkungen
+zu haben. Der Lichtstrahl der LED scheint also nicht sehr stark gebündelt zu sein.
