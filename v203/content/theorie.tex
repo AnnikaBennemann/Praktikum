@@ -16,7 +16,7 @@ Ein Beispiel für die Phase sind die Aggregatzustände (fest, flüssig und gasf�
     \caption {Qualitatives Zustandsdiagramm von Wasser.\cite{v203}}
     \label{fig:Abb_1}
 \end{figure}
-\noindent In \autoref{fig:Abb_1} ist ein Zustandsdiagramm von Wasser zu sehen, wobei der Druck $p$ gegen die Temperatur $T$ aufgetragen ist.
+In \autoref{fig:Abb_1} ist ein Zustandsdiagramm von Wasser zu sehen, wobei der Druck $p$ gegen die Temperatur $T$ aufgetragen ist.
 Die Aggregatzustände sind voneinander in "Bereiche" abgegrenzt, wobei jeder Bereich die zwei Freiheitsgerade $p$ und $T$ besitzen.
 Dies verändert sich jedoch in der Nähe der Kurven. 
 Bei dem Trippelpunkt $TP$ gibt es keinen Freiheitsgerad, weil alle drei Aggregatzustände koexistieren.
@@ -53,5 +53,47 @@ Sie wird durch einen reversiblen Kreisprozess gewonnen, bei dem erst ein Mol ein
     \caption {Kreisprozess im pV-Diagramm, bei dem ein Stoff verdampft und wieder kondensiert.\cite{v203}}
     \label{fig:Abb_2}
 \end{figure}
-\noindent Ein Beispiel für so ein Kreisprozess ist 
+Ein Beispiel für so ein Kreisprozess ist in \autoref{fig:Abb_2} dargestellt und der Startzustand ist bei A, bei dem nur Flüssigkeit vorhanden ist.
+Es wird eine Wärmemenge $dQ_{AB}$ zugeführt, weshalb der Druck und die Temperatur erhöht wird und es somit in den Zustand B übergeht.
+Um in Zustand C zu gelangen, wird die Flüssigkeit isotherm und isobar verdampft, nachdem die Verdampfungswärme $L$ hinzugeführt wird.
+In diesem Zustand ist nur Dampf vorhanden mit dem Volumen $V_D$.
+Der vorliegende Dampf wird abgekühlt auf die Temperatur $T$, sodass Zustand D erreicht wird.
+Durch Zufuhr mechanischer Energie kondensiert der Dampf und der Augsgangszustand A wird erreicht.
+Die summierte Wärmemenge ergibt sich zu
+\begin{equation}
+    dQ_{ges} = C_F dT \,-\, C_D dt \,+\, L(T) \,+\, dL \,-\, L(T),
+    \label{eqn:Wärmemenge}
+\end{equation}
+wobei $C_F$ die Molwärme der Flüssigkeit ist und $C_D$ die Molwärme des dampfes ist.
+Die Wärmemenge wird gleichgesetzt mit der ganzen geleisteten Arbeit
+\begin{equation}
+    A = dp(V_D-V_F)
+    \label{eqn:Arbeit}
+\end{equation}
+und dies wird umgeformt zu
+\begin{equation}
+    (V_D\,-\,V_F)dp = \frac{L}{T}dt .
+    \label{eqn:CC-Gl}
+\end{equation}
+Diese Gleichung wird auch Clausius-Clapeyronsche Gleichung genannt. 
+Die Integration ist kompliziert, jedoch können es in manchen Temperaturbereichen Nähreungsannamen getroffen werden, sodass die Integration leicht möglich ist.
+Diese werden im nächsten Kapitel benannt.
+
 % subsection CC-Gl (end)
+
+\subsection{Annahmen zur Vereinfachung der Integration} % (fold)
+\label{sub:Vereinfachung}
+Die Temperatur $T$ liegt weit unter der kritischen Temperatur $T_{Kr}$ und $V_F$ ist gegenüber $V_D$ vernachlässigbar.
+Wobei $V_D$ der idealen Gasgleichung
+\begin{equation*}
+    V_D(p,T) = R\frac{T}{p}
+\end{equation*}
+gehorcht.
+Eine weitere Annahmen ist, dass $L$ druck- und temperaturabhängig ist. 
+Unter diesen Annahmen kann \autoref{eqn:CC-Gl} umgeformt werden und nach Integration fo,gt daraus
+\begin{align}
+    \text{ln}(p) &= -\frac{L}{RT}+const &\text{oder} && p=p_0 \text{exp}(-\frac{L}{RT})
+    \label{eqn:CC-Gl_2}
+\end{align}
+% subsection Annahmen zur Vereinfachung der Integration (end)
+ 
