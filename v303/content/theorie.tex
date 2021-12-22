@@ -4,8 +4,6 @@ Ziel dieses Versuch ist es den Lock-In-Verstärker und dessen Funktionsweise zu 
 
 \section{Theorie}
 \label{sec:Theorie}
- \subsection{Allgemein} % (fold)
- \label{sub:Allgemein}
  Der Lock-In-Verstärker ist, wie der Name schon sagt, ein Verstärker, in dem ein phasenempfindlicher Detektor integriert ist.
  Er wird hauptsächlich für die Messung verrauschter Signale benutzt, wobei das Messsignal mit einem Referenzsignal $\omega_0$ moduliert wird.
  \begin{figure}[H]
@@ -15,9 +13,24 @@ Ziel dieses Versuch ist es den Lock-In-Verstärker und dessen Funktionsweise zu 
     \label{fig:Abb_1}
 \end{figure}
 Im Folgenden wir der Lock-In-Verstärker schematisch mit \autoref{fig:Abb_2} erklärt.
-Das Nutzsignal $U_sig$, was moduliert und verrauscht ist, wird durch ein Bandpassfilter zu einem Mischer geleitet.
+Das Nutzsignal $U_{sig}$, was moduliert und verrauscht ist, wird durch ein Bandpassfilter zu einem Mischer geleitet.
 Der Bandpassfilter befreit das Signal von Frequnezen, die viel größer sind als die Referenzfrequenz $(\omega >> \omega_0)$ und die viel kleiner $(\omega << \omega_0)$ sind.
 Außerdem wird eine Referenzsignal $U_ref$ durch einen Phasenschieber zum Mischer geleitet.
 Mit dem Phasenschieber kann die Phase des Referenzsignals variiert werden und mit dem Nutzsignal synchronisiert werden.
- 
- % subsection Allgemein (end)
+Die beiden Spannungen werden im Mischer mit der Frequenz $\omega_0$ multipliziert und es entsteht eine Mischsignal $U_{sig} \texttimes U_{ref}$.
+Dieses wird im nachgeschalteten Tiefpassfilter über mehrer Perioden der Modulationsfrequenz integriert, sodass Rauschbeiträge herausgemittelt werden, die nicht zur Modulationsfrequenz synchronisiert sind.
+Durch diesen Aufbau kann eine Güte von $Q = 10^6$ erreicht werden, wobei ein normaler Bandpass im vergleich eine Güte von $Q=10^3$ erreicht.\\
+Im allgemeinen wird das Referenzsignal $U_{ref}$ als Rechecktspannung realisiert, was durch eine Fourier-Reihe angenähert werden kann zu
+\begin{equation}
+    U_{ref} =\frac{4}{\pi}\Bigl( \text{sin}(\omega t) + \frac{1}{3}\text{sin}(3\omega t) + \frac{1}{5}\text{sin}(5\omega t) + ... \Bigr).
+    \label{eqn:Referenzsignal}
+\end{equation}
+Zusammen mit dem sinusförmigen Nutzsignal
+\begin{equation}
+    U_{sig} = U_0 \text{sin}(\omega t)
+    \label{eqn:Nutzsignal}
+\end{equation}
+ergibt sich das Produkt
+\begin{equation}
+    U_{sig} \texttimes U_{ref}
+\end{equation}
