@@ -1,0 +1,37 @@
+\section{Fehlerrechnung}
+\label{sec:Fehlerrechnung}
+
+Der Mittelwert wird durch die Formel
+\begin{align*}
+    \bar{x}=\frac{1}{n} \sum_{i=1}^n x_i \label{eqn:Mittelwert}
+\end{align*}
+berechnet.
+
+Der Fehler des Mittelwerts bzw. die Standardabweichung ergibt sich durch
+\begin{align*}
+    s_i=\sqrt{\frac{1}{n-1}\sum_{j=1}^n (v_j-\bar{v_i})^2}.
+\end{align*}
+
+Wird mit fehlerbehafteten Größen weiter gerechnet, muss der Fehler des Ergebnisses mit der Fehlerfortpflanzung nach Gauß
+\begin{equation*}
+    \Delta f=\sqrt{\sum_{j=1}^n \left(\frac{\partial f}{\partial x_j}\Delta x_j \right)^{2} }\label{eqn:Gauß}
+\end{equation*}
+bestimmt werden.
+
+Mit Hilfe der linearen Regression 
+\begin{align*}
+    y(x)=&A+B\cdot x\\\label{eqn:lin}
+    \intertext{werden Ausgleichsgeraden zu den Messwerten erstellt. Die Parameter der Ausgleichsgeraden berechnen sich zu}
+    A&=\overline{y}-B\cdot \overline{x}\\
+    B&=\frac{\overline{xy}-\overline{x}\cdot \overline{y}}{\overline{x^2}-\overline{x}^2}.
+\end{align*}
+
+Abweichungen von den Theoriewerten werden mit der Formel
+\begin{align}
+  a=\frac{|a_\mathrm{gemessen}-a_\mathrm{theorie}|}{a_\mathrm{theorie}} \label{eqn:abweich}
+\end{align}
+berechnet.
+
+Die Berechnungen der Mittelwerte, Standardabweichungen, sowie der weiteren Fehler und die Ausgleichsgeraden der linearen Regression und weiteren Funtionen
+wird im folgenden mit Hilfe von Python \cite{python} und den Pythonmodulen Matplotlib \cite{matplotlib}, Scipy \cite{scipy}, Uncertainties \cite{unceratainties} und Numpy \cite{numpy}
+durchgeführt.
