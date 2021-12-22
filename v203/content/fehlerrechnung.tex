@@ -19,12 +19,15 @@ Wird mit fehlerbehafteten Größen weiter gerechnet, muss der Fehler des Ergebni
 bestimmt werden.
 
 Mit Hilfe der linearen Regression 
-\begin{align*}
-    y(x)=&A+B\cdot x\\\label{eqn:lin}
+\begin{subequations}
+    \label{eqn:lin}
+\begin{align}
+    y(x)=&A+B\cdot x\\
     \intertext{werden Ausgleichsgeraden zu den Messwerten erstellt. Die Parameter der Ausgleichsgeraden berechnen sich zu}
-    A&=\overline{y}-B\cdot \overline{x}\\
-    B&=\frac{\overline{xy}-\overline{x}\cdot \overline{y}}{\overline{x^2}-\overline{x}^2}.
-\end{align*}
+    A&=\overline{y}-B\cdot \overline{x}\label{eqn:lina}\\
+    B&=\frac{\overline{xy}-\overline{x}\cdot \overline{y}}{\overline{x^2}-\overline{x}^2}\label{eqn:linb}.
+\end{align}
+\end{subequations}
 
 Abweichungen von den Theoriewerten werden mit der Formel
 \begin{align}
@@ -33,5 +36,5 @@ Abweichungen von den Theoriewerten werden mit der Formel
 berechnet.
 
 Die Berechnungen der Mittelwerte, Standardabweichungen, sowie der weiteren Fehler und die Ausgleichsgeraden der linearen Regression und weiteren Funtionen
-wird im folgenden mit Hilfe von Python \cite{python} und den Pythonmodulen Matplotlib \cite{matplotlib}, Scipy \cite{scipy}, Uncertainties \cite{unceratainties} und Numpy \cite{numpy}
+wird im folgenden mit Hilfe von Python und den Pythonmodulen Matplotlib \cite{matplotlib}, Scipy \cite{scipy}, Uncertainties \cite{uncertainties} und Numpy \cite{numpy}
 durchgeführt.

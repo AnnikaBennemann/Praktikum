@@ -100,3 +100,6 @@ plt.ylabel(r'$L \mathbin{/} \si{\joule\per\mol}$')
 plt.grid()
 plt.legend(loc='best')
 plt.savefig('build/plot4.pdf')
+
+abw = (26100-40657)/40657
+print('abw_1= ',abw)
