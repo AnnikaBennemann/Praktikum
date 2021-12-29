@@ -9,18 +9,18 @@ Ziel dieses Versuch ist es den Lock-In-Verstärker und dessen Funktionsweise zu 
  \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{build/Abb_1.pdf}
-    \caption {Schematische Darstellung eines Lock-In-Verstärkers.[1]\cite{v303}}
+    \caption {Schematische Darstellung eines Lock-In-Verstärkers.[1]\cite{V303}}
     \label{fig:Abb_1}
 \end{figure}
-Im Folgenden wir der Lock-In-Verstärker schematisch mit \autoref{fig:Abb_2} erklärt.
-Das Nutzsignal $U_{sig}$, was moduliert und verrauscht ist, wird durch ein Bandpassfilter zu einem Mischer geleitet.
-Der Bandpassfilter befreit das Signal von Frequnezen, die viel größer sind als die Referenzfrequenz $(\omega >> \omega_0)$ und die viel kleiner $(\omega << \omega_0)$ sind.
-Außerdem wird eine Referenzsignal $U_ref$ durch einen Phasenschieber zum Mischer geleitet.
+Im Folgenden wird der Lock-In-Verstärker schematisch mit \autoref{fig:Abb_1} erklärt.
+Das Nutzsignal $U_{sig}$, was moduliert und verrauscht ist, wird durch einen Bandpassfilter zu einem Mischer geleitet.
+Der Bandpassfilter befreit das Signal von Frequenzen, die viel größer sind als die Referenzfrequenz $(\omega >> \omega_0)$ und die viel kleiner $(\omega << \omega_0)$ sind.
+Außerdem wird ein Referenzsignal $U_ref$ durch einen Phasenschieber zum Mischer geleitet.
 Mit dem Phasenschieber kann die Phase des Referenzsignals variiert werden und mit dem Nutzsignal synchronisiert werden.
-Die beiden Spannungen werden im Mischer mit der Frequenz $\omega_0$ multipliziert und es entsteht eine Mischsignal $U_{sig} \texttimes U_{ref}$.
-Dieses wird im nachgeschalteten Tiefpassfilter über mehrer Perioden der Modulationsfrequenz integriert, sodass Rauschbeiträge herausgemittelt werden, die nicht zur Modulationsfrequenz synchronisiert sind.
-Durch diesen Aufbau kann eine Güte von $Q = 10^6$ erreicht werden, wobei ein normaler Bandpass im vergleich eine Güte von $Q=10^3$ erreicht.\\
-Im allgemeinen wird das Referenzsignal $U_{ref}$ als Rechecktspannung realisiert, was durch eine Fourier-Reihe angenähert werden kann zu
+Die beiden Spannungen werden im Mischer mit der Frequenz $\omega_0$ multipliziert und es entsteht ein Mischsignal $U_{sig} \texttimes U_{ref}$.
+Dieses wird im nachgeschalteten Tiefpassfilter über mehrere Perioden der Modulationsfrequenz integriert, sodass Rauschbeiträge herausgemittelt werden, die nicht zur Modulationsfrequenz synchronisiert sind.
+Durch diesen Aufbau kann eine Güte von $Q = 10^6$ erreicht werden, wobei ein normaler Bandpass im Vergleich eine Güte von $Q=10^3$ erreicht.\\
+Im Allgemeinen wird das Referenzsignal $U_{ref}$ als Rechteckspannung realisiert, was durch eine Fourier-Reihe angenähert werden kann zu
 \begin{equation}
     U_{ref} =\frac{4}{\pi}\Bigl( \text{sin}(\omega t) + \frac{1}{3}\text{sin}(3\omega t) + \frac{1}{5}\text{sin}(5\omega t) + ... \Bigr).
     \label{eqn:Referenzsignal}
@@ -32,5 +32,5 @@ Zusammen mit dem sinusförmigen Nutzsignal
 \end{equation}
 ergibt sich das Produkt
 \begin{equation}
-    U_{sig} \texttimes U_{ref}
+    U_{sig} \texttimes U_{ref}.
 \end{equation}

@@ -17,9 +17,18 @@ Einstellungen am Lock-In-Verstärker: Gain am Preamplifier: 20
   \caption{Spannungsverlauf am Oszilloskop, in Abhängigkeit von der Phase bei der Messung ohne Noise Generator}
   \label{fig:plot1}
 \end{figure}
-Uout= 3.2+/-0.8
-b= 1.10+/-0.15
-c= 0.2+/-0.5
+
+In \autoref{fig:plot1} sieht man den Spannungsverlauf des Lock-In-Verstärkers in Abhängigkeit von der Phase, bei der Messung ohne vorgeschalteten
+Noise Generator. Außerdem wird eine Regression mit der Funktion
+\begin{align*}
+  U(\Phi)&=\frac{2}{\pi} \, a \cos(b \, \Phi \frac{2 \pi}{360})+c\\
+\intertext{eingefügt. Die Parameter berechnen sich zu}
+  a&= (3.20 \pm 0.80) \si{\volt}\\
+  b&= (1.10 \pm 0.15)\\
+  c&= (0.20 \pm 0.50),
+\intertext{wobei}
+  a&=U_{\text{out}}.
+\end{align*}
 
 
 Einstellungen am Lock-In-Verstärker: Gain am Preamplifier: 50
@@ -32,10 +41,19 @@ Signal Attentuator $10^-5$
   \caption{Spannungsverlauf am Oszilloskop, in Abhängigkeit von der Phase bei der Messung mit zwischengeschaltetem Noise Generator}
   \label{fig:plot2}
 \end{figure}
+Auch in \autoref{fig:plot2} ist der Spannungsverlauf des Lock-In-Verstärkers in Abhängigkeit von der Phase dargestellt. Dieses Mal wird die Messung jedoch
+mit zwischengeschaltetem Noise Generator durchgeführt.
+Analog zu oben, wird auch hier ein Fit mit der Funktion
+\begin{align*}
+  U(\Phi)&=\frac{2}{\pi} \, a \cos(b \, \Phi \frac{2 \pi}{360})+c\\
+  \intertext{eingefügt. Die Parameter berechnen sich nun zu}
+    a&= (3.40 \pm 0.60) \si{\volt}\\
+    b&= (1.02 \pm 0.13)\\
+    c&= (0.30 \pm 0.40),
+  \intertext{wobei}
+    a&=U_{\text{out}}.
+\end{align*}
 
-Uout= 3.4+/-0.6
-b= 1.02+/-0.13
-c= 0.3+/-0.4
 
 \subsection{Rauschunterdrückung bei einer Photodetektorschaltung} % (fold)
 \label{sub:Rauschunterdrückung bei einer Photodetektorschaltung}
@@ -88,8 +106,14 @@ c= 0.3+/-0.4
   \caption{Spannungsverlauf am Oszilloskop, in Abhängigkeit vom Abstand der LED zum Photodetektor}
   \label{fig:plot3}
 \end{figure}
-
-Regression mit der Funktion $a \cdot \frac{1}{x} +b$ durchgeführt, allerdings erst ab Wert von 25cm, da die Werte davor nicht mit dem Faktor $\frac{1}{x}$ abfallen.
-a= (3.10+/-0.10)e+03
-b= -20.1+/-1.7
+In \autoref{fig:plot3} ist der Spannungsverlauf am Oszilloskop dargestellt. Die Phase wird hier im Gegensatz zu den vorangegangenen Messungen nicht verändert.
+Die Spannung ist in Abhängigkeit vom Abstand der LED vom Photodetektor aufgetragen.
+Es wird eine Regression mit der Funktion
+\begin{align*}
+U(x)&=a \cdot \frac{1}{x} +b\\
+\intertext{durchgeführt, allerdings erst ab einem Wert von 25cm, da die Werte davor nicht mit dem Faktor $\frac{1}{x}$ abfallen. Die Parameter der Regression
+berechnen sich zu}
+a&= (3.10 \pm 0.10) \cdot 10^3 \, \si{\watt\centi\meter\squared}\\
+b&= (-20.1 \pm 1.7) \si{\watt}.
+\end{align*}
 
