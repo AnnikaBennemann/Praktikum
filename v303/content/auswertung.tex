@@ -9,11 +9,63 @@ Am Reference Ausgang des Oszillators ist eine variable Spannung abzugreifen. Am 
 am Oszilloskop abgelesen werden.
 Dieser Wert dient als Referenzwert für $U_{out}$ in den folgenden Messungen.
 
+\autoref{fig:Oszilloskop1} zeigt Bildschirmaufnahmen des Oszilloskops während der Messung ohne zwischengeschalteten Noise Generator. Aus diesen wird die 
+Amplitude der Spannungen zu den verschiedenen Phasen abgelesen und in \autoref{fig:plot1} dargestellt.
 
-Einstellungen am Lock-In-Verstärker: Gain am Preamplifier: 20
-\begin{figure}
+\begin{figure}[H]
   \centering
-  \includegraphics{build/plot1.pdf}
+  \begin{subfigure}{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{build/0.jpg}
+      \caption{$\phi = \SI{0}{\degree}$}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{build/45.jpg}
+    \caption{$\phi = \SI{45}{\degree}$}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{build/90.jpg}
+    \caption{$\phi = \SI{90}{\degree}$}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{build/135.jpg}
+    \caption{$\phi = \SI{135}{\degree}$}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{build/180.jpg}
+    \caption{$\phi = \SI{180}{\degree}$}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{build/225.jpg}
+    \caption{$\phi = \SI{225}{\degree}$}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{build/270.jpg}
+    \caption{$\phi = \SI{270}{\degree}$}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{build/315.jpg}
+    \caption{$\phi = \SI{315}{\degree}$}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{build/360.jpg}
+    \caption{$\phi = \SI{360}{\degree}$}
+  \end{subfigure}
+  \caption{Bildschirmfotos der Spannung ohne zwischengeschalteten Noise-Generator bei verschiedenen Phasenverschiebungen $\phi$}
+  \label{fig:Oszilloskop1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.7]{build/plot1.pdf}
   \caption{Spannungsverlauf am Oszilloskop, in Abhängigkeit von der Phase bei der Messung ohne Noise Generator}
   \label{fig:plot1}
 \end{figure}
@@ -31,18 +83,65 @@ Noise Generator. Außerdem wird eine Regression mit der Funktion
 \end{align*}
 
 
-Einstellungen am Lock-In-Verstärker: Gain am Preamplifier: 50
-Noise Amplitude $10^-3$
-Signal Attentuator $10^-5$
-
-\begin{figure}
+\begin{figure}[H]
   \centering
-  \includegraphics{build/plot2.pdf}
+  \begin{subfigure}{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{build/n0.jpg}
+      \caption{$\phi = \SI{0}{\degree}$}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{build/n45.jpg}
+    \caption{$\phi = \SI{45}{\degree}$}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{build/n90.jpg}
+    \caption{$\phi = \SI{90}{\degree}$}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{build/n135.jpg}
+    \caption{$\phi = \SI{135}{\degree}$}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{build/n180.jpg}
+    \caption{$\phi = \SI{180}{\degree}$}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{build/n225.jpg}
+    \caption{$\phi = \SI{225}{\degree}$}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{build/n270.jpg}
+    \caption{$\phi = \SI{270}{\degree}$}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{build/n315.jpg}
+    \caption{$\phi = \SI{315}{\degree}$}
+  \end{subfigure}
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{build/n360.jpg}
+    \caption{$\phi = \SI{360}{\degree}$}
+  \end{subfigure}
+  \caption{Bildschirmfotos der Spannung mit zwischengeschaltetem Noise-Generator bei verschiedenen Phasenverschiebungen $\phi$}
+  \label{fig:Oszilloskop2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.7]{build/plot2.pdf}
   \caption{Spannungsverlauf am Oszilloskop, in Abhängigkeit von der Phase bei der Messung mit zwischengeschaltetem Noise Generator}
   \label{fig:plot2}
 \end{figure}
 Auch in \autoref{fig:plot2} ist der Spannungsverlauf des Lock-In-Verstärkers in Abhängigkeit von der Phase dargestellt. Dieses Mal wird die Messung jedoch
-mit zwischengeschaltetem Noise Generator durchgeführt.
+mit zwischengeschaltetem Noise Generator durchgeführt. Die Werte entstammen den Bildschirmfotos vom Oszilloskop (siehe \autoref{fig:Oszilloskop2}).
 Analog zu oben, wird auch hier ein Fit mit der Funktion
 \begin{align*}
   U(\Phi)&=\frac{2}{\pi} \, a \cos(b \, \Phi \frac{2 \pi}{360})+c\\
