@@ -15,8 +15,8 @@ Ziel dieses Versuch ist es den Lock-In-Verstärker und dessen Funktionsweise zu 
 Im Folgenden wird der Lock-In-Verstärker schematisch mit \autoref{fig:Abb_1} erklärt.
 Das Nutzsignal $U_{sig}$, was moduliert und verrauscht ist, wird durch einen Bandpassfilter zu einem Mischer geleitet.
 Der Bandpassfilter befreit das Signal von Frequenzen, die viel größer sind als die Referenzfrequenz $(\omega >> \omega_0)$ und die viel kleiner $(\omega << \omega_0)$ sind.
-Außerdem wird ein Referenzsignal $U_ref$ durch einen Phasenschieber zum Mischer geleitet.
-Mit dem Phasenschieber kann die Phase des Referenzsignals variiert werden und mit dem Nutzsignal synchronisiert werden.
+Außerdem wird ein Referenzsignal $U_{ref}$ durch einen Phasenschieber zum Mischer geleitet.
+Mit dem kann die Phase des Referenzsignals variiert werden und mit dem Nutzsignal synchronisiert werden.
 Die beiden Spannungen werden im Mischer mit der Frequenz $\omega_0$ multipliziert und es entsteht ein Mischsignal $U_{sig} \texttimes U_{ref}$.
 Dieses wird im nachgeschalteten Tiefpassfilter über mehrere Perioden der Modulationsfrequenz integriert, sodass Rauschbeiträge herausgemittelt werden, die nicht zur Modulationsfrequenz synchronisiert sind.
 Durch diesen Aufbau kann eine Güte von $Q = 10^6$ erreicht werden, wobei ein normaler Bandpass im Vergleich eine Güte von $Q=10^3$ erreicht.\\
@@ -44,4 +44,4 @@ Bei einer festen Phasendifferenz ergibt sich die Ausgangspannung
 \begin{equation}
     U_{out} = \frac{2}{\pi}U_0 \text{cos}(\phi),
 \end{equation}
-welche auch maximal bei $\phi = 0$.
+welche auch maximal bei $\phi = 0$ ist.
