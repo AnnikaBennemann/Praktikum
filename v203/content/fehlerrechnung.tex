@@ -9,7 +9,7 @@ berechnet.
 
 Der Fehler des Mittelwerts bzw. die Standardabweichung ergibt sich durch
 \begin{align*}
-    s_i=\sqrt{\frac{1}{n-1}\sum_{j=1}^n (v_j-\bar{v_i})^2}.
+    s_i=\sqrt{\frac{1}{n-1}\sum_{j=1}^n (x_j-\bar{x_i})^2}.
 \end{align*}
 
 Wird mit fehlerbehafteten Größen weiter gerechnet, muss der Fehler des Ergebnisses mit der Fehlerfortpflanzung nach Gauß
@@ -35,6 +35,6 @@ Abweichungen von den Theoriewerten werden mit der Formel
 \end{align}
 berechnet.
 
-Die Berechnungen der Mittelwerte, Standardabweichungen, sowie der weiteren Fehler und die Ausgleichsgeraden der linearen Regression und weiteren Funtionen
+Die Berechnungen der Mittelwerte, Standardabweichungen, sowie der weiteren Fehler und die Ausgleichsgeraden der linearen Regression und weiteren Funktionen
 wird im Folgenden mit Hilfe von Python und den Pythonmodulen Matplotlib \cite{matplotlib}, Scipy \cite{scipy}, Uncertainties \cite{uncertainties} und Numpy \cite{numpy}
 durchgeführt.
