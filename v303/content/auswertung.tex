@@ -1,5 +1,6 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+Im Folgenden werden die Ergebnisse der Messungen ausgewertet.
 
 \subsection{Phasenabhängigkeit der Spannung} % (fold)
 \label{sub:Phasenabhängigkeit der Spannung}
@@ -7,7 +8,7 @@
 
 Am Reference Ausgang des Oszillators ist eine variable Spannung abzugreifen. Am Oszillator Ausgang des Oszillators kann hingegen eine Spannung von $\qty{32}{\volt}$
 am Oszilloskop abgelesen werden.
-Dieser Wert dient als Referenzwert für $U_{out}$ in den folgenden Messungen.
+Dieser Wert dient als Referenzwert für $U_{0}$ in den folgenden Messungen.
 
 \autoref{fig:Oszilloskop1} zeigt Bildschirmaufnahmen des Oszilloskops während der Messung ohne zwischengeschalteten Noise Generator. Aus diesen wird die 
 Amplitude der Spannungen zu den verschiedenen Phasen abgelesen und in \autoref{fig:plot1} dargestellt.
@@ -59,14 +60,14 @@ Amplitude der Spannungen zu den verschiedenen Phasen abgelesen und in \autoref{f
     \includegraphics[width=\textwidth]{build/360.jpg}
     \caption{$\phi = \SI{360}{\degree}$}
   \end{subfigure}
-  \caption{Bildschirmfotos der Spannung ohne zwischengeschalteten Noise-Generator bei verschiedenen Phasenverschiebungen $\phi$}
+  \caption{Bildschirmfotos der Spannung ohne zwischengeschalteten Noise-Generator bei verschiedenen Phasenverschiebungen $\phi$.}
   \label{fig:Oszilloskop1}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.7]{build/plot1.pdf}
-  \caption{Spannungsverlauf am Oszilloskop, in Abhängigkeit von der Phase bei der Messung ohne Noise Generator}
+  \caption{Spannungsverlauf am Oszilloskop, in Abhängigkeit von der Phase bei der Messung ohne Noise Generator.}
   \label{fig:plot1}
 \end{figure}
 
@@ -75,13 +76,17 @@ Noise Generator abgebildet. Außerdem wird eine Regression mit der Funktion
 \begin{align*}
   U(\Phi)&=\frac{2}{\pi} \, a \cos(b \, \Phi \frac{2 \pi}{360})+c\\
 \intertext{eingefügt. Die Parameter berechnen sich zu}
-  a&= (3.20 \pm 0.80) \si{\volt}\\
-  b&= (1.10 \pm 0.15)\\
-  c&= (0.20 \pm 0.50),
+  a&= (3.20 \pm 0.80) \si{\volt},\\
+  b&= (1.10 \pm 0.15),\\
+  c&= (0.20 \pm 0.50) \si{\volt},
 \intertext{wobei}
   a&=U_{\text{out}}
 \end{align*}
-gilt.
+gilt. Mit diesem Wert lässt sich $U_0$ zu
+\begin{equation*}
+  U_0=(5.0 \pm 1.1) \si{\volt}
+\end{equation*}
+berechnen.
 
 \begin{figure}[H]
   \centering
@@ -130,14 +135,14 @@ gilt.
     \includegraphics[width=\textwidth]{build/n360.jpg}
     \caption{$\phi = \SI{360}{\degree}$}
   \end{subfigure}
-  \caption{Bildschirmfotos der Spannung mit zwischengeschaltetem Noise-Generator bei verschiedenen Phasenverschiebungen $\phi$}
+  \caption{Bildschirmfotos der Spannung mit zwischengeschaltetem Noise-Generator bei verschiedenen Phasenverschiebungen $\phi$.}
   \label{fig:Oszilloskop2}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.7]{build/plot2.pdf}
-  \caption{Spannungsverlauf am Oszilloskop, in Abhängigkeit von der Phase bei der Messung mit zwischengeschaltetem Noise Generator}
+  \caption{Spannungsverlauf am Oszilloskop, in Abhängigkeit von der Phase bei der Messung mit zwischengeschaltetem Noise Generator.}
   \label{fig:plot2}
 \end{figure}
 Auch in \autoref{fig:plot2} ist der Spannungsverlauf des Lock-In-Verstärkers in Abhängigkeit von der Phase dargestellt. Dieses Mal wird die Messung jedoch
@@ -146,13 +151,16 @@ Analog zu oben, wird auch hier ein Fit mit der Funktion
 \begin{align*}
   U(\Phi)&=\frac{2}{\pi} \, a \cos(b \, \Phi \frac{2 \pi}{360})+c\\
   \intertext{eingefügt. Die Parameter berechnen sich nun zu}
-    a&= (3.40 \pm 0.60) \si{\volt}\\
-    b&= (1.02 \pm 0.13)\\
-    c&= (0.30 \pm 0.40),
+    a&= (3.40 \pm 0.60) \si{\volt},\\
+    b&= (1.02 \pm 0.13),\\
+    c&= (0.30 \pm 0.40) \si{\volt},
   \intertext{wobei auch hier}
     a&=U_{\text{out}}
 \end{align*}
-gilt.
+gilt und somit 
+\begin{equation*}
+  U_0=(5.2 \pm 0.9) \si{\volt}.
+\end{equation*}
 
 \subsection{Rauschunterdrückung bei einer Photodetektorschaltung} % (fold)
 \label{sub:Rauschunterdrückung bei einer Photodetektorschaltung}
@@ -202,7 +210,7 @@ gilt.
 \begin{figure}
   \centering
   \includegraphics{build/plot3.pdf}
-  \caption{Spannungsverlauf am Oszilloskop, in Abhängigkeit vom Abstand der LED zum Photodetektor}
+  \caption{Spannungsverlauf am Oszilloskop, in Abhängigkeit vom Abstand der LED zum Photodetektor.}
   \label{fig:plot3}
 \end{figure}
 In \autoref{fig:plot3} ist der Spannungsverlauf am Oszilloskop dargestellt. Die Phase wird hier im Gegensatz zu den vorangegangenen Messungen nicht verändert.
