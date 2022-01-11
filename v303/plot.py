@@ -21,8 +21,10 @@ b = ufloat(params[1], errors[1])
 c = ufloat(params[2], errors[2])
 
 x=np.linspace(0,360,500)
+U_0=U_out*np.pi/2
 
 print('Uout=',U_out)
+print('U_0=',U_0)
 print('b=',b)
 print('c=',c)
 
@@ -42,8 +44,10 @@ b = ufloat(params[1], errors[1])
 c = ufloat(params[2], errors[2])
 
 x=np.linspace(0,360,500)
+U_0=U_out*np.pi/2
 
 print('Uout=',U_out)
+print('U_0=',U_0)
 print('b=',b)
 print('c=',c)
 
