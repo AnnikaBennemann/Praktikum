@@ -7,9 +7,13 @@ Der Mittelwert wird durch die Formel
 \end{align*}
 berechnet.
 
-Der Fehler des Mittelwerts bzw. die Standardabweichung ergibt sich durch
+Die Standardabweichung ergibt sich durch
 \begin{align*}
-    s_i=\sqrt{\frac{1}{n-1}\sum_{j=1}^n (x_j-\bar{x_i})^2}.
+    \sigma_x=\sqrt{\frac{1}{n-1}\sum_{j=1}^n (x_j-\bar{x_i})^2},
+\end{align*}
+somit lautet der Fehler des Mittelwerts
+\begin{align*}
+    \Delta \bar{x}= \frac{\sigma_x}{n} = \frac{\sqrt{\frac{1}{n-1}\sum_{j=1}^n (x_j-\bar{x_i})^2}}{n}
 \end{align*}
 
 Wird mit fehlerbehafteten Größen weiter gerechnet, muss der Fehler des Ergebnisses mit der Fehlerfortpflanzung nach Gauß

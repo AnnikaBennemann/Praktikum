@@ -1,12 +1,111 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
+g =9,80665
+\subsection{Gleichsinnige Schwingung}
+\label{subsec:aus_gleich}
+
+\begin{table}[H]
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
+  \caption{Messwerte der Schwingungsdauer bei gleichsinniger Schwingung.}
+  \label{tab:T+}
+  \sisetup{table-format=1.2}
+  \begin{tabular}{l S S}
+    \toprule
+     & {$T_+ \mathbin{/} \si{\second}$ bei $l=\qty{0.63}{\meter}$} & {$T_+ \mathbin{/} \si{\second}$ bei $l=\qty{0.36}{\meter}$}\\
+    \midrule
+      &1,50 & 1,26\\
+      &1,53 & 1,23\\
+      &1,55 & 1,26\\
+      &1,56 & 1,24\\
+      &1,50 & 1,24\\
+      &1,53 & 1,24\\
+      &1,56 & 1,24\\
+      &1,51 & 1,22\\
+      &1,50 & 1,24\\
+      &1,53 & 1,24\\
+    \midrule
+      Mittelwert $\overline{T_+}$& 1,53 & 1,24\\
+      Fehler $\Delta \overline{T_+}$& 0,01 & 0,00\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Aus den Messwerten lässt sich mithilfe von \autoref{eqn:w_+} $w_+$ berechnen zu 
+\begin{align*}
+  \omega_{+(0,63)}&=(4,11 \pm 0,02) \si{\per\second} & \text{und} && \omega_{+(0,36)}&=(5,06 \pm 0,02) \si{\per\second}.
+\end{align*}
+
+\subsection{Gegensinnige Schwingung}
+\label{subsec:aus_gegen}
+\begin{table}[H]
+  \centering
+  \caption{Messwerte der Schwingungsdauer bei gegensinniger Schwingung.}
+  \label{tab:T-}
+  \sisetup{table-format=1.2}
+  \begin{tabular}{l S S}
+    \toprule
+     & {$T_- \mathbin{/} \si{\second}$ bei $l=\qty{0.63}{\meter}$} & {$T_- \mathbin{/} \si{\second}$ bei $l=\qty{0.36}{\meter}$}\\
+    \midrule
+      &1,39 & 1,24\\
+      &1,41 & 1,22\\
+      &1,39 & 1,21\\
+      &1,40 & 1,21\\
+      &1,36 & 1,19\\
+      &1,32 & 1,20\\
+      &1,41 & 1,18\\
+      &1,38 & 1,22\\
+      &1,37 & 1,19\\
+      &1,44 & 1,18\\
+    \midrule
+      Mittelwert $\overline{T_-}$& 1,39 & 1,20\\
+      Fehler $\Delta \overline{T_-}$& 0,01 & 0,01\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Aus den Messwerten lässt sich mithilfe von \autoref{eqn:w_-} $w_-$ berechnen zu 
+\begin{align*}
+  \omega_{-(0,63)}&=(4,53 \pm 0,03) \si{\per\second} & \text{und} && \omega_{-(0,36)}&=(5,22 \pm 0,02) \si{\per\second}.
+\end{align*}
+
+$K$ wird durch die \autoref{eqn:K} berechnet zu
+\begin{align*}
+  K_{(0,63)}&=(0,10 \pm 0,01) & \text{und} && K_{(0,36)}&=(0,03 \pm 0,01).
+\end{align*} 
+
+\subsection{Gekoppelte Schwingung}
+\label{subsec:aus_gekoppelt}
+
+\begin{table}[H]
+  \centering
+  \caption{Messwerte der Schwingungsdauer bei gekoppelter Schwingung.}
+  \label{tab:Ts}
+  \sisetup{table-format=2.2}
+  \begin{tabular}{l S S}
+    \toprule
+     & {$T_s \mathbin{/} \si{\second}$ bei $l=\qty{0.63}{\meter}$} & {$T_s \mathbin{/} \si{\second}$ bei $l=\qty{0.36}{\meter}$}\\
+    \midrule
+      &15,35& 25,29\\
+      &15,29& 25,27\\
+      &15,19& 24,95\\
+      &15,39& 25,69\\
+      &15,24& 25,24\\
+    \midrule
+      Mittelwert $\overline{T_-}$& 15,29 & 25,29\\
+      Fehler $\Delta \overline{T_-}$& 0,03 & 0,11\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Aus den Messwerten lässt sich mithilfe von \autoref{eqn:w_s} $w_s$ berechnen zu 
+\begin{align*}
+  \omega_{s(0,63)}&=(0,42 \pm 0,04) \si{\per\second} & \text{und} && \omega_{s(0,36)}&=(0,15 \pm 0,03) \si{\per\second}.
+\end{align*}
 
 
-Siehe \autoref{fig:plot}!
+
+
+
+
+
