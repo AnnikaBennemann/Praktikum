@@ -74,7 +74,8 @@ print('Tp63_theo', Tp63_theo, 'Tp36_theo', Tp36_theo)
 print('wp63_theo', wp63_theo, 'wp36_theo', wp36_theo)
 print('Tm63_theo', Tm63_theo, 'Tm36_theo', Tm36_theo)
 print('wm63_theo', wm63_theo, 'wm36_theo', wm36_theo)
-print('Ts63_theo', Ts63_theo, 'Ts36_theo', Ts36_theo)
+print('Ts63_theo', Ts63_theo)
+print( 'Ts36_theo', Ts36_theo)
 print('ws63_theo', ws63_theo, 'ws36_theo', ws36_theo)
 
 #Abweichung vom Theoriewert
@@ -95,7 +96,7 @@ abw_ws36=(ws36-ws36_theo)/ws36_theo
 
 print('abw_Tp63', abw_Tp63, 'abw_Tp36', abw_Tp36)
 print('abw_Tm63', abw_Tm63, 'abw_Tm36', abw_Tm36)
-print('abw_Ts63', abw_Tp63, 'abw_Ts36', abw_Ts36)
+print('abw_Ts63', abw_Ts63, 'abw_Ts36', abw_Ts36)
 print('abw_wp63', abw_wp63, 'abw_wp36', abw_wp36)
 print('abw_wm63', abw_wm63, 'abw_wm36', abw_wm36)
-print('abw_ws63', abw_wp63, 'abw_ws36', abw_ws36)
+print('abw_ws63', abw_ws63, 'abw_ws36', abw_ws36)
