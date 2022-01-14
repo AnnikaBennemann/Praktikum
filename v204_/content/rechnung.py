@@ -36,13 +36,7 @@ names = np.array(['Messing, breit', 'Messing, schmal', 'Aluminium', 'Edelstahl']
 temps = np.array([stat_1, stat_4, stat_5, stat_8])
 diffs = np.array([stat_2 - stat_1, stat_3 - stat_4, stat_6 - stat_5, stat_7 - stat_8])
 
-<<<<<<< HEAD
-
-||||||| bbbad99
-print("AAAAAAAH="stat_1)
-=======
 print('AAAAAAAH='stat_1)
->>>>>>> a8131ecef5132096388935874d1511b63d74a444
 #Abstand der Thermoelemente
 dx = 3 * 1e-2 
 
