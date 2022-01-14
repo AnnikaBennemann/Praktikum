@@ -1,7 +1,13 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-g =9,80665
+Die Messungen werden nach \autoref{sec:Durchführung} durchgeführt und die Ergebnisse im Folgenden dargestellt und ausgewertet.
+Die Länge der Pendel beträgt beim ersten Durchgang $l=\qty{0.63}{\meter}$ und wird, nachdem alle drei Messreihen durchgeführt wurden auf 
+$l=\qty{0.36}{\meter}$ verkürzt. 
+Die Auswertung erfolgt parallel für beide Pendellängen.
+Als Konstante für den Ortsfaktor der Erdbeschleunigung wird in den Berechnungen $g =\qty{9.80665}{\meter\per\second\squared}$
+verwendet.
+
 \subsection{Gleichsinnige Schwingung}
 \label{subsec:aus_gleich}
 
@@ -30,7 +36,8 @@ g =9,80665
     \bottomrule
   \end{tabular}
 \end{table}
-
+In \autoref{tab:T+} sind die Messwerte der Schwingungsdauer bei gleichsinniger Schwingung dargestellt. Zusätzlich wird der Mittelwert und der zugehörige
+Fehler mithilfe von Python nach den Formeln in \autoref{sec:Fehlerrechnung} bestimmt.
 Aus den Messwerten lässt sich mithilfe von \autoref{eqn:omega+} $w_+$ berechnen zu 
 \begin{align*}
   \omega_{+(0,63)}&=(4,11 \pm 0,02) \si{\per\second} & \text{und} && \omega_{+(0,36)}&=(5,06 \pm 0,02) \si{\per\second}.
@@ -63,13 +70,14 @@ Aus den Messwerten lässt sich mithilfe von \autoref{eqn:omega+} $w_+$ berechnen
     \bottomrule
   \end{tabular}
 \end{table}
-
-Aus den Messwerten lässt sich mithilfe von \autoref{eqn:omega-} $w_-$ berechnen zu 
+Die Messwerte der Messung der Schwingungsdauer bei gegensinniger Schwingung, sowie der Mittelwert und der zugehörige Fehler sind analog zu
+\autoref{subsec:aus_gleich} in \autoref{tab:T-} aufgetragen.
+Aus diesen Werten lässt sich mithilfe von \autoref{eqn:omega-} $w_-$ berechnen zu 
 \begin{align*}
   \omega_{-(0,63)}&=(4,53 \pm 0,03) \si{\per\second} & \text{und} && \omega_{-(0,36)}&=(5,22 \pm 0,02) \si{\per\second}.
 \end{align*}
 
-$K$ wird durch die \autoref{eqn:K} berechnet zu
+$K$ kann nun mit \autoref{eqn:K} und den oben bestimmten Werten für $T_+$ und $T_-$ berechnet werden zu
 \begin{align*}
   K_{(0,63)}&=(0,10 \pm 0,01) & \text{und} && K_{(0,36)}&=(0,03 \pm 0,01).
 \end{align*} 
@@ -97,8 +105,8 @@ $K$ wird durch die \autoref{eqn:K} berechnet zu
     \bottomrule
   \end{tabular}
 \end{table}
-
-Aus den Messwerten lässt sich mithilfe von \autoref{eqn:omegaS} $w_s$ berechnen zu 
+Aus den Messwerten der Schwebungsdauer bei der gekoppelten Schwingung (siehe \autoref{tab:Ts}) lässt sich mithilfe
+von \autoref{eqn:omegaS} $w_s$ berechnen zu 
 \begin{align*}
   \omega_{s(0,63)}&=(0,42 \pm 0,04) \si{\per\second} & \text{und} && \omega_{s(0,36)}&=(0,15 \pm 0,03) \si{\per\second}.
 \end{align*}
