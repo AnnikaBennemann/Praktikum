@@ -11,14 +11,14 @@ Das Fadenpendel besteht aus einer Masse $m$ und einem Faden der Länge $l$, wobe
 Es wirkt die Gewichtskraft $F=m\,\vec{a}$ als rücktreibende Kraft bei der Auslenkung des Pendels aus seiner Ruhelage.
 Dadurch entsteht ein Drehmoment $M=D_p\, \phi$ auf das Pendel, wobei $\phi$ der Auslenkwinkel und $D_p$ die Winkelrichtung des Pendels ist.
 Für kleine Auslenkungen gilt die Kleinwinkelnäherung, sodass die Bewegungsgleichung
-\begin{equation}
+\begin{equation*}
     J \, \ddot{\phi} + D_p \, \phi = 0
-\end{equation}
+\end{equation*}
 lautet, mit $J$ als Trägheitsmoment.
 Die Lösung der Gleichung beschreibt eine harmonische Schwingung mit der Schwingungsfrequenz
-\begin{equation}
+\begin{equation*}
     \omega = \sqrt{\frac{D_p}{J}} = \sqrt{\frac{g}{l}}.
-\end{equation}
+\end{equation*}
 Bei kleinen Auslenkungen ist die Schwingungsdauer somit unabhängig von den Pendelmassen und dem Auslenkungswinkel.
  
 % subsection Fadenpendel (end)
@@ -32,13 +32,13 @@ Bei kleinen Auslenkungen ist die Schwingungsdauer somit unabhängig von den Pend
  \end{equation*}
  wobei $k$ die Federkonstante und $x$ die Auslenkung ist.
  Die Bewegungsgleichung wird zu einem System gekoppelter Differentialgleichungen
- \begin{align}
+ \begin{align*}
      J \, \ddot{\phi_1} + D \phi_1 &= D_F (\phi_2 - \phi_1) \\
      J \, \ddot{\phi_2} + D \phi_2 &= D_F (\phi_1 - \phi_2)
- \end{align}
- umformt, wobei die linke Seite der Gleichungen die Schwingung des einzelnen Pendels ist und die rechte Seite die Kopplung der Pendel betrachtet.
+ \end{align*}
+ umgeformt, wobei die linke Seite der Gleichungen die Schwingung des einzelnen Pendels ist und die rechte Seite die Kopplung der Pendel betrachtet.
  Die Schwingungsgleichungen können bei der richtigen Wahl der Winkel entkoppelt werden und so als eine Überlagerung zweier Eigenschwingungen betrachtet werden.
- Abhängig von den Anfangsbedingungen $\phi(0)$ und $\dot{\phi(0)}$ gibt es verschiedene Schwingungsarten, die im Folgenden näher beschrieben werden.
+ Abhängig von den Anfangsbedingungen $\phi(0)$ und $\dot{\phi}(0)$ gibt es verschiedene Schwingungsarten, die im Folgenden näher beschrieben werden.
 
 \subsubsection{Gleichsinnige Schwingungen}
 \label{subsec:Gleich}
@@ -68,7 +68,7 @@ ergibt sich die Schwingungsdauer zu
 
 \begin{minipage}[t]{0.5\textwidth}
 \label{subsec:Gegen}
-Im Gegensatz zur gleichsinnigen Schwingung werden bei der gegensinnigen Schwingung zwei identischen Pendel um den entgegengesetzten Winkel $\phi_1 = \phi_2$ ausgelenkt.
+Im Gegensatz zur gleichsinnigen Schwingung werden bei der gegensinnigen Schwingung zwei identischen Pendel um den entgegengesetzten Winkel $\phi_1 = -\phi_2$ ausgelenkt.
 In diesem Fall übt die Kopplungsfeder eine jeweils gleich große, aber entgegengesetzte Kraft auf die einzelnen Pendel aus.
 Mit der Schwingungsfrequenz
 \begin{equation}
@@ -100,7 +100,7 @@ Die Amplituden sind wie eine Glockenkurve.
 Ihr Maximum erreichen sie jeweils dann, wenn das andere Pendel zur Ruhe kommt.
 Diese vollständige Energieübertragung wiederholt sich immer wieder und die Zeit zwischen zwei Stillständen eines Pendels wird Schwebungsdauer 
 \begin{equation}
-    T_S=\frac{T+\,T_-}{T_+-T_-}
+    T_S=\frac{T_+ + T_-}{T_+-T_-}
     \label{eqn:TS}
 \end{equation}
 genannt. Diese und die Schwebungsfrequenz
