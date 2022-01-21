@@ -15,6 +15,9 @@ pb += 1
 mkck= 750
 m1= 3
 cw= 4182
+p0= 1
+T0= 273.15
+
 #aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
 
@@ -106,18 +109,27 @@ plt.savefig('build/plot2.pdf')
 
 for i in q:
 
-    dm=dT(T2[i],a2,b2)/L
+    dm=(m1*cw+mkck)*dT(T2[i],a2,b2)/L
     dmmol=dm*120.9
     print('dm/dt ms', i, dm) #Massendurchsatz mol pro sekunde
     print('dm/dt gs', i, dmmol) #Massendurchsatz gramm pro sekunde
-    #irgendwas passt noch nicht
-
-
-
-
-
+    
 #fffffffffffffffffffffffffffffffffffffffffff
 
+rho= rho0*T0*pa/(T2[i]*p0)
+Nmech = 1/(kappa-1)*(pb[i]* (pa[i]/pb[i]))
 
+
+
+k=5
+h=0
+nmech=([0,0,0,0])
+for i in q:
+    ro=1/(T2[k]/(rho*T*p2[k]))
+    nmech[h]=(1/(kappa-1))*((p1[k]*((p2[k]/p1[k])**(1/kappa)))-p2[k])*mt[h]/(ro * 1000)
+    h=h+1
+    k=k+10
+    print('rho = ',ro)
+print('Nmech = ', nmech)
 
  
