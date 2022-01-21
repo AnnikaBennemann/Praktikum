@@ -10,13 +10,19 @@ t, T2, pa, T1, pb, N = np.genfromtxt('content/Messung.txt', unpack=True)
 t *= 60 #Zeit in Sekunden
 T1 += 273.15 #Temperatur in Kelvin
 T2 += 273.15
-pa += 1 #Druck plus 1 bar 
+pa += 1
+pa *= 10**5 #Druck plus 1 bar 
 pb += 1
+pb *= 10**5
 mkck= 750
 m1= 3
 cw= 4182
-p0= 1
+p0= 100000
 T0= 273.15
+rho0= 5.51
+kappa=1.14
+
+#print(np.column_stack([t, T1, T2, pa, pb, N]))
 
 #aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 
@@ -58,6 +64,8 @@ plt.legend(loc='best')
 
 plt.savefig('build/plot1.pdf')
 
+
+
 #ccccccccccccccccccccccccccccccccccccccccccccccc
 
 def dT(x,a,b):
@@ -68,8 +76,7 @@ for i in q:
 
     dT1=dT(T1[i],a,b)
     dT2=dT(T2[i],a2,b2)
-    print('dT1/dt', i, dT1) #Differenzenquotienten
-    print('dT2/dt', i, dT2)
+    print('dT1/dt, dT2/dt', t[i], dT1, dT2) #Differenzenquotienten
 
 #ddddddddddddddddddddddddddddddddddddddddddddddd
 
@@ -81,14 +88,13 @@ for i in q:
     v=(m1*cw+mkck)*dT(T1[i],a,b)/Nm
     vid = T1[i]/(T1[i]-T2[i])
     abw = 100*(v-vid)/vid
-    print('v',i, v) #güteziffer real
-    print('vid',i, vid) #Güteziffer ideal
-    print('abw', i, abw) 
+    print('v',t[i] , v, vid , abw) #güteziffer
+ 
 
 #eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 
 x_plot=1/T1
-y_plot=np.log(pb)
+y_plot=np.log(pb/p0)
 xfit = np.linspace(x_plot[0],x_plot[31],100)
 params, cov = np.polyfit(x_plot, y_plot, deg=1, cov=True)
 errors = np.sqrt(np.diag(cov))
@@ -108,28 +114,22 @@ plt.legend(loc='best')
 plt.savefig('build/plot2.pdf')
 
 for i in q:
-
-    dm=(m1*cw+mkck)*dT(T2[i],a2,b2)/L
+    dQ2=(m1*cw+mkck)*dT(T2[i],a2,b2)
+    dm=dQ2/L
     dmmol=dm*120.9
-    print('dm/dt ms', i, dm) #Massendurchsatz mol pro sekunde
-    print('dm/dt gs', i, dmmol) #Massendurchsatz gramm pro sekunde
+    print('dQ2/dt, dmdt ms, dmdt gs', t[i], dQ2, dm, dmmol)#Massendurchsatz 
+
     
 #fffffffffffffffffffffffffffffffffffffffffff
-
-rho= rho0*T0*pa/(T2[i]*p0)
-Nmech = 1/(kappa-1)*(pb[i]* (pa[i]/pb[i]))
-
-
-
-k=5
-h=0
-nmech=([0,0,0,0])
 for i in q:
-    ro=1/(T2[k]/(rho*T*p2[k]))
-    nmech[h]=(1/(kappa-1))*((p1[k]*((p2[k]/p1[k])**(1/kappa)))-p2[k])*mt[h]/(ro * 1000)
-    h=h+1
-    k=k+10
-    print('rho = ',ro)
-print('Nmech = ', nmech)
 
+    rho= (rho0*T0*pa[i])/(T2[i]*p0)
+    Nmech = (1/(kappa-1))*((pb[i]* ((pa[i]/pb[i])**(1/kappa)))-pa[i])*(1/rho)*((m1*cw+mkck)*dT(T2[i],a2,b2)/L*120.9)*0.001
+    print('rho , nmech' ,t[i] , rho, Nmech)
+    
+
+ 
+ 
+
+#np.savetxt('Tab2.txt', np.column_stack([unp.nominal_values(md),  unp.std_devs(md)]), header="Überschrift")
  
