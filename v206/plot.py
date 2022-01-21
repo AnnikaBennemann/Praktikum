@@ -5,21 +5,23 @@ import uncertainties.unumpy as unp
 from uncertainties import ufloat
 from scipy.optimize import curve_fit
 
-x = np.linspace(0, 10, 1000)
-y = x ** np.sin(x)
+t, T2, pa, T1, pb, N = np.genfromtxt('content/Messung.txt', unpack=True)
 
-plt.subplot(1, 2, 1)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \mathbin{/} \unit{\ohm}$')
-plt.ylabel(r'$y \mathbin{/} \unit{\micro\joule}$')
+t *= 60 #Zeit in Sekunden
+T1 += 273.15 #Temperatur in Kelvin
+T2 += 273.15
+pa += 1 #Druck plus 1 bar 
+pb += 1
+
+#a
+
+plt.figure(1)
+plt.plot(t, T1, 'rx', label='T1')
+plt.plot(t, T2, 'bx', label='T2')
+plt.ylabel(r'Zeit $t \mathbin{/} \si{\second}$')
+plt.xlabel(r'Temperatur $T \mathbin{/} \si{\kelvin}$')
+
+plt.grid()
 plt.legend(loc='best')
 
-plt.subplot(1, 2, 2)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \mathbin{/} \unit{\ohm}$')
-plt.ylabel(r'$y \mathbin{/} \unit{\micro\joule}$')
-plt.legend(loc='best')
-
-# in matplotlibrc leider (noch) nicht möglich
-plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('build/plot.pdf')
+plt.savefig('build/plot1.pdf')
