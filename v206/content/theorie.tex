@@ -23,6 +23,7 @@ Die Güteziffer $\nu$ beschreibt das Verhältnis der transportierten Wärmemenge
 So gilt für die Güteziffer einer idealen Wärmepumpe
 \begin{equation*}
     \nu_{ideal} = \frac{Q_1}{A} = \frac{T_1}{T_1 - T_2}
+    \label{eqn:Güteziffer_ideal}
 \end{equation*} 
 und für die reale Wärmepumpe
 \begin{equation*}
@@ -43,11 +44,11 @@ Für den idealen Fall gilt
 \end{align*}
 Zur Berechnung von der realen Güteziffer wird im Folgenden 
 \begin{equation}
-    \nu_{real} = \frac{\Delta Q_1}{\Delta t N}
+    \nu_{real} = \frac{\Delta Q_1}{\Delta t \bar{N}}
     \label{eqn:Güteziffer}
 \end{equation}
 benutzt. 
-$N$ ist die vom Wattmeter angezeigte und über das Zeitintervall $\Delta t$ gemittelte Leistungsaufnahme des Kompressors.
+$\bar{N}$ ist die vom Wattmeter angezeigte und über das Zeitintervall $\Delta t$ gemittelte Leistungsaufnahme des Kompressors.
 Für $\frac{\Delta Q_1}{\Delta t}$ wird
 \begin{equation}
     \frac{\Delta Q_1}{\Delta t} = (m_1 c_w + m_k c_k)\frac{\Delta T_1}{\Delta t}
@@ -57,19 +58,21 @@ eingesetzt, wobei $m_1 c_w$ die Wärmekapazität des Wassers im Reservoir 1 ist 
 % subsection Güteziffer (end)
  \subsection{Massendurchsatz} % (fold)
  \label{sub:Massendurchsatz}
- Die Wärmemenge, die pro Zeiteinheit aus dem Reservoir 2 entnommene wird
+ Die Wärmemenge 
  \begin{equation}
      \frac{dQ_2}{dt} = (m_2 c_w + m_k c_k)\frac{\Delta T_2}{\Delta t},
      \label{eqn:DeltaQ2}
  \end{equation}
-wird mit der Verdampfungswärme $L$, die pro Zeit- und Masseneinheit verbraucht wird gleichgesetzt
+die pro Zeiteinheit aus dem Reservoir 2 entnommen wird,
+wird mit der Verdampfungswärme $L$ die pro Zeit- und Masseneinheit verbraucht wird gleichgesetzt
 \begin{equation}
     \frac{dQ_2}{dt} = L \frac{dm}{dt}.
     \label{eqn:Ldm}
 \end{equation}
 Um den Massendurchsatz bestimmen zu können wird die \autoref{eqn:Ldm} nach
 \begin{equation}
-    \frac{dm}{dt} = (m_2 c_w + m_k c_k)\frac{\Delta T_2}{\Delta t} \frac{1}{L\,N}
+    \frac{dm}{dt} = (m_2 c_w + m_k c_k)\frac{\Delta T_2}{\Delta t} \frac{1}{L}
+    \label{eqn:Massendurchsatz}
 \end{equation}
 umgestellt.
  % subsection Massendurchsatz (end)

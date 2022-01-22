@@ -1,14 +1,12 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-$c_w = \qty{4182}{\kilo\joule\per\kilo\gram\per\kelvin}$ \cite[381]{PhyPrak}
-$m_kc_k=\qty{750}{\joule\per\kelvin}
-m_1= \qty{3}{\liter}
-p_0= \qty{100000}{\pascal}
+
+
 T_0= \qty{273.15}{\kelvin}
-M= \qty{120.9}{\gram\per\mol}
+
 \rho_0= \qty{5.51}{\kilo\gram\per\cubic\meter}
-\kappa=\qty{1.14}{\watt\per\meter\per\kelvin}$
+\kappa=\qty{1.14}{\watt\per\meter\per\kelvin}
 %R=8.31446261815324$
 
 \begin{table}[H]
@@ -55,16 +53,28 @@ M= \qty{120.9}{\gram\per\mol}
       1860 & 323,55 & 269,85 & 2,5 & 13,0 & 110\\
     \bottomrule
   \end{tabular}
-\end{table}	
+\end{table}
+
+Die Messung wird nach \autoref{sec:Durchführung} durchgeführt und die Temperatur- und Druckverläufe, sowie die Leistungsaufnahme des Kompressors
+werden in \autoref{tab:Tab1} in Abhängigkeit von der Zeit dargestellt.
+Hierbei werden die Werte direkt in SI-Einheiten umgerechnet und zu den Drücken, wie in der Versuchsanleitung vorgegeben (\cite{v206}),
+$\qty{1}{bar}$ dazuaddiert.
+
+Aus den Werten in \autoref{tab:Tab1} für die Temperaturen $T_1$ und $T_2$ wird ein Plot erstellt, siehe \autoref{fig:plot1}.
+Hier werden die Temperaturverläufe in Abhängigkeit von der Zeit aufgetragen.
 
 \begin{figure}
   \centering
   \includegraphics{plot1.pdf}
-  \caption{Plot.}
+  \caption{Temperaturverläufe von $T_1$ und $T_2$.}
   \label{fig:plot1}
 \end{figure}
 
-
+Außerdem wird nach der Formel
+\begin{align*}
+  T(t)=a*t^2+b*t+c
+\end{align*}
+eine jeweils eine Ausgleichskurve für $T_1$ und $T_2$ erstellt.
 Die Parameter werden mithilfe von Python bestimmt und lauten für die Ausgleichskurve von $T_1$
 \begin{align*}
   a&= (-5,5677 \pm 0,1998) \cdot 10^6 \si{\kelvin\per\second\squared}\\
@@ -79,6 +89,17 @@ und für die Ausgleichskurve von $T_2$
 \end{align*}
 
 
+Aus den in \autoref{fig:plot1} dargestellten Funktionen werden nun die Differenzenquotienten $\frac{dT_1}{dt}$ und $\frac{dT_2}{dt}$ zu vier gewählten
+Zeitpunkten bestimmt werden. Die gewählten Zeitpunkte sind $t=\qty{420}{\second},t=\qty{840}{\second}, t=\qty{1260}{\second}$ und $t=\qty{1680}{\second}$.
+Im Folgenden werden alle zu bestimmenden Größen jeweils zu diesen Zeitpunkten berechnet.
+Die Differenzenquotienten werden nach
+\begin{align*}
+  \frac{dT}{dt}&= 2*a*t+b
+  \intertext{berechnet, wobei der Fehler durch}
+  \Delta \frac{dT}{dt}&= sqrt((2*t\cdot \Delta a)^2+(\Delta b)^2)
+\end{align*}
+bestimmt wird. In \autoref{tab:Tab2} sind die Differenzenquotienten $\frac{dT_1}{dt}$ und $\frac{dT_2}{dt}$ und ihre Fehler zu den vier gewählten
+Zeitpunkten aufgelistet.
 \begin{table}[H]
 	\centering
 	\caption{Differenzenquotienten von Temperaturen $T_1$ und $T_2$ zu vier gewählten Zeitpunkten.}
@@ -92,11 +113,20 @@ und für die Ausgleichskurve von $T_2$
     840  & 311,65 & 0,0229 & 0,0004 & 279,85 & -0,0186 & 0,0003 \\
     1260 & 317,55 & 0,0228 & 0,0004 & 274,75 & -0,0187 & 0,0003 \\
     1680 & 321,95 & 0,0228 & 0,0004 & 270,75 & -0,0187 & 0,0003 \\
-    \midrule
-    {Mittelwert}&
     \bottomrule
   \end{tabular}
 \end{table}	
+
+Im nächsten Schritt sollen die ideale und die reale Güteziffer der Wärmepumpe nach Gleichungen \ref{eqn:Güteziffer_ideal} und \ref{eqn:Güteziffer}
+bestimmt werden. N wird dafür gemittelt aus Tab1 zu $\bar{N}= (114 \pm 4) \si{\watt}$. 
+Die Wärmekapazität des Wassers beträgt $c_w = \qty{4182}{\joule\per\kilo\gram\per\kelvin}$ \cite[381]{PhyPrak}, die Masse des Wassers im Reservoir
+beträgt $m_1= \qty{3}{\kilo\gram}$. Somit wird $m_1c_w$ berechnet zu $m_1c_w= \qty{12546}{\joule\per\kelvin}$. Die Wärmekapazität des Eimers und der Kupfer-
+schlange beläuft sich auf $m_kc_k=\qty{750}{\joule\per\kelvin}$.
+Mit den Werten aus \autoref{tab:Tab2} werden nun die Güteziffern bestimmt und in \autoref{tab:Tab3} dargestellt.
+Der Fehler der realen Güteziffer wird nach der Gaußschen Fehlerfortpflanzung durch
+\begin{align*}
+  \Delta \nu_{real}&= sqrt((\frac{m_1 c_w + m_k c_k}{\bar{N}}\Delta\frac{dT_1}{dt})^2+(-(m_1 c_w + m_k c_k)\frac{dT_1}{dt}\frac{1}{\bar{N}^2}\Delta \bar{N})^2).
+\end{align*}
 
 \begin{table}[H]
 	\centering
@@ -105,7 +135,7 @@ und für die Ausgleichskurve von $T_2$
   \sisetup{table-format=1.2}
 	\begin{tabular}{S[table-format=4.0] S@{${}\pm{}$}S S[table-format=2.2] S[table-format=2.1]}
 		\toprule
-      {$t \mathbin{/} \si{\second}$}&\multicolumn{2}{c}{Güteziffer $\nu$}&\multicolumn{2}{c}{ideale Güteziffer $\nu_{id}$}&{Abweichung $\mathbin{/} \si{\percent}$}\\
+      {$t \mathbin{/} \si{\second}$}&\multicolumn{2}{c}{reale Güteziffer $\nu_{real}$}&{ideale Güteziffer $\nu_{ideal}$}&{Abweichung $\mathbin{/} \si{\percent}$}\\
     \midrule
       420  & 2,68 & 0,10 & 17,85 & 85,0 \\
       840  & 2,67 & 0,10 &  9,80 & 72,7 \\
@@ -115,22 +145,30 @@ und für die Ausgleichskurve von $T_2$
   \end{tabular}
 \end{table}
 
-Berechnung der Güteziffer mit Formeln blabla
-wobei N gemittelt aus Tab1 zu $N_m= (114 \pm 4) \si{\watt}$
 
+Um den Massendurchsatz $\frac{dm}{dt}$ nach \autoref{eqn:Massendurchsatz} zu bestimmen wird zuerst ein Plot des logarithmierten
+Drucks $\frac{p_b}{p_0}$ in Abhängigkeit von $\frac{1}{T_1}$ erstellt, woraus die Verdampfungswärme $L$ durch
+\begin{align*}
+  L&= -a *R 
+\end{align*}
+bestimmt wird. Die universelle Gaskonstante lautet $R=8.31446261815324$ und $p_0= \qty{100000}{\pascal}$.
 
 \begin{figure}
   \centering
   \includegraphics{plot2.pdf}
-  \caption{Plot.}
+  \caption{Dampfdruckkurve von Dichlordifluormethan zur Bestimmung der Verdampfungswärme $L$.}
   \label{fig:plot2}
 \end{figure}
-\begin{align}
+Die Ausgleichsgerade wird nach $y= a*x+b$ bestimmt, somit lauten die Parameter
+\begin{align*}
   a&= (-2621.10 \pm 97.45) \si{\kelvin}
   b&= (10.67 \pm 0.31)
+  \intertext{und L kann bestimmt werden zu}
   L&= (21793.07 \pm 810.28) \si{\joule\per\mol}.
-\end{align}
+\end{align*}
 
+Der Massendurchsatz wird in \autoref{tab:Tab4} aufgetragen und zur besseren Darstellung in SI-Einheiten mit der molaren Masse von Dichlordifluormethan
+$M= \qty{120.9}{\gram\per\mol}$ multipliziert.
 \begin{table}[H]
 	\centering
 	\caption{Massendurchsatz zu vier gewählten Zeitpunkten.}
@@ -140,10 +178,10 @@ wobei N gemittelt aus Tab1 zu $N_m= (114 \pm 4) \si{\watt}$
 		\toprule
       {$t \mathbin{/} \si{\second}$}&\multicolumn{2}{c}{$\frac{dm}{dt} \mathbin{/} \si{\mol\per\second}$}&\multicolumn{2}{c}{$\frac{dm}{dt} \mathbin{/} \si{\gram\per\second}$}\\
     \midrule
-      420  -0,0113 & 0,0005 & -1,37 & 0,05\\
-      840  -0,0114 & 0,0005 & -1,37 & 0,05\\
-      1260 -0,0114 & 0,0005 & -1,38 & 0,05\\
-      1680 -0,0114 & 0,0005 & -1,38 & 0,05\\
+      420  & -0,0113 & 0,0005 & -1,37 & 0,05\\
+      840  & -0,0114 & 0,0005 & -1,37 & 0,05\\
+      1260 & -0,0114 & 0,0005 & -1,38 & 0,05\\
+      1680 & -0,0114 & 0,0005 & -1,38 & 0,05\\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -152,8 +190,8 @@ wobei N gemittelt aus Tab1 zu $N_m= (114 \pm 4) \si{\watt}$
 	\centering
 	\caption{Dichte und mechanische Leistung des Kompressors zu vier gewählten Zeitpunkten.}
 	\label{tab:Tab5}
-  \sisetup{table-format=1.4}
-	\begin{tabular}{S[table-format=4.0] S[table-format=3.4]@{${}\pm{}$}S[table-format=1.4] S[table-format=3.2]@{${}\pm{}$} S[table-format=1.2]}
+  \sisetup{table-format=2.1}
+	\begin{tabular}{S[table-format=4.0] S[table-format=2.2] S@{${}\pm{}$} S[table-format=1.1]}
 		\toprule
       {$t \mathbin{/} \si{\second}$}&{$\rho \mathbin{/} \si{\kilo\gram\per\cubic\meter}$}&\multicolumn{2}{c}{$N_{mech} \mathbin{/} \si{\watt}$}\\
     \midrule
