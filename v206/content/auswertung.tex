@@ -1,14 +1,6 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-
-
-T_0= \qty{273.15}{\kelvin}
-
-\rho_0= \qty{5.51}{\kilo\gram\per\cubic\meter}
-\kappa=\qty{1.14}{\watt\per\meter\per\kelvin}
-%R=8.31446261815324$
-
 \begin{table}[H]
 	\centering
 	\caption{Messwerte der Wärmepumpe.}
@@ -57,8 +49,8 @@ T_0= \qty{273.15}{\kelvin}
 
 Die Messung wird nach \autoref{sec:Durchführung} durchgeführt und die Temperatur- und Druckverläufe, sowie die Leistungsaufnahme des Kompressors
 werden in \autoref{tab:Tab1} in Abhängigkeit von der Zeit dargestellt.
-Hierbei werden die Werte direkt in SI-Einheiten umgerechnet und zu den Drücken, wie in der Versuchsanleitung vorgegeben (\cite{v206}),
-$\qty{1}{bar}$ dazuaddiert.
+Hierbei werden die Werte direkt in SI-Einheiten umgerechnet und zu den Drücken, wie in der Versuchsanleitung vorgegeben (\cite{V206}),
+$\qty{1}{bar}$ addiert.
 
 Aus den Werten in \autoref{tab:Tab1} für die Temperaturen $T_1$ und $T_2$ wird ein Plot erstellt, siehe \autoref{fig:plot1}.
 Hier werden die Temperaturverläufe in Abhängigkeit von der Zeit aufgetragen.
@@ -72,7 +64,7 @@ Hier werden die Temperaturverläufe in Abhängigkeit von der Zeit aufgetragen.
 
 Außerdem wird nach der Formel
 \begin{align*}
-  T(t)=a*t^2+b*t+c
+  T(t)=at^2+bt+c
 \end{align*}
 eine jeweils eine Ausgleichskurve für $T_1$ und $T_2$ erstellt.
 Die Parameter werden mithilfe von Python bestimmt und lauten für die Ausgleichskurve von $T_1$
@@ -90,13 +82,13 @@ und für die Ausgleichskurve von $T_2$
 
 
 Aus den in \autoref{fig:plot1} dargestellten Funktionen werden nun die Differenzenquotienten $\frac{dT_1}{dt}$ und $\frac{dT_2}{dt}$ zu vier gewählten
-Zeitpunkten bestimmt werden. Die gewählten Zeitpunkte sind $t=\qty{420}{\second},t=\qty{840}{\second}, t=\qty{1260}{\second}$ und $t=\qty{1680}{\second}$.
+Zeitpunkten bestimmt. Die gewählten Zeitpunkte sind $t=\qty{420}{\second},t=\qty{840}{\second}, t=\qty{1260}{\second}$ und $t=\qty{1680}{\second}$.
 Im Folgenden werden alle zu bestimmenden Größen jeweils zu diesen Zeitpunkten berechnet.
 Die Differenzenquotienten werden nach
 \begin{align*}
-  \frac{dT}{dt}&= 2*a*t+b
+  \frac{dT}{dt}&= 2at+b
   \intertext{berechnet, wobei der Fehler durch}
-  \Delta \frac{dT}{dt}&= sqrt((2*t\cdot \Delta a)^2+(\Delta b)^2)
+  \Delta \frac{dT}{dt}&= \sqrt{(2t\cdot \Delta a)^2+(\Delta b)^2}
 \end{align*}
 bestimmt wird. In \autoref{tab:Tab2} sind die Differenzenquotienten $\frac{dT_1}{dt}$ und $\frac{dT_2}{dt}$ und ihre Fehler zu den vier gewählten
 Zeitpunkten aufgelistet.
@@ -118,16 +110,16 @@ Zeitpunkten aufgelistet.
 \end{table}	
 
 Im nächsten Schritt sollen die ideale und die reale Güteziffer der Wärmepumpe nach Gleichungen \ref{eqn:Güteziffer_ideal} und \ref{eqn:Güteziffer}
-bestimmt werden. N wird dafür gemittelt aus Tab1 zu $\bar{N}= (114 \pm 4) \si{\watt}$. 
+bestimmt werden. N wird dafür gemittelt aus \autoref{tab:Tab1} zu $\bar{N}= (114 \pm 4) \si{\watt}$.
 Die Wärmekapazität des Wassers beträgt $c_w = \qty{4182}{\joule\per\kilo\gram\per\kelvin}$ \cite[381]{PhyPrak}, die Masse des Wassers im Reservoir
-beträgt $m_1= \qty{3}{\kilo\gram}$. Somit wird $m_1c_w$ berechnet zu $m_1c_w= \qty{12546}{\joule\per\kelvin}$. Die Wärmekapazität des Eimers und der Kupfer-
-schlange beläuft sich auf $m_kc_k=\qty{750}{\joule\per\kelvin}$.
+beträgt $m_1= \qty{3}{\kilo\gram}$. Somit wird $m_1c_w$ berechnet zu $m_1c_w= \qty{12546}{\joule\per\kelvin}$. Die Wärmekapazität des Eimers und der 
+Kupferschlange beläuft sich auf $m_kc_k=\qty{750}{\joule\per\kelvin}$.
 Mit den Werten aus \autoref{tab:Tab2} werden nun die Güteziffern bestimmt und in \autoref{tab:Tab3} dargestellt.
 Der Fehler der realen Güteziffer wird nach der Gaußschen Fehlerfortpflanzung durch
 \begin{align*}
-  \Delta \nu_{real}&= sqrt((\frac{m_1 c_w + m_k c_k}{\bar{N}}\Delta\frac{dT_1}{dt})^2+(-(m_1 c_w + m_k c_k)\frac{dT_1}{dt}\frac{1}{\bar{N}^2}\Delta \bar{N})^2).
+  \Delta \nu_{real}&= \sqrt{\Bigl(\frac{m_1 c_w + m_k c_k}{\bar{N}}\Delta\frac{dT_1}{dt}\Bigr)^2+\Bigl(-(m_1 c_w + m_k c_k)\frac{dT_1}{dt}\frac{1}{\bar{N}^2}\Delta \bar{N}\Bigr)^2}
 \end{align*}
-
+bestimmt.
 \begin{table}[H]
 	\centering
 	\caption{Reale und ideale Güteziffer zu vier gewählten Zeitpunkten.}
@@ -145,13 +137,19 @@ Der Fehler der realen Güteziffer wird nach der Gaußschen Fehlerfortpflanzung d
   \end{tabular}
 \end{table}
 
+Die Abweichung der realen von der idealen Güteziffer wird durch die Formel
+\begin{align*}
+  abw = 100\cdot \Bigl(\frac{\nu_{real}-\nu_{ideal}}{\nu_{ideal}}\Bigr)
+\end{align*}
+bestimmt.
 
 Um den Massendurchsatz $\frac{dm}{dt}$ nach \autoref{eqn:Massendurchsatz} zu bestimmen wird zuerst ein Plot des logarithmierten
 Drucks $\frac{p_b}{p_0}$ in Abhängigkeit von $\frac{1}{T_1}$ erstellt, woraus die Verdampfungswärme $L$ durch
-\begin{align*}
-  L&= -a *R 
-\end{align*}
-bestimmt wird. Die universelle Gaskonstante lautet $R=8.31446261815324$ und $p_0= \qty{100000}{\pascal}$.
+\begin{align}
+  L&= -a R\\
+  \label{eqn:Lar}
+\end{align}
+bestimmt wird. Die universelle Gaskonstante lautet $R=\qty{8.31446261815324}{\joule\per\mol\per\kelvin}$ und $p_0= \qty{100000}{\pascal}$.
 
 \begin{figure}
   \centering
@@ -159,16 +157,21 @@ bestimmt wird. Die universelle Gaskonstante lautet $R=8.31446261815324$ und $p_0
   \caption{Dampfdruckkurve von Dichlordifluormethan zur Bestimmung der Verdampfungswärme $L$.}
   \label{fig:plot2}
 \end{figure}
-Die Ausgleichsgerade wird nach $y= a*x+b$ bestimmt, somit lauten die Parameter
+Die Ausgleichsgerade wird nach $y= a\cdot x+b$ mithilfe von Python bestimmt, daher lauten die Parameter
 \begin{align*}
-  a&= (-2621.10 \pm 97.45) \si{\kelvin}
-  b&= (10.67 \pm 0.31)
-  \intertext{und L kann bestimmt werden zu}
+  a&= (-2621.10 \pm 97.45) \si{\kelvin}\\
+  b&= (10.67 \pm 0.31)\\
+  \intertext{und L kann nach \autoref{eqn:Lar} bestimmt werden zu}
   L&= (21793.07 \pm 810.28) \si{\joule\per\mol}.
 \end{align*}
 
-Der Massendurchsatz wird in \autoref{tab:Tab4} aufgetragen und zur besseren Darstellung in SI-Einheiten mit der molaren Masse von Dichlordifluormethan
+Der berechnete Massendurchsatz wird in \autoref{tab:Tab4} aufgetragen und zur besseren Darstellung in SI-Einheiten mit der molaren Masse von Dichlordifluormethan
 $M= \qty{120.9}{\gram\per\mol}$ multipliziert.
+Der Fehler des Massendurchsatzes wird durch die Gaußsche Fehlerfortpflanzung nach
+\begin{align*}
+  \Delta \frac{dm}{dt}&= \sqrt{\Bigl(\frac{m_2 c_w + m_k c_k}{L}\Delta\frac{dT_2}{dt}\Bigr)^2+\Bigl(-(m_2 c_w + m_k c_k)\frac{dT_2}{dt}\frac{1}{L^2}\Delta L\Bigr)^2}
+\end{align*}
+berechnet.
 \begin{table}[H]
 	\centering
 	\caption{Massendurchsatz zu vier gewählten Zeitpunkten.}
@@ -203,3 +206,12 @@ $M= \qty{120.9}{\gram\per\mol}$ multipliziert.
     \end{tabular}
   \end{table}
 
+In \autoref{tab:Tab5} ist die Dichte des Transportgases Dichlordifluormethan, sowie die mechanische Leistung des Kompressors für die vier 
+gewählten Zeitpunkte dargestellt.
+Die Dichte wird nach der Formel
+\begin{align}
+  \rho&= \frac{\rho_0\cdot T_0 \cdot p_a}{T_2 \cdot p_0}
+\end{align} 
+berechnet. Hier ist $p_0= \qty{100000}{\pascal}$, $T_0= \qty{273.15}{\kelvin}$ und $\rho_0= \qty{5.51}{\kilo\gram\per\cubic\meter}$.
+Mithilfe von \autoref{eqn:Kompressorleistung} und den zuvor berechneten Werten wird somit die mechanische Kompressorleistung bestimmt.
+$\kappa$ entspricht für Dichlordifluormethan $\kappa=\qty{1.14}{\watt\per\meter\per\kelvin}$.
