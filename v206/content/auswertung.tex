@@ -1,6 +1,9 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-
+Die Messung wird nach \autoref{sec:Durchführung} durchgeführt und die Temperatur- und Druckverläufe, sowie die Leistungsaufnahme des Kompressors
+werden in \autoref{tab:Tab1} in Abhängigkeit von der Zeit dargestellt.
+Hierbei werden die Werte direkt in SI-Einheiten umgerechnet und zu den Drücken, wie in der Versuchsanleitung \cite{V206} vorgegeben, 
+$\qty{1}{bar}$ addiert.
 \begin{table}[H]
 	\centering
 	\caption{Messwerte der Wärmepumpe.}
@@ -47,11 +50,6 @@
   \end{tabular}
 \end{table}
 
-Die Messung wird nach \autoref{sec:Durchführung} durchgeführt und die Temperatur- und Druckverläufe, sowie die Leistungsaufnahme des Kompressors
-werden in \autoref{tab:Tab1} in Abhängigkeit von der Zeit dargestellt.
-Hierbei werden die Werte direkt in SI-Einheiten umgerechnet und zu den Drücken, wie in der Versuchsanleitung vorgegeben (\cite{V206}),
-$\qty{1}{bar}$ addiert.
-
 Aus den Werten in \autoref{tab:Tab1} für die Temperaturen $T_1$ und $T_2$ wird ein Plot erstellt, siehe \autoref{fig:plot1}.
 Hier werden die Temperaturverläufe in Abhängigkeit von der Zeit aufgetragen.
 
@@ -82,7 +80,7 @@ und für die Ausgleichskurve von $T_2$
 
 
 Aus den in \autoref{fig:plot1} dargestellten Funktionen werden nun die Differenzenquotienten $\frac{dT_1}{dt}$ und $\frac{dT_2}{dt}$ zu vier gewählten
-Zeitpunkten bestimmt. Die gewählten Zeitpunkte sind $t=\qty{420}{\second},t=\qty{840}{\second}, t=\qty{1260}{\second}$ und $t=\qty{1680}{\second}$.
+Zeitpunkten bestimmt. Die gewählten Zeitpunkte sind $t_1=\qty{420}{\second},t_2=\qty{840}{\second}, t_3=\qty{1260}{\second}$ und $t_4=\qty{1680}{\second}$.
 Im Folgenden werden alle zu bestimmenden Größen jeweils zu diesen Zeitpunkten berechnet.
 Die Differenzenquotienten werden nach
 \begin{align*}
@@ -143,11 +141,10 @@ Die Abweichung der realen von der idealen Güteziffer wird durch die Formel
 \end{align*}
 bestimmt.
 
-Um den Massendurchsatz $\frac{dm}{dt}$ nach \autoref{eqn:Massendurchsatz} zu bestimmen wird zuerst ein Plot des logarithmierten
+Um den Massendurchsatz $\frac{\Delta m}{\Delta t}$ nach \autoref{eqn:Massendurchsatz} zu bestimmen wird zuerst ein Plot des logarithmierten
 Drucks $\frac{p_b}{p_0}$ in Abhängigkeit von $\frac{1}{T_1}$ erstellt, woraus die Verdampfungswärme $L$ durch
 \begin{align}
-  L&= -a R\\
-  \label{eqn:Lar}
+  L&= -a R\label{eqn:Lar}
 \end{align}
 bestimmt wird. Die universelle Gaskonstante lautet $R=\qty{8.31446261815324}{\joule\per\mol\per\kelvin}$ und $p_0= \qty{100000}{\pascal}$.
 
@@ -169,7 +166,7 @@ Der berechnete Massendurchsatz wird in \autoref{tab:Tab4} aufgetragen und zur be
 $M= \qty{120.9}{\gram\per\mol}$ multipliziert.
 Der Fehler des Massendurchsatzes wird durch die Gaußsche Fehlerfortpflanzung nach
 \begin{align*}
-  \Delta \frac{dm}{dt}&= \sqrt{\Bigl(\frac{m_2 c_w + m_k c_k}{L}\Delta\frac{dT_2}{dt}\Bigr)^2+\Bigl(-(m_2 c_w + m_k c_k)\frac{dT_2}{dt}\frac{1}{L^2}\Delta L\Bigr)^2}
+  \Delta \frac{\Delta m}{\Delta t}&= \sqrt{\Bigl(\frac{m_2 c_w + m_k c_k}{L}\Delta\frac{dT_2}{dt}\Bigr)^2+\Bigl(-(m_2 c_w + m_k c_k)\frac{dT_2}{dt}\frac{1}{L^2}\Delta L\Bigr)^2}
 \end{align*}
 berechnet.
 \begin{table}[H]
@@ -188,7 +185,15 @@ berechnet.
     \bottomrule
   \end{tabular}
 \end{table}
-
+In \autoref{tab:Tab5} ist die Dichte des Transportgases Dichlordifluormethan, sowie die mechanische Leistung des Kompressors für die vier 
+gewählten Zeitpunkte dargestellt.
+Die Dichte wird nach der Formel
+\begin{align*}
+  \rho&= \frac{\rho_0\cdot T_0 \cdot p_a}{T_2 \cdot p_0}
+\end{align*} 
+berechnet. Hier ist $p_0= \qty{100000}{\pascal}$, $T_0= \qty{273.15}{\kelvin}$ und $\rho_0= \qty{5.51}{\kilo\gram\per\cubic\meter}$.
+Mithilfe von \autoref{eqn:Kompressorleistung} und den zuvor berechneten Werten wird somit die mechanische Kompressorleistung bestimmt.
+$\kappa$ entspricht für Dichlordifluormethan $\kappa=\qty{1.14}{\watt\per\meter\per\kelvin}$.
 \begin{table}[H]
 	\centering
 	\caption{Dichte und mechanische Leistung des Kompressors zu vier gewählten Zeitpunkten.}
@@ -206,12 +211,3 @@ berechnet.
     \end{tabular}
   \end{table}
 
-In \autoref{tab:Tab5} ist die Dichte des Transportgases Dichlordifluormethan, sowie die mechanische Leistung des Kompressors für die vier 
-gewählten Zeitpunkte dargestellt.
-Die Dichte wird nach der Formel
-\begin{align}
-  \rho&= \frac{\rho_0\cdot T_0 \cdot p_a}{T_2 \cdot p_0}
-\end{align} 
-berechnet. Hier ist $p_0= \qty{100000}{\pascal}$, $T_0= \qty{273.15}{\kelvin}$ und $\rho_0= \qty{5.51}{\kilo\gram\per\cubic\meter}$.
-Mithilfe von \autoref{eqn:Kompressorleistung} und den zuvor berechneten Werten wird somit die mechanische Kompressorleistung bestimmt.
-$\kappa$ entspricht für Dichlordifluormethan $\kappa=\qty{1.14}{\watt\per\meter\per\kelvin}$.
