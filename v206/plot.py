@@ -74,8 +74,8 @@ def dT(x,a,b):
 q= (7,14,21,28)
 for i in q:
 
-    dT1=dT(T1[i],a,b)
-    dT2=dT(T2[i],a2,b2)
+    dT1=dT(t[i],a,b)
+    dT2=dT(t[i],a2,b2)
     print('dT1/dt, dT2/dt', t[i], dT1, dT2) #Differenzenquotienten
 
 #ddddddddddddddddddddddddddddddddddddddddddddddd
@@ -85,7 +85,7 @@ print('Nm=', Nm) #gemittelte Leistungsaufnahme Kompressor
 
 for i in q:
 
-    v=(m1*cw+mkck)*dT(T1[i],a,b)/Nm
+    v=(m1*cw+mkck)*dT(t[i],a,b)/Nm
     vid = T1[i]/(T1[i]-T2[i])
     abw = 100*(v-vid)/vid
     print('v',t[i] , v, vid , abw) #güteziffer
@@ -114,7 +114,7 @@ plt.legend(loc='best')
 plt.savefig('build/plot2.pdf')
 
 for i in q:
-    dQ2=(m1*cw+mkck)*dT(T2[i],a2,b2)
+    dQ2=(m1*cw+mkck)*dT(t[i],a2,b2)
     dm=dQ2/L
     dmmol=dm*120.9
     print('dQ2/dt, dmdt ms, dmdt gs', t[i], dQ2, dm, dmmol)#Massendurchsatz 
@@ -124,7 +124,7 @@ for i in q:
 for i in q:
 
     rho= (rho0*T0*pa[i])/(T2[i]*p0)
-    Nmech = (1/(kappa-1))*((pb[i]* ((pa[i]/pb[i])**(1/kappa)))-pa[i])*(1/rho)*((m1*cw+mkck)*dT(T2[i],a2,b2)/L*120.9)*0.001
+    Nmech = (1/(kappa-1))*((pb[i]* ((pa[i]/pb[i])**(1/kappa)))-pa[i])*(1/rho)*((m1*cw+mkck)*dT(t[i],a2,b2)/L*120.9)*0.001
     print('rho , nmech' ,t[i] , rho, Nmech)
     
 
