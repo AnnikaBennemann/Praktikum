@@ -1,0 +1,8 @@
+#Einfallswinkel Ausfallswinkel 
+10  6.5
+20  13.25
+30  19.5
+40  25.5
+50  31
+60  35.75
+70  39
