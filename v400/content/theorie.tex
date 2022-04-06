@@ -6,15 +6,15 @@ Brechung und Beugung eines Lichtstrahls und somit der Strahlen- und Wellenoptik.
 
 \section{Theorie}
 \label{sec:Theorie}
-Licht und ihre Ausbreitung wird in der Strahlenoptik mit Lichtstrahlen dargestellt, wobei diese die Wellennormalen sind.
-Die Ausbreitungsgeschwindigkeit einer Lichtwelle ist abhängig von den Materialeigenschaften, weshalb es zu dem Phänomen der Brechung kommt 
-beim Übergang von einem Medium ins andere.
-Das Snellius Brechungsgesetz
+Licht und seine Ausbreitung wird in der Strahlenoptik mit Lichtstrahlen dargestellt, wobei diese eigentlich Wellennormalen sind.
+Die Ausbreitungsgeschwindigkeit einer Lichtwelle ist abhängig von Materialeigenschaften, weshalb es
+beim Übergang von einem Medium ins andere zu dem Phänomen der Brechung kommt.
+Das Snellius'sche Brechungsgesetz
 \begin{align}
     \frac{sin(\alpha)}{sin(\beta)}  &= \frac{v_1}{v_2} = \frac{n_2}{n_1}
     \label{eqn:Brechung}
 \end{align}
-gibt die Beziehung zwischen den Ausbreitungsgeschwindigkeiten $v_1$ und $v_2$, den Brechungsindizes $n_1$ und $n_2$ und den Winkeln $\alpha$ und $\beta$.
+gibt die Beziehung zwischen den Ausbreitungsgeschwindigkeiten $v_1$ und $v_2$, den Brechungsindizes $n_1$ und $n_2$ und den Winkeln $\alpha$ und $\beta$ an.
 Dabei ist $\alpha$ der Einfallswinkel und $\beta$ der Brechungswinkel.
 \begin{figure}[H]
     \centering
@@ -29,7 +29,6 @@ Ist die Ausbreitungsgeschwindigkeit vom Licht in einem Medium höher als in dem 
 wird es als optisch dichter und umgekehrt als optisch dünner bezeichnet.
 In einem homogenen Medium breiten sich die Lichtstrahlen gradlinig aus und beeinflussen sich nicht gegenseitig, selbst wenn sich zwei oder mehrere kreuzen.
 Der Weg des Lichtstrahls ist umkehrbar.
-
 
 \subsection{Reflexion}
 \label{subsec:Reflexion}
@@ -59,13 +58,22 @@ Der Weg des Lichtstrahls ist umkehrbar.
     Die Ausbreitungsgeschwindigkeiten in den beiden Medium sind verschieden und der Lichtstrahl erfährt an der Grenzfläche eine Richtungsänderung.
     Es gilt das Gesetz von Snellius(\ref{eqn:Brechung}).\\
     Falls ein Lichtstrahl durch einer planparallele Platte hindurch geht und an den beiden Grenflächen gebrochen wird , ändert diese seine Richtung nicht.
-    Er erfährt ein Strahlversatz $s$
+    Er erfährt einen Strahlversatz $s$
     \begin{equation}
         s = d\frac{sin(\alpha-\beta)}{cos(\beta)},
         \label{eqn:Strahlversatz}
     \end{equation}
-    welche durch den Einfallswinkel $\alpha$, der Geometrie und dem Material der Platte bestimmt wird.
+    welcher durch den Einfallswinkel $\alpha$, die Geometrie und das Material der Platte bestimmt wird.
 
+    Trifft ein Lichtstrahl auf ein Prisma, welches durch nicht parallele Grenzflächen gekennzeichnet ist, wird der Lichtstrahl gebrochen.
+    Der Einfallswinkel $\alpha$ ist hier für alle Wellenlängen des Lichts gleich, jedoch variiert der Brechungswinkel $\beta$. Dieser
+    ist abhängig von der Wellenlänge, was als Dispersion bezeichnet wird. Weißes Licht beispielsweise wird also durch ein Prisma in seine Farben aufgeteilt.
+    Die Ablenkung $\delta$, die der Lichtstrahl erfährt, wird ausgedrückt durch
+    \begin{align}
+        \delta = (\alpha_1 + \alpha_2)- (\beta_1 + \beta_2),
+        \label{eqn:Ablenkung}
+    \end{align}
+    wobei die Summe der Brechungswinkel $\beta_1$ und $\beta_2$ zusammen den brechenden Winkel $\gamma$ ergibt.
 \end{minipage}
 \begin{minipage}[t]{0,5\textwidth}
     \begin{figure}[H]
@@ -86,7 +94,7 @@ Der Weg des Lichtstrahls ist umkehrbar.
 \subsection{Reflexion und Transmission}
 \label{subsec:R+T}
 \begin{minipage}[t]{0,5\textwidth}
-    Lichtstraheln, die auf eine Grenzfläche treffen, werden in der Regel nicht vollständig reflektiert bzw. gebrochen.
+    Lichtstrahlen, die auf eine Grenzfläche treffen, werden in der Regel nicht vollständig reflektiert bzw. gebrochen.
     Ein Teil der Intensität wird reflektiert ($R$) und der andere Teil wird transmittiert ($T$) und gebrochen.
     Der Anteil der Reflexion und Transmission ist materialabhängig, es muss jedoch immer $T + R = 1$ gelten
 \end{minipage} 

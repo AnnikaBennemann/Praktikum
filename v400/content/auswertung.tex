@@ -61,9 +61,10 @@ Auch diese Werte sind in \autoref{tab:Brechung} zu finden.
 
 
 Der Mittelwert des Brechungsindexes wird durch die Formel
-\begin{align*}
+\begin{align}
     \bar{n}=\frac{1}{m} \sum_{i=1}^m n_i
-\end{align*}
+    \label{eqn:Mittelwert}
+\end{align}
 zu 
 \begin{align*}
   \bar{n}=1,50
@@ -71,17 +72,19 @@ zu
 berechnet.
 
 Die Standardabweichung ergibt sich durch
-\begin{align*}
+\begin{align}
     \sigma_n=\sqrt{\frac{1}{m-1}\sum_{j=1}^m (n_j-\bar{n})^2},
-\end{align*}
+    \label{eqn:Standardabweichung}
+\end{align}
 zu
 \begin{align*}
   \sigma_n= 0,02.
 \end{align*}
 Somit wird der Fehler des Mittelwerts des Brechungsindexes nach der Formel
-\begin{align*}
+\begin{align}
     \Delta \bar{n}= \frac{\sigma_n}{\sqrt{m}} = \frac{\sqrt{\frac{1}{m-1}\sum_{j=1}^m (n_j-\bar{n})^2}}{\sqrt{m}}
-\end{align*}
+    \label{eqn:Fehler}
+\end{align}
 zu 
 \begin{align*}
   \Delta \bar{n}=7,56 \cdot 10^{-3}
@@ -211,12 +214,14 @@ dargestellt.
 
 %Aufgabe 5
 
-
+Im letzten Versuch werden beide Laserstrahlen nacheinander durch 3 verschiedene Beugungsgitter gestrahlt.
+Die Gitterkonstanten $d$ der Gitter betragen $1/600\si{\milli\meter}, 1/300 \si{\milli\meter}$ und $1/100 \si{\milli\meter}$.
+Der Einfallswinkel beträgt jeweils $\qty{0}{\degree}$. Die Beugungsmaxima werden abgelesen und in \autoref{tab:Beugung} notiert.
 
 \begin{table}
   \centering
-  \caption{Ablenkung des Laserstrahls durch ein Prisma.}
-  \label{tab:Ablenkung}
+  \caption{Beugung des Laserstrahls beim Durchtreten verschiedener Gitter.}
+  \label{tab:Beugung}
   \sisetup{table-format=2.1}
   \begin{tabular}{c S S  S[table-format=3.2]S S[table-format=3.2]}
   \toprule
@@ -240,12 +245,16 @@ dargestellt.
   \end{tabular}
 \end{table}
 
-\begin{figure}
-  \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
+Die Mittelwerte der Wellenlänge des grünen und des roten Lasers berechnen sich analog zu \autoref{eqn:Mittelwert} zu
+\begin{align*}
+  \lambda_{\text{grün}} &= \qty{541.91}{\nano\meter},\\ 
+  \lambda_{\text{rot}} &= \qty{646.78}{\nano\meter}.
+\end{align*}
 
+Ebenso werden die Standardabweichung (siehe \autoref{eqn:Standardabweichung}) und der Fehler (siehe \autoref{eqn:Fehler}) berechnet, sodass sich als Ergenbnis
+\begin{align*}
+  \lambda_{\text{grün}} &= (541,91 \pm 9,80) \si{\nano\meter},\\
+  \lambda_{\text{rot}} &= (646,78 \pm 7,33) \si{\nano\meter}
+\end{align*}
+ergibt.
 
-Siehe \autoref{fig:plot}!
