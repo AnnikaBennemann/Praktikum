@@ -32,8 +32,6 @@ Der Weg des Lichtstrahls ist umkehrbar.
 
 \subsection{Reflexion}
 \label{subsec:Reflexion}
-
-\begin{minipage}[t]{0.5\textwidth}
     Wenn ein Lichtstrahl auf eine Grenzfläche trifft, wird  dieser reflektiert. 
     Es gilt das Reflexiongesetz:
     Der Einfallswinkel $\alpha_1$ ist gleich dem Reflexionswinkel $\alpha_2$.
@@ -41,23 +39,20 @@ Der Weg des Lichtstrahls ist umkehrbar.
         \alpha_1 = \alpha_2
         \label{eqn:Reflexion}
     \end{equation}
-\end{minipage}
-\begin{minipage}[t]{0.5\textwidth}
+
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\textwidth]{build/Abb_2a.pdf}
-        \caption {Reflexion eines \\Lichtstrahls an einer Grenzfläche\cite[2]{V400}.}
-        \label{fig:Abb_1}
+        \includegraphics[width=0.3\textwidth]{build/Abb_2a.pdf}
+        \caption {Reflexion eines Lichtstrahls an einer Grenzfläche\cite[2]{V400}.}
+        \label{fig:Abb_2a}
     \end{figure}
-\end{minipage}
 
 \subsection{Brechung}
 \label{subsec:Brechung}
-\begin{minipage}[t]{0,5\textwidth}
     Wenn ein Lichtstrahl auf ein Medium mit einem Brechungsindex $n$ trifft, breitet er sich in diesem Medium aus. 
     Die Ausbreitungsgeschwindigkeiten in unterschiedlichen Medien sind verschieden und der Lichtstrahl erfährt an der Grenzfläche zweier Medien eine Richtungsänderung.
     Es gilt das Gesetz von Snellius(\ref{eqn:Brechung}).\\
-    Falls ein Lichtstrahl durch einer planparallele Platte hindurch geht und an den beiden Grenflächen gebrochen wird, ändert diese seine Richtung nicht.
+    Falls ein Lichtstrahl durch eine planparallele Platte hindurch geht und an den beiden Grenzflächen gebrochen wird, ändert diese seine Richtung nicht.
     Er erfährt allerdings einen Strahlversatz $s$
     \begin{equation}
         s = d\frac{sin(\alpha-\beta)}{cos(\beta)},
@@ -74,48 +69,46 @@ Der Weg des Lichtstrahls ist umkehrbar.
         \label{eqn:Ablenkung}
     \end{align}
     wobei die Summe der Brechungswinkel $\beta_1$ und $\beta_2$ zusammen den brechenden Winkel $\gamma$ ergibt.
-\end{minipage}
-\begin{minipage}[t]{0,5\textwidth}
     \begin{figure}[H]
+        \begin{subfigure}{0,56\textwidth}
         \centering
-        \includegraphics[width=0.6\textwidth]{build/Abb_2b.pdf}
-        \caption {Brechung eines \\Lichtstrahls an einer Grenzfläche\cite[2]{V400}.}
-        \label{fig:Abb_1}
-    \end{figure}
-
-\end{minipage}
-    \begin{figure}[H]
+        \includegraphics{build/Abb_2b.pdf}
+        \caption {Brechung eines Lichtstrahls an einer Grenzfläche.}
+        \label{fig:Abb_2b}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}{0,40\textwidth}
         \centering
-        \includegraphics[width=0.2\textwidth]{build/Abb_5.pdf}
-        \caption {Brechung eines Lichtstrahls an einer planparallelen Platte\cite[2]{V400}.}
-        \label{fig:Abb_1}
+        \includegraphics{build/Abb_5.pdf}
+        \caption {Brechung eines Lichtstrahls an einer planparallelen Platte.}
+        \label{fig:Abb_5}
+        \end{subfigure}
+        \caption{Brechung eines Lichtstrahls an verschiedenen Grenzflächen\cite[2]{V400}.}
     \end{figure}
 
 \subsection{Reflexion und Transmission}
 \label{subsec:R+T}
-\begin{minipage}[t]{0,5\textwidth}
     Lichtstrahlen, die auf eine Grenzfläche treffen, werden in der Regel nicht vollständig reflektiert bzw. gebrochen.
     Ein Teil der Intensität wird reflektiert ($R$) und der andere Teil wird transmittiert ($T$) und gebrochen.
     Der Anteil der Reflexion und Transmission ist materialabhängig, es muss jedoch immer $T + R = 1$ gelten.
-\end{minipage} 
-\begin{minipage}[t]{0,5\textwidth}
+
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\textwidth]{build/Abb_2c.pdf}
-        \caption {Brechung und Reflexion\\eines Lichtstrahls an\\einer Grenzfläche\cite[2]{V400}.}
-        \label{fig:Abb_1}
+        \includegraphics[width=0.3\textwidth]{build/Abb_2c.pdf}
+        \caption {Brechung und Reflexion eines Lichtstrahls an einer Grenzfläche\cite[2]{V400}.}
+        \label{fig:Abb_2c}
     \end{figure}
 
-\end{minipage}   
+ 
 \subsection{Beugung}
 \label{subsec:Beugung}
 Wenn Licht auf ein Hindernis trifft, kann beobachtet werden, dass das Licht sich auch im Schattenbereich ausbreitet.
 Die Strahlenoptik kann das Phänomen der Beugung nicht erklären, weswegen die Wellenoptik dafür benutzt werden muss.
-Merkmale der elektromagnetischen Wellen sind die Frequenz $\nu$ bzw. die Wellenlänge $\lambda$ und die Ausbreitungsgeschwindigkeit $\v$.
+Merkmale der elektromagnetischen Wellen sind die Frequenz $\nu$ bzw. die Wellenlänge $\lambda$ und die Ausbreitungsgeschwindigkeit $v$.
 Licht besteht aus mehreren Wellenzügen.
 Überlagern sich mehrere Wellen gilt das Superpositionsprinzip, die Amplituden der Wellen addieren sich also in jedem Punkt.\\
 Unter der Bedingung der Kohärenz, also dass die Wellenzüge die gleiche Frequenz und eine feste Phasenbeziehung besitzen, wird ein Interferenzbild erzeugt.
-Bei der Überlagerung von Wellen kann es zu einer konstruktiven Interferenz kommen, also es zu einer  Verstärkung oder zu einer destruktiven
+Bei der Überlagerung von Wellen kann es zu einer konstruktiven Interferenz kommen, also einer  Verstärkung oder zu einer destruktiven
 Interferenz, also einer Abschwächung.\\
 Wenn eine ebene Wellenfront auf ein Spalt mit einer Spaltbreite $a$ trifft, werden alle Punkte an der Spaltöffnung gebeugt.
 Dabei hat die gebeugte Welle die gleiche Frequenz und eine feste Phasenbeziehung.

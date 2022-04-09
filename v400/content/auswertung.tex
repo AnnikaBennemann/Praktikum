@@ -5,7 +5,7 @@
 %Aufgabe 1
 Nach \autoref{subsec:Reflexionsgesetz_durch} wird der Versuch aufgebaut und für $7$ verschiedene Einfallswinkel $\alpha_1$ der Reflexionswinkel $\alpha_2$
 bestimmt. Als Grenzfläche wird hierbei ein Spiegel genutzt. Die ermittelten Werte werden in \autoref{tab:Reflexion} dargestellt.
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Verifizierung des Reflexionsgesetzes.}
   \label{tab:Reflexion}
@@ -25,9 +25,6 @@ bestimmt. Als Grenzfläche wird hierbei ein Spiegel genutzt. Die ermittelten Wer
   \end{tabular}
 \end{table}
 
-Durch die Messung der Einfalls- und Reflexionswinkel lässt sich das Reflexionsgesetz (siehe \autoref{eqn:Reflexion}) verifizieren.
-Die Genauigkeit der Winkel ist jedoch durch menschliche Ablesefehler eingeschränkt. Außerdem ist die Skala in 1 Grad Schritte aufgeteilt,
-sodass eine genauere Bestimmung der Winkel darüber hinaus sehr schwierig ist.
 
 %Aufgabe 2
 \subsection{Brechungsgesetz}
@@ -41,7 +38,7 @@ mithilfe \autoref{eqn:Brechung} der Brechungsindex $n$ berechnet. Durch Umstellu
 wird die Geschwindigkeit des Lichtes im Medium berechnet.
 Auch diese Werte sind in \autoref{tab:Brechung} zu finden.
 
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Brechungswinkel, Brechungsindizes und Lichtgeschwindigkeiten für verschiedene Einfallswinkel $\alpha$.}
   \label{tab:Brechung}
@@ -93,9 +90,20 @@ zu
 \end{align*}
 bestimmt.
 
+Die Abweichung 
+\begin{align}
+  a=\frac{|n_\mathrm{gemessen}-n_\mathrm{theorie}|}{n_\mathrm{theorie}}\cdot 100 \label{eqn:abweich}
+\end{align}
+des Brechungsindexes vom Literaturwert (siehe \autoref{sec:Vorbereitung}) wird zu
+\begin{align*}
+  a=(0,67 \pm 0,70) \si{\percent}
+\end{align*}
+berechnet.
+
+
 Da nun mit der fehlerbehafteten Größe des Mittelwerts des Brechungsindexes weiter gerechnet wird, muss der Fehler der Lichtgeschwindigkeit mit der Fehlerfortpflanzung nach Gauß
 \begin{align*}
-  \Delta v= \sqrt{\left(\frac{\partial v}{\partial \bar{n}}\Delta \bar{n} \right)^{2}} =  \sqrt{\left(\frac{-c}{\bar{n}^2}\Delta \bar{n} \right)^{2}} \label{eqn:Gauß}
+  \Delta v= \sqrt{\left(\frac{\partial v}{\partial \bar{n}}\Delta \bar{n} \right)^{2}} =  \sqrt{\left(\frac{-c}{\bar{n}^2}\Delta \bar{n} \right)^{2}} 
 \end{align*}
 bestimmt werden.
 
@@ -117,7 +125,7 @@ $d$ ist hierbei die Dicke der Platte und beläuft sich auf $d= \qty{5.85}{\centi
 Zuerst werden die gemessenen Einfalls- und Brechungswinkel zur Berechnung genutzt. Die Ergebnisse sind in \autoref{tab:Strahlmess} dargestellt.
 
 
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Strahlversatz $s$ bei gemessenem Brechungswinkel $\beta$ zu verschiedenen Einfallswinkeln $\alpha$.}
   \label{tab:Strahlmess}
@@ -137,7 +145,7 @@ Zuerst werden die gemessenen Einfalls- und Brechungswinkel zur Berechnung genutz
 
 
 Eine weitere Art den Strahlenversatz zu berechnen ist, den Brechnungswinkel mithilfe des in \autoref{subsec:Brechung} bestimmten Brechungsindex
-$n = 1,50 \pm 0,01 $ auch auszurechnen.
+$n = 1,50 \pm 0,01 $ auszurechnen.
 Die Berechnung von $\beta$ erfolgt über das umgestellte Gesetz von Snellius (siehe \autoref{eqn:Brechung}) 
 \begin{align*}
   \beta = \arcsin\left(\frac{\sin(\alpha)}{n}\right).
@@ -152,7 +160,7 @@ Der Fehler vom Strahlversatz berechnet sich nun zu
   \Delta s= \sqrt{\left(\frac{\partial s}{\partial \beta}\Delta \beta \right)^{2}} =  -\dfrac{d\sin\left(\beta\right)\sin\left(\beta-\alpha\right)}{\cos^2\left(\beta\right)}-\dfrac{d\cos\left(\beta-\alpha\right)}{\cos\left(\beta\right)}.
 \end{align*}
 
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Strahlversatz $s$ bei berechnetem Brechungswinkel $\beta$ zu verschiedenen Einfallswinkeln $\alpha$.}
   \label{tab:Strahlrech}
@@ -187,16 +195,16 @@ Hierzu kann zum einen die Beziehung
   \sin(\alpha)= n \sin(\beta)
 \end{align*}
 aus dem Brechungsgesetz genutzt werden. Jedoch gilt beim Prisma auch 
-\begin{align*}
-  \beta_1 + \beta_2 = \gamma,
-\end{align*}
+\begin{align}
+  \beta_1 + \beta_2 = \gamma, \label{eqn:gamma}
+\end{align}
 sodass sich die Formel stark vereinfacht.
-Bei dem im Versuch verwendeten Prisma handelt es sich um Prisma mit dem Brechungswinkel $\gamma = \qty{60}{\degree}$,
+Bei dem im Versuch verwendeten Prisma handelt es sich um ein Prisma mit dem Brechungswinkel $\gamma = \qty{60}{\degree}$,
 welches aus Kronglas besteht und somit den Brechungsindex $n = 1,51$ hat. (siehe \autoref{tab:Brechungsindex})
 Die gemessenen Eintrittswinkel $\alpha_1$ und Austrittswinkel $\alpha_2$, sowie die berechnete Ablenkung sind in \autoref{tab:Ablenkung}
 dargestellt.
 
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Ablenkung des Laserstrahls durch ein Prisma.}
   \label{tab:Ablenkung}
@@ -224,7 +232,7 @@ Im letzten Versuch werden beide Laserstrahlen nacheinander durch 3 verschiedene 
 Die Gitterkonstanten $d$ der Gitter betragen $1/600\si{\milli\meter}, 1/300 \si{\milli\meter}$ und $1/100 \si{\milli\meter}$.
 Der Einfallswinkel beträgt jeweils $\qty{0}{\degree}$. Die Beugungsmaxima werden abgelesen und in \autoref{tab:Beugung} notiert.
 
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Beugung des Laserstrahls beim Durchtreten verschiedener Gitter.}
   \label{tab:Beugung}
@@ -265,3 +273,10 @@ sodass sich als Ergebnis für die Wellenlängen
 \end{align*}
 ergibt.
 
+Nun wird die Abweichung $a$ 
+der berechneten Wellenlängen von den Literaturwerten (siehe \autoref{sec:Durchführung}) analog zu \autoref{eqn:abweich} bestimmt.
+Die Abweichungen belaufen sich auf
+\begin{align*}
+  a_{\text{grün}}=& (1.86\pm 1.80) \si{\percent},\\
+  a_{\text{rot}}=& (1.86 \pm 1.20) \si{\percent}.
+\end{align*}

@@ -63,3 +63,16 @@ print('lama3grün =', lama3grün)
 print('lama3rot =', lama3rot)
 print('lama1grün =', lama1grün) 
 print('lama1rot =', lama1rot)
+
+n = ufloat(1.50, 0.01)
+a= ((n-1.49)/1.49)*100
+print('a=', a)
+
+lg= ufloat(541.91, 9.80)
+lr= ufloat(646.78, 7.33)
+
+ag= (lg-532)/532*100
+ar= (lr-635)/635*100
+
+print('ag=', ag)
+print('ar=' , ar)
