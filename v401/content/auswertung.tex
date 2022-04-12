@@ -1,12 +1,61 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
+
+
+\begin{table}[H]
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
+  \caption{Messdaten zur Bestimmung der Wellenlänge des Lasers.}
+  \label{tab:Wellenlänge}
+  \sisetup{table-format=2.2}
+  \begin{tabular}{S[table-format=1.2] S[table-format=4.0] S[table-format=3.2]}
+  \toprule
+  {$\Delta d / \si{\milli\meter}}$} & {Anzahl $z$ der Intensitätsmaxima} & {Wellenlänge $\lambda / \si{\nano\meter}$}\\
+  \midrule
+    3.38  & 2005 & 668.17 \\
+    3.37  & 2002 & 667.19 \\
+    3.36  & 2006 & 663.88 \\
+    3.39  & 2003 & 670.81 \\
+    3.39  & 2007 & 669.48 \\
+    3.38  & 2001 & 669.50 \\
+    3.38  & 2003 & 668.83 \\
+    3.37  & 1999 & 668.19 \\
+    3.38  & 2003 & 668.83 \\
+    3.38  & 2003 & 668.83 \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+Aus den gemessenen Daten wird mithilfe von !!!! die Wellenlänge des Lasers berechnet und auch in \autoref{tab:Wellenlänge} eingetragen.
+Der 
+\begin{align}
+  \bar{\lambda}=\frac{1}{m} \sum_{i=1}^m \lambda_i
+  \label{eqn:Mittelwert}
+\end{align}
 
 
-Siehe \autoref{fig:plot}!
+Der reale Wert der Wellenlänge des Lasers ist auf dem Etikett des Lasers mit $\lamda_{\text{real}}=\qty{635}{\nano\meter}$ angegeben.
+Im Folgenden wird mit diesem Wert weitergerechnet.
+
+
+
+\begin{table}[H]
+  \centering
+  \caption{Messdaten zur Bestimmung des Brechungsindexes von Luft.}
+  \label{tab:Brechungsindex}
+  \sisetup{table-format=2.2}
+  \begin{tabular}{S[table-format=1.1] S[table-format=2.0] S[table-format=1.6]}
+  \toprule
+  {Luftdruck $ p / \si{\bar}}$} & {Anzahl $z$ der Intensitätsmaxima} & {Brechungsindex $n$}\\
+  \midrule
+    0.6 & 19 & 1.000328
+    0.6 & 17 & 1.000293
+    0.6 & 21 & 1.000363
+    0.6 & 16 & 1.000276
+    0.6 & 17 & 1.000293
+    0.6 & 17 & 1.000293
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+
