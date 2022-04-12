@@ -9,3 +9,8 @@ lama = ufloat(668.37, 0.58)
 lamareal = 635
 a= ((lama-lamareal)/lamareal)*100
 print('a=', a)
+
+nlit = 1.000272
+n = ufloat(1.000308, 0.000013)
+an= ((n-nlit)/nlit)*100
+print('an =', an)

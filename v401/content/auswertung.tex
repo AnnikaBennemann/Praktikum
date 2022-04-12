@@ -33,11 +33,11 @@ Dann wird die Anzahl $z$ der Maxima und die Abstandsänderung $\Delta d$ in \aut
 
 Aus den gemessenen Daten wird durch Umstellung von \autoref{eqn:d} nach
 \begin{align*}
-  \lambda = \frac{\Delta d \cdot 2}{ Ü \cdot z}
+  \lambda = \frac{\Delta d \cdot 2}{ U \cdot z}
 \end{align*}
 die Wellenlänge des Lasers berechnet und auch in \autoref{tab:Wellenlänge} eingetragen.
 $Ü$ steht hierbei für die Übersetzung des Motors mithilfe dessen der Spiegel verschoben wird.
-Bei dem gegebenen Motor beträgt die Übersetzung $Ü= 1:5.046$. 
+Bei dem gegebenen Motor beträgt die Übersetzung $U= 1:5.046$. 
 Der Mittelwert der berechneten Wellenlängen ergibt sich durch
 \begin{align}
   \bar{\lambda}=\frac{1}{m} \sum_{i=1}^m \lambda_i.
@@ -71,8 +71,8 @@ berechnet.
 
 Im zweiten Teil des Versuchs soll der Brechungsindex von Luft bestimmt werden.
 Nach \autoref{sec:Durchführung} wird der Versuch durchgeführt und die Messwerte in \autoref{tab:Brechungsindex} eingetragen.
-Zur Berechnung des Brechungsindex nach der \autoref{eqn:Brechungsindex}
-werden die folgenden Werte verwendet(\cite{V401}):
+Zur Berechnung des Brechungsindex nach \autoref{eqn:n}
+werden die folgenden Werte verwendet\cite{V401}:
 \begin{align*}
   T_0 &= \qty{273.15}{\kelvin}\\
   p_0 &= \qty{1.0132}{\bar}\\
@@ -100,4 +100,13 @@ werden die folgenden Werte verwendet(\cite{V401}):
   \end{tabular}
 \end{table}
 
+Analog zu \autoref{eqn:Mittelwert} und \autoref{eqn:Fehler} berechnet sich der Mittelwert des Brechungsindexes zu
+\begin{align*}
+  \bar{n}= (1.000308 \pm 0.000013)
+\end{align*}
+Die Abweichung vom Literaturwert \cite{Brechungsindex} des Brechungsindexes von Luft $n_{\text{lit}}= 1,000272$
+wird analog zu \autoref{eqn:abweich} berechnet und beträgt
+\begin{align*}
+  a=(0,0036 \pm 0,0013) \si{\percent}.
+\end{align*}
 
