@@ -1,7 +1,12 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-
+\subsection{Bestimmung der Wellenlänge des Lasers}
+\label{subsec:Wellenlänge}
+Im ersten Teil des Versuchs wird die Wellenlänge des verwendeten Lasers experimentell bestimmt.
+Hierzu wird in $10$ Messungen der Abstand $d$ des Spiegels mithilfe des Motors solange vergrößert,
+bis ungefähr $2000$ Interferenzmaxima durch das automatische Zählwerk erfasst wurden.
+Dann wird die Anzahl $z$ der Maxima und die Abstandsänderung $\Delta d$ in \autoref{tab:Wellenlänge} eingetragen.
 
 \begin{table}[H]
   \centering
@@ -10,7 +15,7 @@
   \sisetup{table-format=2.2}
   \begin{tabular}{S[table-format=1.2] S[table-format=4.0] S[table-format=3.2]}
   \toprule
-  {$\Delta d / \si{\milli\meter}}$} & {Anzahl $z$ der Intensitätsmaxima} & {Wellenlänge $\lambda / \si{\nano\meter}$}\\
+  {$\Delta d / \si{\milli\meter}$} & {Anzahl $z$ der Intensitätsmaxima} & {Wellenlänge $\lambda / \si{\nano\meter}$}\\
   \midrule
     3.38  & 2005 & 668.17 \\
     3.37  & 2002 & 667.19 \\
@@ -26,18 +31,55 @@
   \end{tabular}
 \end{table}
 
-Aus den gemessenen Daten wird mithilfe von !!!! die Wellenlänge des Lasers berechnet und auch in \autoref{tab:Wellenlänge} eingetragen.
-Der 
+Aus den gemessenen Daten wird durch Umstellung von \autoref{eqn:d} nach
+\begin{align*}
+  \lambda = \frac{\Delta d \cdot 2}{ Ü \cdot z}
+\end{align*}
+die Wellenlänge des Lasers berechnet und auch in \autoref{tab:Wellenlänge} eingetragen.
+$Ü$ steht hierbei für die Übersetzung des Motors mithilfe dessen der Spiegel verschoben wird.
+Bei dem gegebenen Motor beträgt die Übersetzung $Ü= 1:5.046$. 
+Der Mittelwert der berechneten Wellenlängen ergibt sich durch
 \begin{align}
-  \bar{\lambda}=\frac{1}{m} \sum_{i=1}^m \lambda_i
+  \bar{\lambda}=\frac{1}{m} \sum_{i=1}^m \lambda_i.
   \label{eqn:Mittelwert}
 \end{align}
+Der Fehler des Mittelwerts wird durch 
+\begin{align}
+  \Delta \bar{\lambda}= \frac{\sigma_\lambda}{\sqrt{m}} = \frac{\sqrt{\frac{1}{m-1}\sum_{j=1}^m (\lambda_j-\bar{\lambda})^2}}{\sqrt{m}}
+  \label{eqn:Fehler}
+\end{align}
+berechnet.
+Somit ergibt sich als berechnete Wellenlänge des Lasers
+\begin{align*}
+  \lambda= (668.37 \pm 0.58 )\si{\nano\meter}.
+\end{align*}
 
-
-Der reale Wert der Wellenlänge des Lasers ist auf dem Etikett des Lasers mit $\lamda_{\text{real}}=\qty{635}{\nano\meter}$ angegeben.
+Der reale Wert der Wellenlänge des Lasers ist auf dem Etikett des Lasers mit $\lambda_{\text{real}}=\qty{635}{\nano\meter}$ angegeben.
 Im Folgenden wird mit diesem Wert weitergerechnet.
+Die Abweichung zu $\lambda_{\text{real}}$ wird durch
+\begin{align}
+  a=\frac{|\lambda-\lambda_{\text{real}}|}{\lambda_{\text{real}}}\cdot 100 \label{eqn:abweich}
+\end{align}
+zu
+\begin{align*}
+  a=(5,26 \pm 0,09) \si{\percent}
+\end{align*}
+berechnet.
 
+\subsection{Bestimmung des Brechungsindexes von Luft}
+\label{sub:Brechungsindex}
 
+Im zweiten Teil des Versuchs soll der Brechungsindex von Luft bestimmt werden.
+Nach \autoref{sec:Durchführung} wird der Versuch durchgeführt und die Messwerte in \autoref{tab:Brechungsindex} eingetragen.
+Zur Berechnung des Brechungsindex nach der \autoref{eqn:Brechungsindex}
+werden die folgenden Werte verwendet:
+%\begin{align*}
+%  T_0 &= \qty{273.15}{\kelvin}\\
+%  p_0 &= \qty{1.0132}{\bar}\\
+%  T &= \qty{293.15}{\kelvin}\\
+%  b &=\qty{50}{\milli\meter}\\
+%  \lambda&=\qty{635}{\nano\meter}\cite{V401}
+%\end{align*}
 
 \begin{table}[H]
   \centering
@@ -46,14 +88,14 @@ Im Folgenden wird mit diesem Wert weitergerechnet.
   \sisetup{table-format=2.2}
   \begin{tabular}{S[table-format=1.1] S[table-format=2.0] S[table-format=1.6]}
   \toprule
-  {Luftdruck $ p / \si{\bar}}$} & {Anzahl $z$ der Intensitätsmaxima} & {Brechungsindex $n$}\\
+  {Luftdruck $ p / \si{\bar}$} & {Anzahl $z$ der Intensitätsmaxima} & {Brechungsindex $n$}\\
   \midrule
-    0.6 & 19 & 1.000328
-    0.6 & 17 & 1.000293
-    0.6 & 21 & 1.000363
-    0.6 & 16 & 1.000276
-    0.6 & 17 & 1.000293
-    0.6 & 17 & 1.000293
+    0.6 & 19 & 1.000328 \\
+    0.6 & 17 & 1.000293 \\
+    0.6 & 21 & 1.000363 \\
+    0.6 & 16 & 1.000276 \\
+    0.6 & 17 & 1.000293 \\
+    0.6 & 17 & 1.000293 \\
   \bottomrule
   \end{tabular}
 \end{table}
