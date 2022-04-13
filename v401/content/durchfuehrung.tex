@@ -1,59 +1,46 @@
-\section{Durchführung}
-\label{sec:Durchführung}
+\section{Aufbau}
+\label{sec:Aufbau}
 
-%3.1 Versuchsaufbau
-%Das Michelson-Interferometer ist wie in Abbildung 2 aufgebaut.
-%Um Interferenzen beobachten zu können, wird der Laserstrahl zunächst durch einen
-%Strahlteiler, realisiert als eine semipermeable Platte, in zwei Teilbündel aufgeteilt.
-%Für die spätere Messung ist einer der Strahlwege von variabler Länge. Dazu ist
-%der Spiegel des oberen Strahlwegs durch einen Synchronmotor mit Zehnganggetriebe
-%
-%7
-%
-%Abbildung 2: Schematischer Aufbau der Messapparatur. [1]
-%
-%verschiebbar.
-%Zusätzlich ist im oberen Strahlweg eine Messzelle mit Breite b = 50 mm installiert. Diese
-%lässt sich sowohl evakuieren, als auch mit verschiedenen Gasen befüllen, sodass durch
-%den geänderten Brechungsindex in der Messzelle ebenso ein optischer Wegunterschied
-%zwischen beiden Strahlwegen entsteht.
-%Im rechten Strahlweg ist zudem eine Ausgleichsplatte angebracht, da dieser Strahlweg im
-%Gegensatz zum anderen Strahlweg nicht dreimal, sondern nur einmal durch den in der
-%Mitte angebrachten Strahlteiler führt.
-%Beide Strahlwege treffen schließlich auf das Photoelement, an welchem die ankommenden
-%Lichtsignale registriert werden und über einen Verstärker und einen Impulsformer an ein
-%elektronisches Zählwerk gegeben wird.
-%3.2 Versuchsbeschreibung
-%Zu Beginn des Versuchs muss das Michelson-Interferometer für die Messung justiert
-%werden. Dazu wird der Laser eingeschaltet und an die Position des Photoelements (vgl.
-%Abbildung 2) eine Mattscheibe eingebracht.
-%Der justierbare Spiegel wird so ausgerichtet, dass die beiden hellsten Intensitätsmaxima
-%der beiden ankommenden Strahlen möglichst genau zur Deckung gebracht werden. Das
-%Photoelement wird entsprechend so ausgerichtet, dass das Intensitätsmaxima beider
-%Strahlen genau auf den Eintrittsspalt des Photoelements liegt.
-%Für die Messung der Wellenlänge des Lasers wird der verschiebbare Spiegel genutzt.
-%Dazu wird der Synchronmotor eingeschaltet und eine Verschieberichtung ausgewählt. Zu
-%
-%beachten ist hierbei, dass der Motor nicht zu schnell bewegt wird, da sonst das Photo-
-%8
-%
-%element nicht alle ankommenden konstruktiven Interferenzen, also Intensitätsmaxima
-%der ankommenden Strahlen, als getrennte Intensitätsmaxima eindeutig zählen kann und
-%somit das falsche Ergebnis liefert.
-%Bei Bedarf muss ein kleinerer Gang ausgewählt werden. Im vorliegenden Experiment
-%wurde die Messung im kleinsten Gang durchgeführt. Nachdem etwa 1000 konstruktive
-%Interferenzen der Teilstrahlen am Photoelement registriert wurden, wird die exakte
-%Anzahl an registrierten Interferenzen notiert sowie die Verschiebestrecke des Spiegels über
-%die Verschiebung der Mikrometerschraube bestimmt. Dazu wird die Position zu Beginn
-%und zum Ende der Verschiebung an der Mikrometerschraube abgelesen und mittels der
-%Hebelübersetzung die Verschiebestrecke Δd berechnet.
-%Die Messung wird etwa sieben- bis zehnmal durchgeführt.
-%Zur Bestimmung des Brechungsindex von Luft wird der verschiebbare Spiegel nicht
-%mehr bewegt.
-%Die Messzelle wird mittels der Vakuumpumpe auf den Druck p evakuiert, welcher notiert
-%wird. Beim langsamen Wiedereinlassen der Luft werden erneut die konstruktiven Interfe-
-%renzen am Photoelement gezählt und sobald wieder der Normaldruck p0
-%in der Messzelle
-%herrscht, wird deren Anzahl z notiert.
-%Die Messung wird sechs Mal wiederholt.
-%
+Das Michelson-Interferometer ist wie in \autoref{fig:Abb7} aufgebaut.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{build/Abb7.PNG}
+    \caption {Aufbau des Experiments des Michelson-Interferometer \cite[3]{V401}.}
+    \label{fig:Abb7}
+\end{figure}
+Damit Interferenzen beobachtet werden können, muss der Laserstrahl in zwei Teil aufgeteilt werden.
+Dies geschieht indem das Lich auf eine semipermeable Platte fällt, welche als Strahlteiler fungiert.
+Einer der strahlwege kann durch einen beweglichen Spiegel, der durch einen Motor verschoben wird, verlängert werden.
+Außerdem ist bei dem verstellbaren Weg eine Messzelle angebracht, welche eine Breite von $b=\qty{50}{\milli\meter}$ hat.
+Diese lässt sich sowohl evakuieren, als auch mit verschiedenen Gasen befüllen, sodass durch
+den geänderten Brechungsindex in der Messzelle ebenso ein optischer Wegunterschied
+zwischen beiden Strahlwegen entsteht.
+Im unbewegten Strahlweg ist zudem eine Ausgleichsplatte angebracht, da dieser Strahlweg im
+Gegensatz zum anderen Strahlweg nicht dreimal, sondern nur einmal durch den in der
+Mitte angebrachten Strahlteiler führt.
+Die beiden Strahlwege enden beide auf dem Detektor, wo die durch eine Schaltung mit einem elektronischem Zählwerk erfasst werden.
+
+\section{Durchführung}
+\label{Durchführung}
+Zu Beginn des Versuchs muss das Michelson-Interferometer für die Messung justiert werden. 
+Dazu wird der Laser eingeschaltet und an die Position des Detektors ein weißes Blatt Papier, zur besseren Sichtbarkeit des Lasers, eingebracht.
+Der justierbare Spiegel wird so ausgerichtet, dass die beiden hellsten Intensitätsmaxima
+der beiden ankommenden Strahlen möglichst genau übereinander gebracht werden. 
+Der Detektor wird entsprechend so ausgerichtet, dass die Intensitätsmaxima beider
+Strahlen genau auf dem Eintrittsspalt des Detektors liegen.\\
+\\
+Um die Wellenlänge des Lasers zu bestimmen, wird der verschiebare Spiegel benutzt und dazu wird der Motor eingeschaltet und eine Verschieberichtung
+ausgewählt.
+Wichtig ist , dass der Spiegel nicht zu schnell bewegt wird, sodass alle Intensitätsmaxima vom Detektor erfasst werden.
+Nachdem etwa 2000 Intensitätsmaxima am Zähler abzulesen sind, wird die Messung gestoppt, die Anzahl der Intensitätsmaxima und die Verschiebestrecke 
+des Motors abgelesen und in eine Tabelle notiert.
+Mittels der Hebelübersetzung wird die Verschiebestrecke $\Delta d$ des Spiegels berechnet.
+Die Messung wird zehnmal durchgeführt.\\
+\\
+
+Zur Bestimmung des Brechungsindex von Luft wird die Position des verschiebbaren Spiegels nicht
+mehr verändert.
+Die Messzelle wird mittels der Vakuumpumpe auf den Druck $p$ evakuiert, welcher notiert
+wird. Beim langsamen Wiedereinlassen der Luft wird erneut die Anzahl der Intensitätsmaxima gezählt
+und sobald wieder der Normaldruck $p0$ in der Messzelle herrscht, wird deren Anzahl z notiert.
+Die Messung wird sechs Mal wiederholt.
