@@ -1,7 +1,38 @@
 \section{Zielsetzung}
 \label{sec:Zielsetzung}
 
+Ziel des Versuches ist es, die Reichweite von Alpha-Strahlung in Luft und dadurch die Energie der Alpha-Strahlung zu bestimmen.
+Außerdem soll die Statistik des radioaktiven Zerfalls bestimmt werden.
+
 \section{Theorie}
 \label{sec:Theorie}
+
+Wenn Alpha-Teilchen durch Luft laufen, kommt es zur Wechselwirkung mit anderen Atomen. Aufgrund von Ionisierungsprozessen, Anregung
+und Dissoziation von Mplekülen, kommt es zu Energieverlusten bzw. einer Abgabe von Energien.
+Dieser Energieverlust pro Wegstück ist abhängig von der Dichte, der durchlaufenen Materie und der Energie der Alpha-Strahlung.
+Die Wechselwirkungswahrscheinlichkeit nimmt bei kleinen Geschwindigkeiten zu, es gibt jedoch keine universelle Formel.
+Für alle Energiebereiche gelten unterschiedliche Formeln, bei hinreichend großen Energien gilt die Bete-Bloch-Gleichung
+\begin{align}
+    -\frac{dE_\alpha}{dx} = \frac{z^2e^4}{4 \pi \epsilon_0 m_e}\frac{nZ}{v^2}\text{ln}\left(\frac{2 m_e v^2}{I}\right).\label{eqn:Bete}
+\end{align}
+wobei $v$ die Geschwindigkeit der $\alpha$-Strahlung, $z$ die Ladung, $n$ die Teilchendichte, $I$ die Ionisierungsenergie des durchlaufenen Gases, $Z$ die Ordnungszahl sind.
+Aufgrund von Ladungsaustauschprozessen gilt die Bete-Bloch-Gleichung nicht für kleine Energien.
+Deshalb wird eine empirisch gewonnene Kurve für die Alpha-Strahlung in Luft verwendet.
+Es muss $R_m=3,1 \cdot E_{\alpha}^(3/2)$ gelten, weswegen nur Energien unter 2,5 MeV berücksichtigt werden.
+$R_m$ ist die mittlere Reichweite von $\alpha$-Teilchen, welche die Reichweite angibt, die die Hälfte der Teilche noch erreichen.
+Die Reichweite $R$ eines Alpha-Teilchens lässt sich durch
+\begin{align}
+  R=  \int_0^{E_\alpha} \frac{dE_\alpha}{-dE_\alpha/dx} \label{eqn:Reichweite}
+\end{align} 
+beschreiben, wobei die Energie in Megaelektronenvolt angegeben in einem Bereich unter 2,5 MeV
+liegen sollte und $Rm$ in Millimeter angegeben wird.
+Wenn die Temperatur und das Volumen konstant bleiben, so ist die Reichweite $R$ eines Alpha-Teilchens proportional zum Druck.
+Es wird eine Absorptionsmessung durchgeführt, sodass sich die effektive Länge $x$ bei festem Abstand $x_0$ zwischen Probe und Detektor
+durch
+\begin{align}
+    x = x_0 \frac{p}{p_0}
+\end{align}
+ausdrücken lässt. Der Normaldruck $p_0$ beträgt hierbei $p_0= \qty{1013}{\milli\bar}$.
+
 
 
