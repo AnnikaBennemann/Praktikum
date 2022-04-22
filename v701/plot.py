@@ -170,3 +170,21 @@ plt.bar(k, P, color='b', width=-0.4, align='edge', label=r'Theoriewerte')
 plt.bar(k, P2, color='c', width=0.4, align='edge', label=r'Messwerte')
 plt.legend(loc='best')
 plt.savefig('build/poisson.pdf')
+
+
+###################################
+m1=ufloat(-30827.55,2675.73)
+b1= ufloat(196939.29,3843.14)
+m2=ufloat(-47049.01, 3437.24)
+b2=ufloat(115016.41,7165.45)
+
+Nr1= 1/m1*(1023/2-b1)
+Nr2= 1/m2*(1107/2-b2)
+print('Nr1=',Nr1)
+print('Nr2=',Nr2)
+
+E1= (Nr1/3.1)**(2/3)
+E2= (Nr2/3.1)**(2/3)
+
+print('E1=', E1)
+print('E2=', E2)

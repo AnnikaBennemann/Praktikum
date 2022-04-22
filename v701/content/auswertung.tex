@@ -1,10 +1,23 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+\subsection{Bestimmung der mittleren Reichweite und Energie von Alpha-Teilchen}
+\label{sub:Reichweite}
+
+Zur Berechnung der mittleren Reichweite der $\alpha$-Teilchen wird der Versuch nach \autoref{sec:Durchführung} 
+mit einem Abstand $x_0= \qty{1.7}{\centi\meter}$ durchgeführt und die Ergebnisse
+in \autoref{tab:Zerfall1} aufgelistet.
+Aus den Messwerten wird der effektive Abstand $x$ mithilfe von \autoref{eqn:x} berechnet und auch in \autoref{tab:Zerfall1} eingetragen.
+Die Energie wird dadurch bestimmt, dass die Position des Maximums bei $p=\qty{0}{\milli\bar}$, nachfolgend als $N_0$ bezeichnet, dem
+Energiewert $\SI{4}{\mega\eV}$ entspricht und die restlichen Channel und Energien
+proportional dazu sind. Auch die Energiewerte werden in der Tabelle notiert.
+Dieselbe Messung wird für einen Abstand von $x_0= \qty{3.0}{\centi\meter}$ wiederholt und die Ergebnisse analog zur ersten Messreihe 
+in \autoref{tab:Zerfall2} notiert.
+
 \begin{table}[H]
   \centering
   \caption{Messdaten zum Alpha-Zerfall bei einem Abstand von $x_0=1,7 cm.$}
-  \label{tab:Brechungsindex}
+  \label{tab:Zerfall1}
   \sisetup{table-format=1.2}
   \begin{tabular}{S[table-format=4.0] S[table-format=6.0] S[table-format=4.0] S S}
   \toprule
@@ -34,22 +47,10 @@
   \bottomrule
   \end{tabular}
 \end{table}
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\textwidth]{build/plot1.pdf}
-  \caption {Messdaten zur Bestimmung der mittleren Reichweite aus der Zählrate (Messreihe 1).}
-  \label{fig:plot1}
-\end{figure}
-\begin{align*}
-m =& -30827.54801545226 ± 2675.7342899842047\\
-b =& 196939.285880172 ± 3843.140616824728
-\end{align*}
-
-
 \begin{table}[H]
   \centering
   \caption{Messdaten zum Alpha-Zerfall bei einem Abstand von $x_0=3 cm.$}
-  \label{tab:Brechungsindex}
+  \label{tab:Zerfall2}
   \sisetup{table-format=2.2}
   \begin{tabular}{S[table-format=4.0] S[table-format=6.0] S[table-format=4.0] S S}
     \toprule
@@ -80,22 +81,66 @@ b =& 196939.285880172 ± 3843.140616824728
   \end{tabular}
 \end{table}
 
+Zur Bestimmung der Reichweite der $\alpha$-Teilchen sind in \autoref{fig:plot1} und \autoref{fig:plot2} die Messwerte der Anzahl $N$ der Intensitätsmaxima
+gegen den effektiven Abstand $x$ aufgetragen.
 \begin{figure}[H]
+\begin{subfigure}{\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{build/plot2.pdf}
+  \includegraphics[scale=0.75]{build/plot1.pdf}
+  \caption {Messdaten zur Bestimmung der mittleren Reichweite aus der Zählrate (Messreihe 1).}
+  \label{fig:plot1}
+\end{subfigure}
+\hfill
+\begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[scale=0.75]{build/plot2.pdf}
   \caption {Messdaten zur Bestimmung der mittleren Reichweite aus der Zählrate (Messreihe 2).}
   \label{fig:plot2}
+\end{subfigure}
+  \caption {Messdaten zur Bestimmung der mittleren Reichweite aus der Zählrate.}
 \end{figure}
+
+In \autoref{fig:plot1} wird eine lineare Regression der abfallenden Werte im Intervall $x=\qty{1.17}{\centi\meter}$ bis $x=\qty{1.68}{\centi\meter}$
+mittels des Pythonmoduls matplotlib \cite{matplotlib} in der Form $N=m \cdot x +b$ durchgeführt.
+Für die lineare Regression in \autoref{fig:plot2} geht das Intervall von $x=\qty{1.48}{\centi\meter}$ bis $x=\qty{2.37}{\centi\meter}$, jedoch 
+werden hier die Werte zwischen $x=\qty{1.78}{\centi\meter}$ bis $x=\qty{2.07}{\centi\meter}$ nicht mit berücksichtigt, da diese nicht dem
+linearen Verlauf folgen.
+Die Parameter betragen hierbei
 \begin{align*}
-  m_2 =& -47049.01125929326 ± 3437.2394985987107\\
-  b_2 =& 115016.41234623596 ± 7165.449321747656
+m_1 =& (-30827.55 ± 2675.73) \si{\per\centi\meter},\\
+b_1 =& 196939.29 ± 3843.14\\
+\shortintertext{und}
+m_2 =& (-47049.01 ± 3437.24) \si{\per\centi\meter},\\
+b_2 =& 115016.41 ± 7165.45.
 \end{align*}
 
+Eine horizontale Gerade ist außerdem auf Höhe von $\frac{N_0}{2}$ eingezeichnet. (Bei \autoref{fig:plot1} nicht im angezeigten Bereich.)
+Der Schnittpunkt der beiden Geraden wird durch
+\begin{align*}
+  \frac{N_0}{2} &= m \cdot x + b \\
+  x &= \frac{1}{m} \biggl(\frac{N_0}{2} - b \biggr) \\
+\end{align*}
+berechnet, wobei das errechnete $x$ der mittleren Reichweite $R_m$ der $\alpha$-Teilchen entspricht.
+Da $m$ und $b$, fehlerbehaftete Größen sind, muss der Fehler von $R_m$ mithilfe der Gauß'schen Fehlerfortpflanzung
+\begin{align*}
+  \Delta R_m = \sqrt{\biggl(-\frac{1}{m^2} \biggl( \frac{N_0}{2} - b \biggr)\biggr)^2 \cdot (\Delta m)^2 + \biggl(\frac{1}{m}\biggr)^2 \cdot (\Delta b)^2}
+\end{align*}
+berechnet werden.
+Somit ergibt sich für die mittleren Reichweiten $R_m$ der $\alpha$-Strahlung
+\begin{align*}
+  R_{m1}=& (6.40 \pm 0.60)\si{\centi\meter}\\
+  R_{m2}=& (2.43 \pm 0.23)\si{\centi\meter}.
+\end{align*}
 
+Aus den mittleren Reichweiten lassen sich durch Umstellen der \autoref{eqn:Energiereichweite} die zugehörigen Energien $E_{\alpha}$ zu
+\begin{align*}
+  E_{\alpha, m1}=& (1.62 \pm 0.10)\si{\mega\eV}\\
+  E_{\alpha, m2}=& (0.85 \pm 0.05)\si{\mega\eV}
+\end{align*}
+berechnen.
 
-Die Energie wird dadurch bestimmt, dass der jeweils höchste Channel dem
-Energiewert $\SI{4}{\mega\eV}$ entspricht und die restlichen Channel und Energien
-proportional dazu sind.
+Die Messwerte der Energie $E$ aus \autoref{tab:Zerfall1} und \autoref{tab:Zerfall2} werden zudem in \autoref{fig:plot3} und \autoref{fig:plot4}
+jeweils gegen $x$ aufgetragen.
 
 \begin{figure}[H]
   \centering
@@ -104,9 +149,6 @@ proportional dazu sind.
   \label{fig:plot3}
 \end{figure}
 
-a = -1.1991428506850923 ± 0.12030234858146971
-b = 5.08682524034627 ± 0.16360104210605575
-
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{build/plot4.pdf}
@@ -114,48 +156,106 @@ b = 5.08682524034627 ± 0.16360104210605575
   \label{fig:plot4}
 \end{figure}
 
+Auch hier werden Regressionsgeraden mittels Python erstellt und die Parameter der linearen Regressionen der Form
+$E=c \cdot x +d $ lauten
+\begin{align*}
+  c =& (-1.199 \pm  0.120)\si{\mega\eV\per\centi\meter}\\
+  d =& (5.087 \pm 0.164) \si{\mega\eV}\\
+  c_2 =& (-0.717 \pm  0.044)\si{\mega\eV\per\centi\meter}\\
+  d_2 =& (3.892 \pm 0.054) \si{\mega\eV}.
+\end{align*}
 
-a2 = -0.7169043744199818 ± 0.04428392181469865
-b2 = 3.892020475409914 ± 0.05394053882875626
+Die Änderung der Energie ist die Steigung der Ausgleichsgerade. Somit ergeben sich für die Änderung der Energie $\frac{dE_\alpha}{dx}$
+\begin{align*}
+  \frac{dE_{\alpha, m1}}{dx} &= c = (-1.199 \pm  0.120)\si{\mega\eV\per\centi\meter}\\
+  \frac{dE_{\alpha, m2}}{dx} &= c2 = (-0.717 \pm  0.044)\si{\mega\eV\per\centi\meter}.
+\end{align*}
 
+
+
+\subsection{Statistik des radioaktiven Zerfalls}
+\label{sub:statistik}
+
+Nach \autoref{sec:Durchführung} wird die Messung durchgeführt und die erhobenen Zählraten in \autoref{tab:stat}
+notiert.
+\begin{table}
+  \centering
+  \caption{100 statistische Messwerte der Zählrate bei $p = \SI{0}{\milli\bar}$ und Abstand $x = \SI{3.0}{\centi\meter}$.}
+  \label{tab:stat}
+  \sisetup{table-format=4.0}
+  \begin{tabular}{S S S S S}
+  \toprule
+  4361 & 4256  &  4627 &  4272 &  4460 \\
+  4104 &  4177 &  4266 &  4433 &  4389 \\
+  4524 &  4259 &  4270 &  4630 &  4357 \\
+  4638 &  4394 &  4602 &  4570 &  4528 \\ 
+  4459 &  4436 &  4378 &  4466 &  4585 \\ 
+  4564 &  4320 &  4455 &  4617 &  4347 \\ 
+  4570 &  4305 &  4514 &  4534 &  4399 \\ 
+  4384 &  4196 &  4525 &  4413 &  4573 \\  
+  4379 &  4425 &  4290 &  4600 &  4153 \\  
+  4580 &  4606 &  4265 &  4439 &  4370 \\  
+  4529 &  4650 &  4506 &  4622 &  4488 \\  
+  4415 &  4643 &  4491 &  4321 &  4629 \\  
+  4379 &  4212 &  4080 &  4546 &  4298 \\  
+  4345 &  4402 &  4607 &  4589 &  4706 \\  
+  4539 &  4602 &  4371 &  4444 &  4173 \\  
+  4586 &  4451 &  4576 &  4435 &  4577 \\  
+  4419 &  4521 &  4455 &  4513 &  4483 \\  
+  4321 &  4340 &  4289 &  4381 &  4348 \\  
+  4580 &  4360 &  4560 &  4588 &  4723 \\  
+  4313 &  4414 &  4216 &  4396 &  4651 \\  
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+
+Aus den Daten in \autoref{tab:stat} werden zunächst der Mittelwert
+\begin{align*}
+  \mu &= \frac{1}{n} \sum_{i=1}^n N_i = 4443,47
+\end{align*}
+und die Standardabweichung
+\begin{align*}
+ \sigma &= \sqrt{ \frac{1}{n-1} \sum_{i=1}^n (N_i - \mu)^2  } =141,70 
+\end{align*}
+bestimmt.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{build/gauss.pdf}
-  \caption {Häufigkeitsverteilung der Messwerte.}
+  \caption {Gaußverteilung der Messwerte.}
   \label{fig:gauss}
 \end{figure}
-\begin{align*}
-  4443.47\\
-   141.7019728161891
-\end{align*}
 
-\begin{align*}
-  \mu &= \frac{1}{n} \sum_{i=1}^n N_i = 4443,47\\
-  \sigma &= \sqrt{ \frac{1}{n-1} \sum_{i=1}^n (N_i - \mu)^2  } =141,70
-\end{align*}
-
+In \autoref{fig:gauss} sind die Werte gaußverteilt in einem Histogramm dargestellt. Die zugehörige Gaußkurve
 \begin{align*}
   G(N, \mu, \sigma) = \frac{1}{\sigma \sqrt{2 \pi}} \cdot \text{exp} \left(- \frac{(N - \mu)^2}{2 \sigma^2} \right) \; .
 \end{align*}
+ist außerdem abgebildet.\\
 
 Um die Poissonverteilung zu berechnen werden die Werte zuerst normiert
 \begin{align*}
-  N_\text{i, norm} = \frac{N_i - N_\text{min}}{n}.
+  M=N_\text{i, norm} = \frac{N_i - N_\text{min}}{n}.
 \end{align*}
+$N_\text{min}= 4080$ ist hierbei der kleinste der gemessenen Werte.
+Die normierten Werte $M$ liegen nun zwischen $0$ und $7$.
+Der Mittelwert der normalverteilten Werte beträgt
+\begin{align*}
+  \mu_P= 3.61.
+\end{align*}
+
+In \autoref{fig:poisson} sind nun die normalverteilten Messwerte und die theoretische Poissonverteilung nach der Formel
+\begin{align*}
+  p_{\mu_P}(M) =& \frac{\mu_P^M}{M!} \cdot \text{e}^{-\mu_P} 
+\end{align*}
+in einem Histogramm aufgetragen.
 
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{build/poisson.pdf}
-  \caption {Häufigkeitsverteilung der Messwerte.}
+  \caption {Poissonverteilung der Messwerte.}
   \label{fig:poisson}
 \end{figure}
 
-3.61 1.4275503493747603
 
-[3. 2. 5. 2. 4. 0. 1. 2. 4. 3. 4. 2. 2. 6. 3. 6. 3. 5. 5. 4. 4. 4. 3. 4.
- 5. 5. 2. 4. 5. 3. 5. 2. 4. 5. 3. 3. 1. 4. 3. 5. 3. 3. 2. 5. 1. 5. 5. 2.
- 4. 3. 4. 6. 4. 5. 4. 3. 6. 4. 2. 5. 3. 1. 0. 5. 2. 3. 3. 5. 5. 6. 5. 5.
- 3. 4. 1. 5. 4. 5. 4. 5. 3. 4. 4. 4. 4. 2. 3. 2. 3. 3. 5. 3. 5. 5. 6. 2.
- 3. 1. 3. 6.]

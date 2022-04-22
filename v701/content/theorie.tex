@@ -18,7 +18,11 @@ Für alle Energiebereiche gelten unterschiedliche Formeln, bei hinreichend groß
 wobei $v$ die Geschwindigkeit der $\alpha$-Strahlung, $z$ die Ladung, $n$ die Teilchendichte, $I$ die Ionisierungsenergie des durchlaufenen Gases, $Z$ die Ordnungszahl sind.
 Aufgrund von Ladungsaustauschprozessen gilt die Bete-Bloch-Gleichung nicht für kleine Energien.
 Deshalb wird eine empirisch gewonnene Kurve für die Alpha-Strahlung in Luft verwendet.
-Es muss $R_m=3,1 \cdot E_{\alpha}^(3/2)$ gelten, weswegen nur Energien unter 2,5 MeV berücksichtigt werden.
+Es muss
+\begin{align}
+   R_m=3,1 \cdot E_{\alpha}^{3/2} \label{eqn:Energiereichweite}
+\end{align}
+gelten, weswegen nur Energien unter 2,5 MeV berücksichtigt werden.
 $R_m$ ist die mittlere Reichweite von $\alpha$-Teilchen, welche die Reichweite angibt, die die Hälfte der Teilche noch erreichen.
 Die Reichweite $R$ eines Alpha-Teilchens lässt sich durch
 \begin{align}
@@ -30,7 +34,7 @@ Wenn die Temperatur und das Volumen konstant bleiben, so ist die Reichweite $R$ 
 Es wird eine Absorptionsmessung durchgeführt, sodass sich die effektive Länge $x$ bei festem Abstand $x_0$ zwischen Probe und Detektor
 durch
 \begin{align}
-    x = x_0 \frac{p}{p_0}
+    x = x_0 \frac{p}{p_0} \label{eqn:x}
 \end{align}
 ausdrücken lässt. Der Normaldruck $p_0$ beträgt hierbei $p_0= \qty{1013}{\milli\bar}$.
 
