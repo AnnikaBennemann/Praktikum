@@ -143,17 +143,20 @@ Die Messwerte der Energie $E$ aus \autoref{tab:Zerfall1} und \autoref{tab:Zerfal
 jeweils gegen $x$ aufgetragen.
 
 \begin{figure}[H]
+  \begin{subfigure}{\textwidth}
   \centering
-  \includegraphics[width=\textwidth]{build/plot3.pdf}
+  \includegraphics[scale=0.75]{build/plot3.pdf}
   \caption {Bestimmung des Energieverlustes aus den Messdaten (Messreihe 1).}
   \label{fig:plot3}
-\end{figure}
-
-\begin{figure}[H]
+\end{subfigure}
+\hfill
+\begin{subfigure}
   \centering
-  \includegraphics[width=\textwidth]{build/plot4.pdf}
+  \includegraphics[scale=0.75]{build/plot4.pdf}
   \caption {Bestimmung des Energieverlustes aus den Messdaten (Messreihe 2).}
   \label{fig:plot4}
+\end{subfigure}
+\caption{Bestimmnung des Energieverlustes.}
 \end{figure}
 
 Auch hier werden Regressionsgeraden mittels Python erstellt und die Parameter der linearen Regressionen der Form
