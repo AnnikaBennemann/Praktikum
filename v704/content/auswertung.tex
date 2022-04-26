@@ -74,7 +74,9 @@ Aus den Messwerten wird die Aktivität
   A= \frac{N}{t}-\frac{N_0}{t}
 \end{align}
 berechnet.
-Diese wird logarithmisch in Beziehung zur Schichtdicke $d$ in \autoref{fig:plot1} beziehungsweise \autoref{fig:plot2}
+Diese wird logarithmisch in Beziehung zur Schichtdicke $d$ in \autoref{fig:plot1} beziehungsweise \autoref{fig:plot2} dargestellt.
+Außerdem wird mithilfe vom Pythonmodul matplotlib \cite{matplotlib} eine lineare Regression der Form $a \cdot x + b$ berechnet und 
+als Ausgleichsgerade in den Plot eingetragen.
 
 \begin{figure}[H]
   \begin{subfigure}{\textwidth}
@@ -94,6 +96,14 @@ Diese wird logarithmisch in Beziehung zur Schichtdicke $d$ in \autoref{fig:plot1
   \end{subfigure}
     \caption {Messdaten zur Bestimmung der Absorptionskoeffizienten aus der Zählrate.}
   \end{figure}
+
+Der Absorptionskoeffizient entspricht der negativen Steigung der Geraden
+\begin{align}
+  -a_{\text{Fe}} =& \mu_{\text{Fe}} =& (41.16 \pm 1.56) \si{\per\meter}\\
+  -a_{\text{Pb}} =& \mu_{\text{Pb}} =& (97.80 \pm 1.81) \si{\per\meter}.
+\end{align}
+Dies Größe $N(0)$ wird jeweils als erstes durch eine Messung ohne eingesetze Absorber bestimmt und ist in \autoref{tab:gammaEisen}
+und \autoref{tab:gammaBlei} aufgeführt.
 
 \subsection{Beta-Strahlung}
 \label{sub:beta_aus}
@@ -125,6 +135,7 @@ Außerdem ist in der Tabelle auch der Nulleffekt $A_U$ pro Zeit (siehe \autoref{
   \end{tabular}
 \end{table}
 
+
  Die Aktivität $A-A_U$ wird logarithmisch in Beziehung zur Schichtdicke $d$ in \autoref{fig:plot3}.
 \begin{figure}[H]
   \centering
@@ -132,3 +143,4 @@ Außerdem ist in der Tabelle auch der Nulleffekt $A_U$ pro Zeit (siehe \autoref{
   \caption {Lineare Regression der Aktivität aufgetragen gegen die Dicke.}
   \label{fig:plot3}
 \end{figure}
+
