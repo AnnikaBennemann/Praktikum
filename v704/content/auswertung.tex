@@ -1,26 +1,29 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
+\begin{table}[H]
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
-
-Nullmessung gamma:
- Zählrate 828
- Messzeit 900 s
+  \caption{Messdaten zur Nullmessung beim $\gamma$-Zerfall.}
+  \label{tab:Zerfall0}
+  \sisetup{table-format=3.0}
+  \begin{tabular}{S S @{${}\pm{}$}S[table-format=2.2] S[table-format=1.2] @{${}\pm{}$}S[table-format=1.2] }
+    \toprule
+  \multicolumn{1}{p{2cm}} {Messzeit $t / \si{\second}$} & \multicolumn{2}{c}{$N$}& \multicolumn{2}{c}{$\frac{N}{t} / \frac{1}{\si{\second}}$}\\
+    \midrule
+    900 & 828 & 28.77 & 0.92 & 0.03\\
+  \bottomrule
+  \end{tabular}
+\end{table}
 
 
 \begin{table}[H]
   \centering
   \caption{Messdaten zum $\gamma$-Zerfall mit Eisen als Absorber.}
-  \label{tab:Zerfall2}
+  \label{tab:gammaEisen}
   \sisetup{table-format=2.2}
-  \begin{tabular}{S[table-format=4.0] S[table-format=6.0] S[table-format=4.0] S S}
+  \begin{tabular}{S[table-format=2.1] S[table-format=2.0] S[table-format=4.0]@{${}\pm{}$} S[table-format=2.2] S[table-format=3.2] @{${}\pm{}$}S[table-format=1.2]}
     \toprule
-    \multicolumn{1}{p{2cm}}{ $ d/ \si{\milli\meter}$} &\multicolumn{1}{p{2cm}} {Messzeit $t / \si{\second}$} & \multicolumn{2}{p{2cm}}{$N$}& \multicolumn{2}{p{2cm}}{$N/t / \si{\per\second}$}\\
+    \multicolumn{1}{p{2cm}}{ $ d/ \si{\milli\meter}$} &\multicolumn{1}{p{2cm}} {Messzeit $t / \si{\second}$} & \multicolumn{2}{c}{$N$}& \multicolumn{2}{c}{$\frac{N}{t} / \frac{1}{\si{\second}}$}\\
     \midrule
        0.0 &  60 &  6976 & 83.52 & 116.27 & 1.39 \\
        0.5 &  60 &  6738 & 82.09 & 112.30 & 1.37 \\
@@ -40,15 +43,14 @@ Nullmessung gamma:
   \end{tabular}
 \end{table}
 
-
 \begin{table}[H]
   \centering
   \caption{Messdaten zum $\gamma$-Zerfall mit Blei als Absorber.}
-  \label{tab:Zerfall2}
+  \label{tab:gammaBlei}
   \sisetup{table-format=2.2}
-  \begin{tabular}{S[table-format=2.1] S[table-format=6.0] S[table-format=4.0]}
+  \begin{tabular}{S[table-format=2.1] S[table-format=2.0] S[table-format=4.0]@{${}\pm{}$} S[table-format=2.2] S[table-format=3.2] @{${}\pm{}$}S[table-format=1.2]}
     \toprule
-    \multicolumn{1}{p{2cm}}{ $ d/ \si{\milli\meter}$} &\multicolumn{1}{p{2cm}} {Messzeit $t / \si{\second}$} & \multicolumn{2}{p{2cm}}{$N$}& \multicolumn{2}{p{2cm}}{$N/t / \si{\per\second}$}\\    \midrule
+    \multicolumn{1}{p{2cm}}{ $ d/ \si{\milli\meter}$} &\multicolumn{1}{p{2cm}} {Messzeit $t / \si{\second}$} & \multicolumn{2}{c}{$N$}& \multicolumn{2}{c}{$\frac{N}{t} / \frac{1}{\si{\second}}$}\\ 
        0.0 &  60 & 6718 & 81.96 & 111.97 & 1.37 \\
        1.0 &  60 & 5866 & 76.59 &  97.77 & 1.28 \\
        2.0 &  90 & 7875 & 88.74 &  87.50 & 0.99 \\
@@ -64,4 +66,31 @@ Nullmessung gamma:
   \bottomrule
   \end{tabular}
 \end{table}
-Siehe \autoref{fig:plot}!
+
+Aus den Messwerten wird die Aktivität 
+\begin{align}
+  A= \frac{N}{t}-\frac{N_0}{t}
+\end{align}
+berechnet.
+Diese wird logarithmisch in Beziehung zur Schichtdicke $d$ in \autoref{fig:plot1} beziehungsweise \autoref{}
+
+\begin{figure}[H]
+  \begin{subfigure}{\textwidth}
+    \centering
+    \includegraphics[scale=0.75]{build/plot1.pdf}
+    \caption {Lineare Ausgleichsrechung zur Bestimmung des Absorptionskoeffizienten
+    $\mu_{\text{Fe}}$ von Eisen.}
+    \label{fig:plot1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{\textwidth}
+    \centering
+    \includegraphics[scale=0.75]{build/plot2.pdf}
+    \caption {Lineare Ausgleichsrechung zur Bestimmung des Absorptionskoeffizienten
+    $\mu_{\text{Pb}}$ von Blei.}
+    \label{fig:plot2}
+  \end{subfigure}
+    \caption {Messdaten zur Bestimmung der Absorptionskoeffizienten aus der Zählrate.}
+  \end{figure}
+
+
