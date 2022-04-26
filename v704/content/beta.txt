@@ -1,4 +1,4 @@
-#Dicke Zeit N       Nerror A    aerror
+#Dicke Zeit N       Nerror A-a0    aerror
 0     100   57621   240  575.54 2,37 
 100   100   4093    64   40.20  0.61 
 125   100   973     31   9.00   0.28 

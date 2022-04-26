@@ -11,11 +11,13 @@
   \multicolumn{1}{p{2cm}} {Messzeit $t / \si{\second}$} & \multicolumn{2}{c}{$N$}& \multicolumn{2}{c}{$\frac{N}{t} / \frac{1}{\si{\second}}$}\\
     \midrule
     900 & 828 & 28.77 & 0.92 & 0.03\\
+    900 & 657 & 25.63 & 0.73 & 0.03\\
   \bottomrule
   \end{tabular}
 \end{table}
 
-
+\subsection{Gamma-Strahlung}
+\label{sub:gamma_aus}
 \begin{table}[H]
   \centering
   \caption{Messdaten zum $\gamma$-Zerfall mit Eisen als Absorber.}
@@ -72,7 +74,7 @@ Aus den Messwerten wird die Aktivität
   A= \frac{N}{t}-\frac{N_0}{t}
 \end{align}
 berechnet.
-Diese wird logarithmisch in Beziehung zur Schichtdicke $d$ in \autoref{fig:plot1} beziehungsweise \autoref{}
+Diese wird logarithmisch in Beziehung zur Schichtdicke $d$ in \autoref{fig:plot1} beziehungsweise \autoref{fig:plot2}
 
 \begin{figure}[H]
   \begin{subfigure}{\textwidth}
@@ -93,4 +95,40 @@ Diese wird logarithmisch in Beziehung zur Schichtdicke $d$ in \autoref{fig:plot1
     \caption {Messdaten zur Bestimmung der Absorptionskoeffizienten aus der Zählrate.}
   \end{figure}
 
+\subsection{Beta-Strahlung}
+\label{sub:beta_aus}
+Die Messung wird wie in \autoref{sec:Durchführung} durchgeführt und die Werte werden in \autoref{tab:beta} aufgetragen. 
+Außerdem ist in der Tabelle auch der Nulleffekt $A_U$ pro Zeit (siehe \autoref{tab:Zerfall0}) von der AKtivität $A$ pro Zeit abgezogen.
 
+\begin{table}[H]
+  \centering
+  \caption{Messdaten von $\beta$-Strahlung durch Aluminium.}
+  \label{tab:beta}
+  \sisetup{table-format=2.2}
+  \begin{tabular}{S[table-format=3.0] S[table-format=3.0] S[table-format=5.0] @{${}\pm{}$} S[table-format=3.2] S[table-format=3.2] @{${}\pm{}$} S[table-format=2.2]}
+  \toprule
+  {Dicke $d / \si{\micro\meter}$} & {Zeit $t / \si{\second}$} & \multicolumn{2}{c}{$N$} & \multicolumn{2}{c}{$\; \; A-A_U \, / \, \frac{1}{\si{\second}}$} \\
+  \midrule
+      0   &   100 &   57621   &   240 &   575.54  &   2,37   \\
+      100 &   100 &   4093    &   64  &   40.20   &   0.61    \\
+      125 &   100 &   973     &   31  &   9.00    &   0.28    \\
+      153 &   150 &   1537    &   39  &   9.52    &   0.23    \\
+      160 &   150 &   897     &   30  &   5.25    &   0.17    \\
+      200 &   200 &   456     &   21  &   1.55    &   0.08    \\
+      253 &   300 &   207     &   14  &   -0.04   &   0.02    \\
+      302 &   300 &   208     &   14  &   -0.04   &   0.02    \\
+      338 &   300 &   225     &   15  &   0.02    &   0.02    \\
+      400 &   400 &   280     &   17  &   -0.03   &   0.01    \\
+      444 &   450 &   593     &   24  &   0.59    &   0.03    \\
+      482 &   450 &   319     &   18  &   -0.02   &   0.01    \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+ Die Aktivität $A-A_U$ wird logarithmisch in Beziehung zur Schichtdicke $d$ in \autoref{fig:plot3}.
+\begin{figure}[H]
+  \centering
+  \includegraphics{build/plot3.pdf}
+  \caption {Lineare Regression der Aktivität aufgetragen gegen die Dicke.}
+  \label{fig:plot3}
+\end{figure}

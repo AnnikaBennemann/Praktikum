@@ -4,7 +4,7 @@ from scipy.signal import find_peaks
 import uncertainties.unumpy as unp
 from uncertainties import ufloat
 from scipy.optimize import curve_fit
-import tools
+
 
 N0= 828
 sigmaN0= 28.77
@@ -28,22 +28,6 @@ sigmaNtb=sigmaNb/tb
 Ntb0= Ntb-N0t
 sigmaNtb0= sigmaNtb-sigmaN0t
 print('Ntb= ',Ntb)
-<<<<<<< HEAD
-print('sigmaNtb= ',sigmaNtb)
-
-
-#Betastrahlung
-
-d, t, N, Nerror, A, Aerror= np.genfromtxt('content/beta.txt', unpack=True)
-R = d*1e-6 # Massenbelegung
-
-
-
-print('a1 =', a1)
-print('b1 =', b1)
-||||||| b2875df
-print('sigmaNtb= ',sigmaNtb)
-=======
 print('sigmaNtb= ',sigmaNtb)
 
 def f(x, a, b):
@@ -79,4 +63,51 @@ plt.grid()
 plt.ylabel(r'$\ln(A/A_0)$')
 plt.xlabel(r'$d/\si{\meter}$')
 plt.savefig('build/plot2.pdf')
->>>>>>> 44b90a7ed7eb9e5f200256ed82bd21715f6aeab7
+
+
+#Betastrahlung
+
+d, t, N, Nerror, A, Aerror= np.genfromtxt('content/beta.txt', unpack=True)
+R = d*1e-6 # Massenbelegung
+
+
+def f(x, a, b):
+   return a * x + b
+
+plt.figure(3)
+d_plot = np.delete(d,[6,7,8,9,10,11])
+A_plot= np.delete(A,[6,7,8,9,10,11]) 
+params, cov = curve_fit(f, d_plot, np.log(A_plot))
+Aer= np.delete(Aerror,[6,7,8,9,10,11])
+
+plt.plot(d_plot, np.log(A_plot), 'r.', label='Messdaten')
+plt.plot(d_plot, f(d_plot, *params), 'crimson', label='Ausgleichsgerade', linewidth=1.5)
+errors = np.sqrt(np.diag(cov))
+print('a1 =', params[0], '±', errors[0])
+print('b1 =', params[1], '±', errors[1])
+#zweiter linie
+d_plot2 = np.delete(d,[0,1,2,3,4,5,10])
+A_plot2= np.delete(A,[0,1,2,3,4,5,10])
+ #hier nochmal gucken, ob wir den einen drin lassen
+
+params, cov = curve_fit(f, d_plot2, np.log(np.abs(A_plot2)))
+
+plt.plot(d_plot2, np.log(np.abs( A_plot2)), 'b.', label='Messdaten')
+plt.plot(d_plot2, f(d_plot2, *params), 'cyan', label='Ausgleichsgerade', linewidth=1.5)
+plt.legend()
+plt.grid()
+plt.ylabel(r'$\ln(A/A_0)$')
+plt.xlabel(r'$d/\si{\micro\meter}$')
+plt.savefig('build/plot3.pdf')
+
+print('a2 =', params[0], '±', errors[0])
+print('b2 =', params[1], '±', errors[1])
+
+
+
+
+
+
+
+
+
