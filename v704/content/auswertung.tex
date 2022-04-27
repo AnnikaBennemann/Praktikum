@@ -150,27 +150,26 @@ Außerdem ist in der Tabelle auch der Nulleffekt $A_U$ pro Zeit (siehe \autoref{
 
 Auch hier wird mithilfe vom Pythonmodul matplotlib \cite{matplotlib} eine lineare Regression der Form $a \cdot x + b$ berechnet und 
 als Ausgleichsgerade in den Plot eingetragen. 
+Die Werte der Koeffizienten der Ausgleichsgrade werden zu
+\begin{align*}
+  a_1 &= (-0.029 \pm 0.002) \frac{1}{\si{\micro\meter}}\\
+  b_1 &= (6.372 \pm 0.305) \\
+  a_2 &= (0.004 \pm 0.007) \frac{1}{\si{\micro\meter}}\\
+  b_2 &= (-4.357 \pm 2.673)
+\end{align*}
+berechnet.
 Die x-Koordinate des Schnittpunkts der beiden Ausgleichsgeraden ist der Wert $R_{max}$ und ergibt
 sich aus
 \begin{equation}
   R_{max} =  \frac{b_2 - b_1}{a_1 - a_2}
   \label{eqn:Rmax}
 \end{equation}
-Die Werte der Koeffizienten werden zu
+dieser muss dann noch mit der Dichte von Aluminium $\rho = 2700 \frac{kg}{m^3}$\cite{AlDichte} und ergibt sich somit zu
 \begin{align}
-  a_1 =& (-0.029 \pm 0.002)\\
-  b_1 =& (6.372 \pm 0.305) \\
-  a_2 =& (0.004 \pm 0.002)\\
-  b_2 =& (-4.357 \pm 0.305)\\
-\end{align}
-berechnet und daraus folgt
-\begin{align}
-  R_{max}= 
+  R_{max} &= 0,878 \frac{\si{kg}{\meter^2}}.
 \end{align}
 
-
-
-Der Fehler von $R_{max}$ wird mit der Gauß'schen Fehlerfortpflanzung berechnet.
+Der Fehler von $R_{max}$ wird mit der Gauß'schen Fehlerfortpflanzung 
 \begin{align*}
   \sigma_R = \sqrt{
       \sum\limits_{i = 1}^N
@@ -180,4 +179,11 @@ Der Fehler von $R_{max}$ wird mit der Gauß'schen Fehlerfortpflanzung berechnet.
   + \frac{\sigma_{a_{2}}^{2} \left(- b_{1} + b_{2}\right)^{2}}{\left(- a_{1} + a_{2}\right)^{4}} + \frac{\sigma_{b_{1}}^{2}}{\left(- a_{1}
   + a_{2}\right)^{2}} + \frac{\sigma_{b_{2}}^{2}}{\left(- a_{1} + a_{2}\right)^{2}}}
 \end{align*}
-
+berechnet, sodass sich $R_max$ zu
+\begin{align}
+  R_{max}= (325.121 \pm 81,56) \si{\micro\meter}
+\end{align}
+ergibt. Damit und mit \autoref{eqn:Emax} kann die Energie $E_{max}$ zu
+\begin{align}
+  E_{max}= 624,443 \si{}.
+\end{align}
