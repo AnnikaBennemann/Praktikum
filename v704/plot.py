@@ -80,12 +80,14 @@ A_plot= np.delete(A,[6,7,8,9,10,11])
 params, cov = curve_fit(f, d_plot, np.log(A_plot))
 Aer= np.delete(Aerror,[6,7,8,9,10,11])
 
-plt.plot(d_plot, np.log(A_plot), 'r.', label='Messdaten')
+#plt.plot(d_plot, np.log(A_plot), 'r.', label='Messdaten',markersize=4)
 plt.plot(d_plot, f(d_plot, *params), 'crimson', label='Ausgleichsgerade', linewidth=1.5)
 errors = np.sqrt(np.diag(cov))
 print('a1 =', params[0], '±', errors[0])
 print('b1 =', params[1], '±', errors[1])
+plt.errorbar(d_plot, np.log(A_plot), yerr=[np.log(A_plot+Aer)-np.log(A_plot), np.log(A_plot)-np.log(A_plot-Aer)], fmt = 'o',color='r', markersize=2, capsize=2, ecolor='b', elinewidth=0.5, markeredgewidth=0.5, label='Messdaten mit Fehlerbalken')
 #zweiter linie
+
 d_plot2 = np.delete(d,[0,1,2,3,4,5,10])
 A_plot2= np.delete(A,[0,1,2,3,4,5,10])
  #hier nochmal gucken, ob wir den einen drin lassen
