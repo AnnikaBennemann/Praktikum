@@ -159,8 +159,7 @@ m = np.mean(N)
 sigma = np.std(N)
 print(m, sigma)
 
-plt.ylabel(r'$P_\lambda (k)$')
-plt.xlabel(r'$k$')
+
 
 k = [0,1,2,3,4,5,6,7]
 P = m**k / factorial(k, exact=False) * np.exp(-m)
@@ -168,6 +167,8 @@ P2 = [0.02, 0.06, 0.14, 0.24, 0.22, 0.25, 0.07, 0.00]
 plt.figure(6)
 plt.bar(k, P, color='b', width=-0.4, align='edge', label=r'Theoriewerte')
 plt.bar(k, P2, color='c', width=0.4, align='edge', label=r'Messwerte')
+plt.ylabel(r'$P_\lambda (k)$')
+plt.xlabel(r'$k$')
 plt.legend(loc='best')
 plt.savefig('build/poisson.pdf')
 

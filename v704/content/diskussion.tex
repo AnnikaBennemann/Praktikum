@@ -12,11 +12,10 @@ zur Compton-Streuung folgen. Dabei werden die Gleichungen~\eqref{eqn:sigma_theo}
 und~\eqref{eqn:mu_theo} aus dem Theorieteil verwendet, wobei für die Berechnung
 der Wirkungsquerschnitte $\sigma_{\mathup{com}}$ der für den
 $\ce{^{137}Cs}$-Strahler charakteristische Wert $\varepsilon = \num{1.295}$
-benutzt wird. Tabelle~\ref{tab:theoriewerte} führt die wesentlichen Größen und
-errechneten Werte für Zink und Eisen auf. Dabei bezeichnet $z$ die
+benutzt wird. Dabei bezeichnet $z$ die
 Kernladungszahl, $M$ die molare Masse und $\rho$ die Dichte des jeweiligen
 Stoffes.
-$\ce{^{137}Cs}$-Strahler charakteristische Wert $\varepsilon = \num{1.295}$
+
 
 \begin{table}[ht]
     \centering
@@ -26,27 +25,12 @@ $\ce{^{137}Cs}$-Strahler charakteristische Wert $\varepsilon = \num{1.295}$
 	\begin{tabular}{S S S S S S S}
 			\toprule
 			{Absorber} & {$\sigma_{\mathup{com}}$} & {z} & {$M\left[\si{\frac{\gram}{\mol}}\right]$} &
-            {$\rho\left[\si{\frac{\kilo\gram}{\metre\cubed}}\right]$} &
+            {$\rho\left[\si{\frac{\gram}{\centi\metre\cubed}}\right]$} &
             {$\mu_{\mathup{com}}\left[\si{\frac{1}{\metre}}\right]$} &
             {$\mu_{\mathup{berechnet}}\left[\si{\frac{1}{\metre}}\right]$} \\
 			\midrule
-			Eisen & 2.57e-29 & 26 &  55.8 &  7874 &  & \\
-
+			Eisen & 2.57e-29 & 26 &  55.8 &  7.874 & 41.16  & 54\\
+            Blei  & 2.57e-29 & 82 & 207.2 & 11.340 & 97.80 &  \\
 			\bottomrule
 		\end{tabular}
 \end{table}
-
-\begin{table}[H]
-    \centering
-    \caption{Messdaten zur Nullmessung beim $\gamma$- und $\beta$-Zerfall.}
-    \label{tab:Zerfall0}
-    \sisetup{table-format=3.0}
-    \begin{tabular}{S S S @{${}\pm{}$}S[table-format=2.2] S[table-format=1.2] @{${}\pm{}$}S[table-format=1.2] }
-      \toprule
-      \multicolumn{1}{p{2cm}} {Strahlungsart} &\multicolumn{1}{p{2cm}} {Messzeit $t / \si{\second}$} & \multicolumn{2}{c}{$N_0$}& \multicolumn{2}{c}{$\frac{N_0}{t} / \frac{1}{\si{\second}}$}\\
-      \midrule
-      $\gamma$ & 900 & 828 & 28.77 & 0.92 & 0.03\\
-      $\beta$ & 900 & 657 & 25.63 & 0.73 & 0.03\\
-    \bottomrule
-    \end{tabular}
-  \end{table}
