@@ -162,7 +162,7 @@ sich aus
 \end{equation}
 dieser muss dann noch mit der Dichte von Aluminium $\rho = 2700 \frac{kg}{m^3}$\cite{AlDichte} und ergibt sich somit zu
 \begin{align}
-  R_{max} &= 0,878 \frac{\si{kg}{\meter^2}}.
+  R_{max} &= 0,0878 \frac{\si{\g}}{\si{\centi\meter^2}}.
 \end{align}
 
 Der Fehler von $R_{max}$ wird mit der Gauß'schen Fehlerfortpflanzung 
@@ -177,9 +177,18 @@ Der Fehler von $R_{max}$ wird mit der Gauß'schen Fehlerfortpflanzung
 \end{align*}
 berechnet, sodass sich $R_max$ zu
 \begin{align}
-  R_{max}= (325.121 \pm 81,56) \si{\micro\meter}
+  R_{max}= (0,0878 \pm 8,156 \cdot 10^{-3}) \frac{\si{\g}}{\si{\centi\meter^2}}
 \end{align}
 ergibt. Damit und mit \autoref{eqn:Emax} kann die Energie $E_{max}$ zu
 \begin{align}
-  E_{max}= 624,443 \si{}.
+  E_{max}= 0,316 \si{\mega\eV}
+\end{align}
+berechnet werden.
+Mit der Gauß'schen Fehlerfortpflanzung
+\begin{align*}
+  \sigma_E =1.92 \sqrt{\frac{\sigma_{R}^{2} \left(R + 0.11\right)^{2}}{R^{2} + 0.22 R}}
+\end{align*}
+ergibt sich $E_{max}$ zu
+\begin{align}
+  E_{max}= (0,316 \pm 9.464 \cdot 10^{-3}) \si{\mega\eV}.
 \end{align}
