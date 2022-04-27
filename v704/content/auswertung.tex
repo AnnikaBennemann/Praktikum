@@ -144,3 +144,36 @@ Außerdem ist in der Tabelle auch der Nulleffekt $A_U$ pro Zeit (siehe \autoref{
   \label{fig:plot3}
 \end{figure}
 
+Auch hier wird mithilfe vom Pythonmodul matplotlib \cite{matplotlib} eine lineare Regression der Form $a \cdot x + b$ berechnet und 
+als Ausgleichsgerade in den Plot eingetragen. 
+Die x-Koordinate des Schnittpunkts der beiden Ausgleichsgeraden ist der Wert $R_{max}$ und ergibt
+sich aus
+\begin{equation}
+  R_{max} =  \frac{b_2 - b_1}{a_1 - a_2}
+  \label{eqn:Rmax}
+\end{equation}
+Die Werte der Koeffizienten werden zu
+\begin{align}
+  a_1 =& (-0.029 \pm 0.002)\\
+  b_1 =& (6.372 \pm 0.305) \\
+  a_2 =& (0.004 \pm 0.002)\\
+  b_2 =& (-4.357 \pm 0.305)\\
+\end{align}
+berechnet und daraus folgt
+\begin{align}
+  R_{max}= 
+\end{align}
+
+
+
+Der Fehler von $R_{max}$ wird mit der Gauß'schen Fehlerfortpflanzung berechnet.
+\begin{align*}
+  \sigma_R = \sqrt{
+      \sum\limits_{i = 1}^N
+       \left( \frac{\partial f}{\partial x_i} \sigma_i \right)^{\!\! 2}
+     }
+     =\sqrt{\frac{\sigma_{a_{1}}^{2} \left(- b_{1} + b_{2}\right)^{2}}{\left(- a_{1} + a_{2}\right)^{4}}
+  + \frac{\sigma_{a_{2}}^{2} \left(- b_{1} + b_{2}\right)^{2}}{\left(- a_{1} + a_{2}\right)^{4}} + \frac{\sigma_{b_{1}}^{2}}{\left(- a_{1}
+  + a_{2}\right)^{2}} + \frac{\sigma_{b_{2}}^{2}}{\left(- a_{1} + a_{2}\right)^{2}}}
+\end{align*}
+
