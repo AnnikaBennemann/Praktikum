@@ -86,8 +86,8 @@ errors = np.sqrt(np.diag(cov))
 print('a1 =', params[0], '±', errors[0])
 print('b1 =', params[1], '±', errors[1])
 #zweiter linie
-d_plot2 = np.delete(d,[0,1,2,3,4,5,10])
-A_plot2= np.delete(A,[0,1,2,3,4,5,10])
+d_plot2 = np.delete(d,[0,1,2,3,4,5])
+A_plot2= np.delete(A,[0,1,2,3,4,5])
  #hier nochmal gucken, ob wir den einen drin lassen
 
 params, cov = curve_fit(f, d_plot2, np.log(np.abs(A_plot2)))
