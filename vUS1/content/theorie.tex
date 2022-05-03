@@ -1,0 +1,92 @@
+\section{Zielsetzung}
+\label{sec:Zielsetzung}
+Ziel dieses Versuches ist es dir grundlegenden physikalischen Eigenschaften und Begriffe der Ultraschallechographie zu lernen und anzuwenden. 
+Dazu wird bei verschiedenen Körpern durch verschiedene Verfahren die Laufzeit gemessen.
+
+\section{Theorie}
+\label{sec:Theorie}
+Der Ultraschall besitzt eine Frequnzebereich zwischen $20 \si{\kilo\Hz}$ und $1 \si{\giga\Hz}$, welchen Menschen nicht mehr wahrnehmen können.
+Der Schall im Allgemeinen ist eine longitudinale Welle, welche mit 
+\begin{equation*}
+    p(x,t) = p_0 + v_0 Z \text{cos}(\omega t - k x)
+\end{equation*}
+beschrieben werden kann und welche sich aufrgund der Druckschwankungen fortbewegt.
+Der Faktor $Z$ ist die akustische Impedanz oder Schallkennwiderstand und wird durch
+\begin{equation}
+    Z = c \cdot \rho ,
+    \label{eqn:Impedanz}
+\end{equation}
+wobei $\rho$ die Dichte des durchstrahlten Materials und $c$ der Schallgeschwindigkeit in diesem Material ist.
+Schallwellen zeigen im Allgemeinen das selbe Verhalten wie elektromagnetische Wellen
+auf, jedoch ist bei Schwalwellen aufgrund der Änderung von Druck und Dichte die
+Phasengeschwindigkeit materialabhängig.\\
+Aufgrund der Matreialabhängigkeit muss bei Schallwellen zwischen gasförmigen bzw. flüssigen Medien und Festkörpern unterschieden werden.
+In Gase und Flüsigkeiten treten lediglich Longitudinalwellen auf, sodass sich für die Schallgeschwindigkeit
+\begin{equation}
+    c_{Fl} = \sqrt{\frac{1}{\kappa \rho}}
+    \label{eqn:cFlüssig}
+\end{equation}
+ergibt, wobei $\kappa$ die Kompressibilität des Mediums beschreibt.
+In Festkörpern treten zusätzlich zu Longitudinalwellen auch Transversalwellen auf. Daraus folgt, dass in Festkörpern die Schallgeschwindigkeit 
+grundsätzlich Richtungsabhängig ist.
+Mit dem Elastizitätmodul $E$ ergibt sich für die Schallgeschwindigkeit
+\begin{equation}
+    c_{Fe} = \sqrt{\frac{E}{\rho}}.
+    \label{eqn:cFest}
+\end{equation}
+Für Transversalwellen und Longitudinalwellen ist $c_{Fe}$ unterschiedlich.\\
+Bei der Betrachtung von Schallwellen in einem Medium geht ein Teil der Energie durch Absorption verloren.
+Die Intensität der Welle 
+\begin{equation}
+    I(x) = I_0 \text{e}^{-\alpha x}
+    \label{eqn:Intensi}
+\end{equation}
+lässt sich als Funktion des Ortes und des Absorptionskoeffizienten $\alpha$ beschreiben. Dabei besitzt Luft einen sehr großen Absorptionskoeffizienten,
+weshalb im flogenden Versuch immer ein Kontaktmittel verwendet wird.Bei dem Kontaktmittel handelt es sich um bidestilliertes Wasser oder Hydrogel.\\
+Während des Experiments werden zwei verschiedene Messmethoden verwendet, wovon eine auf der reflektierten und eine transmittierte Welle basiert.
+Der Reflexionskoeffizient 
+\begin{equation}
+    R = (\frac{Z_1-Z_2}{Z_1+Z_2})^2
+\end{equation}
+beschreibt das Verhältnis der einfallenden und reflektierten Intensitäten und ist von den akustischen Impedanzen $Z$ abhähing.
+Der Transmittierte Anteil $T$ lässt sich aus $T = 1 - R$ berechnen.\\
+\\
+Die Erzeugung von Ultraschall kann auf verschiedene Arten erzeugt erden. In diesem Versuch wird nur der piezo-elektrische Effekt betrachtet.
+Piezo-elektrische Kristalle können durch Anregung eines äußeren elektrischen Feldes in Schwingungen versetzt werden.
+Die Amplitude der entstehenden Welle und die daraus resultierende Energiedichte kann maximiert werden, indem zwischen Anregungsfrequenz und Eigenfrequenz
+des Kristalls Resonanz entsteht.
+Außerdem können Pizokristalle als Empfänger genutzt werden, weil sie durch Schallwellen angeregt werden.
+Dabei ist Quarz der meist verwendete Piezokristall, weil Quarz gleichbleibende physikalische Eigenschaften besitzt.
+Jedoch ist der Piezo-Effekt bei Quarzen relativ gering.\\
+Mithilfe von Ultraschall können Informationen über der Aufbau eines Stoffes gewonnen werden. Dies wird hauptsächlich mit der Laufzeitmessung gewonnen,
+welche in diesem Versuch durch zwei Methoden durchgeführt wird. Im Allgemeinen basiert die Messung darauf, dass ein Ultraschallsignal 
+losgesendet wird und die Laufzeit auf einer definierten Messstrecke mittels eines Empfängers gemessen wird.\\
+\begin{figure}[H]
+    \begin{subfigure}{0.48\textwidth}
+       \centering
+       \includegraphics[height=6cm]{build/Impuls_Echo.png}
+       \caption{Das Impuls-Echo-Verfahren.}
+       \label{fig:ImpulsEcho}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}    
+        \centering
+        \includegraphics[height=6cm]{build/Durchschall.png}
+        \caption{Das Durchschaltungs-Verfahren.}
+        \label{fig:Durchschaltung}
+    \end{subfigure}
+    \caption{Zwei Messmethoden zur Messung der Laufzeit\cite{VUS1}.}
+    \label{fig:Methoden}
+\end{figure}
+Bei der ersten Methode handelt es sich um das Impuls-Echo-Verfahren (\autoref{fig:ImpulsEcho}). Es wird nur eine Schallkopf verwendet, welcher
+sowohl Schallwellen lossendet als auch die reflektierten Signale wahrnimmt.
+Mithilfe der Laufzeit kann die Lage der Fehlstellung mit
+\begin{equation}
+    s = \frac{1}{2} c t
+    \label{eqn:Strecke}
+\end{equation}
+bestimmt werden.\\
+Die zweite Methode ist das Durchschaltungs-Verfahren, was in \autoref{fig:Durchschaltung} schematisch dargestellt ist. 
+Dabei werden zwei Ultraschallköpfe benutzt. Einer davon ist der Ultraschallsender und sendet ein Signal, welches auf der anderen Seite von
+einem Empfänger aufgefangen wird. Die Intensität wird abgeschwächt, wenn eine Fehlstellung in der Probe vorliegt. Der genaue Ort der 
+Fehlstellung kann nicht durch dieses Verfahren bestimmt werden.

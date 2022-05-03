@@ -1,0 +1,58 @@
+\section{Auswertung}
+\label{sec:Auswertung}
+
+Die verwendeten Zylinder und Platten wurden mithilfe von einer Schieblehre vermessen und hatten die folgenden Dicken.
+Dabei werden die Werte als fehlerfrei angenommen.
+\begin{description}
+  \item[Zylinder 1] \SI{3,10}{\centi\meter}
+  \item[Zylinder 2] \SI{3,97}{\centi\meter}
+  \item[Zylinder 3] \SI{8.03}{\centi\meter}
+  \item[Zylinder 4] \SI{10.20}{\centi\meter}
+  \item[Zylinder 5] \SI{12.05}{\centi\meter}
+  \item[Platte 1] \SI{0.61}{\centi\meter}
+  \item[Platte 2] \SI{1.00}{\centi\meter}
+\end{description}
+
+\subsection{Bestimmung der Schallgeschwindigkeit und der Dämpfungskonstante mit dem Impuls-Echo-Verfahren}
+\label{sub:ImpEch}
+Zur Bestimmung der Schallgeschwindigkeit wird $Platte 1$ benutzt und dann die Laufzeit $t$ gemessen und in \autoref{tab:ImpLaufzeit} eingetragen.
+Die Schallgeschwindigkeit $c$ wird mit \autoref{eqn:Strecke} berechnet, indem sie nach $c$ umgestellt wird und auch in \autoref{tab:ImpLaufzeit} 
+eingetragen wird.
+
+\begin{table}[H]
+  \centering
+  \caption{Laufzeit und Schallgeschwindigkeit durch Platte 1.}
+  \label{tab:ImpLaufzeit}
+  \sisetup{table-format=2.2}
+  \begin{tabular}{S[table-format=1.0] S[table-format=1.0] S[table-format=2.0] S[table-format=4.0] }
+  \toprule
+  {Messung} & {Laufzeit $\Delta t / \si{\micro\second}$} & {Zeit $\Delta t / \si{\micro\second}$} & {Schallgeschwindigkeit $c / \frac{\si{meter}}{\si{\second}}$}\\
+  \midrule
+  1: &  5   & 5 & 2440  \\
+  2: &  10  & 5 & 2440  \\
+  3: &  14  & 4 & 3050  \\
+  4: &  19  & 5 & 2440  \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+  \centering
+  \caption{Periode, Frequenz und Wellenlänge.}
+  \label{tab:ImpLaufzeit}
+  \sisetup{table-format=2.2}
+  \begin{tabular}{S[table-format=1.1] S[table-format=1.1] S[table-format=4.0] }
+  \toprule
+   {Periode $T / \si{\micro\second}$} & {Frequenz $f/ \si{\mega\Hz}$} & {Wellenlänge $\lambda /\si{\meter}$}\\
+  \midrule
+    0,4  & 2.5 & 2440  \\
+    0,6  & 1.7 & 2440  \\
+    0.6  & 1.7 & 3050  \\
+    0.5  & 2.0 & 2440  \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+
+
