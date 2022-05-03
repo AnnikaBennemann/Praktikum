@@ -15,7 +15,7 @@ Dabei werden die Werte als fehlerfrei angenommen.
 
 \subsection{Bestimmung der Schallgeschwindigkeit und der Dämpfungskonstante mit dem Impuls-Echo-Verfahren}
 \label{sub:ImpEch}
-Zur Bestimmung der Schallgeschwindigkeit wird $Platte 1$ benutzt und dann die Laufzeit $t$ gemessen und in \autoref{tab:ImpLaufzeit} eingetragen.
+Zur Bestimmung der Schallgeschwindigkeit wird Platte 1 benutzt und dann die Laufzeit $t$ gemessen und in \autoref{tab:ImpLaufzeit} eingetragen.
 Die Schallgeschwindigkeit $c$ wird mit \autoref{eqn:Strecke} berechnet, indem sie nach $c$ umgestellt wird und auch in \autoref{tab:ImpLaufzeit} 
 eingetragen wird.
 
@@ -35,24 +35,96 @@ eingetragen wird.
   \bottomrule
   \end{tabular}
 \end{table}
-
-
+Der Mittelwert der Schallgeschwindigkeit wird mit 
+\begin{equation}
+  \bar{c}=\frac{1}{n} \sum_{i=1}^n c_ib
+\end{equation}
+zu
+\begin{align}
+  \bar{c}=2592,5 \si{\meter}.
+\end{align}
+Die Abweichung lässt sich berechnen mit
+\begin{equation}
+  \Delta \bar{c} = \frac{\sqrt{\frac{1}{n-1}\sum_{j=1}^n (x_j-\bar{x_i})^2}}{\sqrt{n}},
+\end{equation}
+sodass sich die mittlere Schallgeschwindigkeit zu
+\begin{align}
+  \bar{c}= (2592,5 \pm 305) \si{\meter}
+\end{align}
+ergibt.
+Die gemessene Periode $T$ wird mit der berechneten Frequenz $f$ und der Wellenlänge $c$ in \autoref{tab:Tfc} eingetragen.
+Die Abweichung der Wellenlänge wird mit der Gaußschen Fehlerfortpflanzung bestimmt.
+\begin{equation*}
+  \Delta \lambda =\sqrt{\sum_{j=1}^n \left(\frac{1}{f}\Delta \bar{c} \right)^{2} }\label{eqn:Gauß}
+\end{equation*}
 \begin{table}[H]
   \centering
   \caption{Periode, Frequenz und Wellenlänge.}
-  \label{tab:ImpLaufzeit}
+  \label{tab:Tfc}
   \sisetup{table-format=2.2}
-  \begin{tabular}{S[table-format=1.1] S[table-format=1.1] S[table-format=4.0] }
+  \begin{tabular}{S[table-format=1.1] S[table-format=1.1] S[table-format=4.2] @{${}\pm{}$} S[table-format=3.2] }
   \toprule
-   {Periode $T / \si{\micro\second}$} & {Frequenz $f/ \si{\mega\Hz}$} & {Wellenlänge $\lambda /\si{\meter}$}\\
+   {Periode $T / \si{\micro\second}$} & {Frequenz $f/ \si{\mega\Hz}$} & \multicolumn{2}{c}{Wellenlänge $\lambda /\si{\meter}$}\\
   \midrule
-    0,4  & 2.5 & 2440  \\
-    0,6  & 1.7 & 2440  \\
-    0.6  & 1.7 & 3050  \\
-    0.5  & 2.0 & 2440  \\
+    0,4  & 2.5 & 1037.00 & 122.41 \\ 
+    0,6  & 1.7 & 1525.00 & 179.41 \\
+    0.6  & 1.7 & 1525.00 & 179.41 \\
+    0.5  & 2.0 & 1296.25 & 152.50 \\
   \bottomrule
   \end{tabular}
 \end{table}
 
 
+\begin{table}[H]
+  \centering
+  \caption{Laufzeit und Amplitudent durch verschiedene Zylinder mit dem Impuls-Echo-Verfahren.}
+  \label{tab:tAimpE}
+  \sisetup{table-format=2.2}
+  \begin{tabular}{S[table-format=1.0] S[table-format=2.0] S[table-format=1.2] }
+  \toprule
+  {Zylinder} & {Laufzeit $t / \si{\micro\second}$} &  {Amplitude $A$}\\
+  1 &  24  & 1.24  \\
+  2 &  30  & 1.24  \\
+  3 &  59  & 0.24  \\
+  4 &  76  & 0.08  \\
+  \bottomrule
+  \end{tabular}
+\end{table}
 
+\subsection{Bestimmung der Schallgeschwindigkeit mit dem Durchschallverfahren}
+\label{subsec:SchallDurchV}
+
+\begin{table}[H]
+  \centering
+  \caption{Laufzeit und Amplitudent durch verschiedene Zylinder mit dem Durchschallungs-Verfahren.}
+  \label{tab:tADurch}
+  \sisetup{table-format=2.2}
+  \begin{tabular}{S[table-format=1.0] S[table-format=2.0] S[table-format=1.2] }
+  \toprule
+  {Zylinder} & {Laufzeit $t / \si{\micro\second}$} &  {Amplitude $A$}\\
+  1 &  10  & 1.24  \\
+  2 &  15  & 1.32  \\
+  3 &  30  & 1.18  \\
+  4 &  38  & 0.60  \\
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Biometrische Untersuchung eines Augenmodells}
+\label{subsec:Auge}
+
+\begin{table}[H]
+  \centering
+  \caption{Laufzeiten im Auge.}
+  \label{tab:Auge}
+  \sisetup{table-format=2.2}
+  \begin{tabular}{S[table-format=1.0] S[table-format=2.0] }
+  \toprule
+  {Peak} & {Laufzeit $t / \si{\micro\second}$} \\
+  1 &  7 \\
+  2 &  11 \\
+  3 &  17 \\
+  4 &  25 \\
+  \bottomrule
+  \end{tabular}
+\end{table}
