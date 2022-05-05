@@ -53,6 +53,13 @@ berechnen, sodass sich die mittlere Schallgeschwindigkeit zu
 \end{align*}
 ergibt.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics{build/Scan1.jpg}
+  \caption {Abbildung des A-Scans der Acrylplatte 1.}
+  \label{fig:scan1}
+\end{figure}
+Anhand von \autoref{fig:scan1} kann zwischen $5$ Schwingungen die Periode abgelesen werden und die Frequenz daraus bestimmt werden.
 Die gemessene Periode $T$ wird mit der daraus nach
 \begin{align*}
   f&= \frac{1}{T}
@@ -61,7 +68,7 @@ berechneten Frequenz $f$ und der nach
 \begin{align*}
   \lambda &= \frac{c}{f}
 \end{align*} 
-berechneten Wellenlänge $\lambda$ in \autoref{tab:Tfc} eingetragen.
+berechneten Wellenlänge $\lambda$ sind in \autoref{tab:Tfc} eingetragen.
 Die Abweichung der Wellenlänge wird mit der Gaußschen Fehlerfortpflanzung
 \begin{equation*}
   \Delta \lambda =\sqrt{\sum_{j=1}^n \left(\frac{1}{f} \cdot \Delta \bar{c} \right)^{2} }\label{eqn:Gauß}
@@ -103,7 +110,7 @@ Die Ergebnisse der Messung sind in \autoref{tab:tAimpE} aufgelistet.
   \sisetup{table-format=2.2}
   \begin{tabular}{S[table-format=1.0] S[table-format=2.0] S[table-format=1.2] }
   \toprule
-  {Zylinder} & {Laufzeit $t / \si{\micro\second}$} &  {Amplitude $A$}\\
+  {Zylinder} & {Laufzeit $t / \si{\micro\second}$} &  {Amplitude $A / \si{\volt}$}\\
   1 &  24  & 1.24  \\
   2 &  30  & 1.24  \\
   3 &  59  & 0.24  \\
@@ -111,28 +118,37 @@ Die Ergebnisse der Messung sind in \autoref{tab:tAimpE} aufgelistet.
   \bottomrule
   \end{tabular}
 \end{table}
-Nach dem Umformen von \autoref{eqn:Strecke} zu
+Die Werte der Laufzeiten in \autoref{tab:tAimpE} werden den jeweiligen Dicken der Zylinder in \autoref{fig:plot1} gegenübergestellt.
+Zudem wird eine Augleichsrechnung der Form $c*t+b$ mithilfe des Pythonmoduls Matplotlib \cite{matplotlib} durchgeführt und auch in die 
+Abbildung eingetragen.
+\begin{figure}[H]
+  \centering
+  \includegraphics{build/plot1.pdf}
+  \caption {Darstellung der Zylinderdicken gegen die Laufzeiten zur Berechnung der Schallgeschwindigkeiten im Impuls-Echo-Verfahren.}
+  \label{fig:plot1}
+\end{figure}
+Die Parameter der linearen Regression und somit die bestimmte Schallgeschwindigkeit $c$ und die Dicke der Ausgleichsschicht $b$ betragen
 \begin{align*}
-  c &= 2 \cdot \frac{d}{t}
+  c_{IE}& =( 2740.76\pm 40.50 ) \si{\meter\per\second}\\
+  b &= (-3.00\pm 2.10) \si{\milli\meter}.
 \end{align*}
-wird die Schallgeschwindigkeit zu
-\begin{align*}
-  \bar{c}= ( \pm ) \si{\meter\per\second}
-\end{align*}
-berechnet.
 
 
 \subsection{Bestimmung der Schallgeschwindigkeit mit dem Durchschallverfahren}
 \label{subsec:SchallDurchV}
 
+Bei dieser Messreihe werden die Zylinder anhand des Durchschallungsverfahrens nach \autoref{sec:Durchführung} ausgemessen.
+Die Messung wird für dieselben $4$ Zylinder wie in \autoref{sub:ImpEch} durchgeführt.
+Die Messwerte der Laufzeiten und Amplituden sind in \autoref{tab:tADurch} dargestellt.
+
 \begin{table}[H]
   \centering
-  \caption{Laufzeit und Amplitudent durch verschiedene Zylinder mit dem Durchschallungs-Verfahren.}
+  \caption{Laufzeit und Amplituden durch verschiedene Zylinder mit dem Durchschallungs-Verfahren.}
   \label{tab:tADurch}
   \sisetup{table-format=2.2}
   \begin{tabular}{S[table-format=1.0] S[table-format=2.0] S[table-format=1.2] }
   \toprule
-  {Zylinder} & {Laufzeit $t / \si{\micro\second}$} &  {Amplitude $A$}\\
+  {Zylinder} & {Laufzeit $t / \si{\micro\second}$} &  {Amplitude $A / \si{\volt}$}\\
   1 &  10  & 1.24  \\
   2 &  15  & 1.32  \\
   3 &  30  & 1.18  \\
@@ -140,6 +156,42 @@ berechnet.
   \bottomrule
   \end{tabular}
 \end{table}
+
+Auch bei dieser Messung soll die Schallgeschwindigkeit $c$ berechnet werden.
+Hier muss die nach $c$ umgestellte \autoref{eqn:Strecke} allerdings modifiziert werden, da der Faktor $2$ nicht mehr benötigt wird.
+Dies liegt daran, dass nun nicht mehr eine Sonde als Sender und Empfänger genutzt wird und die Strecke doppelt durchlaufen wird, 
+sondern an beiden Seiten des Probestücks jeweils eine Sonde anliegt und somit eine Sonde als Empfänger und die andere als Sender fungiert.
+Die Berechnung erfolgt analog zu \autoref{fig:plot1} mithilfe einer Ausgleichsgerade. Diese ist in \autoref{fig:plot3} dargestellt.
+\begin{figure}[H]
+  \centering
+  \includegraphics{build/plot3.pdf}
+  \caption {Darstellung der Zylinderdicken gegen die Laufzeiten zur Berechnung der Schallgeschwindigkeiten im Durchschallungsverfahren.}
+  \label{fig:plot3}
+\end{figure}
+Die Parameter der linearen Regression und somit die bestimmte Schallgeschwindigkeit $c$ und die Dicke der Ausgleichsschicht $b$ betragen
+\begin{align*}
+  c_{D}& =( 2581.65\pm 96.76 ) \si{\meter\per\second}\\
+  b &= (3.23\pm 2.50) \si{\milli\meter}.
+\end{align*}
+
+Der Ausgangsimpuls der als Sender fungierenden Sonde beträgt $A_0= \qty{1.18}{\volt}$.
+Die logarithmierten Messwerte $\log{\frac{A}{A_0}}$ werden gegenüber der Zylinderdicke aufgetragen und eine 
+Ausgleichsrechung der Form $\log{\frac{A}{A_0}}= -\alpha \cdot d$ durchgeführt. Die Ergebnisse sind in \autoref{fig:plot2} dargestellt.
+\begin{figure}[H]
+  \centering
+  \includegraphics{build/plot2.pdf}
+  \caption {Darstellung der logarithmierten Amplituden gegenüber der Zylinderdicken zur Berechnung der Dämpfung im Durchschallungsverfahren.}
+  \label{fig:plot2}
+\end{figure}
+
+Der Absorptionskoeffizient ergibt sich zu
+\begin{align*}
+  \alpha &=( 8.99\pm 4.42) \si{\per\meter}.
+\end{align*}
+
+\subsection{Spektrale Analyse (FFT) und Cepstrum}
+\label{subsec:FFT}
+
 
 \subsection{Biometrische Untersuchung eines Augenmodells}
 \label{subsec:Augew}
