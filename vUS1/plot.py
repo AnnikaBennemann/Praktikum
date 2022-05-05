@@ -45,7 +45,7 @@ plt.xlabel(r'$d \mathbin{/} \si{\milli\meter}$')
 plt.legend(loc='best')
 plt.savefig('build/plot2.pdf')
 
-x_plot=t2
+x_plot=t2 
 y_plot= h
 xfit = np.linspace(5,x_plot[3],50)
 params, cov = np.polyfit(x_plot, y_plot, deg=1, cov=True)

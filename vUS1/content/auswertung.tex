@@ -149,7 +149,7 @@ Die Messwerte der Laufzeiten und Amplituden sind in \autoref{tab:tADurch} darges
   \begin{tabular}{S[table-format=1.0] S[table-format=2.0] S[table-format=1.2] }
   \toprule
   {Zylinder} & {Laufzeit $t / \si{\micro\second}$} &  {Amplitude $A / \si{\volt}$}\\
-  1 &  10  & 1.24  \\
+  1 &  13  & 1.24  \\
   2 &  15  & 1.32  \\
   3 &  30  & 1.18  \\
   4 &  38  & 0.60  \\
@@ -170,8 +170,8 @@ Die Berechnung erfolgt analog zu \autoref{fig:plot1} mithilfe einer Ausgleichsge
 \end{figure}
 Die Parameter der linearen Regression und somit die bestimmte Schallgeschwindigkeit $c$ und die Dicke der Ausgleichsschicht $b$ betragen
 \begin{align*}
-  c_{D}& =( 2581.65\pm 96.76 ) \si{\meter\per\second}\\
-  b &= (3.23\pm 2.50) \si{\milli\meter}.
+  c_{D}& =( 2791.47\pm 76.34 ) \si{\meter\per\second}\\
+  b &= (-3.75\pm 2.00) \si{\milli\meter}.
 \end{align*}
 
 Der Ausgangsimpuls der als Sender fungierenden Sonde beträgt $A_0= \qty{1.18}{\volt}$.
@@ -191,23 +191,56 @@ Der Absorptionskoeffizient ergibt sich zu
 
 \subsection{Spektrale Analyse (FFT) und Cepstrum}
 \label{subsec:FFT}
+Nun wird die Darstellung als FFT und Cepstrum verwendet. 
+Die Messung wird nach \autoref{sec:Durchführung} durchgeführt.
+Aus den Laufzeiten der Peaks ergibt sich eine Dicke der Platten von 
 
 
 \subsection{Biometrische Untersuchung eines Augenmodells}
 \label{subsec:Augew}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics{build/auge.jpg}
+  \caption {A-Scan des Augenmodells.}
+  \label{fig:auge}
+\end{figure}
+
+Bei der Untersuchung des Augenmodells werden im A-Scan (siehe \autoref{fig:Auge}) mehrere Peaks beobachtet.
+Diese lassen sich der Iris, dem Ein- und Austritt aus der Linse und der Retina zuordnen und sind in \autoref{tab:Auge} dargestellt.
 \begin{table}[H]
   \centering
   \caption{Laufzeiten im Auge.}
   \label{tab:Auge}
   \sisetup{table-format=2.2}
-  \begin{tabular}{S[table-format=1.0] S[table-format=2.0] }
+  \begin{tabular}{c S[table-format=2.0] }
   \toprule
-  {Peak} & {Laufzeit $t / \si{\micro\second}$} \\
-  1 &  7 \\
-  2 &  11 \\
-  3 &  17 \\
-  4 &  25 \\
+  {Augenbestandteil} & {Laufzeit $t / \si{\micro\second}$} \\
+    Iris            &  11 \\
+    Linseneintritt  &  17 \\
+    Linsenaustritt  &  25 \\
+    Retina          &  69 \\
+
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+Mithilfe von \autoref{eqn:Strecke} werden die Maße des Augenmodells berechnet. Hierbei muss darauf geachtet werden, dass sich
+die Schallgeschwindigkeit in der Linse $c_L= \qty{2500}{\meter\per\second}$ und die Schallgeschwindigkeit in der Glaskörperflüssigkeit
+$c_{GK}= \qty{1410}{\meter\per\second}$ unterscheiden.
+
+\begin{table}[H]
+  \centering
+  \caption{Abstände im Auge.}
+  \label{tab:Auge}
+  \sisetup{table-format=2.2}
+  \begin{tabular}{c S[table-format=2.2] }
+  \toprule
+  {Augenbestandteil} & {Standort $s / \si{\milli\meter}$} \\
+  Iris            &  7.76\\
+  Linseneintritt  &  11.99\\
+  Linsenaustritt  &  21.99\\
+  Retina          &  60.77\\
   \bottomrule
   \end{tabular}
 \end{table}
