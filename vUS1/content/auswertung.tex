@@ -1,11 +1,11 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-Die verwendeten Zylinder und Platten wurden mithilfe von einer Schieblehre vermessen und hatten die folgenden Dicken.
+Die in den Messungen verwendeten Zylinder und Platten werden mithilfe einer Schieblehre vermessen und haben die folgenden Dicken $d$.
 Dabei werden die Werte als fehlerfrei angenommen.
 \begin{description}
-  \item[Zylinder 1] \SI{3,10}{\centi\meter}
-  \item[Zylinder 2] \SI{3,97}{\centi\meter}
+  \item[Zylinder 1] \SI{3.10}{\centi\meter}
+  \item[Zylinder 2] \SI{3.97}{\centi\meter}
   \item[Zylinder 3] \SI{8.03}{\centi\meter}
   \item[Zylinder 4] \SI{10.20}{\centi\meter}
   \item[Zylinder 5] \SI{12.05}{\centi\meter}
@@ -16,7 +16,7 @@ Dabei werden die Werte als fehlerfrei angenommen.
 \subsection{Bestimmung der Schallgeschwindigkeit und der Dämpfungskonstante mit dem Impuls-Echo-Verfahren}
 \label{sub:ImpEch}
 Zur Bestimmung der Schallgeschwindigkeit wird Platte 1 benutzt und dann die Laufzeit $t$ gemessen und in \autoref{tab:ImpLaufzeit} eingetragen.
-Die Schallgeschwindigkeit $c$ wird mit \autoref{eqn:Strecke} berechnet, indem sie nach $c$ umgestellt wird und auch in \autoref{tab:ImpLaufzeit} 
+Die Schallgeschwindigkeit $c$ wird mit \autoref{eqn:Strecke} berechnet, indem die Formel nach $c$ umgestellt und der dadurch berechnete Wert auch in \autoref{tab:ImpLaufzeit} 
 eingetragen wird.
 
 \begin{table}[H]
@@ -37,26 +37,36 @@ eingetragen wird.
 \end{table}
 Der Mittelwert der Schallgeschwindigkeit wird mit 
 \begin{equation}
-  \bar{c}=\frac{1}{n} \sum_{i=1}^n c_ib
+  \bar{c}=\frac{1}{n} \sum_{i=1}^n c_i \label{eqn:Mittelwert}
 \end{equation}
 zu
-\begin{align}
-  \bar{c}=2592,5 \si{\meter}.
-\end{align}
-Die Abweichung lässt sich berechnen mit
+\begin{align*}
+  \bar{c}=2592,5 \si{\meter\per\second}.
+\end{align*}
+Die Abweichung lässt sich mit
 \begin{equation}
-  \Delta \bar{c} = \frac{\sqrt{\frac{1}{n-1}\sum_{j=1}^n (x_j-\bar{x_i})^2}}{\sqrt{n}},
+  \Delta \bar{c} = \frac{\sqrt{\frac{1}{n-1}\sum_{j=1}^n (c_j-\bar{c})^2}}{\sqrt{n}} \label{eqn:standabw}
 \end{equation}
-sodass sich die mittlere Schallgeschwindigkeit zu
-\begin{align}
-  \bar{c}= (2592,5 \pm 305) \si{\meter}
-\end{align}
+berechnen, sodass sich die mittlere Schallgeschwindigkeit zu
+\begin{align*}
+  \bar{c}= (2592,5 \pm 305) \si{\meter\per\second}
+\end{align*}
 ergibt.
-Die gemessene Periode $T$ wird mit der berechneten Frequenz $f$ und der Wellenlänge $c$ in \autoref{tab:Tfc} eingetragen.
-Die Abweichung der Wellenlänge wird mit der Gaußschen Fehlerfortpflanzung bestimmt.
+
+Die gemessene Periode $T$ wird mit der daraus nach
+\begin{align*}
+  f&= \frac{1}{T}
+\end{align*}
+berechneten Frequenz $f$ und der nach
+\begin{align*}
+  \lambda &= \frac{c}{f}
+\end{align*} 
+berechneten Wellenlänge $\lambda$ in \autoref{tab:Tfc} eingetragen.
+Die Abweichung der Wellenlänge wird mit der Gaußschen Fehlerfortpflanzung
 \begin{equation*}
-  \Delta \lambda =\sqrt{\sum_{j=1}^n \left(\frac{1}{f}\Delta \bar{c} \right)^{2} }\label{eqn:Gauß}
+  \Delta \lambda =\sqrt{\sum_{j=1}^n \left(\frac{1}{f} \cdot \Delta \bar{c} \right)^{2} }\label{eqn:Gauß}
 \end{equation*}
+bestimmt.
 \begin{table}[H]
   \centering
   \caption{Periode, Frequenz und Wellenlänge.}
@@ -66,18 +76,29 @@ Die Abweichung der Wellenlänge wird mit der Gaußschen Fehlerfortpflanzung best
   \toprule
    {Periode $T / \si{\micro\second}$} & {Frequenz $f/ \si{\mega\Hz}$} & \multicolumn{2}{c}{Wellenlänge $\lambda /\si{\meter}$}\\
   \midrule
-    0,4  & 2.5 & 1037.00 & 122.41 \\ 
-    0,6  & 1.7 & 1525.00 & 179.41 \\
+    0.4  & 2.5 & 1037.00 & 122.41 \\ 
+    0.6  & 1.7 & 1525.00 & 179.41 \\
     0.6  & 1.7 & 1525.00 & 179.41 \\
     0.5  & 2.0 & 1296.25 & 152.50 \\
   \bottomrule
   \end{tabular}
 \end{table}
 
+Die Mittelwerte der Frequenz und der Wellenlänge betragen somit analog zu \autoref{eqn:Mittelwert} und \autoref{eqn:standabw} 
+\begin{align*}
+  \bar{f} &= 
+  \bar{\lambda} &= 
+\end{align*}
 
+Der erste berechnete Wert der Schallgeschwindigkeit in Acryl $c=2440 \frac{\si{meter}}{\si{\second}}$ wird in das Darstellungsprogramm eingegeben.
+Es wird eine Tiefenmessung durchgeführt. Die ersten beiden Peaks lagen bei $0.6 \si{\centi\meter}$ und $1.2 \si{\centi\meter}$, woraus abzulesen ist, dass die 
+verwendete Platte eine Dicke von $d=0.6\si{\centi\meter}$ hat.\\
+
+In der zweiten Messreihe werden die zuvor ausgemessenen Acrylzylinder mithilfe des Impuls-Echo-Verfahrens gemäß \autoref{sec:Durchführung} vermessen.
+Die Ergebnisse der Messung sind in \autoref{tab:tAimpE} aufgelistet.
 \begin{table}[H]
   \centering
-  \caption{Laufzeit und Amplitudent durch verschiedene Zylinder mit dem Impuls-Echo-Verfahren.}
+  \caption{Laufzeit und Amplituden durch verschiedene Zylinder mit dem Impuls-Echo-Verfahren.}
   \label{tab:tAimpE}
   \sisetup{table-format=2.2}
   \begin{tabular}{S[table-format=1.0] S[table-format=2.0] S[table-format=1.2] }
@@ -90,6 +111,16 @@ Die Abweichung der Wellenlänge wird mit der Gaußschen Fehlerfortpflanzung best
   \bottomrule
   \end{tabular}
 \end{table}
+Nach dem Umformen von \autoref{eqn:Strecke} zu
+\begin{align*}
+  c &= 2 \cdot \frac{d}{t}
+\end{align*}
+wird die Schallgeschwindigkeit zu
+\begin{align*}
+  \bar{c}= ( \pm ) \si{\meter\per\second}
+\end{align*}
+berechnet.
+
 
 \subsection{Bestimmung der Schallgeschwindigkeit mit dem Durchschallverfahren}
 \label{subsec:SchallDurchV}
