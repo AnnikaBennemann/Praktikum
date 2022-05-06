@@ -15,6 +15,7 @@ Dabei werden die Werte als fehlerfrei angenommen.
 
 \subsection{Bestimmung der Schallgeschwindigkeit und der Dämpfungskonstante mit dem Impuls-Echo-Verfahren}
 \label{sub:ImpEch}
+Der Versuch wird nach \autoref{sec:Aufbau} aufgebaut und die erste Messung nach \autoref{sub:ImpEch_durch} durchgeführt.
 Zur Bestimmung der Schallgeschwindigkeit wird Platte 1 benutzt und dann die Laufzeit $t$ gemessen und in \autoref{tab:ImpLaufzeit} eingetragen.
 Die Schallgeschwindigkeit $c$ wird mit \autoref{eqn:Strecke} berechnet, indem die Formel nach $c$ umgestellt und der dadurch berechnete Wert auch in \autoref{tab:ImpLaufzeit} 
 eingetragen wird.
@@ -24,14 +25,14 @@ eingetragen wird.
   \caption{Laufzeit und Schallgeschwindigkeit durch Platte 1.}
   \label{tab:ImpLaufzeit}
   \sisetup{table-format=2.2}
-  \begin{tabular}{S[table-format=1.0] S[table-format=1.0] S[table-format=2.0] S[table-format=4.0] }
+  \begin{tabular}{S[table-format=2.0] S[table-format=1.0] S[table-format=4.0] }
   \toprule
-  {Messung} & {Laufzeit $\Delta t / \si{\micro\second}$} & {Zeit $\Delta t / \si{\micro\second}$} & {Schallgeschwindigkeit $c / \frac{\si{meter}}{\si{\second}}$}\\
+  {Laufzeit $\Delta t / \si{\micro\second}$} & {Laufzeitdifferenz $\Delta t_{diff} / \si{\micro\second}$} & {Schallgeschwindigkeit $c / \frac{\si{\meter}}{\si{\second}}$}\\
   \midrule
-  1: &  5   & 5 & 2440  \\
-  2: &  10  & 5 & 2440  \\
-  3: &  14  & 4 & 3050  \\
-  4: &  19  & 5 & 2440  \\
+     5   & 5 & 2440  \\
+    10  & 5 & 2440  \\
+    14  & 4 & 3050  \\
+    19  & 5 & 2440  \\
   \bottomrule
   \end{tabular}
 \end{table}
@@ -55,7 +56,7 @@ ergibt.
 
 \begin{figure}[H]
   \centering
-  \includegraphics{build/Scan1.jpg}
+  \includegraphics[width=\textwidth]{build/Scan1.jpg}
   \caption {Abbildung des A-Scans der Acrylplatte 1.}
   \label{fig:scan1}
 \end{figure}
@@ -81,27 +82,27 @@ bestimmt.
   \sisetup{table-format=2.2}
   \begin{tabular}{S[table-format=1.1] S[table-format=1.1] S[table-format=4.2] @{${}\pm{}$} S[table-format=3.2] }
   \toprule
-   {Periode $T / \si{\micro\second}$} & {Frequenz $f/ \si{\mega\Hz}$} & \multicolumn{2}{c}{Wellenlänge $\lambda /\si{\meter}$}\\
+   {Periode $T / \si{\micro\second}$} & {Frequenz $f/ \si{\mega\Hz}$} & \multicolumn{2}{c}{Wellenlänge $\lambda /\si{\milli\meter}$}\\
   \midrule
-    0.4  & 2.5 & 1037.00 & 122.41 \\ 
-    0.6  & 1.7 & 1525.00 & 179.41 \\
-    0.6  & 1.7 & 1525.00 & 179.41 \\
-    0.5  & 2.0 & 1296.25 & 152.50 \\
+    0.4  & 2.5 & 1.037 & 0.122 \\ 
+    0.6  & 1.7 & 1.525 & 0.179 \\
+    0.6  & 1.7 & 1.525 & 0.179 \\
+    0.5  & 2.0 & 1.296 & 0.153 \\
   \bottomrule
   \end{tabular}
 \end{table}
 
 Die Mittelwerte der Frequenz und der Wellenlänge betragen somit analog zu \autoref{eqn:Mittelwert} und \autoref{eqn:standabw} 
 \begin{align*}
-  \bar{f} &= 
-  \bar{\lambda} &= 
+  \bar{f} &= (1.98 \pm 0.19) \si{\mega\hertz}\\
+  \bar{\lambda} &= (1.346 \pm 0.158) \si{\milli\meter}.
 \end{align*}
 
-Der erste berechnete Wert der Schallgeschwindigkeit in Acryl $c=2440 \frac{\si{meter}}{\si{\second}}$ wird in das Darstellungsprogramm eingegeben.
+Der erste berechnete Wert der Schallgeschwindigkeit in Acryl $c=2440 \frac{\si{\meter}}{\si{\second}}$ wird in das Darstellungsprogramm eingegeben.
 Es wird eine Tiefenmessung durchgeführt. Die ersten beiden Peaks lagen bei $0.6 \si{\centi\meter}$ und $1.2 \si{\centi\meter}$, woraus abzulesen ist, dass die 
 verwendete Platte eine Dicke von $d=0.6\si{\centi\meter}$ hat.\\
 
-In der zweiten Messreihe werden die zuvor ausgemessenen Acrylzylinder mithilfe des Impuls-Echo-Verfahrens gemäß \autoref{sec:Durchführung} vermessen.
+In der zweiten Messreihe werden die zuvor ausgemessenen Acrylzylinder mithilfe des Impuls-Echo-Verfahrens vermessen.
 Die Ergebnisse der Messung sind in \autoref{tab:tAimpE} aufgelistet.
 \begin{table}[H]
   \centering
@@ -133,11 +134,25 @@ Die Parameter der linearen Regression und somit die bestimmte Schallgeschwindigk
   b &= (-3.00\pm 2.10) \si{\milli\meter}.
 \end{align*}
 
+Der Ausgangsimpuls Sonde beträgt $A_0= \qty{1.18}{\volt}$.
+Die logarithmierten Messwerte $\log{\frac{A}{A_0}}$ werden gegenüber der Zylinderdicke aufgetragen und eine 
+Ausgleichsrechung der Form $\log{\frac{A}{A_0}}= -\alpha \cdot d$ durchgeführt. Die Ergebnisse sind in \autoref{fig:plot2} dargestellt.
+\begin{figure}[H]
+  \centering
+  \includegraphics{build/plot2.pdf}
+  \caption {Darstellung der logarithmierten Amplituden gegenüber der Zylinderdicken zur Berechnung der Dämpfung im Impuls-Echo-Verfahren.}
+  \label{fig:plot2}
+\end{figure}
 
-\subsection{Bestimmung der Schallgeschwindigkeit mit dem Durchschallverfahren}
+Der Absorptionskoeffizient ergibt sich zu
+\begin{align*}
+  \alpha &=( 39.63\pm 3.61) \si{\per\meter}.
+\end{align*}
+
+\subsection{Bestimmung der Schallgeschwindigkeit mit dem Durchschallungsverfahren}
 \label{subsec:SchallDurchV}
 
-Bei dieser Messreihe werden die Zylinder anhand des Durchschallungsverfahrens nach \autoref{sec:Durchführung} ausgemessen.
+Bei dieser Messreihe werden die Zylinder anhand des Durchschallungsverfahrens nach \autoref{subsec:SchallDurchV_durch} ausgemessen.
 Die Messung wird für dieselben $4$ Zylinder wie in \autoref{sub:ImpEch} durchgeführt.
 Die Messwerte der Laufzeiten und Amplituden sind in \autoref{tab:tADurch} dargestellt.
 
@@ -174,39 +189,32 @@ Die Parameter der linearen Regression und somit die bestimmte Schallgeschwindigk
   b &= (-3.75\pm 2.00) \si{\milli\meter}.
 \end{align*}
 
-Der Ausgangsimpuls der als Sender fungierenden Sonde beträgt $A_0= \qty{1.18}{\volt}$.
-Die logarithmierten Messwerte $\log{\frac{A}{A_0}}$ werden gegenüber der Zylinderdicke aufgetragen und eine 
-Ausgleichsrechung der Form $\log{\frac{A}{A_0}}= -\alpha \cdot d$ durchgeführt. Die Ergebnisse sind in \autoref{fig:plot2} dargestellt.
-\begin{figure}[H]
-  \centering
-  \includegraphics{build/plot2.pdf}
-  \caption {Darstellung der logarithmierten Amplituden gegenüber der Zylinderdicken zur Berechnung der Dämpfung im Durchschallungsverfahren.}
-  \label{fig:plot2}
-\end{figure}
 
-Der Absorptionskoeffizient ergibt sich zu
-\begin{align*}
-  \alpha &=( 8.99\pm 4.42) \si{\per\meter}.
-\end{align*}
 
 \subsection{Spektrale Analyse (FFT) und Cepstrum}
 \label{subsec:FFT}
 Nun wird die Darstellung als FFT und Cepstrum verwendet. 
 Die Messung wird nach \autoref{sec:Durchführung} durchgeführt.
-Aus den Laufzeiten der Peaks ergibt sich eine Dicke der Platten von 
-
+Aus den Laufzeiten der Peaks ergibt sich eine Dicke der ersten Platte von ca. $\qty{60}{\milli\meter}$ was auch durch den Abstand der ersten beiden
+Peaks im Cepstrum (siehe \autoref{fig:scan2}) abgelesen werden kann.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{build/scan4cep.jpg}
+  \caption {Spektrale Analyse und Cepstrum der Acrylelemente.}
+  \label{fig:scan2}
+\end{figure}
 
 \subsection{Biometrische Untersuchung eines Augenmodells}
 \label{subsec:Augew}
 
 \begin{figure}[H]
   \centering
-  \includegraphics{build/auge.jpg}
+  \includegraphics[width=\textwidth]{build/auge.jpg}
   \caption {A-Scan des Augenmodells.}
   \label{fig:auge}
 \end{figure}
 
-Bei der Untersuchung des Augenmodells werden im A-Scan (siehe \autoref{fig:Auge}) mehrere Peaks beobachtet.
+Bei der Untersuchung des Augenmodells werden im A-Scan (siehe \autoref{fig:auge}) mehrere Peaks beobachtet.
 Diese lassen sich der Iris, dem Ein- und Austritt aus der Linse und der Retina zuordnen und sind in \autoref{tab:Auge} dargestellt.
 \begin{table}[H]
   \centering

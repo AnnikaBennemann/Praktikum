@@ -37,12 +37,12 @@ f= ufloat(params[1], errors[1])
 print(f'd {d:.5f}')
 print(f'f {f:.5f}')
 
-plt.figure(2)
+plt.figure(2) 
 plt.plot(x_plot, y_plot, 'rx', label='Messdaten')
 plt.plot(xfit, params[0]*xfit+params[1], 'b-', label='Ausgleichsgerade')
 plt.ylabel(r'$\log{\frac{A}{A_0}}$')
 plt.xlabel(r'$d \mathbin{/} \si{\milli\meter}$')
-plt.legend(loc='best')
+plt.legend(loc='best') 
 plt.savefig('build/plot2.pdf')
 
 x_plot=t2 
@@ -53,7 +53,7 @@ errors = np.sqrt(np.diag(cov))
 a= ufloat(params[0], errors[0])
 b= ufloat(params[1], errors[1])
 print(f'a {a:.5f}')
-print(f'b {b:.5f}')
+print(f'b {b:.5f}') 
 
 plt.figure(3)
 plt.plot(x_plot, y_plot, 'rx', label='Messdaten')
