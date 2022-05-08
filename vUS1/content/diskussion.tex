@@ -1,2 +1,80 @@
 \section{Diskussion}
 \label{sec:Diskussion}
+
+Die durch Messungen bestimmten Schallgeschwindigkeiten in Acryl werden mit dem Theoriewert verglichen.
+Die Abweichung vom Theoriewert $c_{\text{theo}}=\qty{2750}{\meter\per\second}$ \cite{Schall} wird durch
+\begin{align*}
+    a=\frac{|c-c_{\text{theo}}|}{c_{\text{theo}}}\cdot 100 \label{eqn:abweich}
+\end{align*}
+berechnet. Die Ergebnisse sind in \autoref{tab:abweich} dargestellt.
+\begin{table}[H]
+    \centering
+    \caption{Abweichungen der ermittelten Schallgeschwindigkeiten vom Literaturwert\cite{Schall}.}
+    \label{tab:abweich}
+    \sisetup{table-format=2.2}
+    \begin{tabular}{S S[table-format=4.2] @{${}\pm{}$} S[table-format=3.2] S}
+    \toprule
+    &\multicolumn{2}{{p{3cm}}}{Schallgeschwindigkeit $c / \si{\meter\per\second}$}& {Abweichung $/ \si{\percent}$} \\
+    {$c_{\text{IE-Platte}}$} & 2592.50 & 241.12 & 5.72\\
+    {$c_{\text{IE-Zylinder}}$} & 2740.76 & 40.50  & 0.34\\
+    {$c_{\text{D}}$} & 2791.47 & 76.34  & 1.51\\
+    \bottomrule
+    \end{tabular}
+\end{table}
+Anhand \autoref{tab:abweich} ist zu bemerken, dass die Abweichungen bei beiden Messmethoden sehr gering ausfallen, weshalb
+anzunehmen ist, dass der Versuch gut geeignet ist um eine Bestimmung der Schallgeschwindigkeit in Acryl durchzuführen.
+Die geringe Abweichung, sowie die Tatsache, dass die Messergebnisse auch voneinander geringfügig abweichen, kann verschiedene Ursachen haben.
+Zum einen ist auch der Literaturwert nur eine ungefähre Angabe und variiert je nach genauer Zusammensetzung des Materials.
+Außerdem hat die Messung nicht unter optimalen Bedingungen stattgefunden und die Probestücke können kleine Beschädigungen aufweisen,
+welche das Messergebnis beeinflussen. 
+Zudem kann es zu Ablesefehlern gekommen sein, da die Skala nicht sehr genau ist.\\
+
+Die experimentell bestimmten Werte für die Frequenz und Wellenlänge des Ultraschalls
+\begin{align*}
+    \bar{f} &= (1.98 \pm 0.19) \si{\mega\hertz},\\
+    \bar{\lambda} &= (1.346 \pm 0.158) \si{\milli\meter}
+\end{align*}
+liegen sehr nah an dem von der Sonde erzeugten $\qty{2}{\mega\hertz}$-Signal.
+Auch bei dieser Messung kann es durch oben genannte Ursachen zu Messunsicherheiten kommen.
+Bei der Tiefenmessung um die Dicke der Platte zu bestimmen, gibt es eine absolute Abweichung von $\qty{0.1}{\milli\meter}$ zur 
+zuvor mit der Schieblehre bestimmten Dicke. Diese Unsicherheit ist auch durch menschliche Ablesefehler zu erklären.
+Außerdem wurde in das Programm der erste berechnete Wert für die Schallgeschwindigkeit aus der vorangegangenen Messung eingesetzt.
+Dieser Wert entspricht nicht dem Mittelwert, also kann es auch deswegen zu weiteren Ungenauigkeiten kommen.\\
+%Der Absorptionskoeffizient ergibt sich zu
+%\begin{align*}
+%  \alpha &=( 39.63\pm 3.61) \si{\per\meter}.
+%\end{align*}
+
+Die berechnete Dicke der Ausgleichsschicht beträgt
+\begin{align*}
+ b &= (3.75\pm 2.00) \si{\milli\meter}.   
+\end{align*}
+Die genaue Dicke der Ausgleichsschicht am Ultraschallkopf ist nicht angegeben und kann somit nicht verglichen werden. Der berechnete 
+Wert scheint jedoch relaistisch zu sein.\\
+
+Die Messung der Dicke der Platte durch die Spektrale Analyse bringt ein Ergebnis identisch zur vorherigen Tiefenmessung hervor.
+Es kann von den gleichen Ursachen für Messunsicherheiten ausgegangen werden, allerdings kommt hier erschwerend hinzu, dass die Peaks 
+nicht deutlich ablesbar waren.\\
+
+Bei der Vermessung des Augenmodells werden folgende Werte für die Abstände am Augenmodell ermittelt.
+\begin{table}[H]
+    \centering
+    \caption{Abstände im Auge.}
+    \label{tab:Auge}
+    \sisetup{table-format=2.2}
+    \begin{tabular}{c S[table-format=2.2] }
+    \toprule
+    {Augenbestandteil} & {Standort $s / \si{\milli\meter}$} \\
+    Iris            &  7.76\\
+    Linseneintritt  &  11.99\\
+    Linsenaustritt  &  21.99\\
+    Retina          &  60.77\\
+    \bottomrule
+    \end{tabular}
+ \end{table}
+
+Die Werte scheinen realistisch im Bezug auf das Augenmodell bzw. die schematische Darstellung eines Auges (\autoref{fig:Abb_2}) zu sein.
+Ungenauigkeiten entstehen hier dadurch, dass es sehr schwierig ist den richtigen Winkel mit der Ultraschallsonde zu treffen um alle 
+Bestandteile des Auges als deutliche Peaks abzubilden. Außerdem muss bei der Berechnung der Abstände mit verschiedenen Schallgeschwindigkeiten
+gerechnet werden. Auch hier kann es zu Abweichungen von den realen Schallgeschwindigkeiten kommen.
+
