@@ -1,12 +1,72 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
+\subsection{Vorbereitungsaufgabe}
+Als Vorbereitungsaufgabe für den Versuch wurden die Dopplerwinkel $\alpha$ zu den Prismenwinkeln $\theta = 15° , 30°$ und $60°$
+mithilfe von \autoref{eqn:alpha} bestimmt.
+Die Schallgeschwindigkeiten $c_L=\qty{1800}{\meter\per\second}$ und $c_P=\qty{2700}{\meter\per\second}$ werden hierbei der Versuchsanleitung
+\cite{VUS3} entnommen.
+Die Ergebnisse sind in \autoref{tab:vor} eingetragen.
+
+\begin{table}
+    \centering
+    \caption{Prismenwinkel zu Dopplerwinkeln}
+    \begin{tabular}{S[table-format=2.0] S[table-format=2.0]}
+        \toprule
+        {$\theta / \si{\degree}$} & {$\alpha  / \si{\degree}$}  \\
+        \midrule
+        15° & 80.06°  \\
+        30° & 70.53°  \\
+        60° & 54.74°  \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:vor}
+\end{table}
+
+\subsection{Strömungsgeschwindigkeiten}
+\label{sub:Strömungsgeschwindigkeiten}
+
+Die Messung wird nach \autoref{sub:Strömungsgeschwindigkeiten_durch} durchgeführt und die Messwerte der Frequenzverschiebungen
+zu den verschiedenen Pumpdrehzahlen in \autoref{tab:Mess1}, \autoref{tab:Mess2} und \autoref{tab:Mess3} eingetragen.
+Außerdem wird mithilfe der nach $v$ umgestellten \autoref{eqn:Deltanu}
+\begin{align}
+  v= \frac{\Delta \nu}{2 \nu_0 \cos{\alpha}} \label{eqn:v}
+\end{align}
+die Strömungsgeschwindigkeit des Mediums berechnet und den Tabellen hinzugefügt. 
+
+\begin{table}
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
+  \caption{Gemessene Frequenzverschiebungen
+          und die daraus errechneten Strömungsgeschwindigkeiten ($D_\text{groß} = \SI{16}{\milli\metre}$)}
+  \label{tab:Mess1}
+  \begin{tabular}{S[table-format=4.0]
+                  S[table-format=2.0] S[table-format=1.3] 
+                  S[table-format=3.0] S[table-format=2.3] 
+                  S[table-format=3.0] S[table-format=2.3]}
+      \toprule
+      &
+      \multicolumn{2}{c}{$\theta = \ang{15;;}$} &
+      \multicolumn{2}{c}{$\theta = \ang{30;;}$} & 
+      \multicolumn{2}{c}{$\theta = \ang{60;;}$} \\
+      \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+      {$\text{rpm}$}&
+      {$\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {$v \mathbin{/} \si{\milli\meter\second\tothe{-1}}$} & 
+      {$\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {$v \mathbin{/} \si{\milli\meter\second\tothe{-1}}$} &
+      {$\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {$v \mathbin{/} \si{\milli\meter\second\tothe{-1}}$} \\
+      \midrule
+      5400 & 49 & 24.366 & 73  & 18.790 & 110 & 16.347\\
+      6200 & 61 & 30.333 & 98  & 25.225 & 146 & 21.697\\
+      7000 & 73 & 36.300 & 116 & 29.858 & 183 & 27.196\\
+      7800 & 85 & 42.267 & 122 & 31.403 & 208 & 30.911\\
+      8400 & 98 & 48.731 & 159 & 40.927 & 250 & 37.152\\
+  \end{tabular}
+\end{table}
+\begin{table}
+
+  %Tabellen werte anpassen und andere 2 Tabellen noch erstellen!!!!!!!!!
 
 
-Siehe \autoref{fig:plot}!
+\subsection{Strömungsprofil}
+\label{sub:Strömungsprofil}
+
+
