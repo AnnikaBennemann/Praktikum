@@ -40,7 +40,7 @@ plt.savefig('build/plot1.pdf')
 
 
 d , fmax , I = np.genfromtxt('content/Werte2.txt', unpack=True)
-
+I= I/100
 vfmax = F(fmax, 80.06)
 print('vfmax= ', vfmax)
 
@@ -48,7 +48,7 @@ plt.figure(2)
 plt.errorbar(d, vfmax, fmt='r.', label=r'Geschwindigkeit')
 plt.errorbar(d, I, fmt='b.', label=r'Intensität')
 plt.xlabel(r'Messtiefe [$\mu s$]')
-plt.ylabel(r'I [$\frac{kV^2}{s}$] / $v$ [$\frac{m}{s}]')
+plt.ylabel(r'I [$\frac{10MV^2}{s}$] / $v$ [$\frac{m}{s}]')
 plt.legend(loc='best')
 plt.tight_layout()
 plt.savefig('build/plot2.pdf')
