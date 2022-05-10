@@ -8,7 +8,7 @@ Die Schallgeschwindigkeiten $c_L=\qty{1800}{\meter\per\second}$ und $c_P=\qty{27
 \cite{VUS3} entnommen.
 Die Ergebnisse sind in \autoref{tab:vor} eingetragen.
 
-\begin{table}
+\begin{table}[H]
     \centering
     \caption{Prismenwinkel zu Dopplerwinkeln}
     \begin{tabular}{S[table-format=2.0] S[table-format=2.2]}
@@ -34,10 +34,9 @@ Außerdem wird mithilfe der nach $v$ umgestellten \autoref{eqn:Deltanu}
 \end{align}
 die Strömungsgeschwindigkeit des Mediums berechnet und der Tabelle hinzugefügt. 
 
-\begin{table}
+\begin{table}[H]
   \centering
-  \caption{Gemessene Frequenzverschiebungen
-          und die daraus errechneten Strömungsgeschwindigkeiten ($D_\text{groß} = \SI{16}{\milli\metre}$)}
+  \caption{Messdaten zur Bestimmung der Strömungsgeschwindigkeiten ($D = \SI{10}{\milli\meter}$).}
   \label{tab:Mess1}
   \begin{tabular}{S[table-format=4.0]
                   S[table-format=3.0] S[table-format=1.2] 
@@ -62,8 +61,7 @@ die Strömungsgeschwindigkeit des Mediums berechnet und der Tabelle hinzugefügt
   \end{tabular}
 \end{table}
 
-
-  %Tabellen werte anpassen und andere 2 Tabellen noch erstellen!!!!!!!!!
+Die jeweiligen Frequenzverschiebungen werden gegenüber der Strömungsgeschwindigkeit in \autoref{fig:plot} aufgetragen.
   
   \begin{figure}[H]
     \centering
@@ -75,27 +73,36 @@ die Strömungsgeschwindigkeit des Mediums berechnet und der Tabelle hinzugefügt
 \subsection{Strömungsprofil}
 \label{sub:Strömungsprofil}
 
-
-\begin{table}
+Die Messung wird nach \autoref{sub:Strömungsprofil_durch} durchgeführt und die Messwerte in \autoref{tab:Messtiefe} eingetragen. Außerdem wird
+nach \autoref{eqn:v} die Strömungsgeschwindigkeit berechnet und auch in \autoref{tab:Messtiefe} eingetragen.
+\begin{table}[H]
   \centering
-  \caption{Prismenwinkel zu Dopplerwinkeln}
-  \begin{tabular}{S[table-format=2.1] S[table-format=3.0] S[table-format=3.0] S[table-format=3.0]}
+  \caption{Messdaten zur Bestimmung des Strömungsprofils.}
+  \begin{tabular}{S[table-format=2.1] S[table-format=3.0] S[table-format=3.0] S[table-format=1.2]}
       \toprule
       {Messtiefe $d / \si{\micro\second}$}  & {Frequenzverschiebung $\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {Intensität $I  / \si{\kilo\volt\squared\per\second}$} & {Geschwindigkeit $v  / \si{\meter\per\second}$} \\
       \midrule
-      12,5  &  330 & 36  & \\
-      13,0  &  373 & 48  & \\
-      13,5  &  420 & 53  & \\
-      14,0  &  455 & 61  & \\
-      14,4  &  476 & 62  & \\
-      15,0  &  461 & 70  & \\
-      15,5  &  423 & 71  & \\
-      16,0  &  368 & 77  & \\
-      16,5  &  336 & 83  & \\
-      17,0  &  373 & 75  & \\
-      17,5  &  406 & 143 & \\
-      18,0  &  410 & 344 & \\
+      12,5  &  330 & 36  & 0.86 \\
+      13,0  &  373 & 48  & 0.97 \\
+      13,5  &  420 & 53  & 1.09 \\
+      14,0  &  455 & 61  & 1.19 \\
+      14,4  &  476 & 62  & 1.24 \\
+      15,0  &  461 & 70  & 1.20 \\
+      15,5  &  423 & 71  & 1.20 \\
+      16,0  &  368 & 77  & 0.96 \\
+      16,5  &  336 & 83  & 0.88 \\
+      17,0  &  373 & 75  & 0.97 \\
+      17,5  &  406 & 143 & 1.06 \\
+      18,0  &  410 & 344 & 1.07 \\
       \bottomrule
   \end{tabular}
-  \label{tab:vor}
+  \label{tab:Messtiefe}
 \end{table}
+Aus den Messwerten für die Strömungsgeschwindigkeit und die Streuintensität in \autoref{tab:Messtiefe} wird ein Diagramm (\ref{fig:plot2}) erstellt, indem die Werte 
+als Funktion der Messtiefe aufgetragen werden.
+\begin{figure}[H]
+  \centering
+  \includegraphics{build/plot2.pdf}
+  \caption {Streuintensität und Momentangeschwindigkeit gegenüber der Messtiefe.}
+  \label{fig:plot2}
+\end{figure}
