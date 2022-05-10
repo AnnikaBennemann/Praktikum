@@ -25,12 +25,16 @@ def A(x):
     return (x * 2 * f) / c
 
 a1 = A(vf15)
+a2 = A(vf30)
+a3 = A(vf60)
 
-
-plt.errorbar(vf15, a1, fmt='r.', label=r'Daten')
+plt.figure(1)
+plt.errorbar(vf15, a1, fmt='r.', label=r'15$^{\circ}$')
+plt.errorbar(vf30, a2, fmt='b.', label=r'30$^{\circ}$')
+plt.errorbar(vf60, a3, fmt='g.', label=r'60$^{\circ}$')
 plt.xlabel(r'Strömungsgeschwindigkeit [$\frac{m}{s}$]')
 plt.ylabel(r'Δ$v / cos(\alpha)')
 plt.legend(loc='best')
 plt.tight_layout()
-plt.savefig('plot1.pdf')
+plt.savefig('build/plot1.pdf')
 
