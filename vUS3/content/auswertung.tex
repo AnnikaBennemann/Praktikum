@@ -40,9 +40,9 @@ die Strömungsgeschwindigkeit des Mediums berechnet und der Tabelle hinzugefügt
           und die daraus errechneten Strömungsgeschwindigkeiten ($D_\text{groß} = \SI{16}{\milli\metre}$)}
   \label{tab:Mess1}
   \begin{tabular}{S[table-format=4.0]
-                  S[table-format=2.0] S[table-format=1.3] 
-                  S[table-format=3.0] S[table-format=2.3] 
-                  S[table-format=3.0] S[table-format=2.3]}
+                  S[table-format=3.0] S[table-format=1.2] 
+                  S[table-format=3.0] S[table-format=1.3] 
+                  S[table-format=4.0] S[table-format=1.3]}
       \toprule
       &
       \multicolumn{2}{c}{$\theta = \ang{15;;}$} &
@@ -50,25 +50,52 @@ die Strömungsgeschwindigkeit des Mediums berechnet und der Tabelle hinzugefügt
       \multicolumn{2}{c}{$\theta = \ang{60;;}$} \\
       \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
       {$\text{rpm}$}&
-      {$\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {$v \mathbin{/} \si{\milli\meter\second\tothe{-1}}$} & 
-      {$\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {$v \mathbin{/} \si{\milli\meter\second\tothe{-1}}$} &
-      {$\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {$v \mathbin{/} \si{\milli\meter\second\tothe{-1}}$} \\
+      {$\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {$v \mathbin{/} \si{\meter\per\second}$} & 
+      {$\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {$v \mathbin{/} \si{\meter\per\second}$} &
+      {$\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {$v \mathbin{/} \si{\meter\per\second}$} \\
       \midrule
-      5000 & 208 & 24.366 & 377 & 18.790 & 670 & 16.347\\
-      5250 & 275 & 30.333 & 428 & 25.225 & 753 & 21.697\\
-      5500 & 309 & 36.300 & 500 & 29.858 & 840 & 27.196\\
-      5750 & 339 & 42.267 & 563 & 31.403 & 938 & 30.911\\
-      6000 & 375 & 48.731 & 612 & 40.927 & 1050 & 37.152\\
+      5000 & 208 & 0.54 & 377 & 0.51 & 670 & 0.52\\
+      5250 & 275 & 0.71 & 428 & 0.58 & 753 & 0.59\\
+      5500 & 309 & 0.81 & 500 & 0.68 & 840 & 0.65\\
+      5750 & 339 & 0.88 & 563 & 0.76 & 938 & 0.73\\
+      6000 & 375 & 0.98 & 612 & 0.83 & 1050 & 0.82\\
   \end{tabular}
 \end{table}
 
-vf15=  [0.54224156 0.71690591 0.80554155 0.88374947 0.97759897]
-vf30=  [0.50998789 0.5789783  0.67637651 0.76159996 0.82788485]
-vf60=  [0.52226991 0.58696902 0.65478615 0.73117787 0.81848269]
-  %Tabellen werte anpassen und andere 2 Tabellen noch erstellen!!!!!!!!!
 
+  %Tabellen werte anpassen und andere 2 Tabellen noch erstellen!!!!!!!!!
+  
+  \begin{figure}[H]
+    \centering
+    \includegraphics{build/plot1.pdf}
+    \caption {Darstellung der Strömungsgeschwindigkeit gegenüber der Frequenzverschiebungen.}
+    \label{fig:plot}
+  \end{figure}
 
 \subsection{Strömungsprofil}
 \label{sub:Strömungsprofil}
 
 
+\begin{table}
+  \centering
+  \caption{Prismenwinkel zu Dopplerwinkeln}
+  \begin{tabular}{S[table-format=2.1] S[table-format=3.0] S[table-format=3.0] S[table-format=3.0]}
+      \toprule
+      {Messtiefe $d / \si{\micro\second}$}  & {Frequenzverschiebung $\symup{\Delta} \nu \mathbin{/} \si{\hertz}$} & {Intensität $I  / \si{\kilo\volt\squared\per\second}$} & {Geschwindigkeit $v  / \si{\meter\per\second}$} \\
+      \midrule
+      12,5  &  330 & 36  & \\
+      13,0  &  373 & 48  & \\
+      13,5  &  420 & 53  & \\
+      14,0  &  455 & 61  & \\
+      14,4  &  476 & 62  & \\
+      15,0  &  461 & 70  & \\
+      15,5  &  423 & 71  & \\
+      16,0  &  368 & 77  & \\
+      16,5  &  336 & 83  & \\
+      17,0  &  373 & 75  & \\
+      17,5  &  406 & 143 & \\
+      18,0  &  410 & 344 & \\
+      \bottomrule
+  \end{tabular}
+  \label{tab:vor}
+\end{table}
