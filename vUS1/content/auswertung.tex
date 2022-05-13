@@ -112,6 +112,7 @@ Die Ergebnisse der Messung sind in \autoref{tab:tAimpE} aufgelistet.
   \begin{tabular}{S[table-format=1.0] S[table-format=2.0] S[table-format=1.2] }
   \toprule
   {Zylinder} & {Laufzeit $t / \si{\micro\second}$} &  {Amplitude $A / \si{\volt}$}\\
+  \midrule
   1 &  24  & 1.24  \\
   2 &  30  & 1.24  \\
   3 &  59  & 0.24  \\
@@ -164,6 +165,7 @@ Die Messwerte der Laufzeiten und Amplituden sind in \autoref{tab:tADurch} darges
   \begin{tabular}{S[table-format=1.0] S[table-format=2.0] S[table-format=1.2] }
   \toprule
   {Zylinder} & {Laufzeit $t / \si{\micro\second}$} &  {Amplitude $A / \si{\volt}$}\\
+  \midrule
   1 &  13  & 1.24  \\
   2 &  15  & 1.32  \\
   3 &  30  & 1.18  \\
@@ -195,8 +197,12 @@ Die Parameter der linearen Regression und somit die bestimmte Schallgeschwindigk
 \label{subsec:FFT}
 Nun wird die Darstellung als FFT und Cepstrum verwendet. 
 Die Messung wird nach \autoref{sec:Durchführung} durchgeführt.
-Aus den Laufzeiten der Peaks ergibt sich eine Dicke der ersten Platte von ca. $\qty{60}{\milli\meter}$ was auch durch den Abstand der ersten beiden
-Peaks im Cepstrum (siehe \autoref{fig:scan2}) abgelesen werden kann.
+Der erste Peak liegt bei ungefähr $\qty{7,5}{\milli\meter}$, dieser bezieht sich auf die Dicke der ersten Platte, wobei die gemessene 
+Dicke mit der Schieblehre $\qty{6.1}{\milli\meter}$ ist.
+Der zweite Peak liegt bei ungefähr $\qty{14}{\milli\meter}$ und bezieht sich auf die Dicken beider Platten, wobei die mit der Schieblehre gemessene
+Dicke $\qty{16.1}{\milli\meter}$ beträgt. 
+Aus den Laufzeiten der Peaks ergibt sich eine Dicke der ersten Platte von ca. $\qty{6}{\milli\meter}$ was auch durch den Abstand der ersten beiden
+Peaks im Cepstrum (siehe \autoref{fig:scan2}) abgelesen werden kann. 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{build/scan4cep.jpg}
@@ -224,6 +230,7 @@ Diese lassen sich der Iris, dem Ein- und Austritt aus der Linse und der Retina z
   \begin{tabular}{c S[table-format=2.0] }
   \toprule
   {Augenbestandteil} & {Laufzeit $t / \si{\micro\second}$} \\
+  \midrule
     Iris            &  11 \\
     Linseneintritt  &  17 \\
     Linsenaustritt  &  25 \\
@@ -244,6 +251,7 @@ $c_{GK}= \qty{1410}{\meter\per\second}$ unterscheiden.
   \begin{tabular}{c S[table-format=2.2] }
   \toprule
   {Augenbestandteil} & {Standort $s / \si{\milli\meter}$} \\
+  \midrule
   Iris            &  7.76\\
   Linseneintritt  &  11.99\\
   Linsenaustritt  &  21.99\\
