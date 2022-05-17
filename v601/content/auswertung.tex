@@ -30,18 +30,8 @@ Das Verhältnis $\frac{a}{\bar{\omega}}$ wird auch in \autoref{tab:Weglänge} ei
 
 \subsection{Integrale und differentielle Energieverteilung}
 \label{subsec:Energieverteilung}
-Als erstes werden die durch den XY-Schreiber aufgenommenen Werte mithilfe des WebPlotDigitizers \cite{Rohatgi2020} digitalisiert um
-sie mit den  Pythonmodulen Matplotlib \cite{matplotlib}, Numpy \cite{numpy} und Scipy \cite{scipy} weiter verarbeiten zu können.
-Die digitalisierten Werte der Messungen sind in \autoref{fig:plot1} zu sehen. Es wird der Auffängerstrom $I_A$ gegenüber der Bremsspannung
-$U_A$ bei konstanter Beschleunigungsspannung $U_B= \qty{11}{\volt}$ zu zwei verschiedenen Temperaturen $T_1= \qty{23.3}{\celsius}$ und 
-$T_2= \qty{143}{\celsius}$ dargestellt.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\textwidth]{build/plot1.pdf}
-  \caption {Digitalisierte Messwerte zur integralen Energieverteilung der Elektronen.}
-  \label{fig:plot1}
-\end{figure}
+Tiefpunkt für $T_1$ bei $\qty{8.25}{\volt}$ und $T_2$ bei $\qty{1.29}{\volt}$.
 
 Anschließend wird aus den Werten mithilfe der Formel
 \begin{align*}
@@ -75,6 +65,10 @@ Die Temperaturen liegen bei $T_3= \qty{169}{\celsius}$ und bei $T_4= \qty{179}{\
   \caption{Franck-Hertz-Kurve bei $T_3$ und $T_4$.}
   \label{fig:plot3}
 \end{figure}
+
+Im Folgenden wird die Kurve mit der Temperatur $T_3 = \qty{169}{\celsius}$ benutzt, weil diese deutlichere Peaks aufweisen. Zur Vollständigkeit
+werden die Werte von der anderen Kurve auch in \autoref{tab:Franck} aufgelistet.
+
 
 
 % subsection Franck-Hertz-Kurve (end)
