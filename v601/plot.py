@@ -23,11 +23,15 @@ print("aw = ", aw)
 
 ###169
 x3, y3 = np.genfromtxt('content/Fr169.txt', unpack=True)
+x3hp, y3hp = np.genfromtxt('content/Fr169hp.txt', unpack=True)
 x4, y4 = np.genfromtxt('content/Fr179.txt', unpack=True)
+x4hp, y4hp = np.genfromtxt('content/Fr179hp.txt', unpack=True)
 
 plt.figure(3)
 plt.plot(x3, y3, 'r-', label=r'$T_1=\qty{169}{\celsius}$')
+plt.plot(x3hp, y3hp, 'g.', label=r'Hochpunkte$')
 plt.plot(x4, y4, 'b-', label=r'$T_2=\qty{179}{\celsius}$')
+plt.plot(x4hp, y4hp, 'g.')
 plt.xlabel(r'$U_A / \si{\volt}$')
 plt.ylabel(r'$I_A / $Kästchen')
 plt.grid()
