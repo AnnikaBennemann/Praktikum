@@ -41,7 +41,6 @@ plt.legend(loc='best')
 plt.tight_layout()
 plt.savefig('build/plot3.pdf')
 
-##Rechnung
 
 ####Franck ende
 ##############plot 
