@@ -21,7 +21,6 @@ print("aw = ", aw)
 
 #######Franck
 
-###169
 x3, y3 = np.genfromtxt('content/Fr169.txt', unpack=True)
 x3hp, y3hp = np.genfromtxt('content/Fr169hp.txt', unpack=True)
 x4, y4 = np.genfromtxt('content/Fr179.txt', unpack=True)
@@ -38,6 +37,8 @@ plt.grid()
 plt.legend(loc='best')
 plt.tight_layout()
 plt.savefig('build/plot3.pdf')
+
+####Franck ende
 ##############plot 
 
 
