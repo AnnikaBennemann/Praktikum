@@ -9,3 +9,6 @@ T = np.genfromtxt('content/Temperatur.txt', unpack=True)
 
 
 #Weglänge ende
+
+
+########
