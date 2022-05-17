@@ -19,7 +19,21 @@ aw = 1/w
 print("aw = ", aw)
 #Weglänge ende
 
+#######Franck
 
+###169
+x3, y3 = np.genfromtxt('content/Fr169.txt', unpack=True)
+x4, y4 = np.genfromtxt('content/Fr179.txt', unpack=True)
+
+plt.figure(3)
+plt.plot(x3, y3, 'r-', label=r'$T_1=\qty{169}{\celsius}$')
+plt.plot(x4, y4, 'b-', label=r'$T_2=\qty{179}{\celsius}$')
+plt.xlabel(r'$U_A / \si{\volt}$')
+plt.ylabel(r'$I_A / $Kästchen')
+plt.grid()
+plt.legend(loc='best')
+plt.tight_layout()
+plt.savefig('build/plot3.pdf')
 ##############plot 
 
 
