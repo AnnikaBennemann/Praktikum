@@ -12,7 +12,7 @@ Temperaturen bestimmt. Danach wird $\bar{\omega}$ mit der \autoref{eqn:Weglänge
   \sisetup{table-format=2.2}
   \begin{tabular}{S[table-format=3.2] S[table-format=2.3] S[table-format=1.4] S[table-format=4.1]}
   \toprule
-  {Temperaturen $T / \si{\kelvin}$} & {Sättigungsdampfdruck $p_{s\ddot{a}t} / \si{\milli\bar}$} & {mittlere Weglänge $\bar{\omega} / \si{\centi\meter}$} & {Verhältnis $\frac{a}{\bar{\omega}}$}\\
+  {Temperatur $T / \si{\kelvin}$} & {Sättigungsdampfdruck $p_{s\ddot{a}t} / \si{\milli\bar}$} & {mittlere Weglänge $\bar{\omega} / \si{\centi\meter}$} & {Verhältnis $\frac{a}{\bar{\omega}}$}\\
   \midrule
     296.45   & 0.005 & 0.6241 & 1602.2 \\
     416.15  & 3.669 & 0.0008  & 1265.2 \\
@@ -69,7 +69,54 @@ Die Temperaturen liegen bei $T_3= \qty{169}{\celsius}$ und bei $T_4= \qty{179}{\
 Im Folgenden wird die Kurve mit der Temperatur $T_3 = \qty{169}{\celsius}$ benutzt, weil diese deutlichere Peaks aufweisen. Zur Vollständigkeit
 werden die Werte von der anderen Kurve auch in \autoref{tab:Franck} aufgelistet.
 
+\begin{table}[H]
+  \centering
+  \caption{Wärmeströme zu verschiedenen Messzeiten.}
+  \label{tab:Franck}
+  \sisetup{table-format=2.3}
+  \begin{tabular}{S S S S S}
+    \toprule
+    \multicolumn {2}{c}{$T_3 = \qty{169}{\celsius}$}& \multicolumn {2}{c}{$T_4= \qty{179}{\celsius}$}\\
+    \cmidrule(lr){1-2}\cmidrule(lr){3-4}
+    {Maxima $U_{169} /\si{\volt}$} & {Maximaabstand $\Delta U_{169} / \si{\volt}$} & {Maxima $U_{179} /\si{\volt}$} & {Maximaabstand $\Delta U_{179} / \si{\volt}$}\\ 
+    \midrule
+    7.791  &  & 7.821  &  \\
+    12.360 & 4.569 & 12.227 & 4.406 \\
+    17.171 & 4.811 & 16.913 & 4.686 \\
+    21.980 & 4.809 & 21.738 & 4.825 \\
+    27.049 & 5.069 & 26.675 & 4.937 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
+Der gemittelte Abstand der Maxima berechnet sich mit
+\begin{equation*}
+  \bar{\Delta U}=\frac{1}{n} \sum_{i=1}^n \Delta U_i.
+  \label{eqn:Mittelwert}
+\end{equation*}
+Der Fehler berechnet sich mit 
+\begin{equation*}
+  \sigma_{\Delta U} =\sqrt{\frac{1}{n-1}\sum_{j=1}^n (\Delta U_j - \bar{\Delta U}_i)^2}
+\end{equation*}
+und 
+\begin{equation*}
+  \Delta (\bar{\Delta U})= \frac{\sigma_{\Delta U}}{n}
+\end{equation*}
+zu 
+\begin{align*}
+  \bar{\Delta U_{169}} = (6,267 \pm 0,423) \si{\volt}\\
+  \bar{\Delta U_{179}} = (4,714 \pm 0,057) \si{\volt}.
+\end{align*}
+Mit dem Zusammenhang \ref{eqn:Anregungspotential} und \ref{eqn:Grundzustand} werden die Wellenlängen berechnet. Die Fehler wird mit der Gaußschen Fehlerfortpflanzung
+\begin{equation}
+  \Delta \lambda =\sqrt{(-\frac{hc}{\Delta U^2} \, \Delta U )^{2}}
+\end{equation}
+bestimmt.
+Daraus folgen die Wellenlängen
+\begin{align*}
+  \lambda = (3,580 \pm 0,242) \cdot 10^{15} m\\
+  \lambda = (4,759 \pm 0,057) \cdot 10^{15} m.
+\end{align*}
 
 % subsection Franck-Hertz-Kurve (end)
 

@@ -22,9 +22,9 @@ print("aw = ", aw)
 #######Franck
 
 x3, y3 = np.genfromtxt('content/Fr169.txt', unpack=True)
-x3hp, y3hp = np.genfromtxt('content/Fr169hp.txt', unpack=True)
+x3hp, y3hp, du1 = np.genfromtxt('content/Fr169hp.txt', unpack=True)
 x4, y4 = np.genfromtxt('content/Fr179.txt', unpack=True)
-x4hp, y4hp = np.genfromtxt('content/Fr179hp.txt', unpack=True)
+x4hp, y4hp, du2 = np.genfromtxt('content/Fr179hp.txt', unpack=True)
 
 plt.figure(3)
 plt.plot(x3, y3, 'r-', label=r'$T_3=\qty{169}{\celsius}$')
@@ -40,6 +40,8 @@ plt.grid()
 plt.legend(loc='best')
 plt.tight_layout()
 plt.savefig('build/plot3.pdf')
+
+##Rechnung
 
 ####Franck ende
 ##############plot 
