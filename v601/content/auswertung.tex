@@ -30,9 +30,38 @@ Das Verhältnis $\frac{a}{\bar{\omega}}$ wird auch in \autoref{tab:Weglänge} ei
 
 \subsection{Integrale und differentielle Energieverteilung}
 \label{subsec:Energieverteilung}
+Als erstes werden die durch den XY-Schreiber aufgenommenen Werte mithilfe des WebPlotDigitizers \cite{Rohatgi2020} digitalisiert um
+sie mit den  Pythonmodulen Matplotlib \cite{matplotlib}, Numpy \cite{numpy} und Scipy \cite{scipy} weiter verarbeiten zu können.
+Die digitalisierten Werte der Messungen sind in \autoref{fig:plot1} zu sehen. Es wird der Auffängerstrom $I_A$ gegenüber der Bremsspannung
+$U_A$ bei konstanter Beschleunigungsspannung $U_B= \qty{11}{\volt}$ zu zwei verschiedenen Temperaturen $T_1= \qty{23.3}{\celsius}$ und 
+$T_2= \qty{143}{\celsius}$ dargestellt.
 
-Tiefpunkt für $T_1$ bei $\qty{8.25}{\volt}$ und $T_2$ bei $\qty{1.29}{\volt}$.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{build/plot1.pdf}
+  \caption {Digitalisierte Messwerte zur integralen Energieverteilung der Elektronen.}
+  \label{fig:plot1}
+\end{figure}
 
+Anschließend wird aus den Werten mithilfe der Formel
+\begin{align*}
+  \frac{\Delta I_A}{\Delta U_A} &= \frac{I_A_{i+1}-I_A_i}{U_A_{i+1}-U_A_i}\label{eqn:diffquo}
+\end{align*}
+stückweise die Differenzenquotienten berechnet.
+Die differentielle Darstellung der Energieverteilung wird somit in \autoref{fig:plot2} abgebildet.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{build/plot2.pdf}
+  \caption {Aus der integralen Energieverteilung berechnete differentielle Energieverteilung der Elektronen.}
+  \label{fig:plot2}
+\end{figure}
+Die Tiefpunkte der differentiellen Energieverteilung liegen für $T_1$ bei $\qty{8.25}{\volt}$ und für $T_2$ bei $\qty{1.29}{\volt}$.
+Aus der Lage des Tiefpunktes der Kurve von $T_1$ ergibt sich das Kontaktpotential $K$ mit der Beschleunigungsspannung $U_B= \qty{11}{\volt}$
+durch Umstellen von \autoref{eqn:UBeff} zu
+\begin{align*}
+  K_1 &= \qty{11}{\volt}-\qty{8.25}{\volt} &= \qty{2.75}{\volt}.\\
+\end{align*}
 %Ende der Energieverteilung
 
 \subsection{Franck-Hertz-Kurve} % (fold)
