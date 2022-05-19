@@ -14,24 +14,29 @@ Temperaturen bestimmt. Danach wird $\bar{\omega}$ mit der \autoref{eqn:Weglänge
   \toprule
   {Temperatur $T / \si{\kelvin}$} & {Sättigungsdampfdruck $p_{s\ddot{a}t} / \si{\milli\bar}$} & {mittlere Weglänge $\bar{\omega} / \si{\centi\meter}$} & {Verhältnis $\frac{a}{\bar{\omega}}$}\\
   \midrule
-    296.45   & 0.005 & 0.6241 & 1602.2 \\
-    416.15  & 3.669 & 0.0008  & 1265.2 \\
-    442.15  & 9.695 & 0.0003  & 3342.9 \\
-    452.15  & 13.674 & 0.0002 & 4715.2 \\
+    296.45   & 0.005 & 0.6241 & 1.6 \\
+    416.15  & 3.669 & 0.0008  & 1250.0 \\
+    442.15  & 9.695 & 0.0003  & 3333.3 \\
+    452.15  & 13.674 & 0.0002 & 5000.0 \\
   \bottomrule
   \end{tabular}
 \end{table}
 Das Verhältnis $\frac{a}{\bar{\omega}}$ wird auch in \autoref{tab:Weglänge} eingetregen mit $a = \qty{1}{\centi\meter}$. 
-%T =  [296.45 416.15 442.15 452.15]
-%psät=  [4.64657855e-03 3.66913288e+00 9.69451481e+00 1.36740660e+01]
-%w =  [6.24115136e-01 7.90377480e-04 2.99138230e-04 2.12080298e-04]
-%aw =  [1.60226846e+00 1.26521823e+03 3.34293614e+03 4.71519518e+03]
-%Ende der Weglänge
+
 
 \subsection{Integrale und differentielle Energieverteilung}
 \label{subsec:Energieverteilung}
-
-Tiefpunkt für $T_1$ bei $\qty{8.25}{\volt}$ und $T_2$ bei $\qty{1.29}{\volt}$.
+Als erstes werden die durch den XY-Schreiber aufgenommenen Werte mithilfe des WebPlotDigitizers \cite{Rohatgi2020} digitalisiert um
+sie mit den  Pythonmodulen Matplotlib \cite{matplotlib}, Numpy \cite{numpy} und Scipy \cite{scipy} weiter verarbeiten zu können.
+Die digitalisierten Werte der Messungen sind in \autoref{fig:plot1} zu sehen. Es wird der Auffängerstrom $I_A$ gegenüber der Bremsspannung
+$U_A$ bei konstanter Beschleunigungsspannung $U_B= \qty{11}{\volt}$ zu zwei verschiedenen Temperaturen $T_1= \qty{23.3}{\celsius}$ und 
+$T_2= \qty{143}{\celsius}$ dargestellt.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{build/plot1.pdf}
+  \caption {Digitalisierte Messwerte zur integralen Energieverteilung der Elektronen.}
+  \label{fig:plot1}
+\end{figure}
 
 Anschließend wird aus den Werten mithilfe der Formel
 \begin{align*}
@@ -48,7 +53,7 @@ Die differentielle Darstellung der Energieverteilung wird somit in \autoref{fig:
 \end{figure}
 Die Tiefpunkte der differentiellen Energieverteilung liegen für $T_1$ bei $\qty{8.25}{\volt}$ und für $T_2$ bei $\qty{1.29}{\volt}$.
 Aus der Lage des Tiefpunktes der Kurve von $T_1$ ergibt sich das Kontaktpotential $K$ mit der Beschleunigungsspannung $U_B= \qty{11}{\volt}$
-durch Umstellen von \autoref{eqn:UBeff} zu
+durch Umstellen von \autoref{eqn:Verschiebung} zu
 \begin{align*}
   K_1 &= \qty{11}{\volt}-\qty{8.25}{\volt} &= \qty{2.75}{\volt}.\\
 \end{align*}
@@ -66,12 +71,12 @@ Die Temperaturen liegen bei $T_3= \qty{169}{\celsius}$ und bei $T_4= \qty{179}{\
   \label{fig:plot3}
 \end{figure}
 
-Im Folgenden wird die Kurve mit der Temperatur $T_3 = \qty{169}{\celsius}$ benutzt, weil diese deutlichere Peaks aufweisen. Zur Vollständigkeit
+Im Folgenden wird die Kurve mit der Temperatur $T_3 = \qty{169}{\celsius}$ zur Auswertung benutzt, weil diese deutlichere Peaks aufweisen. Zur Vollständigkeit
 werden die Werte von der anderen Kurve auch in \autoref{tab:Franck} aufgelistet.
 
 \begin{table}[H]
   \centering
-  \caption{Wärmeströme zu verschiedenen Messzeiten.}
+  \caption{Messdaten zur Franck-Hertz-Kurve bei verschiedenen Temperaturen.}
   \label{tab:Franck}
   \sisetup{table-format=2.3}
   \begin{tabular}{S S S S S}
@@ -100,22 +105,30 @@ Der Fehler berechnet sich mit
 \end{equation*}
 und 
 \begin{equation*}
-  \Delta (\bar{\Delta U})= \frac{\sigma_{\Delta U}}{n}
+  \Delta (\bar{\Delta U})= \frac{\sigma_{\Delta U}}{n}.
 \end{equation*}
-zu 
+Somit ergibt sich der gemittelte Abstand der Maxima zu
 \begin{align*}
-  \bar{\Delta U_{169}} = (6,267 \pm 0,423) \si{\volt}\\
-  \bar{\Delta U_{179}} = (4,714 \pm 0,057) \si{\volt}.
+  \bar{\Delta U_{169}} &= (4,815 \pm 0,051) \si{\volt}\\
+  \bar{\Delta U_{179}} &= (4,714 \pm 0,057) \si{\volt}
 \end{align*}
-Mit dem Zusammenhang \ref{eqn:Anregungspotential} und \ref{eqn:Grundzustand} werden die Wellenlängen berechnet. Die Fehler wird mit der Gaußschen Fehlerfortpflanzung
+und die Anregungsenergie der emittierten Photonen beträgt somit nach \autoref{eqn:Grundzustand}
+\begin{align*}
+  E_{169} &= (4,815 \pm 0,051) \si{\electronvolt}\\
+  E_{179} &= (4,714 \pm 0,057) \si{\electronvolt}.
+\end{align*}
+
+
+Mit dem Zusammenhang von \autoref{eqn:Anregungspotential} werden die Wellenlängen berechnet.
+Der Fehler wird mit der Gaußschen Fehlerfortpflanzung
 \begin{equation}
   \Delta \lambda =\sqrt{(-\frac{hc}{e \Delta U^2} \, \Delta U )^{2}}
 \end{equation}
 bestimmt.
 Daraus folgen die Wellenlängen
 \begin{align*}
-  \lambda = (197,83 \pm 13,35) \si{\nano\meter} \\
-  \lambda = (263,01 \pm 3,18) \si{\nano\meter}.
+  \lambda_{169} &= (257,50 \pm 2,73) \si{\nano\meter} \\
+  \lambda_{179} &= (263,01 \pm 3,18) \si{\nano\meter}.
 \end{align*}
 
 % subsection Franck-Hertz-Kurve (end)
