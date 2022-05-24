@@ -20,9 +20,16 @@ plt.savefig('build/plot1.pdf')
 thetae2, imp2  = np.genfromtxt('content/emission.txt', unpack=True)
 
 thetae = thetae2 / 2
+w1 = thetae [79:84]
+R1= imp2 [79:84]
+w2 = thetae [90:96]
+R2= imp2 [90:96]
+
 
 plt.figure(2)
-plt.plot(thetae, imp2, 'b-', label='Messdaten')
+plt.plot(thetae, imp2, 'b-', label='Bremsberg')
+plt.plot(w1, R1, 'g-', label=r'$K_\alpha$')
+plt.plot(w2, R2, 'r-', label=r'$K_\beta$')
 plt.ylabel(r'Zählrate Impulse $ \mathbin{/} \si{\second}$')
 plt.xlabel(r'Kristallwinkel $\theta \mathbin{/} \si{\degree}$')
 plt.grid()
@@ -84,3 +91,34 @@ plt.xlabel(r'Kristallwinkel $\theta \mathbin{/} \si{\degree}$')
 plt.grid()
 plt.legend(loc='best')
 plt.savefig('build/plot7.pdf')
+
+######Absorption
+winkel, Z , E = np.genfromtxt('content/maxima.txt', unpack=True)
+sigmak = Z - np.sqrt((E*1000)/13.6)
+print("sigmak = ", sigmak)
+
+def g(x, A, B):
+    return A*x +B 
+
+x = Z 
+y = np.sqrt(E)
+
+params, pcov = curve_fit(g, x, y)
+errors = np.sqrt(np.diag(pcov))
+
+A= ufloat(params[0], errors[0])
+B= ufloat(params[1], errors[1])
+print(f'A {A:.5f}')
+print(f'B {B:.5f}')
+
+plt.figure(8)
+plt.plot(Z, np.sqrt(E), 'bx', label='Messdaten')
+plt.plot(x, g(x, *params), 'r-', label='Fit')
+plt.ylabel(r'$ \sqrt{E_{abs}} \mathbin{/} \sqrt{\si{\kilo\electronvolt}}$')
+plt.xlabel(r'Z')
+plt.grid()
+plt.legend(loc='best')
+plt.savefig('build/plot8.pdf')
+
+A2 = A**2
+print('A2 = ', A2)
