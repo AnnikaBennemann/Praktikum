@@ -15,3 +15,14 @@ plt.ylabel(r'$Imp \mathbin{/} \si{\second}$)')
 plt.xlabel(r'$\theta \mathbin{/} \si{\degree}$')
 plt.legend(loc='best')
 plt.savefig('build/plot1.pdf')
+
+thetae2, imp2  = np.genfromtxt('content/emission.txt', unpack=True)
+
+thetae = thetae2 / 2
+
+plt.figure(2)
+plt.plot(thetae, imp2, 'rx', label='Messdaten')
+plt.ylabel(r'$Imp \mathbin{/} \si{\second}$)')
+plt.xlabel(r'$\theta \mathbin{/} \si{\degree}$')
+plt.legend(loc='best')
+plt.savefig('build/plot2.pdf')
