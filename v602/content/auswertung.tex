@@ -121,17 +121,17 @@ Die bestimmten Zahlen werden der \autoref{tab:Absorption_aus} hinzugefügt.
 \begin{table}[H]
   \centering
   \caption{Gemessen Kristallwinkel und daraus bestimmten Werte.}
-  \label{tab:Vorbereitung}
+  \label{tab:Absorption_aus}
   \sisetup{table-format=2.2}
   \begin{tabular}{c S[table-format=2.0] S S S[table-format=1.2] }
   \toprule
   {Element} & {Abbildung} & {$\theta_{K}^{lit} [\si{\degree}]$} & {$E_{K}^{lit} [\si{\kilo\electronvolt}]$}& {$\sigma_K$}\\
   \midrule
-    Zn & 7 &  9.65 & 18.60 & 3.56 \\
-    Sr & 8 & 16.12 & 11.01 & 3.98 \\
-    Zr & 9 & 18.01 &  9.84 & 4.08 \\
-    Br & 10 & 13.48 & 13.20 & 3.84 \\
-    Ga & 11 & 10.38 & 17.25 & 3.60 \\ 
+    Zn & 7  & 18.55 & 9.68  & 3.57 \\
+    Sr & 8  & 10.90 & 16.28 & 4.01 \\
+    Zr & 9  &  9.75 & 18.18 & 4.08 \\
+    Br & 10 & 13.10 & 13.58 & 3.75 \\
+    Ga & 11 & 17.10 & 10.47 & 3.49 \\ 
   \bottomrule
   \end{tabular}
 \end{table}
@@ -171,9 +171,32 @@ Die bestimmten Zahlen werden der \autoref{tab:Absorption_aus} hinzugefügt.
   \label{fig:plot7}
 \end{figure}
 
-Zink Maximum bei 18.9 Minimum 18.2
-Strontium Maximum 11.3 Minimum 10.5
-Zirkonium Maximum 10.1 Minimum 9.4
-Brom Maximum 13.4 Minimum 12.8
-Gallium Maximum 17.4 Minimum 16.8
+%Zink Maximum bei 18.9 Minimum 18.2 delta 18.55  E 9.68
+%Strontium Maximum 11.3 Minimum 10.5 delta 10.9  E 16.28
+%Zirkonium Maximum 10.1 Minimum 9.4 delta  9.75  E 18.18
+%Brom Maximum 13.4 Minimum 12.8     delta 13.1   E 13.58
+%Gallium Maximum 17.4 Minimum 16.8  delta 17.1   E 10.47
+
 % subsection Das Absorptionsspektrum (end)
+
+\subsection{Das Moseleysche Gesetz} % (fold)
+\label{sub:Das Moseleysche Gesetz}
+Das Moseleysche Gesetz besagt, dass die Absorptionsenergie $E_{abs}$ proportional zu $Z^2$ ist.
+Dieser Zusammenhang wird in \autoref{fig:plot8} dargestellt. Außerdem wird ein linearer Fit hinzugefügt
+und die Steigung berechnet sich zu
+\begin{equation}
+  A = (0.11484+/-0.00055) \sqrt{\si{\kilo\electronvolt}}.
+\end{equation}
+Für die Rydbergenergie gilt
+\begin{align}
+  R_{\infty} = A^2 = (13.19 \pm 0.13) \si{\electronvolt}.
+\end{align}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{build/plot8.pdf}
+  \caption{Proportionaler Zusammenhang zwischen Absorptionsenergie und der Ordnungszahl zum Quadraht.}
+  \label{fig:plot8}
+\end{figure}
+
+% subsection Das Moseleysche Gesetz (end)

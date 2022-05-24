@@ -91,3 +91,34 @@ plt.xlabel(r'Kristallwinkel $\theta \mathbin{/} \si{\degree}$')
 plt.grid()
 plt.legend(loc='best')
 plt.savefig('build/plot7.pdf')
+
+######Absorption
+winkel, Z , E = np.genfromtxt('content/maxima.txt', unpack=True)
+sigmak = Z - np.sqrt((E*1000)/13.6)
+print("sigmak = ", sigmak)
+
+def g(x, A, B):
+    return A*x +B 
+
+x = Z 
+y = np.sqrt(E)
+
+params, pcov = curve_fit(g, x, y)
+errors = np.sqrt(np.diag(pcov))
+
+A= ufloat(params[0], errors[0])
+B= ufloat(params[1], errors[1])
+print(f'A {A:.5f}')
+print(f'B {B:.5f}')
+
+plt.figure(8)
+plt.plot(Z, np.sqrt(E), 'bx', label='Messdaten')
+plt.plot(x, g(x, *params), 'r-', label='Fit')
+plt.ylabel(r'$ \sqrt{E_{abs}} \mathbin{/} \sqrt{\si{\kilo\electronvolt}}$')
+plt.xlabel(r'Z')
+plt.grid()
+plt.legend(loc='best')
+plt.savefig('build/plot8.pdf')
+
+A2 = A**2
+print('A2 = ', A2)
