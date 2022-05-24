@@ -20,9 +20,16 @@ plt.savefig('build/plot1.pdf')
 thetae2, imp2  = np.genfromtxt('content/emission.txt', unpack=True)
 
 thetae = thetae2 / 2
+w1 = thetae [79:84]
+R1= imp2 [79:84]
+w2 = thetae [90:96]
+R2= imp2 [90:96]
+
 
 plt.figure(2)
-plt.plot(thetae, imp2, 'b-', label='Messdaten')
+plt.plot(thetae, imp2, 'b-', label='Bremsberg')
+plt.plot(w1, R1, 'g-', label=r'$K_\alpha$')
+plt.plot(w2, R2, 'r-', label=r'$K_\beta$')
 plt.ylabel(r'Zählrate Impulse $ \mathbin{/} \si{\second}$')
 plt.xlabel(r'Kristallwinkel $\theta \mathbin{/} \si{\degree}$')
 plt.grid()
