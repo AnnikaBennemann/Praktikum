@@ -5,21 +5,13 @@ import uncertainties.unumpy as unp
 from uncertainties import ufloat
 from scipy.optimize import curve_fit
 
-x = np.linspace(0, 10, 1000)
-y = x ** np.sin(x)
+theta2, imp1  = np.genfromtxt('content/bragg.txt', unpack=True)
 
-plt.subplot(1, 2, 1)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \mathbin{/} \unit{\ohm}$')
-plt.ylabel(r'$y \mathbin{/} \unit{\micro\joule}$')
+theta = theta2 / 2
+
+plt.figure(1)
+plt.plot(theta, imp1, 'rx', label='Messdaten')
+plt.ylabel(r'$Imp \mathbin{/} \si{\second}$)')
+plt.xlabel(r'$\theta \mathbin{/} \si{\degree}$')
 plt.legend(loc='best')
-
-plt.subplot(1, 2, 2)
-plt.plot(x, y, label='Kurve')
-plt.xlabel(r'$\alpha \mathbin{/} \unit{\ohm}$')
-plt.ylabel(r'$y \mathbin{/} \unit{\micro\joule}$')
-plt.legend(loc='best')
-
-# in matplotlibrc leider (noch) nicht möglich
-plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-plt.savefig('build/plot.pdf')
+plt.savefig('build/plot1.pdf')
