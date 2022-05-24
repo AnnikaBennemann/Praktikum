@@ -28,19 +28,31 @@ Im ersten Versuchsteil wird die Bragg-Bedingung überprüft. Dazu wird ein feste
 Mit einem Winkelzuwachs von $\Delta\theta = \qty{0.1}{\degree}$ in einer Integrationszeit
 von $\Delta t = \qty{5}{\second}$ wird die Intensität der Röntgenstrahlung am Geiger-Müller-Zählrohr in
 einem Winkelbereich von $\theta_{GM} = \qty{26}{\degree}$ bis $\theta_{GM} = \qty{30}{\degree}$ gemessen.
-Es wird eine 
+Es wird eine Funktion der Zählrate gegenüber des Kristallwinkels geplottet und das Maximum der Kurve bestimmt.
 % subsection Überprüfung der Bragg-Bedingung (end)
 
 \subsection{Analyse des Emissionsspektrums einer Cu-Röntgenröhre} % (fold)
 \label{sub:Emission_durch}
 
 Um das Emissionsspektrum der Röntgenröhre aufzunehmen werden im Programm measure die Einstellungen verändert.
-Die Messung erfolgt im 2:1 Koppelmodus. Das Röntgenspektrum wird im Winkelbereich von $\theta = \qty{26}{\degree}$ bis $\theta_{GM} = \qty{30}{\degree}$ gemessen. 
-
+Die Messung erfolgt im 2:1 Koppelmodus. Das Röntgenspektrum wird im Winkelbereich von $\theta = \qty{4}{\degree}$ bis $\theta_{GM} = \qty{26}{\degree}$ gemessen. 
+Der Winkelzuwachs wird auf $\Delta\theta = \qty{0.2}{\degree}$ und die Integrationszeit wird beibehalten.
+Auch hier wird eine Funktion der Zählrate gegnüber dem Kristallwinkel geplottet und die Maxima bestimmt.
+Anschließend wird die Halbwertsbreite bestimmt und daraus das Auflösungsvermögen der Apparatur.
+Zuletzt werden die Abschirmkonstanten von Kupfer aus den Emmissionsenergien der $K_{\alpha}$- und $K_{\beta}$-Linien.
 
 % subsection Das Emissionsspektrum einer Cu-Röntgenröhre (end)
 
 \subsection{Analyse der Absorptionsspektren} % (fold)
 \label{sub:Absorption_durch}
+Um das Absorptionsspektrum zu messen wird ein Absorber vor das Geiger-Müller Zählrohr gesetzt.
+Der Winkelzuwachs wird wieder auf $\Delta\theta = \qty{0.1}{\degree}$ eingestellt und die Integrationszeit
+auf $\Delta t = \qty{20}{\second}$ erhöht. Der Messbereich ist abhängig von dem Absorber und muss somit individuell angepasst werden.
+Aus der geplotten Funktion wird die Absorptionsenergie der gemessenen K-Kante bestimmt.
+Anschließend wird die Abschirmzahl $\sigma_K$ berechnet.
+Diese Messung wird für insgesamt für fünf Absorber durchgeführt.
+Die Abschirmzahlen wird aus den bestimmten Energieübergängen  aus den gemessenen K-Kanten berechnet.
+Zuletzt wird aus den bestimmten Absorberenergien eine $\sqrt{E_K}-Z$ Diagramm gezeichnet und aus der Steigung
+die Rydbergkonstante berechnet.
 
 % subsection Das Absorptionsspektrum (end)
