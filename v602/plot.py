@@ -28,8 +28,8 @@ R2= imp2 [90:96]
 
 plt.figure(2)
 plt.plot(thetae, imp2, 'b-', label='Bremsberg')
-plt.plot(w1, R1, 'g-', label=r'$K_\alpha$')
-plt.plot(w2, R2, 'r-', label=r'$K_\beta$')
+plt.plot(w1, R1, 'g-', label=r'$K_\beta$')
+plt.plot(w2, R2, 'r-', label=r'$K_\alpha$')
 plt.ylabel(r'Zählrate Impulse $ \mathbin{/} \si{\second}$')
 plt.xlabel(r'Kristallwinkel $\theta \mathbin{/} \si{\degree}$')
 plt.grid()

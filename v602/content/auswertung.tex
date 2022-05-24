@@ -6,7 +6,7 @@
 
 In Vorbereitung auf den Versuch wird herausgesucht bei welchen Energien die Cu-$K_\alpha$- und die Cu-$K_\beta$-Linien
 zu erwarten sind und bei welchen Winkeln $\theta$ sie bei Verwendung eines LiF-Kristalls ($d = \qty{201.4}{\pico\meter}$) liegen.
-Die Energien liegen bei $E_{K_\alpha}= \qty{8.05}{\kilo\electronvolt}$ und $E_{K_\beta}= \qty{8.91}{\kilo\electronvolt}$\cite{X-Ray}.
+Die Energien liegen bei $E_{K_\alpha,theo}= \qty{8.05}{\kilo\electronvolt}$ und $E_{K_\beta,theo}= \qty{8.91}{\kilo\electronvolt}$\cite{X-Ray}.
 Durch Umstellen von \autoref{eqn:Bragg} zu
 \begin{align}
   \theta = \arcsin{\frac{h \cdot c} {E \cdot 2 d}} \label{eqn:theta}
@@ -64,16 +64,49 @@ Das Maximum der Kurve in \autoref{fig:plot1} liegt bei $\theta=\qty{14.1}{\degre
 \end{figure}
 
 Die Maxima der Kurve und somit die Winkel für die Energien liegen für die 
-$K_\alpha$ -Energie  bei $\theta_\alpha=\qty{20.2}{\degree}$ und für die $K_\beta$ - Energie
-bei $\theta_\beta=\qty{22.6}{\degree}$.
+$K_\alpha$ -Energie  bei $\theta_\alpha=\qty{22.6}{\degree}$ und für die $K_\beta$ - Energie
+bei $\theta_\beta=\qty{20.2}{\degree}$.
+Daraus folgen nach \autoref{eqn:Bragg} die Energien
+\begin{align*}
+  E_{K_\alpha}&= \qty{8.01}{\kilo\electronvolt}\\
+  E_{K_\beta}&= \qty{8.91}{\kilo\electronvolt}
+\end{align*} 
 
-Aus der fjdiosöfjewIPÖFJAEWFOÖJEW<I-FJPÄJGa
-FNDSLK<JFOÜEKMOWÖ<S
-KFSFADLJFLEASJFMA
-MLASÖJFNJF
-NFSALJFOEWJGFP
+
+Aus \autoref{fig:plot2} werden außerdem die Halbwertsbreiten der $K_\alpha$ - Linie zu $\Delta\theta_{\alpha,halb}=\qty{0.6}{\degree}$ und
+der $K_\beta$ - Linie zu $\Delta\theta_{\beta,halb}=\qty{0.4}{\degree}$ bestimmt.
+Mit den entsprechenden Werten  
+\begin{align*}
+  \theta_{\alpha,halb1}&=\qty{22.3}{\degree}  & E_{\alpha,halb1}&= \qty{8.11}{\kilo\electronvolt}\\
+  \theta_{\alpha,halb2}&=\qty{22.7}{\degree}  & E_{\alpha,halb2}&= \qty{7.98}{\kilo\electronvolt}\\
+  \theta_{\beta,halb1}&=\qty{19.9}{\degree}    & E_{\beta,halb1}&= \qty{9.04}{\kilo\electronvolt}\\
+  \theta_{\beta,halb2}&=\qty{20.5}{\degree}  & E_{\beta,halb2}&= \qty{8.79}{\kilo\electronvolt}
+ \end{align*}
+wird die Energiedifferenz
+\begin{align*}
+ \Delta E_{\alpha,halb}&= \qty{0.13}{\kilo\electronvolt}\\
+ \Delta E_{\beta,halb}&= \qty{0.25}{\kilo\electronvolt}
+\end{align*}
+berechnet.
+Das Auflösungsvermögen beträgt nach 
+\begin{align*}
+  A &= \frac{E_K}{\Delta E}:
+\end{align*}
+\begin{align*}
+  A_{K_\alpha} &= 61.62\\
+  A_{K_\beta} &= 35.64.
+\end{align*}
 
 
+Die Abschirmkonstanten werden mit \autoref{eqn:Ekabs} bis \autoref{eqn:Ekb} bestimmt. Hierbei wird
+$E_{K,abs}= \qty{8.99}{\kilo\electronvolt}$\cite{X-Ray} verwendet, was durch den Versuchsaufbau nicht bestimmt werden kann.
+Außerdem gilt $n=1, m=2$ und $l=3$.
+Somit berechnen sich die Abschirmkontanten zu
+\begin{align*}
+  \sigma_1 &= 3.29\\
+  \sigma_2 &= 12.02\\
+  \sigma_3 &= 21.72.
+\end{align*}
 % subsection Das Emissionsspektrum einer Cu-Röntgenröhre (end)
 
 \subsection{Analyse der Absorptionsspektren} % (fold)
