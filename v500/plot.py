@@ -155,7 +155,7 @@ plt.savefig('build/plot5.pdf')
 
 
 nu = np.array([518.67, 549.07, 609.33, 689.18, 734.79])
-U_g = np.array([-0.583, -0.730, -1.012, -1.313, -1.444])
+U_g = np.array([-0.583, -0.730, -1.005, -1.313, -1.444])
 
 
 params, cov = np.polyfit(nu, U_g, deg=1, cov=True)

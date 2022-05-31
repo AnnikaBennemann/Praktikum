@@ -192,9 +192,14 @@ Aus den gegebenen Wellenlängen(\cite[80]{V500}) werden die Frequenzen für vers
   \nu = \frac{c}{\lambda}
 \end{equation} 
 und in \autoref{tab:Frequenzen} eingetragen.
+Mithilfe der Parameter der Ausgleichsgeraden wird mit
+\begin{align*}
+  U_g = - \frac{b}{a}
+\end{align*}
+die Grenzspannung berechnet und auch in \autoref{tab:Frequenzen} eingetragen.
 \begin{table}[H]
   \centering
-  \caption{Berechnete Frequenzen für verschiedene Farben.}
+  \caption{Berechnete Frequenzen und Parameter der Ausgleichsgeraden für verschiedene Farben.}
   \label{tab:Frequenzen}
   \sisetup{table-format=1.3}
   \begin{tabular}{c S[table-format=3.0] S[table-format=3.2] S@{${}\pm{}$} S S@{${}\pm{}$} S S[table-format=3.3]@{${}\pm{}$} S }
@@ -203,13 +208,33 @@ und in \autoref{tab:Frequenzen} eingetragen.
   \midrule
     gelb    & 578 & 518.67 & 0.650 & 0.033 & 0.379 & 0.013 & -0.583 & 0.035 \\
     grün    & 546 & 549.07 & 0.857 & 0.049 & 0.625 & 0.023 & -0.730 & 0.050 \\
-    türkis  & 492 & 609.33 & 0.179 & 0.014 & 0.181 & 0.008 & -1.012 & 0.090 \\
+    türkis  & 492 & 609.33 & 0.184 & 0.018 & 0.185 & 0.010 & -1.005 & 0.113 \\
     blau    & 435 & 689.18 & 0.792 & 0.043 & 1.040 & 0.032 & -1.313 & 0.082 \\
     violett & 408 & 734.79 & 0.407 & 0.155 & 0.587 & 0.013 & -1.444 & 0.063 \\
   \bottomrule
   \end{tabular}
 \end{table}
 
+Die ermittelten Werte der Grenzspannungen werden gegen die jeweilige Frequenz aufgetragen.
+Das Ergebnis ist in \autoref{fig:plot7} dargestellt.
+Außerdem wird eine Ausgleichsgerade erstellt.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{plot7.pdf}
+  \caption{Grenzspannungen aufgetragen gegenüber der Frequenz.}
+  \label{fig:plot7}
+\end{figure}
+
+Mithilfe der Parameter der Ausgleichsgerade
+\begin{align*}
+  a &= (-4.014 \pm 0.177) 10^4 \si{\volt\second} \\
+  b &= (1.474 \pm 0.111) \si{\volt}
+\end{align*}
+wird das Verhältnis von $h$ und $e$, sowie die Austrittsarbeit bestimmt zu
+\begin{align*}
+  \frac{h}{e} &= (4.014 \pm 0.177) 10^4 \si{\volt\second} \\
+  A_K &=  (1.474 \pm 0.111) \si{\electronvolt}.
+\end{align*}
 
 %ende von Austrittsarbeit
 
