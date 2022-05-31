@@ -5,8 +5,16 @@ Der Versuch wird wie in \autoref{sec:Durchführung} beschrieben durchgeführt.
 \subsection{Bestimmung der Grenzfrequenz für verschiedenen Wellenlängen} % (fold)
 \label{sub:Grenzfrequenz_aus}
 
-
-
+Für das gelbe Licht werden die Werte in \autoref{tab:gelb} aufgenommen. 
+Die Werte der Gegenfeldmethode werden in \autoref{fig:plot1b} dargestellt, wobei die Wurzel des Photonenstroms
+gegenüber der Spannung aufgetragen wird. Außerdem wird mit den Pythonmodulen \cite{matplotlib}, \cite{numpy}, \cite{uncertainties}
+eine Ausgleichsgerade erstellt. Die Parameter der Ausgleichgrade werden in \autoref{tab:Frequenzen} eingefügt.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{build/plot1b.pdf}
+  \caption{Messwerte der Gegenfeldmethode für das gelbes Licht mit der Ausgleichsgerade.}
+  \label{fig:plot1b}
+\end{figure}
 \begin{table}[H]
   \centering
   \caption{Messwerte für das gelbe Licht.}
@@ -50,7 +58,9 @@ Der Versuch wird wie in \autoref{sec:Durchführung} beschrieben durchgeführt.
   \bottomrule
   \end{tabular}
 \end{table}
-
+Die bestimmten Werte für das grüne Licht werde in \autoref{tab:grün} eingetragen. 
+In \autoref{fig:plot2} wird die Wurzel der Stromstärke gegenüber der der Spannung für grünes Licht eingetragen.
+Auch hier wird eine Ausgleichsgerade eingefügt und die Parameter werden in \autoref{tab:Frequenzen} eingetragen.
 \begin{table}[H]
   \centering
   \caption{Messwerte für das grüne Licht.}
@@ -74,7 +84,14 @@ Der Versuch wird wie in \autoref{sec:Durchführung} beschrieben durchgeführt.
   \bottomrule
   \end{tabular}
 \end{table}
-
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{build/plot2.pdf}
+  \caption{Messwerte der Gegenfeldmethode für das grüne Licht mit der Ausgleichsgerade.}
+  \label{fig:plot2}
+\end{figure}
+In \autoref{tab:türkis} werden die Messwerte für das türkise Licht eingtragen und in \autoref{fig:plot3} dargestellt.
+Die Ausgleichsgerade wird auch eingetragen und die Parameter sind in \autoref{tab:Frequenzen} eingefügt.
 \begin{table}[H]
   \centering
   \caption{Messwerte für das türkise Licht.}
@@ -97,7 +114,19 @@ Der Versuch wird wie in \autoref{sec:Durchführung} beschrieben durchgeführt.
   \bottomrule
   \end{tabular}
 \end{table}
-
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{build/plot3.pdf}
+  \caption{Messwerte für das türkise Licht mit der Ausgleichsgerade.}
+  \label{fig:plot3}
+\end{figure}
+Die Werte der Messung für das blaue Licht sind in \autoref{tab:blau} eingetragen und in 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{build/plot4.pdf}
+  \caption{Messwerte der das blaue Licht mit der Ausgleichsgerade.}
+  \label{fig:plot4}
+\end{figure}
 \begin{table}[H]
   \centering
   \caption{Messwerte für das blaue Licht.}
@@ -124,6 +153,7 @@ Der Versuch wird wie in \autoref{sec:Durchführung} beschrieben durchgeführt.
   \bottomrule
   \end{tabular}
 \end{table}
+
 
 \begin{table}[H]
   \centering
@@ -153,11 +183,11 @@ Der Versuch wird wie in \autoref{sec:Durchführung} beschrieben durchgeführt.
   \end{tabular}
 \end{table}
 %ende von Grebzfrequenz
-\subsection{Bestimmung von \frac{h}{e} und der Austrittsarbeit} % (fold)
+\subsection{Bestimmung von $\frac{h}{e}$ und der Austrittsarbeit} % (fold)
 \label{sub:Austrittsarbeit}
 
 
-Aus den gegebenen Wellenlängen(\cite[80]{v500}) werden die Frequenze für verschiedene Farben berechnet mit
+Aus den gegebenen Wellenlängen(\cite[80]{V500}) werden die Frequenze für verschiedene Farben berechnet mit
 \begin{equation}
   \nu = \frac{c}{\lambda}
 \end{equation} 
