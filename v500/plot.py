@@ -152,3 +152,33 @@ plt.xlabel(r'U $\mathbin{/} \si{\V}$')
 plt.grid()
 plt.legend(loc='best')
 plt.savefig('build/plot5.pdf')
+
+
+nu = np.array([518.67, 549.07, 609.33, 689.18, 734.79])
+U_g = np.array([-0.583, -0.730, -1.012, -1.313, -1.444])
+
+
+params, cov = np.polyfit(nu, U_g, deg=1, cov=True)
+errors = np.sqrt(np.diag(cov))
+
+a = ufloat(params[0], errors[0])
+b = ufloat(params[1], errors[1])
+
+print('a =', params[0], '±', errors[0])
+print('b =', params[1], '±', errors[1])
+
+z = np.linspace(np.min(nu), np.max(nu))
+
+plt.figure(7)
+plt.plot(nu[0], U_g[0], 'yx', label='gelb')
+plt.plot(nu[1], U_g[1], 'gx', label='grün')
+plt.plot(nu[2], U_g[2], 'cx', label='türkis')
+plt.plot(nu[3], U_g[3], 'bx', label='blau')
+plt.plot(nu[4], U_g[4], 'mx', label='violett')
+plt.plot(z, f(z, *params), 'k-', label='Ausgleichsgerade')
+plt.ylabel(r'Grenzspannung $U_g \mathbin{/} \si{\volt}$')
+plt.xlabel(r'Frequenz $\nu \mathbin{/} \si{\tera\hertz}$')
+#plt.axvline(x=14.00, color='r', linestyle=':', label='Sollwinkel')
+plt.grid()
+plt.legend(loc='best')
+plt.savefig('build/plot7.pdf')
