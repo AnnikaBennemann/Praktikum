@@ -6,7 +6,7 @@ Der Versuch wird wie in \autoref{sec:Durchführung} beschrieben durchgeführt.
 \label{sub:Grenzfrequenz_aus}
 
 Für das gelbe Licht werden die Werte in \autoref{tab:gelb} aufgenommen. 
-Die Werte der Gegenfeldmethode werden in \autoref{fig:plot1b} dargestellt, wobei die Wurzel des Photonenstroms
+Die Werte, die mit der Gegenfeldmethode aufgenommen wird, werden in \autoref{fig:plot1b} dargestellt, wobei die Wurzel des Photonenstroms
 gegenüber der Spannung aufgetragen wird. Außerdem wird mit den Pythonmodulen \cite{matplotlib}, \cite{numpy}, \cite{uncertainties}
 eine Ausgleichsgerade erstellt. Die Parameter der Ausgleichgrade werden in \autoref{tab:Frequenzen} eingefügt.
 \begin{figure}[H]
@@ -90,7 +90,8 @@ Auch hier wird eine Ausgleichsgerade eingefügt und die Parameter werden in \aut
   \caption{Messwerte der Gegenfeldmethode für das grüne Licht mit der Ausgleichsgerade.}
   \label{fig:plot2}
 \end{figure}
-In \autoref{tab:türkis} werden die Messwerte für das türkise Licht eingtragen und in \autoref{fig:plot3} dargestellt.
+In \autoref{tab:türkis} werden die Messwerte für das türkise Licht eingetragen und in \autoref{fig:plot3} dargestellt.
+Dabei wird die Wurzel der Stromstärke gegenüber der Spannung gestellt.
 Die Ausgleichsgerade wird auch eingetragen und die Parameter sind in \autoref{tab:Frequenzen} eingefügt.
 \begin{table}[H]
   \centering
@@ -120,8 +121,8 @@ Die Ausgleichsgerade wird auch eingetragen und die Parameter sind in \autoref{ta
   \caption{Messwerte für das türkise Licht mit der Ausgleichsgerade.}
   \label{fig:plot3}
 \end{figure}
-Die Werte der Messung für das blaue Licht sind in \autoref{tab:blau} eingetragen und in \autoref{fig:plot4} dargestellt mit einer Ausgleichgrade.
-Die 
+Die Werte der Messung für das blaue Licht sind in \autoref{tab:blau} eingetragen und in \autoref{fig:plot4} dargestellt mit einer Ausgleichgerade.
+Die Wurzel der Stromstärke wird dabei gegenüber der Spannung aufgetragen.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{build/plot4.pdf}
@@ -154,8 +155,9 @@ Die
   \bottomrule
   \end{tabular}
 \end{table}
-
-
+Das violette Licht wird gemessen und und in \autoref{tab:violett} eingetragen. Die Wurzel der Stromstärke wird gegenüber der Spannung in
+\autoref{fig:plot5} eingetragen mit einer Ausgleichsgerade. Die berechneten Parameter der Ausgleichgerade werden in \autoref{tab:Frequenzen}
+eingetragen.
 \begin{table}[H]
   \centering
   \caption{Messwerte für das violette Licht.}
@@ -183,6 +185,12 @@ Die
   \bottomrule
   \end{tabular}
 \end{table}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{build/plot5.pdf}
+  \caption{Messwerte für das violette Licht mit der Ausgleichsgerade.}
+  \label{fig:plot5}
+\end{figure}
 %ende von Grebzfrequenz
 \subsection{Bestimmung von $\frac{h}{e}$ und der Austrittsarbeit} % (fold)
 \label{sub:Austrittsarbeit}
