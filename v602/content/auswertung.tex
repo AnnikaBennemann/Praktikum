@@ -183,14 +183,18 @@ Die bestimmten Zahlen werden der \autoref{tab:Absorption_aus} hinzugefügt.
 \subsection{Das Moseleysche Gesetz} % (fold)
 \label{sub:Das Moseleysche Gesetz}
 Das Moseleysche Gesetz besagt, dass die Absorptionsenergie $E_{abs}$ proportional zu $Z^2$ ist.
-Dieser Zusammenhang wird in \autoref{fig:plot8} dargestellt. Außerdem wird ein linearer Fit hinzugefügt
+Dieser Zusammenhang wird in \autoref{fig:plot8} dargestellt. Außerdem wird ein linearer Fit
+nach \autoref{eqn:Bindungsenergie} mit $n=1$ bzw.
+\begin{align*}
+  Z= \frac{1}{\sqrt{R_\infty}} \cdot \sqrt{E_{abs}} + \sigma
+\end{align*} hinzugefügt
 und die Steigung berechnet sich zu
 \begin{equation}
-  A = (0.11484 \pm 0.00055) \sqrt{\si{\kilo\electronvolt}}.
+  \frac{1}{\sqrt{R_\infty}} = A = (8.70680 \pm 0.04139) \sqrt{\si{\kilo\electronvolt}}.
 \end{equation}
-Für die Rydbergenergie gilt
+Für die Rydbergenergie gilt somit
 \begin{align}
-  R_{\infty} = A^2 = (13.19 \pm 0.13) \si{\electronvolt}.
+  R_{\infty} = \Bigl(\frac{1}{A}\Bigr)^2 = (13.19 \pm 0.13) \si{\electronvolt}.
 \end{align}
 
 \begin{figure}[H]
