@@ -24,3 +24,6 @@ print('Bedingung = ', Bed)
 
 
 
+
+
+
