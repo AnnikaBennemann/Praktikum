@@ -101,8 +101,8 @@ print("sigmak = ", sigmak)
 def g(x, A, B):
     return A*x +B 
 
-x = Z 
-y = np.sqrt(E)
+y = Z 
+x = np.sqrt(E)
 
 params, pcov = curve_fit(g, x, y)
 errors = np.sqrt(np.diag(pcov))
@@ -113,13 +113,14 @@ print(f'A {A:.5f}')
 print(f'B {B:.5f}')
 
 plt.figure(8)
-plt.plot(Z, np.sqrt(E), 'bx', label='Messdaten')
+plt.plot(np.sqrt(E), Z,  'bx', label='Messdaten')
 plt.plot(x, g(x, *params), 'r-', label='Fit')
-plt.ylabel(r'$ \sqrt{E_{abs}} \mathbin{/} \sqrt{\si{\kilo\electronvolt}}$')
-plt.xlabel(r'Z')
+plt.xlabel(r'$ \sqrt{E_{abs}} \mathbin{/} \sqrt{\si{\kilo\electronvolt}}$')
+plt.ylabel(r'Z')
 plt.grid()
+plt.tight_layout()
 plt.legend(loc='best')
 plt.savefig('build/plot8.pdf')
 
-A2 = A**2
-print('A2 = ', A2)
+R = (1/A)**2
+print('R = ', R)
