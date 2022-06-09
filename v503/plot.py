@@ -100,28 +100,57 @@ print('q_korr = ', q_1)
 plt.figure(2)
 plt.errorbar(range(1, len(noms(q)) + 1), np.sort(noms(q)), yerr= qerr, fmt='rx', label='Werte mit Fehlern')
 #plt.plot(range(1, len(noms(q)) + 1), np.sort(noms(q)), 'kx', label = r'Messdaten')
+plt.hlines(y=[0,1.5,2*1.5,3*1.5,4*1.5,5*1.5,6*1.5],xmin=-1, xmax=len(noms(q_korr))+1 ,colors='k', linestyle='--')
 plt.ylabel(r'q $\mathbin{/} 10^{-19} \si{\coulomb}$')
 plt.xlabel(r'Messungen')
-plt.grid()
+#plt.grid()
 plt.legend(loc='best')
 plt.savefig('build/plot2.pdf')
 
-q= np.sort(noms(q))/ 1.602
-q_mittel = np.array([np.mean(q[0:5]), q[6], np.mean(q[7:8]), np.mean(q[9:12]), np.mean(q[13:14]), np.mean(q[15:16]), q[17], q[18], q[19]])
+q= np.sort(noms(q))
+
+q_mittel = np.array([np.mean(q[0:5]),np.mean(q[6:8]), np.mean(q[9:12]), np.mean(q[13:17]), np.mean(q[18:19])])
 print('q_mittel = ',q_mittel)
-print(np.argmin(abs(q / 1.602 - 1)))
+q_mittel=np.delete(q_mittel,[0])
 
 
 plt.figure(3)
 plt.errorbar(range(1, len(noms(q_korr)) + 1), np.sort(noms(q_korr)), yerr= q_korrerr, fmt='rx', label='Werte mit Fehlern')
 #plt.plot(range(1, len(noms(q_korr)) + 1), np.sort(noms(q_korr)), 'kx', label = r'Messdaten')
+plt.hlines(y=[0,1.45,2*1.45,3*1.45,4*1.45,5*1.45,6*1.45,7*1.45],xmin=-1, xmax=len(noms(q_korr))+1 ,colors='k', linestyle='--')
 plt.ylabel(r'q(korrigiert) $\mathbin{/} 10^{-19} \si{\coulomb}$')
 plt.xlabel(r'Messungen')
-plt.grid()
+#plt.grid()
 plt.legend(loc='best')
 plt.savefig('build/plot3.pdf')
 
-q_korr= np.sort(noms(q_korr))/ 1.602
-q_mittel = np.array([np.mean(q_korr[0:5]), q_korr[6], np.mean(q_korr[7:8]), np.mean(q_korr[9:12]), np.mean(q_korr[13:14]), np.mean(q_korr[15:16]), q_korr[17], q_korr[18], q_korr[19]])
-print('q_mittel = ',q_mittel)
-print(np.argmin(abs(q / 1.602 - 1)))
+q_korr= np.sort(noms(q_korr))
+q_mittel2 = np.array([np.mean(q_korr[0:5]),np.mean(q_korr[6:8]), np.mean(q_korr[9:11]), np.mean(q_korr[12:17]),np.mean(q_korr[18:19])])
+print('q_mittel2 = ',q_mittel2)
+
+
+q_mittel2= np.delete(q_mittel2,[0])
+def GCD(q,maxi):
+    gcd=q[0]
+    for i in range(1,len(q)):
+        n=0
+        while abs(gcd-q[i])>1 and n <= maxi:
+            if gcd > q[i]:
+                gcd = gcd - q[i]
+            else:
+                q[i] = q[i] - gcd
+            n = n+1
+    return gcd
+
+qe= np.sort(noms(qe))
+qe=np.delete(qe,[0,1,2,3,4,5])
+qkorr= unp.uarray(q_korr, q_korrerr)
+qkorr= np.sort(noms(qkorr))
+qkorr=np.delete(qkorr,[0,1,2,3,4,5])
+
+e_01 = GCD(qe,15)
+e_03 = GCD(q_mittel,15)
+e_02 = GCD(qkorr,15)
+print('e_01 = ',e_01)
+print('e_02 = ',e_02)
+print('e_03 = ',e_03)

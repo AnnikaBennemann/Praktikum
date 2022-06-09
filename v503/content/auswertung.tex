@@ -260,7 +260,7 @@ Der Plot mit der Ausgleichsfunktion ist in \autoref{fig:plottemp} dargestellt.
         \label{fig:plottemp}
 \end{figure}
 
-Nun kann aus \autoref{fig:Abb_2} die Viskosität der Luft für die Temperatur abgelesen werden.
+Nun kann aus \autoref{fig:Abb_3} die Viskosität der Luft für die Temperatur abgelesen werden.
 Mithilfe des WebplotDigitizers \cite{Rohatgi2020} wird die Geradengleichung zu
 \begin{align*}
        \eta = 0.0048 \cdot T + 1.7268 
@@ -269,12 +269,15 @@ bestimmt.
 Die berechneten Werte der Temperatur, Viskosität, sowie Ladung und Radius der Öltröpfchen sind in \autoref{tab:werte} aufgelistet.
 Zudem wird die Viskosität mit der Cunningham-Korrektur angepasst. Somit ändert sich die Formel zur Berechnung der Ladung zu \autoref{eqn:Ladung_kor}.
 Auch die korrigierten Ladungen sind in \autoref{tab:werte} eingetragen.
+Der Luftdruck wird als $p= \qty{1.01325}{\bar} = 760$Torr angenommen.
+Die Dichte der Öltröpfchen beträgt $\rho_{öl}= \qty{866}{\kilo\gram\per\cubic\meter}$\cite{V503} und die Dichte von Luft ist im Verhältnis vernachlässigbar gering.
+Der Abstand $d$ der Platten des Kondensators beträgt $\qty{7.6250 \pm 0.0051}{\milli\meter}.$\cite{V503}
 \begin{table}[H]
         \centering
         \caption{Berechnete Daten der Öltröpfchen.}
         \label{tab:werte}
         \sisetup{table-format=1.3}
-        \begin{tabular}{S S[table-format=2.2] S[table-format=1.4] S[table-format=1.2] @{${}\pm{}$} S[table-format=1.2] S[table-format=1.2] @{${}\pm{}$} S[table-format=1.2] S[table-format=1.2] @{${}\pm{}$} S[table-format=1.2]}
+        \begin{tabular}{S S[table-format=2.2] S[table-format=1.4] S[table-format=1.2] @{${}\pm{}$} S[table-format=1.2] S[table-format=1.2] @{${}\pm{}$} S[table-format=1.2] S[table-format=2.2] @{${}\pm{}$} S[table-format=1.2]}
         \toprule
         {$R / \si{\mega\ohm}$}& {$T / \si{\celsius}$} &{$\eta_{Luft} / 10^{-5} \frac{\si{\newton\second}}{\si{\meter\squared}}$} & \multicolumn{2}{c}{$r / 10^{-6} \si{\meter}$} & \multicolumn{2}{c}{$q / 10^{-19}\si{\coulomb}$} & \multicolumn{2}{c}{$q_{korr} / 10^{-19}\si{\coulomb}$} \\
         \midrule
@@ -302,6 +305,39 @@ Auch die korrigierten Ladungen sind in \autoref{tab:werte} eingetragen.
         \end{tabular}
 \end{table}
 
+Um aus der Ladung die Elementarladung $e_0$ zu ermitteln werden zunächst die berechneten Ladungen in \autoref{fig:e_01} und \autoref{fig:e_02} graphisch dargestellt.
+Es werden horizontale Linien hinzugefügt, sodass möglichst viele der Ladungen auf oder in der Nähe der Linien liegen.
+Der Abstand der Linien entspricht der berechneten Elementarladung, da die Tröpfchen nur mit einem Vielfachen der Elementarladung geladen sein können.
 
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{build/plot2.pdf}
+        \caption {Unkorrigierte Ladungen.}
+        \label{fig:e_01}
+\end{figure}
+Der Abstand zwischen den Linien und somit die bestimmte Elementarladung beträgt bei den unkorrigierten Ladungen
+\begin{align*}
+        e_{0,unkorrigiert}&= 1.5\cdot 10^{-19} \unit{\coulomb}.
+\end{align*}
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{build/plot3.pdf}
+        \caption {Korrigierte Ladungen.}
+        \label{fig:e_02}
+\end{figure}
+Bei den korrigierten Ladungen beträgt die bestimmte Elementarladung
+\begin{align*}
+        e_{0,korrigiert}&= 1.45\cdot 10^{-19} \unit{\coulomb}.
+\end{align*}
 
-1 2 13 15 22 weg 
+Durch
+\begin{align*}
+        N_A&= \frac{F}{e_0}
+\end{align*}
+lässt sich mithilfe der Faraday-Konstante $F=\qty{96485.33212}{\coulomb\per\mol}$\cite{Faraday}
+die Avogadro-Konstante berechnen.
+Diese lautet demnach für die unkorrigierte und korrigierte Elementarladung
+\begin{align*}
+        N_{A,unkorrigiert}&= 6.4324\cdot 10^{23} \unit{\per\mol},\\  
+        N_{A,korrigiert}&= 6.6542\cdot 10^{23} \unit{\per\mol}.      
+\end{align*}
