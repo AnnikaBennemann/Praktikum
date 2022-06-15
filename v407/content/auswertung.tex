@@ -1,6 +1,22 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+Zunächst wird die Apparatur einjustiert und der Dunkelstrom gemessen, also der Strom, der durch das Licht im Versuchsraum ausgelöst wird.
+Dieser beträgt
+\begin{align*}
+  I_{\text{d}}&=\qty{5.9}{\micro\ampere}.
+\end{align*}
+
+Der Nullstrom, also die einfallende Lichtintensität des Lasers ohne Reflektion wird zu
+\begin{align*}
+  I_{\text{0, s}}&=\qty{540}{\micro\ampere}
+\end{align*}
+bestimmt.
+
+Anschließend werden die Messungen nach \autoref{sec:Durchführung} druchgeführt.
+Die Messwerte für den Winkel und den gemessenen Photostrom sind in \autoref{tab:Tab1} aufgeführt.
+In den Berechnungen im weiteren Verlauf wird mit den Photoströmen weitergerechnet wo der Dunkelstrom abgezogen wird.
+Zudem wird durch das Umstellen von FORMEL!!!!!!! der Brechungsindex berechnet und auch in \autoref{tab:Tab1} eingetragen.
 \begin{table}[H]
 	\centering
 	\caption{Messwerte der Wärmepumpe.}
@@ -67,5 +83,15 @@
  %9.01982606e+00 8.24530267e+00 1.01256339e+01 1.38014143e+01
  %2.13214457e+04 1.12722838e+01 2.77411587e+00 2.12172647e+00
  %1.72491538e+00 1.31670385e+00 1.14168797e+00]
+
+
+Bei der Berechnung des Mittelwertes werden nur Werte von $n_{\text{s}}<4.5$ und $n_{\text{p}}<4.5$
+beachtet, um große systematische Fehler zu vernachlässigen.
+Die Mittwelwerte der Brechungsindizes und deren Fehler werden mit den Pythonmodulen Numpy \cite{numpy} und Uncertainties \cite{uncertainties} berechnet
+und ergeben sich zu
+\begin{align*}
+  \bar{n}_{\text{s}}&=\qty{}{} \\
+  \bar{n}_{\text{p}}&=\qty{}{}.
+\end{align*}
 
 
