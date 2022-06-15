@@ -65,12 +65,12 @@ alpha = np.linspace(0, 90, 1000)
 alpha_1 = np.linspace(0, alpha_B, 1000)
 alpha_2 = np.linspace(alpha_B, 90, 1000)
 
-plt.plot(alpha, KurveS(alpha, n_s_mean), color = "cornflowerblue", label = "Theoriekurve s-polarisiert")
-plt.plot(alpha_1, KurveP(alpha_1, n_p_mean), color = "forestgreen", label = "Theoriekurve p-polarisiert")
-plt.plot(alpha_2, -KurveP(alpha_2, n_p_mean), color = "forestgreen")
+plt.plot(alpha, KurveS(alpha, n_s_mean), color = "m", label = "Theoriekurve s-polarisiert")
+plt.plot(alpha_1, KurveP(alpha_1, n_p_mean), color = "g", label = "Theoriekurve p-polarisiert")
+plt.plot(alpha_2, -KurveP(alpha_2, n_p_mean), color = "g")
 
-plt.plot(g, np.sqrt(I_s/I_0), marker = "x", color = "firebrick", linewidth = 0, label = "Messwerte s-polarisiert")
-plt.plot(g, np.sqrt(I_p/I_0), marker = "+", markersize = 8, color = "coral", linewidth = 0, label = "Messwerte p-polarisiert")
+plt.plot(g, np.sqrt(I_s/I_0), marker = "x", color = "b", linewidth = 0, label = "Messwerte s-polarisiert")
+plt.plot(g, np.sqrt(I_p/I_0), marker = "+", markersize = 8, color = "r", linewidth = 0, label = "Messwerte p-polarisiert")
 
 plt.grid()
 plt.xlabel(r"$\alpha \mathbin{/} °$")
