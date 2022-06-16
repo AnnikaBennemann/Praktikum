@@ -9,24 +9,29 @@ Dieser beträgt
 
 Der Nullstrom, also die einfallende Lichtintensität des Lasers ohne Reflektion wird zu
 \begin{align*}
-  I_{\text{0, s}}&=\qty{540}{\micro\ampere}
+  I_{\text{0, s}}&=\qty{180}{\micro\ampere}
 \end{align*}
 bestimmt.
 
-Anschließend werden die Messungen nach \autoref{sec:Durchführung} druchgeführt.
+Anschließend werden die Messungen nach \autoref{sec:Durchführung} durchgeführt.
 Die Messwerte für den Winkel und den gemessenen Photostrom sind in \autoref{tab:Tab1} aufgeführt.
-In den Berechnungen im weiteren Verlauf wird mit den Photoströmen weitergerechnet wo der Dunkelstrom abgezogen wird.
-Zudem wird durch das Umstellen von  der Brechungsindex berechnet und auch in \autoref{tab:Tab1} eingetragen.
-\begin{table}[H]
-	\centering
-	\caption{Messwerte der Wärmepumpe.}
-	\label{tab:Tab1}
-  \sisetup{table-format=3.0}
-	\begin{tabular}{S[table-format=2.0] S S[table-format=4.2]S[table-format=2.1]S[table-format=3.2]}
-		\toprule
+In den Berechnungen im weiteren Verlauf wird mit den Photoströmen weitergerechnet bei denen der Dunkelstrom abgezogen wird.
+Zudem wird durch das Umstellen von \autoref{eqn:senkrecht} und \autoref{eqn:parallel} der Brechungsindex berechnet und auch in \autoref{tab:Tab1} eingetragen.
+
+	
+\begin{longtable}{S[table-format=2.0] S[table-format=3.0] S[table-format=4.2]S[table-format=2.1]S[table-format=3.2]}
+		\caption{Messwerte des Versuchs.}\label{tab:Tab1}\\
+    \toprule
     & \multicolumn{2}{c}{senkrecht} & \multicolumn{2}{c}{parallel} \\
       {Winkel $\mathbin{/} \si{\degree}$}&{$I_s \mathbin{/} \si{\micro\ampere}$}&{Brechungsindex $n_{\bot}$}&{$I_p \mathbin{/} \si{\micro\ampere}$}&{Brechungsindex $n_{\bot}$}\\
     \midrule
+      \endfirsthead
+    \caption{(fortgesetzt)}\\
+    \toprule
+    & \multicolumn{2}{c}{senkrecht} & \multicolumn{2}{c}{parallel} \\
+      {Winkel $\mathbin{/} \si{\degree}$}&{$I_s \mathbin{/} \si{\micro\ampere}$}&{Brechungsindex $n_{\bot}$}&{$I_p \mathbin{/} \si{\micro\ampere}$}&{Brechungsindex $n_{\bot}$}\\
+    \midrule
+    \endhead
     4  & 30  &  2.37    & 44 & 2.96 \\
     6  & 58  &  3.61    & 60 & 3.75 \\
     8  & 60  &  3.70    & 65 & 4.05 \\
@@ -71,8 +76,7 @@ Zudem wird durch das Umstellen von  der Brechungsindex berechnet und auch in \au
     86 & 180 &  8512.52 & 62 & 55.05 \\
     87 & 190 &  4.00    & 84 & 101.48 \\
    \bottomrule 
-  \end{tabular}
-\end{table}
+\end{longtable}
 
 
 Bei der Berechnung des Mittelwertes werden nur Werte von $n_{\text{s}}<4.5$ und $n_{\text{p}}<4.5$
@@ -91,13 +95,20 @@ Zur Bestimmung des Minimums werden die Messwerte in \autoref{fig:plot1} graphisc
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\textwidth]{build/plot.pdf}
-  \caption {Wechselwirkung eines Lichtstrahls an einer Grenzfläche \cite{V407}.}
+  \includegraphics[width=\textwidth]{build/plot.pdf}
+  \caption {Messwerte und Theoriekurven zur Bestimmung des Brewsterwinkels.}
   \label{fig:plot1}
 \end{figure}
 
 Außerdem werden Vergleichskurven geplottet. Hierfür werden die zuvor berechneten Mittelwerte der Brechungsindizes in die Fresnelschen
-Formeln \eqref{eqn:senkrecht} \eqref{eqn:parallel} eingesetzt.
+Formeln \eqref{eqn:senkrecht},\eqref{eqn:parallel} eingesetzt.
+
+Aus dem Brewsterwinkel von $\alpha_B = \qty{75}{\degree}$ wird der Brechungsindex mithilfe von \autoref{eqn:brewster}
+zu
+\begin{align*}
+  n_{\text{B}}&= 3.73 
+\end{align*}
+berechnet.
 
 
 

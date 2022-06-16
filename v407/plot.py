@@ -12,7 +12,7 @@ from scipy.optimize import curve_fit
 
 n_brewster = np.tan(75*np.pi/180)
 print("Brewster: ", n_brewster)
-
+ 
 
 I_0 = 0.18*10**(-3)
 I_dunkel = 5.9*10**(-9)
@@ -52,6 +52,15 @@ print("std: " ,n_p_std)
 n_p_err = ufloat(n_p_mean, np.std(n_p[n_p < 4.5]))
 print("p-polarisiert: ", n_p_err)  
 np.savetxt("content/n_p.txt", n_p, fmt = '%.4f')
+
+n_lit= 3.35268
+
+abwns= (n_s_err-n_lit)/(n_lit)*100
+abwnp= (n_p_err-n_lit)/(n_lit)*100
+abwnb= (n_brewster-n_lit)/(n_lit)*100
+print(f'abw n_s = {abwns:.2f} ')
+print(f'abw n_p = {abwnp:.2f}')
+print(f'abw n_b = {abwnb:.2f}')
 ############################ Plots ###################################
 
 def KurveS(a, n):
@@ -81,3 +90,4 @@ plt.legend()
 plt.tight_layout()
 plt.savefig("build/plot.pdf")
   
+
