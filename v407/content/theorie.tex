@@ -1,11 +1,11 @@
 \section{Zielsetzung}
 \label{sec:Zielsetzung}
 Ziel dieses Versuches ist es den Brechungsindex von Silizium zu berechnen, indem die
-Abhängigkeit von der Intensität des, an einem Silizium-Spiegel reflektierten, Lichtes vom 
+Abhängigkeit der Intensität des an einem Silizium-Spiegel reflektierten Lichtes vom 
 Eintrittswinkel und der Polarisation zu untersuchen.
 \section{Theorie}
 \label{sec:Theorie}
-Das ausbreitende Licht wird in den meisten Fällen beim Durchqueren von Grenzflächen zweier
+Das sich ausbreitende Licht wird in den meisten Fällen beim Durchqueren von Grenzflächen zweier
 Medien mit zwei verschiedenen Brechungsindizes reflektiert und gebrochen. Dies wird in \autoref{fig:Abb_1} dargestellt.
 \begin{figure}[H]
     \centering
@@ -14,25 +14,25 @@ Medien mit zwei verschiedenen Brechungsindizes reflektiert und gebrochen. Dies w
     \label{fig:Abb_1}
 \end{figure}
 Ein allgemeiner Ausdruck für die Strahlungsleistung von Lichtwellen wird benötigt um den Anteil zu bestimmen,
-den das reflektierte und gebrochene Licht von der urspründlichen Intensität besitzen.
+den das reflektierte und gebrochene Licht von der ursprünglichen Intensität besitzen.
 Aus den Maxwell Gleichungen und der Elektrizitätslehre folgt der Poynting-Vektor
 \begin{equation*}
     \vec{S} = \vec{E} \times \vec{H},
     \label{eqn:Poynting}
 \end{equation*}
-wobei $\vec{E}$ die elektrische Feldstärke ist und $\vec{H}$ die magnetische ist, welche eine
+wobei $\vec{E}$ die elektrische und $\vec{H}$ die magnetische Feldstärke ist, welche eine
 elektromagnetische Welle beschreibt. Der Poynting-Vektor beschreibt den Transport von Energie,
 weil er in die Ausbreitungsrichtung der elektromagnetischen Welle zeigt und sein Betrag entspricht
-dem der Energie der Strahlung. Er besitzt die Dimension $\frac{Leistung}{Fläche}$.\\
+der Energie der Strahlung. Er besitzt die Dimension $\frac{Leistung}{Fläche}$.\\
 Trifft eine elektromagnetische Welle auf eine Grenzfläche teilt sich die Strahlungsleistung auf den 
-reflektierten und gebrochen Teil auf. In diesem Versuch wird nur das nicht absorbierende Medium betrachtet,
+reflektierten und gebrochen Teil auf. In diesem Versuch wird nur ein nicht absorbierendes Medium betrachtet,
 weswegen für die Energieerhaltung
 \begin{equation*}
     S_e \text{cos}(\alpha) = S_r \text{cos}(\alpha) + S_d \text{cos}(\alpha)
 \end{equation*}
-gilt. Dabei bezeichnet $S_e$ den Betrag des Poynting-Vektors, der einfallende Strahlung und $S_r$ 
-und $S_d$ analog den der reflektierten und gebrochen Strahlung. Der einfallende Winkel wird durch 
-$\alpha$ dargestellt und Brechungswinkel wird durch $\beta$ dargestellt.
+gilt. Dabei bezeichnet $S_e$ den Betrag des Poynting-Vektors, also der einfallenden Strahlung und $S_r$ 
+und $S_d$ analog die reflektierte und gebrochene Strahlung. Der einfallende Winkel wird durch 
+$\alpha$ dargestellt und der Brechungswinkel wird durch $\beta$ dargestellt.
 Mit den Winkeln und dem Snelliusschen Brechungsgesetz
 \begin{equation*}
     n = \frac{\text{sin}(\alpha)}{\text{sin}(\beta)}
@@ -45,7 +45,7 @@ lässt sich der Brechungsindex $n$ bestimmen, wobei außerdem
 \end{equation}
 als Verhältnis der Geschwindigkeit von Licht in beiden Medien gilt.
 Das Verhältnis zwischen reflektiertem und gebrochem Anteil der Strahlungsleistung ist
-stark vom Polarisationszustand abhängig, müssen der senkrechte und parallel polarisierte
+stark vom Polarisationszustand abhängig, daher müssen der senkrechte und parallel polarisierte
 Strahlungsteil separat betrachtet werden. 
 Für die senkrecht polarisierte Strahlung gilt
 \begin{equation}
@@ -57,15 +57,15 @@ und für die parallel polarisierte Strahlung gilt
     \vec{E_{r||}}(\alpha) = \vec{E_{e||}} \frac{n^2 \text{cos}(\alpha) - \sqrt{n^2 - \text{sin}^2(\alpha)}}{n^2 \text{cos}(\alpha) + \sqrt{n^2 - \text{sin}^2(\alpha)}}
     \label{eqn:parallel}
 \end{equation}
-analog. Dabei ist $n$ der Brechungswinkel und $\alpha$ der Winkel in dem die Strahlung auf die Gernzfläche trifft.
-$\vec{E_r}$ und $\vec{E_e}$ sin die Amplituden der elektrischen Felder für den reflektierten und einfallenden Teil der 
+analog. Dabei ist $n$ der Brechungsindex und $\alpha$ der Winkel in dem die Strahlung auf die Gernzfläche trifft.
+$\vec{E_r}$ und $\vec{E_e}$ sind die Amplituden der elektrischen Felder für den reflektierten und einfallenden Teil der 
 Strahlung. Der Ausdruck für $\vec{E_{r||}}(\alpha)$ lässt sich auch als 
 \begin{equation}
     \vec{E_{r||}}(\alpha) = \vec{E_{e||}}\frac{\text{tan}(\alpha - \beta)}{\text{tan}(\alpha + \beta)}
 \end{equation}
 schreiben, woraus folgt, dass $\vec{E_{r||}}(\alpha)$ null werden kann, wenn $\alpha + \beta = \qty{90}{\degree}$
-erfüllt ist. Es verschwindet somit für einen bestimmten Winkel $\alpha$, sodass der gesamte reflektierte Anteil
-und die gesamte Strahlung in das brechende Medium eindringt. Dieser Winkel ist der Brewster Winkel, welcher durch Relation
+erfüllt ist. $\vec{E_{r||}}(\alpha)$ verschwindet somit für einen bestimmten Winkel $\alpha$, sodass der gesamte reflektierte Anteil
+und die gesamte Strahlung in das brechende Medium eindringt. Dieser Winkel ist der Brewsterwinkel, welcher durch die Relation
 \begin{equation}
     \text{arctan}(n) =\alpha_B \label{eqn:brewster}
 \end{equation}
