@@ -19,16 +19,17 @@ Liegt eine Spannung an der unteren Platte an, wirkt die elektrische Kraft in Ric
 Die Reibungskraft wirkt entgegen der beiden Kräfte und gegen die Geschwindigkeit $\vec{v_{ab}}$.
 Es gilt die Kräftegleichung
 \begin{equation}
-    \frac{4 \pi}{3} r^3 (\rho_{Oel}-\rho_L)g - 6 \pi \eta_L v_{ab} = - q E.
+    \frac{4 \pi}{3} r^3 (\rho_{Oel}-\rho_L)g - 6 \pi \eta_L r v_{ab} = - q E.
     \label{eqn:vab}
 \end{equation}
 Liegt eine Spannung an der oberen Platte an, wirkt die elektrische Kraft entgegen der Gravitationskraft.
 Bei hinreichend hoher Feldstärke entsteht eine Aufwärtsbewegung, welche entgegen der Reibungskraft wirkt.
 Es gilt die Kräftegleichung
 \begin{equation}
-    \frac{4\pi}{3} r^3 (\rho_{Oel}-\rho_L) g + 6 \pi \eta_L v_{auf} = q E.
+    \frac{4\pi}{3} r^3 (\rho_{Oel}+\rho_L) g + 6 \pi \eta_L r v_{auf} = q E.
     \label{eqn:vauf}
 \end{equation}
+Durch die Auftriebskraft wird $m$ in der Gravitaionskraft korrigiert mit der reduzierten Dichte $\rho = \rho_{Oel}-\rho_L$.
 Die Ladung kann mit \autoref{eqn:vab} und \autoref{eqn:vauf} zu
 \begin{equation}
    q = 3 \pi \eta_L \sqrt{\frac{9}{4} \frac{\eta_L}{g} \frac{(v_{ab}-v{auf})}{(\rho_{Oel}-\rho_L)}} \frac{(v_{ab}+v{auf})}{E}
