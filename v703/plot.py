@@ -82,3 +82,8 @@ plt.ylabel(r'$Z $')
 plt.tight_layout()
 plt.savefig("build/plot2.pdf")
 
+T= 125
+T2= ufloat(78,36)
+abw= ((T-T2)/T2)*100
+print(f'Abweichung ={abw:.2f} ')
+
