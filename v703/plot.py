@@ -31,12 +31,12 @@ plt.savefig('build/plot1.pdf')
 
 print(f'a = {params[0]} +- {errors[0]}')
 print(f'b = {params[1]} +- {errors[1]}')
-print(f'Steigung in Prozent pro 100V: {((params[0] * 500 + params[1]) - (params[0] * 400 + params[1])) / 100}')
+print(f'Steigung in Prozent pro 100V:' )
 
 
-N1= /120
-N2= /120
-N12= /120
+N1= 87579/120
+N2= 126615/120
+N12= 199854/120
 
 n1= ufloat(N1,np.sqrt(N1))
 n2= ufloat(N2, np.sqrt(N2))
