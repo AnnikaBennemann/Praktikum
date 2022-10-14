@@ -1,4 +1,4 @@
-all: build/v204.pdf
+all: build/v48.pdf
 
 # hier Python-Skripte:
 build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
@@ -8,9 +8,9 @@ build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot.py
 
 # hier weitere Abhängigkeiten für build/vXXX.pdf deklarieren:
-build/v204.pdf: build/plot.pdf 
+build/v48.pdf: build/plot.pdf 
 
-build/v204.pdf: FORCE | build
+build/v48.pdf: FORCE | build
 	# to find header and bib files in the main directory
 	TEXINPUTS=..: \
 	BIBINPUTS=..: \
@@ -20,7 +20,7 @@ build/v204.pdf: FORCE | build
 	  --output-directory=build \
 	  --interaction=nonstopmode \
 	  --halt-on-error \
-	v204.tex
+	v48.tex
 
 build:
 	mkdir -p build
