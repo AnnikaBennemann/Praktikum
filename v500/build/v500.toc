@@ -1,0 +1,14 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Zielsetzung}{3}{section.1}%
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Grundsätzliches Prinzip des Photoeffekts}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Experimentelle Messung des Photoeffektes mit der Gegenfeldmethode}{4}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Durchführung}{5}{section.3}%
+\contentsline {section}{\numberline {4}Auswertung}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Bestimmung der Grenzfrequenz für verschiedenen Wellenlängen}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Bestimmung von $\frac {h}{e}$ und der Austrittsarbeit}{12}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Nähere Betrachtung des Photostroms vom gelben Licht}{13}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Diskussion}{14}{section.5}%
+\contentsline {section}{\numberline {6}Anhang}{15}{section.6}%
+\contentsline {section}{\nonumberline Literatur}{16}{section*.20}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

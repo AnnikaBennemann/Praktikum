@@ -1,0 +1,118 @@
+\section{Auswertung}
+\label{sec:Auswertung}
+
+Die Messungen werden nach \autoref{sec:Durchführung} durchgeführt und die Ergebnisse im Folgenden dargestellt und ausgewertet.
+Die Länge der Pendel beträgt beim ersten Durchgang $l=\qty{0.63}{\meter}$ und wird, nachdem alle drei Messreihen durchgeführt wurden, auf 
+$l=\qty{0.36}{\meter}$ verkürzt. Die Masse der Pendelkörper beträgt $m=\qty{1}{\kilo\gram}$. 
+Die Auswertung erfolgt parallel für beide Pendellängen.
+Als Konstante für den Ortsfaktor der Erdbeschleunigung wird in den Berechnungen $g =\qty{9.80665}{\meter\per\second\squared}$
+verwendet.
+
+\subsection{Gleichsinnige Schwingung}
+\label{subsec:aus_gleich}
+
+\begin{table}[H]
+  \centering
+  \caption{Messwerte der Schwingungsdauer bei gleichsinniger Schwingung.}
+  \label{tab:T+}
+  \sisetup{table-format=1.2}
+  \begin{tabular}{l S S}
+    \toprule
+     & {$T_+ \mathbin{/} \si{\second}$ bei $l=\qty{0.63}{\meter}$} & {$T_+ \mathbin{/} \si{\second}$ bei $l=\qty{0.36}{\meter}$}\\
+    \midrule
+      &1,50 & 1,26\\
+      &1,53 & 1,23\\
+      &1,55 & 1,26\\
+      &1,56 & 1,24\\
+      &1,50 & 1,24\\
+      &1,53 & 1,24\\
+      &1,56 & 1,24\\
+      &1,51 & 1,22\\
+      &1,50 & 1,24\\
+      &1,53 & 1,24\\
+    \midrule
+      Mittelwert $\overline{T_+}$& 1,53 & 1,24\\
+      Fehler $\Delta \overline{T_+}$& 0,01 & 0,00\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+In \autoref{tab:T+} sind die Messwerte der Schwingungsdauer bei gleichsinniger Schwingung dargestellt. Zusätzlich wird der Mittelwert und der zugehörige
+Fehler mithilfe von Python nach den Formeln in \autoref{sec:Fehlerrechnung} bestimmt.
+Aus den Messwerten lässt sich mithilfe von \autoref{eqn:omega+} $w_+$ berechnen zu 
+\begin{align*}
+  \omega_{+(0,63)}&=(4,11 \pm 0,02) \si{\per\second} & \text{und} && \omega_{+(0,36)}&=(5,06 \pm 0,02) \si{\per\second}.
+\end{align*}
+
+\subsection{Gegensinnige Schwingung}
+\label{subsec:aus_gegen}
+\begin{table}[H]
+  \centering
+  \caption{Messwerte der Schwingungsdauer bei gegensinniger Schwingung.}
+  \label{tab:T-}
+  \sisetup{table-format=1.2}
+  \begin{tabular}{l S S}
+    \toprule
+     & {$T_- \mathbin{/} \si{\second}$ bei $l=\qty{0.63}{\meter}$} & {$T_- \mathbin{/} \si{\second}$ bei $l=\qty{0.36}{\meter}$}\\
+    \midrule
+      &1,39 & 1,24\\
+      &1,41 & 1,22\\
+      &1,39 & 1,21\\
+      &1,40 & 1,21\\
+      &1,36 & 1,19\\
+      &1,32 & 1,20\\
+      &1,41 & 1,18\\
+      &1,38 & 1,22\\
+      &1,37 & 1,19\\
+      &1,44 & 1,18\\
+    \midrule
+      Mittelwert $\overline{T_-}$& 1,39 & 1,20\\
+      Fehler $\Delta \overline{T_-}$& 0,01 & 0,01\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+Die Messwerte der Messung der Schwingungsdauer bei gegensinniger Schwingung, sowie der Mittelwert und der zugehörige Fehler sind analog zu
+\autoref{subsec:aus_gleich} in \autoref{tab:T-} aufgetragen.
+Aus diesen Werten lässt sich mithilfe von \autoref{eqn:omega-} $w_-$ berechnen zu 
+\begin{align*}
+  \omega_{-(0,63)}&=(4,53 \pm 0,03) \si{\per\second} & \text{und} && \omega_{-(0,36)}&=(5,22 \pm 0,02) \si{\per\second}.
+\end{align*}
+
+$K$ kann nun mit \autoref{eqn:K} und den oben bestimmten Werten für $T_+$ und $T_-$ berechnet werden zu
+\begin{align*}
+  K_{(0,63)}&=(0,10 \pm 0,01) & \text{und} && K_{(0,36)}&=(0,03 \pm 0,01).
+\end{align*} 
+
+\subsection{Gekoppelte Schwingung}
+\label{subsec:aus_gekoppelt}
+
+\begin{table}[H]
+  \centering
+  \caption{Messwerte der Schwingungsdauer bei gekoppelter Schwingung.}
+  \label{tab:Ts}
+  \sisetup{table-format=2.2}
+  \begin{tabular}{l S S}
+    \toprule
+     & {$T_s \mathbin{/} \si{\second}$ bei $l=\qty{0.63}{\meter}$} & {$T_s \mathbin{/} \si{\second}$ bei $l=\qty{0.36}{\meter}$}\\
+    \midrule
+      &15,35& 25,29\\
+      &15,29& 25,27\\
+      &15,19& 24,95\\
+      &15,39& 25,69\\
+      &15,24& 25,24\\
+    \midrule
+      Mittelwert $\overline{T_-}$& 15,29 & 25,29\\
+      Fehler $\Delta \overline{T_-}$& 0,03 & 0,11\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+Aus den Messwerten der Schwebungsdauer bei der gekoppelten Schwingung (siehe \autoref{tab:Ts}) lässt sich mithilfe
+von \autoref{eqn:omegaS} $w_s$ berechnen zu 
+\begin{align*}
+  \omega_{s(0,63)}&=(0,42 \pm 0,04) \si{\per\second} & \text{und} && \omega_{s(0,36)}&=(0,15 \pm 0,03) \si{\per\second}.
+\end{align*}
+
+
+
+
+
+

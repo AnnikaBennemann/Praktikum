@@ -1,0 +1,33 @@
+\section{Fehlerrechnung}
+\label{sec:Fehlerrechnung}
+
+Der Mittelwert wird durch die Formel
+\begin{align*}
+    \bar{x}=\frac{1}{n} \sum_{i=1}^n x_i \label{eqn:Mittelwert}
+\end{align*}
+berechnet.
+
+Die Standardabweichung ergibt sich durch
+\begin{align*}
+    \sigma_x=\sqrt{\frac{1}{n-1}\sum_{j=1}^n (x_j-\bar{x_i})^2},
+\end{align*}
+somit lautet der Fehler des Mittelwerts
+\begin{align*}
+    \Delta \bar{x}= \frac{\sigma_x}{n} = \frac{\sqrt{\frac{1}{n-1}\sum_{j=1}^n (x_j-\bar{x_i})^2}}{\sqrt{n}}.
+\end{align*}
+
+Wird mit fehlerbehafteten Größen weiter gerechnet, muss der Fehler des Ergebnisses mit der Fehlerfortpflanzung nach Gauß
+\begin{equation*}
+    \Delta f=\sqrt{\sum_{j=1}^n \left(\frac{\partial f}{\partial x_j}\Delta x_j \right)^{2} }\label{eqn:Gauß}
+\end{equation*}
+bestimmt werden.
+
+Abweichungen von den Theoriewerten werden mit der Formel
+\begin{align*}
+  a=\frac{|a_\mathrm{gemessen}-a_\mathrm{theorie}|}{a_\mathrm{theorie}} \label{eqn:abweich}
+\end{align*}
+berechnet.
+
+Die Berechnungen der Mittelwerte, Standardabweichungen, sowie der weiteren Fehler wird im folgenden mit Hilfe von Python und 
+den Pythonmodulen Scipy \cite{scipy}, Uncertainties \cite{uncertainties} und Numpy \cite{numpy}
+durchgeführt.

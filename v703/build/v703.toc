@@ -1,0 +1,18 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Zielsetzung}{3}{section.1}%
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Aufbau und Funktionsweise eines Geiger-Müller-Zählrohrs}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Einfluss der positiv geladenen Ionen}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Charakteristik des Zählrohrs}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Ansprechvermögen des Zählrohrs}{6}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Durchführung}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Charakteristik des Zählrohrs}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Totzeit des Zählrohrs}{7}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Auswertung}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Charakteristik des Zählrohrs}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Totzeit des Zählrohrs}{9}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Freigesetzte Ladungen}{11}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Diskussion}{13}{section.5}%
+\contentsline {section}{\numberline {6}Anhang}{16}{section.6}%
+\contentsline {section}{\nonumberline Literatur}{17}{section*.14}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

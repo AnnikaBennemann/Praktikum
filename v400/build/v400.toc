@@ -1,0 +1,24 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Zielsetzung}{3}{section.1}%
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Reflexion}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Brechung}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Reflexion und Transmission}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Beugung}{5}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Vorbereitung}{6}{section.3}%
+\contentsline {section}{\numberline {4}Aufbau und Durchführung}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Reflexionsgesetz}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Brechungsgesetz}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Planparallele Platte}{8}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Prisma}{8}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Beugung am Gitter}{8}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Auswertung}{8}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Reflexionsgesetz}{8}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Brechungsgesetz}{9}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Planparallele Platte}{11}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Prisma}{12}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Beugung am Gitter}{13}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Diskussion}{14}{section.6}%
+\contentsline {section}{\numberline {7}Anhang}{15}{section.7}%
+\contentsline {section}{\nonumberline Literatur}{16}{section*.17}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

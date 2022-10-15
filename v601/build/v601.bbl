@@ -1,0 +1,204 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{matplotlib}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a2f53dcc6bb05a06b8ad94176f80fe26}{%
+           family={Hunter},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \strng{fullhash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \strng{bibnamehash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \strng{authorbibnamehash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \strng{authornamehash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \strng{authorfullhash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computing in Science \& Engineering}
+      \field{number}{3}
+      \field{title}{{Matplotlib}: A {2D} Graphics Environment}
+      \field{version}{1.4.3}
+      \field{volume}{9}
+      \field{year}{2007}
+      \field{pages}{90\bibrangedash 95}
+      \range{pages}{6}
+      \verb{urlraw}
+      \verb http://matplotlib.org/
+      \endverb
+      \verb{url}
+      \verb http://matplotlib.org/
+      \endverb
+    \endentry
+    \entry{scipy}{software}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{hash=4b3d26f886661aa723985bcfd835ba18}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=d500f4849030f34359cdb3e1513acf83}{%
+           family={Oliphant},
+           familyi={O\bibinitperiod},
+           given={Travis\bibnamedelima E.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=3d6efaaa3d9682e20787eb06ff70a3d7}{%
+           family={Peterson},
+           familyi={P\bibinitperiod},
+           given={Pearu},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c2d4b138ebed3e173fcb667b68477029}
+      \strng{fullhash}{c2d4b138ebed3e173fcb667b68477029}
+      \strng{bibnamehash}{c2d4b138ebed3e173fcb667b68477029}
+      \strng{authorbibnamehash}{c2d4b138ebed3e173fcb667b68477029}
+      \strng{authornamehash}{c2d4b138ebed3e173fcb667b68477029}
+      \strng{authorfullhash}{c2d4b138ebed3e173fcb667b68477029}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{SciPy}: Open source scientific tools for {Python}}
+      \field{version}{0.16.0}
+      \verb{urlraw}
+      \verb http://www.scipy.org/
+      \endverb
+      \verb{url}
+      \verb http://www.scipy.org/
+      \endverb
+    \endentry
+    \entry{numpy}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d500f4849030f34359cdb3e1513acf83}{%
+           family={Oliphant},
+           familyi={O\bibinitperiod},
+           given={Travis\bibnamedelima E.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{d500f4849030f34359cdb3e1513acf83}
+      \strng{fullhash}{d500f4849030f34359cdb3e1513acf83}
+      \strng{bibnamehash}{d500f4849030f34359cdb3e1513acf83}
+      \strng{authorbibnamehash}{d500f4849030f34359cdb3e1513acf83}
+      \strng{authornamehash}{d500f4849030f34359cdb3e1513acf83}
+      \strng{authorfullhash}{d500f4849030f34359cdb3e1513acf83}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computing in Science \& Engineering}
+      \field{number}{3}
+      \field{title}{{NumPy}: {Python} for Scientific Computing}
+      \field{version}{1.9.2}
+      \field{volume}{9}
+      \field{year}{2007}
+      \field{pages}{10\bibrangedash 20}
+      \range{pages}{11}
+      \verb{urlraw}
+      \verb http://www.numpy.org/
+      \endverb
+      \verb{url}
+      \verb http://www.numpy.org/
+      \endverb
+    \endentry
+    \entry{Anregungsenergie}{online}{}
+      \name{author}{1}{}{%
+        {{hash=59795af575d289d836c004e9261b7335}{%
+           family={Quadt},
+           familyi={Q\bibinitperiod},
+           given={Arnulf},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{59795af575d289d836c004e9261b7335}
+      \strng{fullhash}{59795af575d289d836c004e9261b7335}
+      \strng{bibnamehash}{59795af575d289d836c004e9261b7335}
+      \strng{authorbibnamehash}{59795af575d289d836c004e9261b7335}
+      \strng{authornamehash}{59795af575d289d836c004e9261b7335}
+      \strng{authorfullhash}{59795af575d289d836c004e9261b7335}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Der Franck-Hertz-Versuch, Universität Göttingen}
+      \field{urlday}{19}
+      \field{urlmonth}{5}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://lp.uni-goettingen.de/get/text/1612
+      \endverb
+      \verb{url}
+      \verb https://lp.uni-goettingen.de/get/text/1612
+      \endverb
+    \endentry
+    \entry{Rohatgi2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e1ab8eab8a1fb8afa04ad3b7fb9564eb}{%
+           family={Rohatgi},
+           familyi={R\bibinitperiod},
+           given={Ankit},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e1ab8eab8a1fb8afa04ad3b7fb9564eb}
+      \strng{fullhash}{e1ab8eab8a1fb8afa04ad3b7fb9564eb}
+      \strng{bibnamehash}{e1ab8eab8a1fb8afa04ad3b7fb9564eb}
+      \strng{authorbibnamehash}{e1ab8eab8a1fb8afa04ad3b7fb9564eb}
+      \strng{authornamehash}{e1ab8eab8a1fb8afa04ad3b7fb9564eb}
+      \strng{authorfullhash}{e1ab8eab8a1fb8afa04ad3b7fb9564eb}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Webplotdigitizer: Version 4.5}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://automeris.io/WebPlotDigitizer
+      \endverb
+      \verb{url}
+      \verb https://automeris.io/WebPlotDigitizer
+      \endverb
+    \endentry
+    \entry{V601}{manual}{}
+      \list{organization}{1}{%
+        {TU Dortmund, Fakultät Physik}%
+      }
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labeltitlesource}{title}
+      \field{title}{Versuchsanleitung zu Versuch Nr. 601 Der Franck-Hertz-Versuch}
+      \field{year}{2022}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

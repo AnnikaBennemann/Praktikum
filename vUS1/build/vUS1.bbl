@@ -1,0 +1,108 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Schall}{online}{}
+      \name{author}{2}{}{%
+        {{hash=3edacc159d215e03240ef2b4614b5e10}{%
+           family={Database},
+           familyi={D\bibinitperiod},
+           given={NDT},
+           giveni={N\bibinitperiod}}}%
+        {{hash=bbef9ef82335fa06e2fc63cc6cc18cb4}{%
+           family={Nondestructive\bibnamedelima Testing},
+           familyi={N\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Journal},
+           giveni={J\bibinitperiod},
+           prefix={of},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{19ccf17ce4e2fe3bd22ccc9bb8b4e078}
+      \strng{fullhash}{19ccf17ce4e2fe3bd22ccc9bb8b4e078}
+      \strng{bibnamehash}{19ccf17ce4e2fe3bd22ccc9bb8b4e078}
+      \strng{authorbibnamehash}{19ccf17ce4e2fe3bd22ccc9bb8b4e078}
+      \strng{authornamehash}{19ccf17ce4e2fe3bd22ccc9bb8b4e078}
+      \strng{authorfullhash}{19ccf17ce4e2fe3bd22ccc9bb8b4e078}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Plastic Material's acoustic properties}
+      \field{urlday}{8}
+      \field{urlmonth}{5}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://www.ndt.net/links/proper.htm#references
+      \endverb
+      \verb{url}
+      \verb http://www.ndt.net/links/proper.htm#references
+      \endverb
+    \endentry
+    \entry{matplotlib}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a2f53dcc6bb05a06b8ad94176f80fe26}{%
+           family={Hunter},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \strng{fullhash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \strng{bibnamehash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \strng{authorbibnamehash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \strng{authornamehash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \strng{authorfullhash}{a2f53dcc6bb05a06b8ad94176f80fe26}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computing in Science \& Engineering}
+      \field{number}{3}
+      \field{title}{{Matplotlib}: A {2D} Graphics Environment}
+      \field{version}{1.4.3}
+      \field{volume}{9}
+      \field{year}{2007}
+      \field{pages}{90\bibrangedash 95}
+      \range{pages}{6}
+      \verb{urlraw}
+      \verb http://matplotlib.org/
+      \endverb
+      \verb{url}
+      \verb http://matplotlib.org/
+      \endverb
+    \endentry
+    \entry{VUS1}{manual}{}
+      \list{organization}{1}{%
+        {TU Dortmund, Fakultät Physik}%
+      }
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labeltitlesource}{title}
+      \field{title}{Versuchsanleitung zu Versuch Nr. US1 Grundlagen der Ultraschalltechnik}
+      \field{year}{2022}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
