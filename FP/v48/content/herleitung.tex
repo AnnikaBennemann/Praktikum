@@ -1,0 +1,139 @@
+\subsection{Polarisationsansatz}
+
+Die Dipole sind in ihrem angeregtem Zustand alle in dieselbe Richtung ausgerichtet.
+Dies bedeutet auch, dass durch die Relaxation im Mittel alle positiven Ladungen in 
+die gleiche Richtung verschoben werden und somit einen Strom erzeugen.
+Der Strom wird Depolarisationsstrom genannt und ist gleich der Änderungsrate der 
+gesamten Polarisation $P(t)$:
+\begin{equation}
+    I(T) = - \frac{\text{d}P(t)}{\text{d}t}.
+\end{equation}
+Die Änderungsrate lässt sich auch mittels der Relaxationszeit darstellen und ergibt somit 
+folgende fracferentialgleichung:
+\begin{equation}
+    \frac{\text{d} P(t)}{\text{d} t} = \frac{P(t)}{\tau(T)}.
+    \label{eqn:fracf}
+\end{equation}
+Das Lösen der fracferentialgleichung mittels Seperation der Variabeln ergibt dann:
+\begin{equation}
+    P(t) = P_0 \text{exp}\left(- \frac{t}{\tau(T)} \right).
+\end{equation}
+Ableiten dieser Lösung ergibt wieder die Änderung der Polarisation und somit den 
+Depolarisationsstrom.
+\begin{equation}
+    I(T) = \frac{P_0}{\tau(T)} \text{exp}\left(-\frac{t}{\tau(T)}\right)
+\end{equation}
+Hier gibt $t$ die Zeit an, die benötigt wurde um $T$ zu erreichen.
+Sie lässt sich auch als Integral schreiben:
+\begin{equation}
+    I(T) = \frac{P_0}{\tau(T)} \text{exp}\left(-\int_0^t\frac{\text{d}t}{\tau(T)}\right) \quad.
+    \end{equation}
+Mittels einer konstanten Heizrate
+\begin{equation}
+    b := \frac{T}{t} = const
+\end{equation}
+lässt sich der Depolarisationsstrom nun als 
+\begin{equation}
+    I(T) = \frac{P_0}{\tau(T)} \text{exp}\left(\frac{-1}{b\tau_0}\int_{T_0}^T\frac{\text{d}T'}{\tau(T')}\right)
+\end{equation}
+ausdrücken.
+
+\subsection{Stromdichtenansatz}
+
+Ein weiterer Ansatz für den Depolarisationsstrom ergibt, sich mittels der Debeye-Polarisation
+\begin{equation}
+    \bar{P}(T) = \frac{N}{N_V}\frac{p^2E}{3k_\text{B}T} \, ,
+\end{equation}	
+mit dem Dipolmoment $p$, der elektrischen Feldstärke $E$, der Temperatur $T$ und der Dipoldichte $N_V$.
+Die Änderung der Anzahl der Dipole lässt sich auch hier wieder über die Relaxationszeit ausdrücken:
+\begin{equation}
+    \frac{N(T)}{t} =- \frac{N}{\tau(T)}.
+\end{equation}
+Analog zum vorherigen Kapitel ergibt sich die Lösung der fracferentialgleichung zu:
+\begin{equation}
+    N = N_\text{P} \text{exp}\left( \frac{-1}{b}\int_{T_0}^T \frac{\text{d}T'}{\tau(T')}\right) \quad .
+\end{equation}
+Weiterhin gilt
+\begin{align}
+    I(T) = \bar{P}(T)\frac{N}{t}& &\text{und} & & I(T) = -\bar{P}(T) \frac{N}{\tau(T)}
+\end{align}
+Zusammensetzten aller dieser Terme ergibt dann einen Ausdruck für den Depolarisationsstrom
+\begin{equation}
+    I(T) =\frac{p^2E}{3k_\text{B}T}\frac{N_\text{P}}{\tau_0}\text{exp}\left(\frac{-1}{b\tau_0}\int_{T_0}^T\frac{\text{d}T'}{\tau(T')}\right)\text{exp}\left(-\frac{W}{k_\text{B}T}\right).
+    \label{eqn:long}
+\end{equation}		
+
+\subsection{Berechnung der Aktivierungsenergie W}
+
+\subsubsection{Bestimmung mit Hilfe des Maximums}
+
+        Aufgrund der endlichen Anzahl an Dipolen entsteht trotz konstanter Heizrate, in der Theorie und im Experiment, bei einer gewissen Temperatur $T_\text{max}$ ein Maximum des Depolarisationsstroms.
+        Dies kann dazu genutzt werden um charakteristische Eigenschaften des Kristalles zu bestimmen.
+        Wird angenommen, dass die Aktivierungsenergie $W$ groß gegenüber der Energie $k_\text{B}T$ und der Temperaturfracferenz $T-T_0$ ist, so wird das Integral in Gleichung \ref{eqn:long} zu
+        \begin{equation}
+            \int_{T_0}^T\frac{\text{d}T'}{\tau(T')} \approx 0.
+        \end{equation}
+        Somit ergibt sich dich der Strom dann zu
+        \begin{equation}
+            I(T) = \frac{P^2E}{3k_\text{B}T}\frac{N_\text{P}}{\tau_0} \text{exp}\left(-\frac{W}{k_\text{B}T}\right).
+        \end{equation}	
+        Mittes des Logarithmus entsteht hieraus eine Geradengleichung der Form
+        \begin{equation}
+            \text{ln}(I(T)) = \left(\frac{P^2EN_\text{P}}{3k_\text{B}T\tau_0}\right) - \frac{W}{k_\text{B}} \frac{1}{T} \quad .
+        \end{equation}
+        Die Steigung $m$ dieser Geraden ist also $\frac{W}{k_\text{B}}$ oder
+        \begin{equation}
+            W = m \cdot k_\text{B}.
+            \label{eqn:W}
+        \end{equation}
+        Dieses analytische Ergebnis gilt am besten für den Bereich vor dem Maximum und wird daher in diesem Bereich ausgewertet.			
+
+\subsubsection{Verwendung des gesamten Kurvenverlaufs}
+
+        Ein weiterer Ausdruck entsteht wenn der Verlauf der Gesamtpolarisation $P(T)$ betrachtet wird:
+        \begin{equation}
+            \frac{P}{t} = \frac{P(t)}{\tau(T(t))}.
+        \end{equation}
+        Umstellen und mit $\frac{T}{T}$ erweitern liefert:
+        \begin{equation}
+            \tau(T) = P(T) \cdot \frac{\text{d}T}{\frac{P}{t}\text{d}T}
+        \end{equation}
+        Auch hier ist die Änderung der Temperatur gleich der Heizrate $b$:
+        \begin{equation}
+            \tau(T) = \frac{P(t)}{b}\frac{T}{P}.
+        \end{equation}
+        Durch Erweitern mit $\frac{t}{t}$ ergibt sich
+        \begin{equation}
+            \frac{P(t)}{b} \frac{\frac{T}{t}}{\frac{P}{t}}
+        \end{equation}
+        Die Änderung Polarisation entspricht dem Strom und mit $P = \int \text{d}P$ ist dann
+        \begin{equation}
+            \tau(T) = \frac{\int \frac{P}{t}\text{d}T}{I(T)b} \quad .
+        \end{equation}
+        Hier kann nun erneut der Depolarisationsstrom identifiziert und eingesetzt werden:
+        \begin{equation}
+            \tau(T) = \frac{\int_T^\infty I(T')\text{d}T'}{I(T)b}
+        \end{equation}
+        und somit ergibt sich für die Aktivierungsenergie $W$:
+        \begin{equation}
+            W = k_\text{B}T\;\text{ln}\left( \frac{\int_T^\infty I(T')\text{d}T'}{I(T)b\tau_0}\right)
+            \label{eqn:int}
+        \end{equation}
+        Die obere Grenze verschwindet in der Praxis, da bei hohen Temperaturen keine Dipole mehr vorhanden sind die noch relaxieren können.
+
+\subsection{Berechnung der charakteristischen Relaxationszeit}
+        
+An dem Maximum der Stomstärke, bei der Temperatur $T_\text{max}$, ist dessen Ableitung verschwindend. Dies lässt sich nutzen um die charakteristische Relaxationszeit zu bestimmen.
+Dazu wird Gleichung \ref{eqn:long} nach der Temperatur abgeleitet:
+\begin{equation}
+    \frac{I(T)}{T} \approx \frac{1}{\tau_0} \left( - \frac{1}{b\tau_0}
+    \int_{T_0}^T \text{exp}\left(\frac{W}{k_\text{B}T}\right)\text{d}T' - 
+    \frac{W}{k_\text{B}T}\right) \cdot \left( \frac{W}{k_\text{B}T^2} - 
+    \frac{1}{b\tau_0} 
+    \text{exp}\left(-\frac{W}{k_\text{B}T}\right)\right).
+\end{equation}
+Dies lässt sich nun am Maximum nach der charakteristischen Relaxationszeit umstellen:
+\begin{equation}
+    \tau_0 = \tau(T_\text{max})\text{exp}\left(- \frac{W}{k_\text{B}T_\text{max}}\right) = \frac{k_\text{B}T^2_\text{max}}{Wb}\text{exp}\left(-\frac{W}{k_\text{B}T_\text{max}}\right)
+    \label{eqn:taumaxsource}
+\end{equation}
