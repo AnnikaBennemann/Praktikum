@@ -6,5 +6,46 @@ Im Versuch wird daher die Aktivierungsenergie $W$ und die charakeristische Relax
 
 \section{Theorie}
 \label{sec:Theorie}
+ 
+Im Folgendem werden zunächst die Ionenkristalle erklärt und die enthaltenden Dipole. Anschließend wird der 
+Dipolarisationsstrom mit zwei verschiedenen Ansätzen hergeleitet.
 
+\subsection{Kristallstruktur und Dipole}
+\label{subsec:KriDi}
+Ionenkristalle sind Festkörper aus Ionenbindungen, wobei eine Wanderung von Elektktronen nicht vorhanden
+ist. Bei höheren Temperaturen kommt es jedoch zu Gitterfehlern und somit Ionenwanderung.\\
+In diesem Versuch können zwei Proben verwendet werden. Die eine Probe ist Kaliumbromid (KBr), was aus einem kubischen Gitter
+besteht mit Kaliumkationen und Bromidanionen. Die andere Probe ist Cäsiumiodid (CsJ), was aus einem kubischen
+Gitter mit Cäsiumkationen und Jodanionen besteht. Beide Proben wurden mit Strotonium (Sr) dotiert, sodass sich
+Leerstellen bildet, wie in \autoref{fig:KrisDi.png} dargestellt.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Abbildungen/KrisDi.png}
+    \caption {Schematische 2D-Darstellung eines strontiumdotierten Cäsiumiodid}
+    \label{fig:KrisDi.png}
+\end{figure}
+Dipole sind physikalische Anordnungen zweier zueinander entgegengesetzter Ladungen, wobei sich die beiden Ladungen
+kompensieren und der Dipol ingesamt neutral geladen ist.
+Bei einem dotierten Ionenkristall bilden ein doppelt geladenes Ion und eine Leerstelle ein Dipol und geben so die 
+Richtung des Dipolmoments an.\\
+Bei Raumtemperatur ist das Gesamtdipolmoment neutral, weil die verschiedenen Dipole, die durch die Dotierung 
+entstehen, sich ausgleichen.\\
+Dipole besitzen eine bestimmte Aktivierungsenergie $W$. Das ist eine materialabhängige Energiedifferenz, die 
+überwunden werden muss, damit Leerstellendiffusion ensteht.
+Außerdem besitzen Dipole eine Relaxationszeit
+\begin{equation}
+    \tau(T) = \tau_0 exp(\frac{W}{k T}),
+    \label{eqn:Relaxationszeit}
+\end{equation}
+welche ein Maß dafür ist, wie schnell sich wieder ein elektrisches Gleichgewicht einstellt.\\
+\\ 
+Als Vorgriff auf die Durchführung (\ref{sec:Durchführung}) sei hier erwähnt, dass die Dipole in der Probe
+mit einem E-Feld vorher ausgrichtet und anschließend in diesem Zustand eingefroren werden. Anschließend
+wird die Probe wieder erwärmt und ein Strom gemessen. Dieser enstehende Strom ensteht aus der Reorientierung
+der Dipole, die wieder in ihre energetisch günstigere Ausgangslage relaxieren. Dadurch dass es keine idealen Ionenkristalle
+gibt, ist die Dipolrelaxation nicht der einzige Strom, der gemessen wird. Aufgrund von Gitterfehlern kommt es zu weiteren
+Ladungsträgerdiffusionen, der Untergrund. \\
+Der Depolarisationsstrom kann mit den folgenden zwei Ansätzen hergeleitet werden.
 
+\subsection{Herleitung des Depolarisationsstroms über die Stromdichte}
+\label{Subsec:HerStromdichte}
