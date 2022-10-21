@@ -7,31 +7,33 @@ Im Versuch wird daher die Aktivierungsenergie $W$ und die charakeristische Relax
 \section{Theorie}
 \label{sec:Theorie}
  
-Im Folgenden werden zunächst die Ionenkristalle und die enthaltenden Dipole erklärt. Anschließend wird der 
-Dipolarisationsstrom mit zwei verschiedenen Ansätzen hergeleitet.
+Im Folgenden werden zunächst die Ionenkristalle und die in ihnen enthaltenen Dipole erklärt. Anschließend wird der 
+Depolarisationsstrom mit zwei verschiedenen Ansätzen hergeleitet.
 
 \subsection{Kristallstruktur und Dipole}
 \label{subsec:KriDi}
-Ionenkristalle sind Festkörper aus Ionenbindungen.
-Bei höheren Temperaturen kommt es Ionenwanderung, aufgrund der Energiezufuhr.\\
+Ionenkristalle sind Festkörper aus entgegengesetzt geladenen Ionen zweier Elemente, welche Ionenbindungen eingehen.
+Bei höheren Temperaturen kommt es aufgrund der Energiezufuhr zu Ionenwanderungen.\\
 In diesem Versuch können zwei Proben verwendet werden. Die eine Probe ist Kaliumbromid (KBr), was aus einem kubischen Gitter
-besteht mit Kaliumkationen und Bromidanionen. Die andere Probe ist Cäsiumiodid (CsJ), was aus einem kubischen
-Gitter mit Cäsiumkationen und Jodanionen besteht. Beide Proben wurden mit Strotonium (Sr) dotiert, sodass sich
-Leerstellen bildet, wie in \autoref{fig:KrisDi.png} dargestellt.
+mit Kaliumkationen und Bromidanionen besteht. Die andere Probe ist Cäsiumiodid (CsJ), was aus einem kubischen
+Gitter mit Cäsiumkationen und Jodanionen besteht. Beide Proben wurden mit zweifach positiv geladenen Strontiumionen (Sr) dotiert, sodass sich
+Leerstellen bilden um die Ladungsneutralität nach außen wiederherzustellen, wie in \autoref{fig:KrisDi.png} dargestellt.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{Abbildungen/KrisDi.png}
-    \caption {Schematische 2D-Darstellung eines strontiumdotierten Cäsiumiodid}
+    \caption {Schematische 2D-Darstellung eines strontiumdotierten Cäsiumiodidkristalls.}
     \label{fig:KrisDi.png}
 \end{figure}
 Dipole sind physikalische Anordnungen zweier zueinander entgegengesetzter Ladungen, wobei sich die beiden Ladungen
 kompensieren und der Dipol ingesamt neutral geladen ist.
-Bei einem dotierten Ionenkristall bilden ein doppelt geladenes Ion und eine Leerstelle ein Dipol und geben so die 
+Bei einem mit Strontium dotierten Ionenkristall bilden ein doppelt geladenes Ion und eine Leerstelle einen Dipol und geben so die 
 Richtung des Dipolmoments an.\\
-Bei Raumtemperatur ist das Gesamtdipolmoment neutral, weil die verschiedenen Dipole, die durch die Dotierung 
-entstehen, sich ausgleichen.\\
+Bei Raumtemperatur ist das Gesamtdipolmoment null, weil die verschiedenen Dipolmomente, die durch die Dotierung 
+entstehen, statistisch verteilt sind und sich somit ausgleichen.\\
 Dipole besitzen eine bestimmte Aktivierungsenergie $W$. Das ist eine materialabhängige Energiedifferenz, die 
-überwunden werden muss, damit Leerstellendiffusion ensteht.
+überwunden werden muss, damit Leerstellendiffusion erfolgen kann, was unterhalb von $\qty{500}{\celsius}$ die einzige Möglichkeit
+einer Richtungsänderung für den Dipol darstellt.
+Aufgrund der Gitterlinien sind allerdings nur diskrete Richtungen möglich.
 Außerdem besitzen Dipole eine Relaxationszeit
 \begin{equation}
     \tau(T) = \tau_0 exp(\frac{W}{k_\text{B} T}),
@@ -40,20 +42,16 @@ Außerdem besitzen Dipole eine Relaxationszeit
 welche ein Maß dafür ist, wie schnell sich wieder ein elektrisches Gleichgewicht einstellt.\\
 \\ 
 Als Vorgriff auf die Durchführung (\ref{sec:Durchführung}) sei hier erwähnt, dass die Dipole in der Probe
-mit einem E-Feld vorher ausgrichtet und anschließend in diesem Zustand eingefroren werden. Anschließend
+mit einem E-Feld ausgrichtet und anschließend in diesem Zustand eingefroren werden. Anschließend
 wird die Probe wieder erwärmt und ein Strom gemessen. Dieser enstehende Strom ensteht aus der Reorientierung
 der Dipole, die wieder in ihre energetisch günstigere Ausgangslage relaxieren. Dadurch dass es keine idealen Ionenkristalle
 gibt, ist die Dipolrelaxation nicht der einzige Strom, der gemessen wird. Aufgrund von Gitterfehlern kommt es zu weiteren
-Ladungsträgerdiffusionen, der Untergrund. \\
+Ladungsträgerdiffusionen, welche im folgenden Untergrund genannt werden. \\
 Der Depolarisationsstrom kann mithilfe der folgenden zwei Ansätzen hergeleitet werden.
-
-\subsection{Herleitung des Depolarisationsstroms über die Stromdichte}
-\label{Subsec:HerStromdichte}
-
 
 
 \subsection{Polarisationsansatz}
-\label{subsec:polarisation}
+\label{subsec:Polarisation}
 
 Da die Dipole sich bei genügend hoher Temperatur wieder statistisch ausrichten und dies mit Ladungsträgerdiffusion verbunden ist,
 entsteht ein elektrisch messbarer Strom.
@@ -87,6 +85,7 @@ lässt sich der Depolarisationsstrom nun als
 ausdrücken, da $T$ eine lineare Funktion in Abhängigkeit von $t$ ist.
 
 \subsection{Stromdichtenansatz}
+\label{subsec:Stromdichte}
 
 Die Zeit in der das elektrische Feld eingeschaltet ist muss groß gegen die Relaxationszeit $\tau(T)$ sein, 
 damit sich ein Bruchteil $y(T)$ der Dipole in Feldrichtung einstellt.
@@ -103,7 +102,7 @@ relaxierenden Dipole $\frac{\text{d}N}{\text{d}t}$:
     \label{eqn:stromdichte}
 \end{align}
 
-Analog zu \autoref{subsec:polarisation} lässt sich auch hier eine Differentialgleichung aufstellen und lösen.
+Analog zu \autoref{subsec:Polarisation} lässt sich auch hier eine Differentialgleichung aufstellen und lösen.
 Die Änderung der Dipole entspricht
 \begin{align}
     \frac{\text{d} N}{\text{d} t} = -\frac{N}{\tau(T)}
@@ -131,6 +130,7 @@ Somit ergibt sich der Strom zu
 
 
 \subsection{Berechnung der Aktivierungsenergie W}
+\label{subsec:Aktivierungsenergie}
 
 \subsubsection{Bestimmung mit Hilfe der Anlaufkurve des Maximums}
 
