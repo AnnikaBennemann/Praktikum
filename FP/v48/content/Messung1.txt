@@ -1,0 +1,1 @@
+# Zeit t        Temperatur t    Strom I
