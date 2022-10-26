@@ -89,7 +89,7 @@ plt.savefig('build/plot1.pdf')
 #Untergrund abziehen
 plt.figure(2)
 Iohne=If-fit(Tf,*params)
-print('I ohne Untergrund=',Iohne)
+#print('I ohne Untergrund=',Iohne)
 plt.plot(Tf, Iohne,'r+', label='Messdaten ohne Untergrund')
 plt.plot(Tf[5:30], Iohne[5:30],'b+', label='Messdaten für Integral')
 plt.plot(Tf[5:22], Iohne[5:22],'k+', label='Messdaten für Anlaufkurve')
@@ -104,7 +104,7 @@ plt.savefig('build/plot2.pdf')
 
 
 
-##########################Messung2#############
+##########################Messung2  #########################################################################################################
 t2, T2, I2= np.genfromtxt('content/Messung2.txt', unpack=True)
 ta2, Ta2, Ia2= np.genfromtxt('content/Messung2abzug.txt', unpack=True)
 tk2, Tk2, Ik2 =np.genfromtxt('content/Messung2Korrektur.txt', unpack=True)
@@ -168,7 +168,7 @@ plt.savefig('build/plot3.pdf')
 #Untergrund abziehen
 plt.figure(4)
 Iohne2=If2-fit(Tf2,*params)
-print('I ohne Untergrund=',Iohne2)
+#print('I ohne Untergrund=',Iohne2)
 plt.plot(Tf2, Iohne2,'r+', label='Messdaten ohne Untergrund')
 plt.plot(Tf2[10:43], Iohne2[10:43],'b+', label='Messdaten für Integral')
 plt.plot(Tf2[10:29], Iohne2[10:29],'k+', label='Messdaten für Anlaufkurve')
@@ -178,3 +178,174 @@ plt.ylabel(r'$I$ in $A \cdot 10^{-11}$')
 plt.legend(loc="best")
 plt.tight_layout() 
 plt.savefig('build/plot4.pdf')
+
+
+
+#####Aktiviungsarbeit aus Anlaufkurve#########################################################################################################
+plt.figure(5)
+#u = np.linspace(0.0039, 0.0045)
+TAnlauf=Tf[5:22]
+IAnlauf=np.log(Iohne[5:22])
+plt.plot(1/TAnlauf, IAnlauf,'r+', label='Messdaten')
+
+
+def g(x ,c, d):
+    return -c*x+d
+
+params, cov= curve_fit(g, 1/TAnlauf,  IAnlauf)
+errors = np.sqrt(np.diag(cov))
+print('c =', params[0], '±', errors[0])
+print('d =', params[1], '±', errors[1])
+
+#plt.plot(u, g(u,*params),'b-', label='Regression')
+plt.plot(1/TAnlauf, g(1/TAnlauf,*params),'b-', label='Regression')
+plt.grid()
+plt.xlabel(r'$1/T$ in 1/K')
+plt.ylabel(r'ln$(I)$ in ln($A\cdot 10^{-11}$)')
+plt.legend(loc="best")
+plt.tight_layout()
+plt.savefig('build/plot5.pdf')
+
+
+W1A=params[0]*const.k/const.e #Berechnung der Aktivierungsenergie W=c*k und umrechnen in eV
+print('Aktivierungsarbeit über Anlauf (eV)=', W1A)
+
+
+#####Polarisationsansatz/ Integral
+Tint=Tf[5:30] #Für Integral verwendete Werte
+Iint=Iohne[5:30] #Für Integral verwendete Werte
+I_int = integrate.cumtrapz(Iint, Tint, initial=Iint[0]) #Integral berechnen
+IInt=np.log(I_int/Iint)
+#print('Iint', Iint)
+#print('Tint', Tint)
+#print('I_int', I_int)
+#print('IInt=', IInt)
+
+
+############ Ohne log
+plt.figure(6)
+plt.plot(1/Tint, I_int/Iint ,'r+', label='Integral')
+plt.grid()
+plt.xlabel(r'$1/T$ in K')
+plt.ylabel(r'$f(T)$ in $A\cdot 10^{-11}$')
+plt.legend(loc="best")
+plt.tight_layout()
+plt.savefig('build/plot6.pdf')
+
+###############
+plt.figure(7)
+plt.plot(1/Tint, IInt ,'r+', label='Integral')
+t = np.linspace(0.00365, 0.0045)
+def h(x ,e, f):
+    return -e*x+f
+
+params3, cov3= curve_fit(h, 1/Tint,  IInt)
+errors3 = np.sqrt(np.diag(cov3))
+print('e =', params3[0], '±', errors3[0])
+print('f =', params3[1], '±', errors3[1])
+
+plt.plot(1/Tint, h(1/Tint,*params3),'b-', label='Regression')
+plt.grid()
+plt.xlabel(r'$1/T$ in K')
+plt.ylabel(r'ln$f(T)$ in $A\cdot 10^{-11}$')
+plt.legend(loc="best")
+plt.tight_layout()
+plt.savefig('build/plot7.pdf')
+
+
+W1I=params3[0]*const.k/const.e #Berechnung der Aktivierungsenergie W=c*k und umrechnen in eV
+print('Aktivierungsarbeit über Integral (eV)=', W1I)
+
+####Relaxationszeit
+Tmax=259.45 #K
+taumax1A=(const.k*Tmax**2)/(H*W1A)
+taumax1I=(const.k*Tmax**2)/(H*W1I)
+
+print('Relaxationszeit Anlauf=', taumax1A)
+print('Relaxationszeit Integral=', taumax1I)
+
+
+##################################################Messung2  ##############################################################################
+
+
+plt.figure(8)
+#u = np.linspace(0.0039, 0.0045)
+TAnlauf=Tf2[10:29]
+IAnlauf=np.log(Iohne2[10:29])
+plt.plot(1/TAnlauf, IAnlauf,'r+', label='Messdaten')
+
+
+def g(x ,c, d):
+    return -c*x+d
+
+params, cov= curve_fit(g, 1/TAnlauf,  IAnlauf)
+errors = np.sqrt(np.diag(cov))
+print('c =', params[0], '±', errors[0])
+print('d =', params[1], '±', errors[1])
+
+#plt.plot(u, g(u,*params),'b-', label='Regression')
+plt.plot(1/TAnlauf, g(1/TAnlauf,*params),'b-', label='Regression')
+plt.grid()
+plt.xlabel(r'$1/T$ in 1/K')
+plt.ylabel(r'ln$(I)$ in ln($A\cdot 10^{-11}$)')
+plt.legend(loc="best")
+plt.tight_layout()
+plt.savefig('build/plot8.pdf')
+
+
+W2A=params[0]*const.k/const.e #Berechnung der Aktivierungsenergie W=c*k und umrechnen in eV
+print('Aktivierungsarbeit über Anlauf (eV)=', W2A)
+
+
+#####Polarisationsansatz/ Integral
+Tint=Tf2[10:43] #Für Integral verwendete Werte
+Iint=Iohne2[10:43] #Für Integral verwendete Werte
+I_int = integrate.cumtrapz(Iint, Tint, initial=Iint[0]) #Integral berechnen
+IInt=np.log(I_int/Iint)
+#print('Iint', Iint)
+#print('Tint', Tint)
+#print('I_int', I_int)
+#print('IInt=', IInt)
+
+
+############ Ohne log
+plt.figure(9)
+plt.plot(1/Tint, I_int/Iint ,'r+', label='Integral')
+plt.grid()
+plt.xlabel(r'$1/T$ in K')
+plt.ylabel(r'$f(T)$ in $A\cdot 10^{-11}$')
+plt.legend(loc="best")
+plt.tight_layout()
+plt.savefig('build/plot9.pdf')
+
+###############
+plt.figure(10)
+plt.plot(1/Tint, IInt ,'r+', label='Integral')
+t = np.linspace(0.00365, 0.0045)
+def h(x ,e, f):
+    return -e*x+f
+
+params3, cov3= curve_fit(h, 1/Tint,  IInt)
+errors3 = np.sqrt(np.diag(cov3))
+print('e =', params3[0], '±', errors3[0])
+print('f =', params3[1], '±', errors3[1])
+
+plt.plot(1/Tint, h(1/Tint,*params3),'b-', label='Regression')
+plt.grid()
+plt.xlabel(r'$1/T$ in K')
+plt.ylabel(r'ln$f(T)$ in $A\cdot 10^{-11}$')
+plt.legend(loc="best")
+plt.tight_layout()
+plt.savefig('build/plot10.pdf')
+
+
+W2I=params3[0]*const.k/const.e #Berechnung der Aktivierungsenergie W=c*k und umrechnen in eV
+print('Aktivierungsarbeit über Integral (eV)=', W2I)
+
+####Relaxationszeit
+Tmax=249.55 #K
+taumax2A=(const.k*Tmax**2)/(H*W2A)
+taumax2I=(const.k*Tmax**2)/(H*W2I)
+
+print('Relaxationszeit Anlauf=', taumax2A)
+print('Relaxationszeit Integral=', taumax2I)

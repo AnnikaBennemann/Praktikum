@@ -75,3 +75,61 @@ markierten Werte aus \autoref{fig:plot2} verwendet.
 
 \subsubsection{Bestimmung mit Hilfe der Anlaufkurve des Maximums}
 
+\begin{figure}[H]
+  \begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{build/plot5.pdf}
+  \caption{Messung 1.}
+  \label{fig:plot3a}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{build/plot8.pdf}
+  \caption{Messung 2.}
+  \label{fig:plot3b}
+  \end{subfigure}
+  \caption{Lineare Regression der Anlaufkurve des ersten Maximums.}
+  \label{fig:plot3}
+\end{figure}
+
+
+
+Die Parameter der lineraren Regressionen nach der Form
+\begin{equation}
+  f(\frac{1}{T})= -m\cdot \frac{1}{T} +d
+\end{equation}
+ergeben sich zu
+\begin{align*}
+  m_1 &= 5831.79 \pm 677.47 \\
+  m_2 &= 8727.17 \pm 497.87\\
+  d_1 &= 24.54 \pm 2.83\\
+  d_2 &= 37.54 \pm 2.11.\\
+\end{align*}
+
+Die Aktivierungsarbeit berechnet sich somit nach \autoref{eqn:W} zu
+\begin{align*}
+  W_{1,Anlauf} &= \qty{0.50}{\electronvolt}\\
+  W_{2,Anlauf} &= \qty{0.75}{\electronvolt}\\
+\end{align*} 
+
+\subsubsection{Verwendung des gesamten Kurvenverlaufs}
+
+\begin{align*}
+  W_{1,Integral} &= \qty{0.47}{\electronvolt}\\
+  W_{2,Integral} &= \qty{0.51}{\electronvolt}\\
+\end{align*} 
+
+e = 5422.625678523953 ± 418.39231927130663
+f = 24.52938206245129 ± 1.6953898334367103
+
+Relaxationszeit Anlauf= (1.262+/-0.024)e-18
+Relaxationszeit Integral= (1.358+/-0.026)e-18
+
+Messung 2:
+
+e = 5935.771289647492 ± 531.9045005242695
+f = 26.64046788618594 ± 2.1667532981597453
+
+Relaxationszeit Anlauf= (7.80+/-0.15)e-19
+Relaxationszeit Integral= (1.147+/-0.022)e-18
