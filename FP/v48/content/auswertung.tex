@@ -39,7 +39,7 @@ untersucht wird, auf der steigenden Flanke des zweiten Maximums liegt, wird dies
 Das zweite Maximum entsteht durch den Dipolstrom der Wassermoleküle, welche sich bei höheren Temperaturen am Ionenkristall anlagern.
 Um den Untergrund zu bestimmen wird eine Regression der Form
 \begin{align*}
-  f(T)= a * \text{exp}(-b/T)
+  f(T)= a * \text{exp}(-c/T)
 \end{align*}
 an den Messwerten durchgeführt die außerhalb der Maximumskurve liegen.
 Der so errechnete Untergrund wird von den Messwerten abgezogen.
@@ -75,6 +75,9 @@ markierten Werte aus \autoref{fig:plot2} verwendet.
 
 \subsubsection{Bestimmung mit Hilfe der Anlaufkurve des Maximums}
 
+In \autoref{fig:plot3} werden die schwarz markierten Messwerte betrachtet. Sie werden logarithmiert gegenüber von $\frac{1}{T}$ aufgetragen
+und können somit durch \autoref{eqn:kurz} genähert werden, welche logarithmisch gegen $\frac{1}{T}$ einer Gerade enstspricht.
+
 \begin{figure}[H]
   \begin{subfigure}{\textwidth}
   \centering
@@ -93,8 +96,6 @@ markierten Werte aus \autoref{fig:plot2} verwendet.
   \label{fig:plot3}
 \end{figure}
 
-
-
 Die Parameter der lineraren Regressionen nach der Form
 \begin{equation}
   f(\frac{1}{T})= -m\cdot \frac{1}{T} +d
@@ -109,27 +110,65 @@ ergeben sich zu
 
 Die Aktivierungsarbeit berechnet sich somit nach \autoref{eqn:W} zu
 \begin{align*}
-  W_{1,Anlauf} &= \qty{0.50}{\electronvolt}\\
-  W_{2,Anlauf} &= \qty{0.75}{\electronvolt}\\
+  W_{1,\text{Anlauf}} &= (0.50 \pm 0.06) \unit{\electronvolt}\\
+  W_{2,\text{Anlauf}} &= (0.75 \pm 0.04) \unit{\electronvolt}.\\
 \end{align*} 
 
 \subsubsection{Verwendung des gesamten Kurvenverlaufs}
 
+Um die Aktivierungsenergie $W$ über die Methode der Integration zu bestimmen, werden die Messwerte des gesamten Kurvenverlaufs des ersten 
+Maximums aus \autoref{fig:plot2} verwendet.
+Die Werte werden integriert und logarithmiert gegenüber $\frac{1}{T}$ aufgetragen und können durch \autoref{eqn:int} analog zum vorherigen
+Abschnitt zu einer Gerade angenähert werden.
+Sowohl die integrierten Werte, als auch die Regressionsgerade sind in \autoref{fig:plot4} dargestellt.
+
+\begin{figure}[H]
+  \begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{build/plot7.pdf}
+  \caption{Messung 1.}
+  \label{fig:plot4a}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{build/plot10.pdf}
+  \caption{Messung 2.}
+  \label{fig:plot4b}
+  \end{subfigure}
+  \caption{Lineare Regression der integrierten Kurven.}
+  \label{fig:plot4}
+\end{figure}
+
+Die Ausgleichsrechnung ergibt die Parameter
 \begin{align*}
-  W_{1,Integral} &= \qty{0.47}{\electronvolt}\\
-  W_{2,Integral} &= \qty{0.51}{\electronvolt}\\
+  e_1 &= 5422.63 \pm 418.39 \\
+  e_2 &= 5935.77 \pm 531.90 \\
+  f_1 &= 24.53 \pm 1.70 \\
+  f_2 &= 26.64 \pm 2.17 \\
+\end{align*}
+
+Daraus bestimmt sich die Aktivierungsenergie zu 
+\begin{align*}
+  W_{1,\text{Integral}} &= (0.47 \pm 0.04) \unit{\electronvolt}\\
+  W_{2,\text{Integral}} &= (0.51 \pm 0.04)\unit{\electronvolt}.\\
 \end{align*} 
 
-e = 5422.625678523953 ± 418.39231927130663
-f = 24.52938206245129 ± 1.6953898334367103
 
-Relaxationszeit Anlauf= (1.262+/-0.024)e-18
-Relaxationszeit Integral= (1.358+/-0.026)e-18
+\subsection{Berechnung der charakteristischen Relaxationszeit}
 
-Messung 2:
+Um die Relaxationszeit zu berechnen werden zunächst aus \autoref{fig:plot2} die Temperaturen $T_\text{max}$ bestimmt, an denen $I$ maximal ist.
+Diese enstsprechen
+\begin{align*}
+  T_\text{max1} &= \qty{259.45}{\celsius}\\
+  T_\text{max2} &= \qty{249.55}{\celsius}.\\
+\end{align*}
 
-e = 5935.771289647492 ± 531.9045005242695
-f = 26.64046788618594 ± 2.1667532981597453
-
-Relaxationszeit Anlauf= (7.80+/-0.15)e-19
-Relaxationszeit Integral= (1.147+/-0.022)e-18
+Durch Einsetzen der Maximaltemperaturen , sowie der in den vorherigen Abschnitten bestimmten Aktivierungsenergien
+in \autoref{eqn:taumaxsource} ergeben sich die charakteristischen Relaxationszeiten zu
+\begin{align*}
+  \tau_{01,\text{Anlauf}} &= \qty{1.26 (15)e-18}{\second}\\ 
+  \tau_{01,\text{Integral}} &=\qty{1.36 (11)e-18}{\second}\\
+  \tau_{02,\text{Anlauf}} &= \qty{7.80 (50)e-19}{\second}\\
+  \tau_{02,\text{Integral}} &=\qty{1.15 (0.10)e-18}{\second}.\\
+\end{align*}

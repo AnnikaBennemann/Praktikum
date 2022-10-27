@@ -207,7 +207,7 @@ plt.tight_layout()
 plt.savefig('build/plot5.pdf')
 
 
-W1A=params[0]*const.k/const.e #Berechnung der Aktivierungsenergie W=c*k und umrechnen in eV
+W1A=ufloat(params[0],errors[0])*const.k/const.e #Berechnung der Aktivierungsenergie W=c*k und umrechnen in eV
 print('Aktivierungsarbeit über Anlauf (eV)=', W1A)
 
 
@@ -253,7 +253,7 @@ plt.tight_layout()
 plt.savefig('build/plot7.pdf')
 
 
-W1I=params3[0]*const.k/const.e #Berechnung der Aktivierungsenergie W=c*k und umrechnen in eV
+W1I=ufloat(params3[0],errors3[0])*const.k/const.e #Berechnung der Aktivierungsenergie W=c*k und umrechnen in eV
 print('Aktivierungsarbeit über Integral (eV)=', W1I)
 
 ####Relaxationszeit
@@ -293,7 +293,7 @@ plt.tight_layout()
 plt.savefig('build/plot8.pdf')
 
 
-W2A=params[0]*const.k/const.e #Berechnung der Aktivierungsenergie W=c*k und umrechnen in eV
+W2A=ufloat(params[0],errors[0])*const.k/const.e #Berechnung der Aktivierungsenergie W=c*k und umrechnen in eV
 print('Aktivierungsarbeit über Anlauf (eV)=', W2A)
 
 
@@ -339,7 +339,7 @@ plt.tight_layout()
 plt.savefig('build/plot10.pdf')
 
 
-W2I=params3[0]*const.k/const.e #Berechnung der Aktivierungsenergie W=c*k und umrechnen in eV
+W2I=ufloat(params3[0],errors[0])*const.k/const.e #Berechnung der Aktivierungsenergie W=c*k und umrechnen in eV
 print('Aktivierungsarbeit über Integral (eV)=', W2I)
 
 ####Relaxationszeit
