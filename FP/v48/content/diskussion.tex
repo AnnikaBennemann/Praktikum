@@ -1,14 +1,47 @@
 \section{Diskussion}
 \label{sec:Diskussion}
-
-Theoriewerte\cite{RMucillo}: 
+Die berechneten Werte für die Aktivierungsenergie aus der Anlaufkurve sind
+\begin{align*}
+    W_{1,\text{Anlauf}} &= (0.50 \pm 0.06) \unit{\electronvolt}\\
+    W_{2,\text{Anlauf}} &= (0.75 \pm 0.04) \unit{\electronvolt}\\
+\end{align*}
+und die berechnet Aktivierungsenergie aus dem Integral ergibt sich zu
+\begin{align*}
+    W_{1,\text{Integral}} &= (0.47 \pm 0.04) \unit{\electronvolt}\\
+    W_{2,\text{Integral}} &= (0.51 \pm 0.04)\unit{\electronvolt}.\\
+\end{align*} 
+Die Abweichungen zu den Theoriewerten (\cite{RMucillo}) 
 \begin{align*}
     W_\text{lit}&= \qty{0.66}{\electronvolt}\\
     \tau_{0,\text{lit}}&= \qty{4e-14}{\second}\\ 
-    \SI{6.78(16)e-19}{\s}\\
 \end{align*}
-Relaxationszeit hängt von Aktivierungsenergie ab, daher Fehlerfortpflanzung.
-Vakuum hat sich verändert
-menschliche Messunsicherheiten
-Picoamperemeter ist sehr empfindlich gegenüber Erschütterungen oder Bewegungen.
-keine konstante Heizwärme
+lässt sich mit 
+\begin{align*}
+    abw=\frac{|x_\mathrm{gemessen}-x_\mathrm{theorie}|}{x_\mathrm{theorie}}\cdot 100 \label{eqn:abweich}
+\end{align*}
+bestimmen.
+Der Theoriewert der Aktivierungsenergie liegt nicht im Fehlerbereich der experimentell
+bestimmten Werte. Die größte Abweichung liegt bei $\qty{28.78}{\percent}$ für den Wert
+von der ersten Messung, die über das Integral berechnet wurde. Die kleinste Abweichung
+ist bei der zweiten Messung, die über die Anlaufkurve bestimmt wurde, mit $\qty{13.63}{\percent}$.
+Sowohl die höchste als auch die kleinste Abweichung sind nicht so prägnant, sodass beide
+Berechnungsmethoden als relativ genau angenommen werden können. 
+Die berechneten Relaxationszeiten sind
+\begin{align*}
+    \tau_{01,\text{Anlauf}} &= \qty{1.26 (15)e-18}{\second}\\ 
+    \tau_{02,\text{Anlauf}} &= \qty{7.80 (50)e-19}{\second}\\
+    \tau_{01,\text{Integral}} &=\qty{1.36 (11)e-18}{\second}\\
+    \tau_{02,\text{Integral}} &=\qty{1.15 (0.10)e-18}{\second}.\\
+\end{align*}
+Auch hier lässt sich die Abweichungen bestimmen. Dabei weichen diese Werte um mehrere
+Größenordnungen ab. Dies lässt sich unteranderem daher erklären, dass die Relaxationszeit abhängig von
+der Aktivierungsenergie und der Heizrate ist und es somit zu einer größeren Fehlerfortpflanzung kommen kann.
+Weitere Fehlerquellen für die Abweichungen sind zum Einen menschlich bedingte Messunsicherheiten, zum Beispiel
+das erschwerte Ablesen und das Einstellen einer konstanten Heizrate. Zum Anderen ist das Picoamperemeter
+sehr empfindlich gegenüber Erschütterungen und Bewegungen.
+Eine weitere Fehlerquelle sind starke Schwankungen bei dem Thermometer und eine ungewollte Veränderung 
+des Vakkuums im Versuchsverlauf. Zudem weisen die Werte der Kurve des erstens Maximums einen nicht zu erwartenden Verlauf auf.
+Es gibt einen Spike in der Anlaufkurve des Maximums, der für die Berechnung der Aktivierungsenergie und der
+charakteristischen Relaxationszeit nicht berücksichtigt wurde, jedoch zu verfälschten Messwerten führen kann.
+Bei beiden Messung tritt diese Unregelmäßigkeit im selben Temperaturbereich auf, was darauf schließen lässt,
+dass es sich um einen systematischen Fehler handelt.
