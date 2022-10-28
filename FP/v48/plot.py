@@ -39,7 +39,7 @@ print('Heizrate=', H)
 plt.figure(1)
 x = np.linspace(210, 316)
 plt.plot (T, I,'r+', label='Messdaten')
-plt.plot (Ta, Ia,'rx', label='Messdaten für Fit')
+plt.plot (Ta, Ia,'yx', label='Messdaten für Fit')
 
 def fit(x ,a, b):
     return a*np.exp(-b/x)
@@ -129,7 +129,7 @@ print('Heizrate=', H)
 plt.figure(3)
 x2 = np.linspace(205, 316)
 plt.plot (T2, I2,'r+', label='Messdaten')
-plt.plot (Ta2, Ia2,'rx', label='Messdaten für Fit')
+plt.plot (Ta2, Ia2,'yx', label='Messdaten für Fit')
 
 
 params, cov= curve_fit(fit, Ta2, Ia2)

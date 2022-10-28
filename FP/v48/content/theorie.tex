@@ -2,7 +2,7 @@
 \label{sec:Zielsetzung}
 In diesem Versuch wird die Dipolrelaxation in Ionenkristallen untersucht. Besonderes Augenmerk liegt hierbei auf der Relaxationszeit der Dipole
 $\tau(T)=\tau_0 \exp(W/k_BT)$ einer strontiumdotierten Kaliumbromidprobe in Abhängigkeit von der Temperatur.
-Im Versuch wird daher die Aktivierungsenergie $W$ und die charakeristische Relaxationszeit $\tau_0$ bestimmt.
+Im Versuch werden daher die Aktivierungsenergie $W$ und die charakeristische Relaxationszeit $\tau_0$ bestimmt.
 
 \section{Theorie}
 \label{sec:Theorie}
@@ -14,14 +14,13 @@ Depolarisationsstrom mit zwei verschiedenen Ansätzen hergeleitet.
 \label{subsec:KriDi}
 Ionenkristalle sind Festkörper aus entgegengesetzt geladenen Ionen zweier Elemente, welche Ionenbindungen eingehen.
 Bei höheren Temperaturen kommt es aufgrund der Energiezufuhr zu Ionenwanderungen.\\
-In diesem Versuch können zwei Proben verwendet werden. Die eine Probe ist Kaliumbromid (KBr), was aus einem kubischen Gitter
-mit Kaliumkationen und Bromidanionen besteht. Die andere Probe ist Cäsiumiodid (CsJ), was aus einem kubischen
-Gitter mit Cäsiumkationen und Jodanionen besteht. Beide Proben wurden mit zweifach positiv geladenen Strontiumionen (Sr) dotiert, sodass sich
-Leerstellen bilden um die Ladungsneutralität wiederherzustellen, wie in \autoref{fig:KrisDi.png} dargestellt.
+In diesem Versuch wird eine Probe aus Kaliumbromid (KBr)verwendet, was aus einem kubischen Gitter
+mit Kaliumkationen und Bromidanionen besteht. Die Proben wurde mit zweifach positiv geladenen Strontiumionen (Sr) dotiert, sodass sich
+Leerstellen bilden um die Ladungsneutralität im Kristall wiederherzustellen, wie in \autoref{fig:KrisDi.png} dargestellt.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{Abbildungen/KrisDi.png}
-    \caption {Schematische 2D-Darstellung eines strontiumdotierten Cäsiumiodidkristalls.}
+    \caption {Schematische 2D-Darstellung eines strontiumdotierten Cäsiumiodidkristalls.\cite{V48alt}}
     \label{fig:KrisDi.png}
 \end{figure}
 Dipole sind physikalische Anordnungen zweier zueinander entgegengesetzter Ladungen, wobei sich die beiden Ladungen
@@ -45,20 +44,21 @@ Als Vorgriff auf die Durchführung (\ref{sec:Durchführung}) sei hier erwähnt, 
 mit einem E-Feld ausgrichtet und anschließend in diesem Zustand eingefroren werden. Anschließend
 wird die Probe wieder erwärmt und ein Strom gemessen. Dieser enstehende Strom ensteht aus der Reorientierung
 der Dipole, die wieder in ihre energetisch günstigere Ausgangslage relaxieren. Dadurch dass es keine idealen Ionenkristalle
-gibt, ist die Dipolrelaxation nicht der einzige Strom, der gemessen wird. Aufgrund von Gitterfehlern kommt es zu weiteren
-Ladungsträgerdiffusionen, welche im folgenden Untergrund genannt werden. \\
+gibt, ist die Dipolrelaxation nicht der einzige Strom, der gemessen wird. Aufgrund von Gitterfehlern und Wassermolekülen die sich am Kristall
+anlagern kommt es zu weiteren Ladungsträgerdiffusionen, welche zusammen mit dem aufbaubedingten Untergund im folgenden Untergrund genannt werden. \\
 Der Depolarisationsstrom kann mithilfe der folgenden zwei Ansätzen hergeleitet werden.
 
 
 \subsection{Polarisationsansatz}
 \label{subsec:Polarisation}
 
-Da die Dipole sich bei genügend hoher Temperatur wieder statistisch ausrichten und dies mit Ladungsträgerdiffusion verbunden ist,
+Da die Dipole sich bei genügend hoher Temperatur wieder statistisch ausrichten und dies mit Ladungsträgerdiffusion und einer Wanderung
+von Elektronen durch die Kondensatorplatten verbunden ist,
 entsteht ein elektrisch messbarer Strom.
 Der Strom wird Depolarisationsstrom genannt und ist gleich der Änderungsrate der 
 Polarisation $P(t)$, also dem Gesamtdipolmoment pro Volumeneinheit.
 \begin{equation}
-    I(T) = - \frac{\text{d}P(t)}{\text{d}t}.
+    j(T) = - \frac{\text{d}P(t)}{\text{d}t}.
 \end{equation}
 Dies lässt sich auch mit der Relaxationszeit darstellen und ergibt somit die Differentialgleichung
 \begin{equation}
@@ -90,7 +90,7 @@ ausdrücken, da $T$ eine lineare Funktion in Abhängigkeit von $t$ ist.
 Die Zeit in der das elektrische Feld eingeschaltet ist muss groß gegen die Relaxationszeit $\tau(T)$ sein, 
 damit sich ein Bruchteil $y(T)$ der Dipole in Feldrichtung einstellt.
 Zudem muss $pE << k_\text{B}T$ gelten.
-$y(T)$ ist dann gegeben durch
+Der Anteil der Dipole in Feldrichtung $y(T)$ ist dann gegeben durch
 \begin{align*}
     y(T)= \frac{pE}{3 k_\text{B}T}
 \end{align*}
@@ -121,6 +121,7 @@ Einsetzen der gesamten Gleichungen in \autoref{eqn:stromdichte} liefert mit Nutz
 Für kleine Temperaturen $T$ ist die Aktivierungsenergie $W$ groß gegenüber der Energie $k_\text{B}T$ und der Temperaturdifferenz $T-T_0$ und das Integral in \autoref{eqn:lang} wird zu
 \begin{align}
     \int_{T_0}^T\frac{\text{d}T'}{\tau(T')} \approx 0.
+    \label{eqn:approx}
 \end{align}
 Somit ergibt sich der Strom zu
 \begin{equation}
@@ -131,6 +132,10 @@ Somit ergibt sich der Strom zu
 
 \subsection{Berechnung der Aktivierungsenergie W}
 \label{subsec:Aktivierungsenergie}
+
+Es gibt zwei Wege, die Aktivierungsenergie über den Depolarisationsstrom in Abhängigkeit von der Temperatur zu bestimmen.
+In den folgenden zwei Abschnitten werden die Bestimmung über die Anlaufkurve des Maximums und die Bestimmung über die Integration des gesamten
+Kurvenverlaufs erläutert.
 
 \subsubsection{Bestimmung mit Hilfe der Anlaufkurve des Maximums}
 
@@ -147,7 +152,7 @@ Somit ergibt sich der Strom zu
             W = m \cdot k_\text{B}.
             \label{eqn:W}
         \end{equation}
-        Diese Gleichung gilt am besten für den Bereich vor dem Maximum und wird daher in diesem Bereich zur Auswertung angewandt.			
+        Diese Gleichung gilt am besten für den Bereich vor dem Maximum, da dort die Näherung nach \autoref{eqn:approx} gilt und wird daher in diesem Bereich zur Auswertung angewandt.			
 
 \subsubsection{Verwendung des gesamten Kurvenverlaufs}
 
@@ -167,7 +172,7 @@ Somit ergibt sich der Strom zu
         \begin{equation}
             \frac{P(t)}{b} \frac{\frac{dT}{dt}}{\frac{dP}{dt}}
         \end{equation}
-        Die Änderung Polarisation $\frac{dP}{dt}$ entspricht dem Strom $I(T)$ und mit $P = \int \text{d}P$ ist dann
+        Die Änderung Polarisation $\frac{dP}{dt}$ entspricht der Stromdichte $I(T)$ und mit $P = \int \text{d}P$ ist dann
         \begin{equation}
             \tau(T) = \frac{\int \frac{dP}{dt}\text{d}T}{I(T)b} \quad .
         \end{equation}
@@ -188,7 +193,7 @@ Die charakteristische Relaxationszeit $\tau_0$ kann aus dem Maximum der Temperat
 Dazu wird Gleichung \ref{eqn:lang} nach der Temperatur abgeleitet um eine Beziehung zwischen $T_\text{max}$ und $\tau(T_\text{max})$ herzustellen.
 
 \begin{equation}
-    \frac{dj(T)}{dT} \approx \frac{1}{\tau_0} \left( - \frac{1}{b\tau_0}
+    \frac{dj(T)}{dT} = \frac{1}{\tau_0} \left( - \frac{1}{b\tau_0}
     \int_{T_0}^T \text{exp}\left(\frac{W}{k_\text{B}T}\right)\text{d}T' - 
     \frac{W}{k_\text{B}T}\right) \cdot \left( \frac{W}{k_\text{B}T^2} - 
     \frac{1}{b\tau_0} 
