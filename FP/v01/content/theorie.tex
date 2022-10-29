@@ -6,4 +6,51 @@ Ziel dieses Versuchs ist die Bestimmung der Lebensdauer von kosmischen Myonen.
 \section{Theorie}
 \label{sec:Theorie}
 
+Myonen ($\mu^-$) sind Elementarteilchen, die zur zweiten der drei Leptonenfamilien gehören.
+Sie sind Fermionen und besitzen somit einen Spin von $\frac{1}{2}$.
+Außerdem sind sie wie Elektronen einfach negativ geladen (die Antimyonen einfach positiv), besitzen jedoch mit $\qty{105.66}{\mega\electronvolt}$
+eine ungefähr 207-mal höhere Ruhemasse als Elektronen.
+Die mittlere Lebensdauer von Myonen beträgt $\qty{2.2}{\micro\second}$. \cite{PDG}
+Myonen unterliegen der schwachen und der elektromagnetischen Wechselwirkung.
+Sie sind der Hauptbestandteil von sekundärer kosmischer Strahlung.
+Diese entsteht, wenn primäre kosmische Strahlung (hochenergetische Protonen aus der Sonne uns anderen Sternen) mit Atomkernen
+der oberen Atmosphäre wechselwirkt. Dabei werden in circa $15-\qty{20}{\kilo\meter}$ Höhe Pionen und Kaonen erzeugt,
+welche wiederum in circa $\qty{15}{\kilo\meter}$ Höhe durch die schwache Wechselwirkung hauptsächlich zu Myonen zerfallen.
+\begin{align*}
+    \pi^+ \longrightarrow \mu^+ + \nu_{\mu} \\
+    \pi^- \longrightarrow \mu^- + \overline{\nu}_{\mu}
+\end{align*}
+Der Zerfall von Kaonen erfolgt analog.
+
+ 
+
+\begin{align*}
+    \mu^- \longrightarrow \nu_{\mu} + \text{e}^- + \overline{\nu}_{\text{e}} \\
+    \mu^+ \longrightarrow \overline{\nu}_{\mu} + \text{e}^+ + \nu_{\text{e}} 
+\end{align*}
+
+
+Wenn das Myon eine Energie von $E_{\mu}$=\SI{10}{\giga\electronvolt} besitzt, kann die Geschwindigkeit des Myons $v_{\mu}$ klassisch durch
+Umstellen von 
+\begin{align*}
+    E_{\mu}^2 &= m_{\mu}^2c^4 + p_{\mu}^2c^2
+    \shortintertext{mit}
+    p_{\mu}&=\gamma_{\mu} \text{m}_{\mu}v_{\mu}
+    \shortintertext{zu}
+    v_{\mu} &\approx 0.998c
+\end{align*}
+berechnet werden.
+Daraus ergibt sich nach dem Weg-Zeit-Gesetz die Reichweite
+\begin{align*}
+    s = v_{\mu} \cdot \tau_{\mu} \approx \SI{658.22}{\meter}.
+    \label{eqn:s}
+\end{align*}
+Da die Myonen, wie oben erwähnt auf einer Höhe von circa $\qty{15}{\kilo\meter}$ entstehen, würden sie nach dem klassischen Ansatz den Erdboden nicht erreichen.
+Dies widerspricht allerdings den experimentellen Erkentnissen.
+Erklären lässt sich dies mithilfe der Zeitdilatation. So bezieht sich die Eigenzeit $\tau_{\mu}$ auf das Ruhesystem des Myons. Im Ruhesystem
+des Beobachters auf der Erde muss \autoref{eqn:s} also noch durch den Lorentzfaktor ergänzt werden und lautet somit
+\begin{equation*}
+    s = v_{\mu} \cdot \gamma_{\mu} \tau_{\mu} \approx \SI{0}{\meter}.
+    \label{eqn:s2}
+\end{equation*}
 
