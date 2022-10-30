@@ -14,57 +14,109 @@ Die mittlere Lebensdauer von Myonen beträgt $\qty{2.2}{\micro\second}$. \cite{P
 Myonen unterliegen der schwachen und der elektromagnetischen Wechselwirkung.
 Sie sind der Hauptbestandteil von sekundärer kosmischer Strahlung.
 Diese entsteht, wenn primäre kosmische Strahlung (hochenergetische Protonen aus der Sonne uns anderen Sternen) mit Atomkernen
-der oberen Atmosphäre wechselwirkt. Dabei werden in circa $15-\qty{20}{\kilo\meter}$ Höhe Pionen und Kaonen erzeugt,
-welche wiederum in circa $\qty{15}{\kilo\meter}$ Höhe durch die schwache Wechselwirkung hauptsächlich zu Myonen zerfallen.
+der oberen Atmosphäre wechselwirkt. Dabei werden in circa $10-\qty{15}{\kilo\meter}$ Höhe Pionen und Kaonen erzeugt,
+welche wiederum in circa $\qty{10}{\kilo\meter}$ Höhe durch die schwache Wechselwirkung hauptsächlich zu Myonen zerfallen.
 \begin{align*}
     \pi^+ \longrightarrow \mu^+ + \nu_{\mu} \\
     \pi^- \longrightarrow \mu^- + \overline{\nu}_{\mu}
 \end{align*}
 Der Zerfall von Kaonen erfolgt analog.
 
- 
+Die entstandenen kosmischen Myonen zerfallen spontan durch schwache Wechselwirkung.
 
 \begin{align*}
     \mu^- \longrightarrow \nu_{\mu} + \text{e}^- + \overline{\nu}_{\text{e}} \\
     \mu^+ \longrightarrow \overline{\nu}_{\mu} + \text{e}^+ + \nu_{\text{e}} 
 \end{align*}
+\\
 
+Teilchenzerfälle sind statistische Prozesse. Daher wird dem Zerfall des Myons
+eine Wahrscheinlichkeit 
+\begin{align}
+    \text{d}W &= \lambda \text{d}t.
+    \label{eqn:dW}
+\end{align}
+zugeordnet, mit der dieses in einer bestimmten Zeit $\text{d}t$ zerfällt.
+Die Anzahl an Teilchen $\text{d}N$ die in einem infinitessimalen Zeitraum $\text{d}t$ mit der Wahrscheinliichkeit $W$ zerfallen ergibt sich
+aus \eqref{eqn:dW} zu 
+\begin{align*}
+    \text{d}N &= -\lambda N\text{d}t.
+\end{align*}
+Hieraus lässt sich das Zerfallsgesetz 
+\begin{align}
+    N(t) &= N_0 \cdot e^{- \lambda \cdot t}\label{eqn:Zerfallsgesetz}
+\end{align}
+durch Umstellen und Integrieren herleiten.$N_0$ ist dabei die Anzahl der zum Startzeitpunkt vorhanden Teilchen. 
 
-Wenn das Myon eine Energie von $E_{\mu}$=\SI{10}{\giga\electronvolt} besitzt, kann die Geschwindigkeit des Myons $v_{\mu}$ klassisch durch
+Die Zerfallskonstante ist hierbei der Proportionalitätsfaktor $\lambda$, wobei
+\begin{align*}
+    \lambda &= \frac{1}{\tau}
+\end{align*}
+gilt. Die mittlere Lebensdauer $\tau$ beschreibt hierbei die Zeit nach der die Anzahl der Myonen auf den Bruchteil $\frac{1}{e}$ abgefallen ist.
+\\
+Wenn das Myon eine Energie von $E_{\mu}$=\SI{10}{\giga\electronvolt} besitzt, kann die Geschwindigkeit des Myons $v_{\mu}$ durch
 Umstellen von 
 \begin{align*}
     E_{\mu}^2 &= m_{\mu}^2c^4 + p_{\mu}^2c^2
     \shortintertext{mit}
     p_{\mu}&=\gamma_{\mu} \text{m}_{\mu}v_{\mu}
     \shortintertext{zu}
-    v_{\mu} &\approx 0.998c
+    v_{\mu} &\approx 0.994c
 \end{align*}
 berechnet werden.
-Daraus ergibt sich nach dem Weg-Zeit-Gesetz die Reichweite
-\begin{align*}
-    s = v_{\mu} \cdot \tau_{\mu} \approx \SI{658.22}{\meter}.
+Daraus ergibt sich klassisch nach dem Weg-Zeit-Gesetz die Reichweite
+\begin{align}
+    s = v_{\mu} \cdot \tau_{\mu} \approx \SI{655.6}{\meter}.
     \label{eqn:s}
-\end{align*}
-Da die Myonen, wie oben erwähnt auf einer Höhe von circa $\qty{15}{\kilo\meter}$ entstehen, würden sie nach dem klassischen Ansatz den Erdboden nicht erreichen.
+\end{align}
+Da die Myonen, wie oben erwähnt auf einer Höhe von circa $\qty{10}{\kilo\meter}$ entstehen, würden sie nach dem klassischen Ansatz den Erdboden nicht erreichen.
 Dies widerspricht allerdings den experimentellen Erkentnissen.
 Erklären lässt sich dies mithilfe der Zeitdilatation. So bezieht sich die Eigenzeit $\tau_{\mu}$ auf das Ruhesystem des Myons. Im Ruhesystem
 des Beobachters auf der Erde muss \autoref{eqn:s} also noch durch den Lorentzfaktor ergänzt werden und lautet somit
-\begin{equation*}
-    s = v_{\mu} \cdot \gamma_{\mu} \tau_{\mu} \approx \SI{0}{\meter}.
+\begin{align}
+    s = v_{\mu} \cdot \gamma_{\mu} \tau_{\mu} \approx \SI{6206.0}{\meter}.
     \label{eqn:s2}
-\end{equation*}
+\end{align}
+Für energiereichere Myonen mit einer Energie von $E_{\mu}$=\SI{20}{\giga\electronvolt} beträgt die relativistische Reichweite sogar $\qty{12451}{\meter}$.
+Der Fluss der Myonen beträgt circa ein Myon pro \si{\square\centi\metre} pro Minute auf Meereshöhe.\cite{Grupen}
+Die horizontale Querschnittsfläche eines liegenden Zylinders mit $\qty{50}{\liter}$ Volumen und einer Höhe von 2r beträgt
+$\qty{1594.36}{\square\centi\metre}$, somit lässt sich die Ereignisrate im Zylinderquerschnitt zu 1594 Myonen pro Minute bestimmen.
+
+
+
 
 \subsection{Grundlagen zum Szintillator}
 \label{subsec:Szintillator}
-Ein Szintillator ist ein Körper mit Molekülen, die beim Durchgang von energiereichen Teilchen aufgrund von Stoßprozessen angregt werden.
-Anschließend wird die Anregungsenergie in Form von Licht wieder abgegeben.
-Ein Szintillator wird dazu benutzt um die Energie und die Intensität ionisierender Strahlung zu messen. Dabei ergibt dich sie Energie 
-jedes einzelenen Stoßvorgang aus der abgegeben Lichtmenge. Es gibt zwei Arten von Szintillatoren.\\
-Die anorganischen Szintillatoren sind Kristalle mit Aktivator-Zenteren dotiert. Dabei erzeugen ionisierende Strahlung freie 
+In einem Szintillator trifft einfallende Strahlung auf Atome des Szintillatormediums, welche dadurch entweder ionsiert oder angeregt werden.
+Anschließend wird die Anregungsenergie in Form von Photonen wieder abgegeben, wenn die angeregten Atome wieder relaxieren.
+Wenn das Myon innerhalb des Szintillators zerfällt regt das freigewordene Elektron auch ein Atom des Szintillatormediums an und
+erzeugt somit ein weiteres Signal.
+
+Ein Szintillator wird dazu benutzt, um die Energie und die Intensität ionisierender Strahlung zu messen. Dabei ergibt sich die Energie 
+jedes einzelnen Stoßvorgangs aus der abgegeben Lichtmenge.
+Die Lichtpulse können in elektrische Signale umgewandelt und weiterverarbeitet werden.
+Es gibt zwei Arten von Szintillatoren.\\
+Die anorganischen Szintillatoren sind Kristalle mit Aktivator-Zenteren dotiert. Dabei erzeugt ionisierende Strahlung freie 
 Elektronen, freie Löcher oder Elektron-Loch-Paare. Diese Anregzustände wandern umher, bis sie auf einen Aktivatorzustand treffen und diesen
 anregen. Unter Emission von sichtbarem Licht fällt dieser wieder in den Grundzustand zurück.\\
 Organische Szintillatoren können Kristalle, Flüssigkeiten und polymere Festkörper sein. Sie beruhen auf die Anregung von Molekülzuständen,
 die beim Zerfall UV-Strahlung emittieren.\\
 Hier fehlen noch die Vor und Nachteile.
 
+
+
+
+
+Durch Messung der Zeit zwischen dem Eintritt des Myons und des
+Zerfalls ist eine Bestimmung der mittleren Lebensdauer des Myons möglich.
+Es wird also innerhalb eines bestimmten Zeitrahmens nach Eintritt eines Myons ein weiteres Signal
+erwartet.
+Sollte innerhalb dieses Zeitrahmens ein weiteres Myon den Detektor erreichen oder das
+Myon nicht innerhalb des Detektors zerfallen, wird die Messung verfälscht.
+Diese Verfälschungen der Messung erzeugen einen Untergrund
+\begin{equation}
+  U = P_{\lambda} (k) = \frac{\lambda^{k}}{k!} \exp{(-\lambda)},
+  \label{eqn:Untergrundrate}
+\end{equation}
+welcher mit einer Poissonverteilung mit Erwartungswert $\lambda$ und der Ereignisanzahl $k$ angenähert wird.
 
