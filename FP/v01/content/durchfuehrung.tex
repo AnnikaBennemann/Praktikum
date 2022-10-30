@@ -34,3 +34,27 @@ Anschließend wird das MCA kalibriert, indem der Doppelimpulsgenerator angeschlo
 $\qty{0.3}{\micro\second}$ bis  $\qty{9.9}{\micro\second}$ durchgeführt. Dabei wird bei allen Messpunkten eine gleich Messzeit benutzt und anschließend die absolute Zählrate verglichen.\\
 Nach erfolreicher Kalibration werden die Photomultiplier angeschlossen und die eigentlich Messung beginnt.
 
+\subsection{Rauschunterdrückung}
+\label{subsec:Rauschunterdrückung}
+Bei endlichen Temperaturen neigen Photokathoden zu spontaner Elektronemission, wobei kleine Impulse entstehen.
+Diese Impulse sind kleiner als "echte" Impulse und können so mit einem Diskriminatoren rausgefiltert werden. Die Schwelle wird
+dabei so gesetzt, dass möglichst nur die ungewollten Impulse rausgefiltert werden. Esa kann jedoch dazu kommen, dass auch "echte"
+Impulse rausgefiltert werden, weswegen auf beiden Seiten ein PMT mit Diskriminator angeschlossen wird. 
+So dass wenn ein Myon eintrifft und zerfällt beide PMT das aufnehmen und zur Koinzidenz weiterleiten.
+
+\subsection{Stoppuhr-Methode}
+\label{subsec:Messmethode}
+Es kann sein, dass Myonen in den Szintillator gelangen und dann entweder von dem Szintillator absorbiert werden oder sie genug 
+Energie haben um durch das Szintillatormaterial und den Detektor zu bewegen. Bei beiden Fällen kann nicht die Lebenszeit von Myonen bestimmt werden.
+Es wird somit nur ein Impuls gesendet, dass ein Myon in den Szintillator eintrifft, aber dabei nicht zerfällt. Um dagegen zu wirken
+wird die Stoppuhr-Methode benutzt. Dabei beginnt eine Suchzeit $T_S$ nach dem Startimpuls. Zerfällt das Myon nicht innerhalb der Suchzeit,
+wird die Apparatur wieder in den Anfangszustand zurückgebracht.\\
+Diese grundlegende Messprinzip wird schaltungstechnisch durch den Monoflop und den zwei AND-Gittern geregelt.
+Der Monoflop hat einen stabilen und einen instabilen Zustand.
+Die Zeit, in der der Monoflop im instabilem Zustand ausglenkt ist, sollte ungefäht der Suchzeit eintsprechen, weil im stabilen Zusatnd sendet
+der Monoflop ein Signal an das zweite AND-Gitter, was die Messung stoppt.
+Die Koinzidenz lenkt dabei den Monoflop in den instabilen Zustand aus und das TAC misst die Zeit. Kommt es dann in der Suchzeit zu keinem
+Stromimpuls, der über das zwite AND-Gatter an das TAC weitergeleitet wird, wird die Messung verworfen und das TAC gibt kein Signal ab.
+Um die Anzahl der verworfenen Messunngen zu bestimmen, wird ein weiterer Impulszähler angeschlossen.\\
+Treffen zwei Myonen gleichzeitig innnerhalb der Suchzeit im Tank en, kommt es zu einer Fehlermessung, die auch Untergrund genannt wird.
+Dabei ist der Zeitabstand in dem zwei Myonen eintreffen statistisch verteilt und füllt daher die Kanäle des Vielkanalanalysator gleichmäßig auf.
