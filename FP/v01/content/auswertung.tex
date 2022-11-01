@@ -1,12 +1,27 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
-  \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
+Um den Vielkanalanalysator zu kalibrieren werden mit Hilfe eines Doppelimpuls-Generators Impulse
+mit unterschiedlichem zeitlichem Abstand eingelesen. Die belegten Kanäle sind in dargestellt
+und in gegen die Impulsabstände aufgetragen.
 
 
-Siehe \autoref{fig:plot}!
+
+Zeugs für Halbwertsbreite: 
+
+Der Graph zur Justierung der Verzörgerungsleitungen in \autoref{fig:Verzoergerung} weist ein leichtes Plateau auf.
+Dieses Plateau ist, wie in der Durchführung beschrieben, auf die normierte Pulsdauer der Ausgangssignale der Diskriminatoren zurückzuführen und befindet sich im erwarteten Bereich von \SI{10}{\nano \second}. \\
+Da das Plateau nicht sehr stark ausgeprägt ist, wurde eine Gaußfunktion höherer Potenz, anstatt einer Rechteckfunktion als Anpassungsfunktion gewählt.
+Dementsprechend ist die Halbwertsbreite der angepassten Funktion mit $T_{\text{FWHM}} = \SI{16,4}{\nano \second}$ größer als das eigentliche Plateau.
+
+
+Die Auflösungszeit~$\symup{\Delta}t_K$ der Koinzidenzapparatur ist gleichbedeutend
+mit der Differnez zwischen der Summe der Diskriminatorbreiten und der in grün
+eingezeichneten Halbwertsbreite. Zur Bestimmung von dieser wird
+ein linearer Fit für das Plateau und die beiden Flanken durchgeführt. Durch die halbe
+Höhe des Plateau ist anschließend die Halbwertsbreite gegeben. Durch die abgelesenen Schnittpunkte
+mit den beiden Flanken lässt sich nun die Verzögerungszeit zu
+\begin{equation}
+  \symup{\Delta}t_K = 40 - \left[ |-25 \pm 0.5| + |18 \pm 0.5| \right] \si{\nano\second} = \- 3 \pm 0.71\; \si{\nano\second}
+\end{equation}
+bestimmen. Dabei ergeben sich die \SI{40}{\nano\second} aus der Summation der Breiten der beiden Diskriminatoren.

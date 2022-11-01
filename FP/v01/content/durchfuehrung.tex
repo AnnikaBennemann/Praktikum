@@ -18,23 +18,11 @@ Aufgrund der Verbindung der AND-Gitter mit dem Time-Amplitude-Converter (TAC), s
 wenn ein Myon das aktive Volumen betritt. Die Zeitmessung stoppt aufgrund eines Signal des anderen AND-Gatters, wenn das Myon zerfällt. 
 Außerdem wird sie Zeitmessung bzw. der Monoflop zurückgesetzt wenn die Suchzeit $T_S$ abgelaufen ist, ohne dass ein Stoppsignal ausgelöst wurde.
 Die Start- und Stoppimpulse werden gezählt, indem die Gatter außerdem jeweils mit einem Impulszähler verbunden sind.
-Das Signal des TAC gelangt über einem Vielkanalanalysator (bzw. Multi-Channel-Analyser) (MCA) zu einem PC, wo es durch eine bestimmte Messsoftware augelesen wird.
-Der MCA kann über einen Doppelimpulsgenerator kalibriert werden. Dieser Doppelimpulsgenerator generiert dabei Doppelimpulse mit einem variablen Zeitabstand bei einer Frequenz von $\qty{1}{\kilo\Hz}$.
+Das Signal des TAC gelangt zu einem Vielkanalanalysator (bzw. Multi-Channel-Analyser) (MCA). Dieser ordnet jedem Signal entsprechend
+seiner Größe einen Kanal innerhalb eines Datensatzes zu und erhöht den Wert des entsprechenden Kanals um Eins. Die Anzahl der in einem Kanal
+gespeicherten Signale entspricht also der Häufigkeit des Auftretens eines Signals mit einer bestimmten Lebensdauer. Das Histogramm der
+Kanäle kann am PC durch eine bestimmte Messsoftware augelesen werden.
 
-
-\section{Durchführung}
-\label{sec:Durchführung}
-Für die Durchführung des Versuchs muss die Schaltung in \autoref{sec:Aufbau} aufgebaut und kalibriert werden.
-Dabei wird zur Überprüfung der Schaltung ein Oszilloskop benutzt.\\
-Zur Einstellung der Schwellspannung der Diskriminatoren, werden zunächst die Spannungsimpulse der Photomultiplier mit dem Oszilloskop überprüft.
-Die Spannungsimpulse sind unterschiedlicher Höhe und die Diskriminatorschwelle wird so eingestellt, dass an beiden Ausgängen ungefähr $30$ Impulse pro Sekunde gemessen werden.
-Die Pulsdauer wird auf $\Delta t = \qty{10}{\nano\second}$ eingestellt werden.\\
-Anschließend wird der Koinzidenzapparat eingestellt, indem die Verzögerungsleitungen so gewählt werden, dass die Signale gleichzeitig eintreffen. Dabei wird der Messbereich so gewählt,
-dass sich die Halbwertsbreite der Verteilung bestimmen lässt. Die Ereignisrate soll im Bereich von $\qty{20}{\second^{-1}}$ liegen.\\
-Danach wird der restliche Teil der Schaltung verkabelt, eine Suchzeit $T_S$ eingestellt und der Messbereich des TAC entsprechend angepasst.
-Anschließend wird das MCA kalibriert, indem der Doppelimpulsgenerator angeschlossen wird und die jeweiligen Ausgänge gemessen werden. Die Kalibration wird für zehn Messwerte im Bereich von
-$\qty{0.3}{\micro\second}$ bis  $\qty{9.9}{\micro\second}$ durchgeführt. Dabei wird bei allen Messpunkten eine gleich Messzeit benutzt und anschließend die absolute Zählrate verglichen.\\
-Nach erfolreicher Kalibration werden die Photomultiplier angeschlossen und die eigentlich Messung beginnt.
 
 \subsection{Rauschunterdrückung}
 \label{subsec:Rauschunterdrückung}
@@ -48,15 +36,41 @@ So dass wenn ein Myon eintrifft und zerfällt beide PMT das Signal aufnehmen und
 \label{subsec:Messmethode}
 Es kann sein, dass Myonen in den Szintillator gelangen und dann entweder von dem Szintillator absorbiert werden oder sie genug 
 Energie haben um durch das Szintillatormaterial und den Detektor zu bewegen. Bei beiden Fällen kann nicht die Lebenszeit von Myonen bestimmt werden.
-Es wird somit nur ein Impuls gesendet, dass ein Myon in den Szintillator eintrifft, aber dabei nicht zerfällt. Um dagegen zu wirken
+Es wird somit von diesen Myonen nur ein Impuls gesendet und der Impuls des nächsten eintreffenden Myons würde als Zerfallsimpuls des ersten
+registriert werden. Um dagegen zu wirken
 wird die Stoppuhr-Methode benutzt. Dabei beginnt eine Suchzeit $T_S$ nach dem Startimpuls. Zerfällt das Myon nicht innerhalb der Suchzeit,
 wird die Apparatur wieder in den Anfangszustand zurückgebracht.\\
 Diese grundlegende Messprinzip wird schaltungstechnisch durch den Monoflop und den zwei AND-Gittern geregelt.
 Der Monoflop hat einen stabilen und einen instabilen Zustand.
 Die Zeit, in der der Monoflop im instabilem Zustand ausglenkt ist, sollte ungefäht der Suchzeit eintsprechen, weil im stabilen Zusatnd sendet
 der Monoflop ein Signal an das zweite AND-Gitter, was die Messung stoppt.
-Die Koinzidenz lenkt dabei den Monoflop in den instabilen Zustand aus und das TAC misst die Zeit. Kommt es dann in der Suchzeit zu keinem
-Stromimpuls, der über das zwite AND-Gatter an das TAC weitergeleitet wird, wird die Messung verworfen und das TAC gibt kein Signal ab.
-Um die Anzahl der verworfenen Messunngen zu bestimmen, wird ein weiterer Impulszähler angeschlossen.\\
-Treffen zwei Myonen gleichzeitig innnerhalb der Suchzeit im Tank en, kommt es zu einer Fehlermessung, die auch Untergrund genannt wird.
+Die Koinzidenzschaltung lenkt dabei den Monoflop in den instabilen Zustand aus und das TAC misst die Zeit. Kommt es dann in der Suchzeit zu keinem
+Stromimpuls, der über das zweite AND-Gatter an das TAC weitergeleitet wird, wird die Messung verworfen und das TAC gibt kein Signal ab.
+Um die Anzahl der verworfenen Messungen zu bestimmen, wird ein weiterer Impulszähler angeschlossen.\\
+Treffen zwei Myonen gleichzeitig innnerhalb der Suchzeit im Tank ein, kommt es zu einer Fehlermessung, die auch Untergrund genannt wird.
 Dabei ist der Zeitabstand in dem zwei Myonen eintreffen statistisch verteilt und füllt daher die Kanäle des Vielkanalanalysator gleichmäßig auf.
+
+\section{Durchführung}
+\label{sec:Durchführung}
+Für die Durchführung des Versuchs wird die Schaltung wie in \autoref{sec:Aufbau} aufgebaut und  anschließend kalibriert.
+Dabei wird zur Überprüfung der Schaltung ein Oszilloskop benutzt.\\
+Zur Einstellung der Schwellspannung der Diskriminatoren, werden zunächst die Spannungsimpulse der Photomultiplier mit dem Oszilloskop überprüft.
+Die Spannungsimpulse sollten vor den Diskriminatoren von unterschiedlicher Höhe und Länge sein und die Diskriminatorschwelle wird so eingestellt,
+dass an beiden Ausgängen ungefähr $30$ Impulse pro Sekunde gemessen werden, welche nun die gleiche Höhe besitzen.
+Die Pulsdauer wird auf $\Delta t = \qty{10}{\nano\second}$ eingestellt, was klein gegenüber der Lebensdauer der Myonen ist, damit sich zwei Impulse
+möglichst nicht überlagern.\\
+Anschließend wird der Koinzidenzschaltung eingestellt, indem die Verzögerungsleitungen so gewählt werden, dass die Signale gleichzeitig eintreffen. Dabei wird der Messbereich so gewählt,
+dass sich die Halbwertsbreite der Verteilung bestimmen lässt. Die Ereignisrate soll im Bereich von $\qty{20}{\second^{-1}}$ liegen.\\
+Danach wird der restliche Teil der Schaltung verkabelt, eine Suchzeit $T_S$ eingestellt und der Messbereich des TAC entsprechend angepasst.
+Der MCA kann über einen Doppelimpulsgenerator kalibriert werden. Dieser Doppelimpulsgenerator generiert dabei Doppelimpulse mit einem
+variablen Zeitabstand bei einer Frequenz von $\qty{1}{\kilo\Hz}$. Die Kalibration wird für zehn Messwerte im Bereich von
+$\qty{0.3}{\micro\second}$ bis $\qty{9.9}{\micro\second}$ durchgeführt. Dabei wird bei allen Messpunkten die gleiche Messzeit benutzt
+und anschließend die absolute Zählrate verglichen.
+Um die verfügbaren Kanäle des Vielkanalanalysators optimal ausnutzen zu können wird die Spannungsausgabe des
+TAC so eingestellt, dass bei Impulsabständen von $\qty{9.9}{\micro\second}$ ungefähr der mittlere Kanal
+aufgefüllt wird.\\
+Nach erfolreicher Kalibration werden die Photomultiplier angeschlossen und die eigentlich Messung beginnt.
+Dabei werden die individuellen Lebensdauern der Myonen für ?? Stunden aufgenommen und als Histogramm dargestellt.
+Aus dem Histogramm wird dann die mittlere Lebensdauer der Myonen bestimmt.
+
+
