@@ -1,0 +1,10 @@
+# Zeit in Microsekunden t   Channel K
+1       40
+2       86
+3       132
+4       178
+5       224
+6       270
+7       316
+8       362
+9       408

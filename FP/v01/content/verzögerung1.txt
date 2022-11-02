@@ -1,0 +1,19 @@
+#Verzögerung links ist negativ rechts positiv tv in ns counts n
+
+
+7           1354
+6           1363
+5           1425
+4           1410
+3           1374
+2           1231
+1           1260
+0           1158
+-1          1140
+-2          1150
+-3          960
+-4          798
+-5          659
+-6          529
+-7          441
+-8          
