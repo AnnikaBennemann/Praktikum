@@ -112,7 +112,6 @@ plt.figure(3)
 plt.step(ch, Daten,'rx', label='Messwerte')
 plt.xlabel('Kanal')
 plt.ylabel('Anzahl an Impulse')
-
 plt.grid()
 plt.legend(loc='best', numpoints=1)
 plt.tight_layout()
