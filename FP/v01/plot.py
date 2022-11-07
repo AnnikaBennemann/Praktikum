@@ -32,7 +32,7 @@ plt.plot(tv[34:44], fit(tv[34:44],*params2),'b-', label='Regression für Abfall'
 HoeheP_val= np.mean(n[10:34])
 HoeheP_std= np.std(n[10:34])
 HoeheP = ufloat(HoeheP_val,HoeheP_std)
-print('Plataumittelwert =' , HoeheP)
+print('Plateaumittelwert =' , HoeheP)
 
 cl = 1/(a1) * (HoeheP_val/2 - b1)
 print('cl =' , cl)
@@ -47,7 +47,8 @@ plt.plot(x1, 0*x1 + HoeheP_val/2, 'g--', linewidth = 1.1, label = r'Plateaumitte
 
 #Justage plot
 plt.figure(1)
-plt.plot(tv, n, 'rx',label='Messwerte')
+#plt.plot(tv, n, 'rx',label='Messwerte')
+plt.errorbar(tv, n, yerr=np.sqrt(n), fmt='rx', label="Messwerte")
 plt.ylabel(r'counts $n \mathbin{/} \unit{\per\second}$')
 plt.xlabel(r'$\Delta t \mathbin{/} \unit{\nano\second}$')
 plt.legend(loc='best')
@@ -62,17 +63,18 @@ print('Schnittpunkt also Verzögerung einstellen auf ', x)
 
 #Lineare Anpassung zu den Kanälen
 tk, K= np.genfromtxt('content/channel.txt', unpack=True)
-params3, cov3= curve_fit(fit, tk, K)
+params3, cov3= curve_fit(fit, K, tk)
 errors3 = np.sqrt(np.diag(cov3))
-
+a3= ufloat(params3[0],errors3[0])
+b3= ufloat(params3[1],errors3[1])
 print('a3 =', params3[0], '±', errors3[0])
 print('b3 =', params3[1], '±', errors3[1])
 
 plt.figure(2)
-plt.plot(tk, K, 'rx',label='Messwerte')
-plt.plot(tk, fit(tk,*params3),'-', label='Regressionsgerade')
-plt.ylabel(r'Channel')
-plt.xlabel(r'$t \mathbin{/} \unit{\micro\second}$')
+plt.plot(K, tk, 'rx',label='Messwerte')
+plt.plot(K, fit(K,*params3),'-', label='Regressionsgerade')
+plt.xlabel(r'Channel')
+plt.ylabel(r'$\Delta t \mathbin{/} \unit{\micro\second}$')
 plt.legend(loc='best')
 plt.grid()
 plt.tight_layout()
@@ -102,14 +104,31 @@ print('Un =' , Un)
 
 #Grafik
 Daten= np.genfromtxt('content/messung.txt', unpack=True)
-ch = np.linspace(4,512, 512)
+Daten= Daten - 3
+ch = np.linspace(0,512,512)
+ch_plot= np.linspace(4,512,508)
 
+def exp(t, N, tau):
+	return N*np.exp(-t/tau)
 
-
+params4, cov4 = curve_fit(exp,ch_plot, Daten[4:512]) #Exponentialfunktionsfit
+errors4 = np.sqrt(np.diag(cov4))
+N = ufloat(params4[0], errors4[0])
+tau = ufloat(params4[1], errors4[1])
+#U = ufloat(params4[2], errors4[2])
+mittLebens=a3 *tau +b3 #Lebensdauer berechnen mit der ausgleichsgerade von der kalibrierung
+abw= (mittLebens-2.2)/2.2 *100
+print('N =' , N,
+       #'U =' , U,
+       'tau =' , tau,
+       'lebensdauer =' , mittLebens,
+       'Abweichung = ', abw)
 
 
 plt.figure(3)
-plt.step(ch, Daten,'rx', label='Messwerte')
+plt.errorbar(ch, Daten, yerr=np.sqrt(Daten), fmt='rx', elinewidth=0.7, label="Messdaten",markersize=3, capsize=1.5, markeredgewidth=0.5)
+#plt.step(ch, Daten,'rx', label='Messwerte')
+plt.plot(ch_plot, exp(ch_plot,*params4),'-', label='Regressionsgerade')
 plt.xlabel('Kanal')
 plt.ylabel('Anzahl an Impulse')
 plt.grid()
@@ -117,15 +136,3 @@ plt.legend(loc='best', numpoints=1)
 plt.tight_layout()
 plt.savefig('build/plot3.pdf')
 
-def exp(t, N, tau, U):
-	return N*np.exp(-t/tau) + U
-
-#params, cov = curve_fit(exp,, daten)
-#errors = np.sqrt(np.diag(cov))
-#N = ufloat(params[0], errors[0])
-#tau = ufloat(params[1], errors[1])
-#U = ufloat(params[2], errors[2])
-#
-#print('N =' , N,
-#       'U =' , U,
-#       'tau =' , tau)

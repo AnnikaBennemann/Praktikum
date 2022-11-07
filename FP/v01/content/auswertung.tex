@@ -1,27 +1,15 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-Um den Vielkanalanalysator zu kalibrieren werden mit Hilfe eines Doppelimpuls-Generators Impulse
-mit unterschiedlichem zeitlichem Abstand eingelesen. Die belegten Kanäle sind in dargestellt
-und in gegen die Impulsabstände aufgetragen.
-Da das Plateau nicht sehr stark ausgeprägt ist, wurde eine Gaußfunktion höherer Potenz, anstatt einer Rechteckfunktion als Anpassungsfunktion gewählt.
-Dementsprechend ist die Halbwertsbreite der angepassten Funktion mit $T_{\text{FWHM}} = \SI{16,4}{\nano \second}$ größer als das eigentliche Plateau.
-Die Auflösungszeit~$\symup{\Delta}t_K$ der Koinzidenzapparatur ist gleichbedeutend
-mit der Differenz zwischen der Summe der Diskriminatorbreiten und der in grün
-eingezeichneten Halbwertsbreite. Zur Bestimmung von dieser wird
-ein linearer Fit für das Plateau und die beiden Flanken durchgeführt. Durch die halbe
-Höhe des Plateau ist anschließend die Halbwertsbreite gegeben. 
-
-
-
 \subsection{Justage}
 \label{subsec:Justage}
-Es kann in den PMTs, den Kabeln und den  Diskriminatoren bei einem Myonensignal unterschiedliche Verzögerungen enststehen, was dazu führen kann, dass die Koinzidenz kein Signal weitergibt.
-Zur Vermeidung gibt es vor den Diskriminatoren die Verzögerungen, die justiert werden. Um die Verzögerung richtig zu justieren wird diese variiert und in einem $\qty{40}{\second}$ Intervall
-das Myonensstartsignal gemessen. In \autoref{fig:Verzoegerung} ist das Myonensstartsignal gegenüber der Verzögerung aufgetragen.
+In den PMTs, den Kabeln und den  Diskriminatoren können bei einem Myonensignal auf beiden Seiten des Szintillators unterschiedliche Verzögerungen
+enststehen, was dazu führen kann, dass die Koinzidenzschaltung kein Signal weitergibt.
+Zur Vermeidung gibt es vor den Diskriminatoren justierbare Verzögerungsschaltungen. Um die Verzögerung richtig zu justieren wird diese variiert und in einem $\qty{40}{\second}$ Intervall
+das Myonensstartsignal gemessen. In \autoref{fig:Verzoegerung} ist das Myonensstartsignal gegenüber der eingestellten Verzögerung aufgetragen.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.7\textwidth]{build/plot1.pdf}
+  \includegraphics[width=\textwidth]{build/plot1.pdf}
   \caption {Messwerte der Justagemessung zur Bestimmung der Halbwertsbreite und der optimalen Verzögerung zwischen den beiden PMTs.}
   \label{fig:Verzoegerung}
 \end{figure}
@@ -43,12 +31,10 @@ Danach wird die Halbwertsbreite bestimmt, indem die Schnittpunkte der Hälfte de
    \Delta t = t_r - t_l = (34.8 \pm 0.8) \si{\nano\second}
 \end{align*}
 berechnet werden.
-Hää was genau hast du hier gemacht? Dachte du hättest hier den Schnitpunkt der Fits berechnet... warum abgelesen?
-Durch die abgelesenen Schnittpunkte mit den beiden Flanken lässt sich nun die Verzögerungszeit zu
-\begin{equation}
-  \symup{\Delta}t_K = 40 - \left[ |-25 \pm 0.5| + |18 \pm 0.5| \right] \si{\nano\second} = \- 3 \pm 0.71\; \si{\nano\second}
-\end{equation}
-bestimmen. Dabei ergeben sich die \SI{40}{\nano\second} aus der Summation der Breiten der beiden Diskriminatoren.
+Außerdem wird der Schnittpunkt der beiden Ausgleichsgeraden berechnet.
+Dieser liegt bei $\Delta t = \qty{3.15}{\nano\second}$, weshalb für die Messung der Lebensdauer der Myonen eine Verzögerung von $\qty{3}{\nano\second}$
+vor dem rechten Diskriminator eingestellt wird.
+
 
 \subsection{Kalibration}
 \label{subsec:Kalibration}
@@ -60,24 +46,25 @@ mit unterschiedlichem zeitlichem Abstand eingelesen. Die belegten Kanäle sind i
   \caption {Messwerte und Ausgleichsgerade der Kalibrationsmessung zur Umrechnung von Kanalnummern in Zerfallszeiten.}
   \label{fig:plot2}
 \end{figure}
-Außerdem wurde ein linearer Fit angelegt und die Parameter zu
+Außerdem wird ein linearer Fit angelegt. Die Beziehung zwischen der Zeit zwischen den Impulsen $\Delta t$ und der Kanalnummer lautet somit
 \begin{align}
-  a_k &= (46.00 \pm 7.75) \si{\nano\second^{-1}\second^{-1}} & b_k &= (-6.00 \pm 4.36) \si{\second^{-1}}
+  \Delta t &= (\num{0.0217} \pm \num{1.35 e{-18}}) \si{\micro\second}  \cdot \text{Kanal}+ (\num{0.1304} \pm \num{3.43e-16})\si{\micro\second}.
+  \label{eqn:tau}
 \end{align}
-berechnet.
+Mithilfe dieser Funktion kann somit jedem Kanal eine Zeit zugeordnet werden.
 
-\subsection{Berechnung des Unntergrunds}
+\subsection{Berechnung des Untergrunds}
 \label{subsec:Untergrund}
 
-Bei der Messmethode, die in \autoref{subsec:Messmethode} beschrieben wurde, kann es zu Messfehlern kommen, wenn in der eingestellten Suchzeit
+Bei der Messmethode, die in \autoref{subsec:Messmethode} beschrieben wird, kann es zu Messfehlern kommen, wenn in der eingestellten Suchzeit
 \begin{align}
-  T_S = 10 \si{\micro\second}
+  T_S = \qty{10}{\micro\second}
   \label{eqn:Suchzeit}
 \end{align}
 ein weiteres Myon in den Tank eintrifft, was dann zu einem falschen Stoppsignal führt. 
 Es tritt somit ein Untergrund über die gesamte Messzeit
 \begin{align}
-  T_{ges} = 169,832.86 \si{\second},
+  T_{ges} = \qty{169832.86}{\second}
   \label{eqn:Messzeit}
 \end{align}
 auf, der sich gleichmäßig auf die Kanäle aufteilt, aufgrund der Unabhängigkeit der Myonen.
@@ -92,28 +79,47 @@ in der Zeit $T_S$ in den Detektor einfallen ist poissonverteilt
 \end{equation}
 Die durchschnittlich gemessene Rate $I_{Mess}$ lässt sich mit
 \begin{align*}
-  I_{Mess} = \frac{N_{Start}}{T_{ges}} = (27.95 \pm 0.01) \si{\second}^{-1}
+  I_{Mess} = \frac{N_{Start}}{T_{ges}} = \qty{27.95 \pm 0.01}{\second\tothe{-1}}
 \end{align*}
 berechnen, wobei $N_{Start}$ die gesamt Anzahl der Startimpulse 
 \begin{align*}
-  N_{Start} = (4747339 \pm 2178.84) 
+  N_{Start} = \qty{4747339 \pm 2178.84}{} 
 \end{align*}
 ist.
-Der gesamte Untergrund ergibt sich nun aus \autoref{eqn:Poission} für ein Teilchen und der Anzahl der Startimpulse zu
+Der gesamte Untergrund ergibt sich nun aus \autoref{eqn:Poission} für ein Teilchen $(n=1)$ und der Anzahl der Startimpulse zu
 \begin{align}
-  U_{ges} = p_{\mu}(1) N_{Start} = (1326.70 \pm 1.20).
+  U_{ges} = p_{\mu}(1) N_{Start} = \num{1326.70 \pm 1.20}.
 \end{align}
 Dieser Untergrund muss nun auf die relevanten Kanäle normiert werden. Dabei beträgt die Anzahl der relevanten Kanäle in $T_S$ $435$ und somit ergibt sich der Untergrund zu
 \begin{align}
-  U_n = \frac{U_{ges}}{435} = (3.050 \pm 0.003).
+  U_n = \frac{U_{ges}}{435} = \num{3.050 \pm 0.003}.
 \end{align}
 
 \subsection{Lebenszeit der Myonen}
 \label{subsec:Lebenszeit}
-Die Counts pro zeitintervall wird in \autoref{fig:plot3} dargestellt.
+Die vom Vielkanalanalysator aufgenommenen Messwerte für die Counts pro Kanal sind in \autoref{fig:plot3} dargestellt.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.7\textwidth]{build/plot3.pdf}
-  \caption {Messwerte und Exponentialfit, welcher den Untergrund Un als Fitparameter berücksichtigt, der Lebensdauer-Messung..}
+  \includegraphics[width=\textwidth]{build/plot3.pdf}
+  \caption {Um den Untergrund korrigierte Messwerte der Lebensdauer-Messung und Exponentialfit.}
   \label{fig:plot3}
 \end{figure}
+
+Hierbei wurde von den aufgenommenen Daten schon der in \autoref{subsec:Untergrund} berechnete Untergrund abgezogen.
+Ein Exponentialfit der Form
+\begin{align*}
+  N(t) &= N_0 \cdot \exp(-t \mathbin{/} \text{Kanal})
+\end{align*}
+mit den Parametern 
+\begin{align*}
+  N_0 &= (156.1 \pm 1.2)\\
+  \text{Kanal} &= (93.4 \pm 1.0)
+\end{align*}
+ist außerdem dargestellt.
+Somit kann mithilfe von \autoref{eqn:tau} der Abstand der Impulse, beziehungsweise die mittlere Lebensdauer der kosmischen Myonen
+zu 
+\begin{align*}
+  \tau &= (2.160 \pm 0.021)\si{\micro\second}
+\end{align*}
+bestimmt werden.
+
