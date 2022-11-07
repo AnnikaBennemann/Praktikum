@@ -55,7 +55,7 @@ Der Depolarisationsstrom kann mithilfe der folgenden zwei Ansätzen hergeleitet 
 Da die Dipole sich bei genügend hoher Temperatur wieder statistisch ausrichten und dies mit Ladungsträgerdiffusion und einer Wanderung
 von Elektronen durch die Kondensatorplatten verbunden ist,
 entsteht ein elektrisch messbarer Strom.
-Der Strom wird Depolarisationsstrom genannt und ist gleich der Änderungsrate der 
+Der Strom wird Depolarisationsstrom genannt und die Stromdichte ist gleich der Änderungsrate der 
 Polarisation $P(t)$, also dem Gesamtdipolmoment pro Volumeneinheit.
 \begin{equation}
     j(T) = - \frac{\text{d}P(t)}{\text{d}t}.
@@ -69,18 +69,18 @@ Die Lösung der Gleichung mithilfe der Separation der Variablen ergibt
 \begin{equation}
     P(t) = P_0 \text{exp}\left(-\int_0^t\frac{\text{d}t}{\tau(T)}\right).
 \end{equation}
-Ableiten dieser Lösung nach der Zeit ergibt wieder die Änderung der Polarisation und somit den 
-Depolarisationsstrom.
+Ableiten dieser Lösung nach der Zeit ergibt wieder die Änderung der Polarisation und somit die
+Depolarisationsstromdichte.
 \begin{equation}
-    I(T) = \frac{P_0}{\tau(T)} \text{exp}\left(-\int_0^t\frac{\text{d}t}{\tau(T)}\right) \quad.
+    j(T) = \frac{P_0}{\tau(T)} \text{exp}\left(-\int_0^t\frac{\text{d}t}{\tau(T)}\right) \quad.
     \end{equation}
 Mit der konstanten Heizrate
 \begin{equation}
     b := \frac{\text{d}T}{\text{d}t} = const
 \end{equation}
-lässt sich der Depolarisationsstrom nun als 
+lässt sich die Depolarisationsstromdichte nun als 
 \begin{equation}
-    I(T) = \frac{P_0}{\tau(T)} \text{exp}\left(-\frac{1}{b\tau_0}\int_{T_0}^T\frac{\text{d}T'}{\tau(T')}\right)
+    j(T) = \frac{P_0}{\tau(T)} \text{exp}\left(-\frac{1}{b\tau_0}\int_{T_0}^T\frac{\text{d}T'}{\tau(T')}\right)
 \end{equation}
 ausdrücken, da $T$ eine lineare Funktion in Abhängigkeit von $t$ ist.
 
@@ -174,11 +174,11 @@ Kurvenverlaufs erläutert.
         \end{equation}
         Die Änderung Polarisation $\frac{dP}{dt}$ entspricht der Stromdichte $j(T)$ und mit $P = \int \text{d}P$ ist dann
         \begin{equation}
-            \tau(T) = \frac{\int \frac{dP}{dt}\text{d}T}{I(T)b} \quad .
+            \tau(T) = \frac{\int \frac{dP}{dt}\text{d}T}{j(T)b} \quad .
         \end{equation}
-        Der Dipolarisationsstrom kann hier erneut gegen die Änderung der Polarisation vertauscht werden
+        Die Stromdichte kann hier erneut gegen die Änderung der Polarisation vertauscht werden
         \begin{equation}
-            \tau(T) = \frac{\int_T^\infty I(T')\text{d}T'}{I(T)b}
+            \tau(T) = \frac{\int_T^\infty j(T')\text{d}T'}{j(T)b}
         \end{equation}
         und somit ergibt sich für die Aktivierungsenergie $W$ nach Einsetzen von \autoref{eqn:Relaxationszeit}
         \begin{equation}
