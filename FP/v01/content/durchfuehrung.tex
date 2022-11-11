@@ -9,7 +9,10 @@ Ein Schaltbild des Versuchsaufbaus ist in \autoref{fig:Schaltbild} dargestellt.
 \end{figure}
 Dabei besteht der Versuchsaufbau aus einem Szintillatortank, welcher ein Volumen von ungefähr $\qty{50}{\liter}$ fasst.
 An beiden Ausgängen des Szintillatortanks ist je ein Photomultiplier (PMT) gekoppelt, welcher schwache Lichtsignale durch Erzeugung und Verstärkung eines elektrischen Signals detektiert.
-Dessen Ausgänge werden über eine Verzögerungsleitung auf den den Eingang jeweils eines Diskriminators gegeben, welcher eine variable Schwelle besitzt. 
+Dabei werden an einer Photokathode durch den Photoeffekt Elektronen ausgelöst, welche über mehrere positiv geladene Dyonen beschleunigt werden.
+An jeder Dynode vervielfacht sich die Zahl der Elektronen. Die Elektronen treffen am Ende des PMTs auf eine Anode, wo das ursprüngliche
+Signal stark verstärkt in ein elektronisches Signal umgewandelt wird.
+Die Ausgänge der PMTs werden über eine Verzögerungsleitung auf den den Eingang jeweils eines Diskriminators gegeben, welcher eine variable Schwelle besitzt. 
 Anschließend gelangen die Signale beider PMT in eine Koinzidenzschaltung, welche nur dann ein Ausgangssignal erzeugt, wenn beide Signale der PMT zeitgleich an den Eingangen der Koinzidenzschaltung
 eintreffen.\\
 Danach folgt das elektronische Äquivalent einer Stoppuhr.
@@ -20,17 +23,20 @@ Außerdem wird die Zeitmessung bzw. der Monoflop zurückgesetzt wenn die Suchzei
 Die Start- und Stoppimpulse werden mithilfe von Impulszählern gezählt.
 Das Signal des TAC gelangt zu einem Vielkanalanalysator (bzw. Multi-Channel-Analyser) (MCA). Dieser ordnet jedem Signal entsprechend
 seiner Größe einen Kanal innerhalb eines Datensatzes zu und erhöht den Wert des entsprechenden Kanals um Eins. Die Anzahl der in einem Kanal
-gespeicherten Signale entspricht also der Häufigkeit des Auftretens eines Signals mit einer bestimmten Lebensdauer. Das Histogramm der
-Kanäle kann am PC durch eine bestimmte Messsoftware augelesen werden.
+gespeicherten Signale entspricht also der Häufigkeit des Auftretens eines Signals mit einer bestimmten Lebensdauer.
 
 
 \subsection{Rauschunterdrückung}
 \label{subsec:Rauschunterdrückung}
 Bei endlichen Temperaturen neigen die Photokathoden in den PMTs zu spontaner Elektronemission, wobei kleine Impulse entstehen.
-Diese Impulse sind kleiner als "echte" Impulse und können so mit einem Diskriminator herausgefiltert werden. Die Schwelle wird
+Diese Impulse sind kleiner als \dq echte \dq Impulse und können so mit einem Diskriminator herausgefiltert werden.
+Dieser lässt nur Signale durch, die eine Mindestspannung überschreiten. Die Schwelle wird
 dabei so gesetzt, dass möglichst nur die ungewollten Impulse rausgefiltert werden. Da die Elektronenemission an beiden PMTs unabhängig
-voneiander geschieht, wird eine Koinzidenzschaltung verwebdet, sodass die Signale der PMT
-nur weitergeleitet werden wenn ein Myon eintrifft und zerfällt und somit beide PMT gleichzeitig ein Signal aufnehmen und zur Koinzidenz weiterleiten.
+voneiander geschieht, wird eine Koinzidenzschaltung verwendet, sodass die Signale der PMT
+nur weitergeleitet werden wenn ein Myon eintrifft und zerfällt und somit beide PMT gleichzeitig ein Signal aufnehmen und zur Koinzidenz
+weiterleiten. Die Wahrscheinlichkeit, dass beide PMTs gleichzeitig ein Signal weiterleiten das nicht von einem Myon oder dessen Zerfall
+stammt ist sehr gering. Diese Signale können allerdings nicht weiter von den echten Signalen unterschieden werden.
+
 
 \subsection{Stoppuhr-Methode}
 \label{subsec:Messmethode}
@@ -41,9 +47,9 @@ Es wird somit von diesen Myonen nur ein Impuls gesendet und der Impuls des näch
 registriert werden. Um disesm entgegen zu wirken
 wird die Stoppuhr-Methode benutzt. Dabei beginnt eine Suchzeit $T_S$ nach dem Startimpuls des Myons. Zerfällt das Myon nicht innerhalb der Suchzeit,
 wird die Apparatur wieder in den Anfangszustand zurückgebracht.\\
-Dieses grundlegende Messprinzip wird schaltungstechnisch durch den Monoflop und die zwei AND-Gittern geregelt.
+Dieses grundlegende Messprinzip wird schaltungstechnisch durch den Monoflop und die zwei AND-Gitter geregelt.
 Der Monoflop hat einen stabilen und einen instabilen Zustand.
-Die Zeit, in der der Monoflop im instabilem Zustand ausgelenkt ist, sollte ungefäht der Suchzeit eintsprechen, denn im stabilen Zustand sendet
+Die Zeit, in der der Monoflop im instabilem Zustand ausgelenkt ist, sollte ungefähr der Suchzeit entsprechen, denn im stabilen Zustand sendet
 der Monoflop ein Signal an das zweite AND-Gitter, welches die Messung stoppt.
 Die Koinzidenzschaltung lenkt dabei den Monoflop in den instabilen Zustand aus und das TAC misst die Zeit. Kommt es dann in der Suchzeit zu keinem
 Stromimpuls, der über das zweite AND-Gatter an das TAC weitergeleitet wird, wird die Messung verworfen und das TAC gibt kein Signal ab.
@@ -64,14 +70,14 @@ Anschließend wird die Koinzidenzschaltung eingestellt, indem die Verzögerungsl
 dass sich die Halbwertsbreite der Verteilung bestimmen lässt. Die Ereignisrate soll im Bereich von $\qty{20}{\second^{-1}}$ liegen.\\
 Danach wird der restliche Teil der Schaltung verkabelt, eine Suchzeit $T_S$ eingestellt und der Messbereich des TAC entsprechend angepasst.
 Der MCA kann über einen Doppelimpulsgenerator kalibriert werden. Dieser Doppelimpulsgenerator generiert dabei Doppelimpulse mit einem
-variablen Zeitabstand bei einer Frequenz von $\qty{1}{\kilo\Hz}$. Die Kalibration wird für zehn Messwerte im Bereich von
+variablen Zeitabstand bei einer Frequenz von $\qty{1}{\kilo\Hz}$. Die Kalibration wird für neun Messwerte im Bereich von
 $\qty{1}{\micro\second}$ bis $\qty{9}{\micro\second}$ durchgeführt. Dabei wird bei allen Messpunkten die gleiche Messzeit benutzt
 und anschließend die absolute Zählrate verglichen.
 Um die verfügbaren Kanäle des Vielkanalanalysators optimal ausnutzen zu können wird die Spannungsausgabe des
 TAC so eingestellt, dass bei Impulsabständen von $\qty{9}{\micro\second}$ ungefähr der mittlere Kanal
 aufgefüllt wird.\\
 Nach erfolreicher Kalibration werden die Photomultiplier angeschlossen und die eigentlich Messung beginnt.
-Dabei werden die individuellen Lebensdauern der Myonen für $47.18$ Stunden aufgenommen und im PC als Histogramm dargestellt.
+Dabei werden die individuellen Lebensdauern der Myonen für $47.18$ Stunden aufgenommen.
 Aus den Daten des Histogramms wird dann die mittlere Lebensdauer der Myonen bestimmt.
 
 

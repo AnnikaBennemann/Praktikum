@@ -5,15 +5,15 @@
 \label{subsec:Justage}
 In den PMTs, den Kabeln und den  Diskriminatoren können bei einem Myonensignal auf beiden Seiten des Szintillators unterschiedliche Verzögerungen
 enststehen, was dazu führen kann, dass die Koinzidenzschaltung kein Signal weitergibt.
-Zur Vermeidung gibt es vor den Diskriminatoren justierbare Verzögerungsschaltungen. Um die Verzögerung richtig zu justieren wird diese variiert und in einem $\qty{40}{\second}$ Intervall
-das Myonensstartsignal gemessen. In \autoref{fig:Verzoegerung} ist das Myonensstartsignal gegenüber der eingestellten Verzögerung aufgetragen.
+Zur Vermeidung gibt es vor den Diskriminatoren justierbare Verzögerungsschaltungen. Um die Verzögerung richtig zu justieren, wird diese variiert und jeweils für $\qty{40}{\second}$
+die Anzahl der Myonensstartsignale gemessen. In \autoref{fig:Verzoegerung} ist das Myonensstartsignal gegenüber der eingestellten Verzögerung aufgetragen.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{build/plot1.pdf}
   \caption {Messwerte der Justagemessung zur Bestimmung der Halbwertsbreite und der optimalen Verzögerung zwischen den beiden PMTs.}
   \label{fig:Verzoegerung}
 \end{figure}
-Der Graph zur Justierung der Verzögerungsleitungen in \autoref{fig:Verzoegerung} weist ein leichtes Plateau auf.
+Der Graph zur Justierung der Verzögerungsleitungen weist ein Plateau auf.
 Dieses Plateau ist, wie in der Durchführung beschrieben, auf die normierte Pulsdauer der Ausgangssignale der Diskriminatoren zurückzuführen und befindet sich im erwarteten Bereich von \SI{10}{\nano \second}. \\
 Zur Bestimmung der Halbwertsbreite wird zunächst die Höhe des Plateaus
 \begin{align*}
@@ -108,19 +108,20 @@ Die vom Vielkanalanalysator aufgenommenen Messwerte für die Counts pro Kanal si
 Hierbei wurde von den aufgenommenen Daten schon der in \autoref{subsec:Untergrund} berechnete Untergrund abgezogen.
 Ein Exponentialfit der Form
 \begin{align*}
-  N(t) &= N_0 \cdot \exp(-t \mathbin{/} \text{Kanal})
+  N(t) &= N_0 \cdot \exp(-t \mathbin{/} \text{Kanal})+U
 \end{align*}
 mit den Parametern 
 \begin{align*}
-  N_0 &= (156.1 \pm 1.2)\\
-  \text{Kanal} &= (93.4 \pm 1.0)
+  N_0 &= \num{155.8 \pm 1.2}\\
+  \text{Kanal} &= \num{97.2 \pm 1.7}\\
+  U&= \num{-1.5 \pm 0.6}
 \end{align*}
 ist außerdem dargestellt.
-Hierbei werden die ersten Werte außer Acht gelassen, da sie nicht dem exponentiellen Verlauf folgen.
+Hierbei werden die nicht relevanten Kanäle außer Acht gelassen.
 Somit kann mithilfe von \autoref{eqn:tau} der Abstand der Impulse, beziehungsweise die mittlere Lebensdauer der kosmischen Myonen
 zu 
 \begin{align*}
-  \tau &= (2.160 \pm 0.021)\si{\micro\second}
+  \tau &= (2.24 \pm 0.04)\si{\micro\second}
 \end{align*}
 bestimmt werden.
 

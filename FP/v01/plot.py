@@ -104,29 +104,30 @@ print('Un =' , Un)
 
 #Grafik
 Daten= np.genfromtxt('content/messung.txt', unpack=True)
-Daten= Daten - 3
+Daten= Daten -3
 ch = np.linspace(0,512,512)
-ch_plot= np.linspace(4,512,508)
+ch_plot= np.linspace(4,440,436)
 
-def exp(t, N, tau):
-	return N*np.exp(-t/tau)
+def exp(t, N, tau,U):
+	return N*np.exp(-t/tau)+U
 
-params4, cov4 = curve_fit(exp,ch_plot, Daten[4:512]) #Exponentialfunktionsfit
+params4, cov4 = curve_fit(exp,ch_plot, Daten[4:440]) #Exponentialfunktionsfit
 errors4 = np.sqrt(np.diag(cov4))
 N = ufloat(params4[0], errors4[0])
 tau = ufloat(params4[1], errors4[1])
-#U = ufloat(params4[2], errors4[2])
+U = ufloat(params4[2], errors4[2])
 mittLebens=a3 *tau +b3 #Lebensdauer berechnen mit der ausgleichsgerade von der kalibrierung
-abw= (mittLebens-2.2)/2.2 *100
+abw= (mittLebens-2.20)/2.20 *100 #keine Ahnung warum da falsche werte rausgespuckt werden. Mit dem Taschenrechner kommt das richtige raus
 print('N =' , N,
-       #'U =' , U,
+       'U =' , U,
        'tau =' , tau,
        'lebensdauer =' , mittLebens,
-       'Abweichung = ', abw)
+       'Abweichung = ', abw
+       )
 
 
 plt.figure(3)
-plt.errorbar(ch, Daten, yerr=np.sqrt(Daten), fmt='rx', elinewidth=0.7, label="Messdaten",markersize=3, capsize=1.5, markeredgewidth=0.5)
+plt.errorbar(ch_plot, Daten[4:440], yerr=np.sqrt(Daten[4:440]), fmt='rx', elinewidth=0.7, label="Messdaten",markersize=3, capsize=1.5, markeredgewidth=0.5)
 #plt.step(ch, Daten,'rx', label='Messwerte')
 plt.plot(ch_plot, exp(ch_plot,*params4),'-', label='Regressionsgerade')
 plt.xlabel('Kanal')
