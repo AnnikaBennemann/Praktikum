@@ -7,17 +7,139 @@ mit Hilfe des Faraday-Effekts zu bestimmen.
 \section{Theorie}
 \label{sec:Theorie}
 
+\subsection{Bandstruktur}
+\label{sub:Bandstruktur}
+Die elektronischen Energiezustände in einem Kristall können durch das Bändermodell beschrieben werden.
+Jedes Atom besitzt ein diskretes Energiespektrum. Wenn mehrere Atome angenähert werden und miteinander
+wechselwirken überlappen sich diese Spektren. In Kristallen können die Energieniveaus als breite Bänder angenommen werden.
+Das Bändermodell besagt, dass jeder Körper ein Valenzband besitzt, dessen Zustände voll mit Elektronen besetzt sind.
+Energetisch darüber liegt das Leitungsband, welches freie Zustände für Elektronen besitzt.
+Die Besetzung des Leitungsbandes, sowie die Differenz der Energieniveaus der beiden Bänder, die sogenannte Bandlücke,
+beeinflussen die Leitfähigkeit eines Materials.
+Es werden drei Formen unterschieden:
+Im Metall (Leiter) überlappen das Leitungs- und das Valenzband. Die Bandlücke verschwindet somit und das Leitungsband ist mit Elektronen besetzt.
+Im Isolator (Nichtleiter) ist die Bandlücke so groß, dass sie von den Elektronen im Valenzband nicht überwunden werden kann. Es gibt somit keine
+besetzten Zustände im Leitungsband.
+Im Halbleiter ist eine Bandlücke vorhanden, diese kann jedoch, anders als beim Isolator von den Elektronen überwunden werden, wenn diese angeregt werden.
+Diese Anregung kann über zugefügte Energie in Form von Wärme entstehen.
+Wird keine Energie hinzugefügt, befinden sich die Elektronen im Valenzband in einer festen Bindung und können die Lücke
+nicht überwinden, der Stoff ist somit nicht leitend.
+Gelangt bei einem Halbleiter ein Elektron in das Leitungsband, entsteht durch das fehlende Elektron ein Loch in dem Valenzband, sodass zwei freie 
+Ladungsträger entstehen.
+Zusätzlich zur thermischen Anregung können bei Halbleitern durch Dotierung auch gezielt Ladungsträger eingebracht werden.
+
+\subsection{Dotierung}
+\label{sub:Dotierung}
+
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.35]{Abbildungen/Dotierung.png}
-    \caption{Schematischer Aufbau des Versuchs.\cite{Dotierung}}
-    \label{fig:aufbau}
+    \includegraphics[scale=0.7]{Abbildungen/Dotierung.png}
+    \caption{Schematische Skizze zur Dotierung von Halbleitern.\cite{Dotierung}}
+    \label{fig:Dotierung}
 \end{figure}
 
 
+\subsection{Die effektive Masse}
+\label{sub:effektiv}
+Um die Bewegung von Elektronen in einem Festkörper beschreiben zu können, wird das Konzept der effektiven Masse eingeführt.
+Elektronen in einem Festkörper bewegen sich quasifrei. Wird ihre Masse durch eine effektive Masse ersetzt, die den Einfluss des
+periodischen Potentials des Gitters auf die Bewegung und kinetische Energie der Elektronen berücksichtigt, können sie als freie
+Teilchen betrachtet werden.
+Die Betrachtung des Leitungsbandes um das Minimum eignet sich in Halbleitern als Approximation der komplexen mathematischen Bandstruktur.
+(siehe \autoref{fig:Band})
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.35]{Abbildungen/Doppelbrechung.png}
-    \caption{Schematischer Aufbau des Versuchs.\cite{V46_Anhang}}
-    \label{fig:aufbau}
+    \includegraphics[scale=0.7]{Abbildungen/band.pdf}
+    \caption{Approximation der Bandstruktur im Halbleiter.\cite{V46}}
+    \label{fig:Band}
 \end{figure}
+
+Um die effektive Masse herzuleiten wird die Elektronenenergie am Minimum $\varepsilon(\vec{k})$ in eine Taylorreihe um $k=0$ entwickelt
+\begin{align*}
+    \varepsilon(\vec{k})=\varepsilon(0) + \frac{1}{2}\sum_{i=1}^3 \left. \frac{\partial^2 \varepsilon}{\partial k_i^2}\right|_{k=0}k_i^2 + \mathcal{O}(k^3)
+\end{align*}
+und mit der Elektronenenergie des harmonischen Oszillators
+\begin{align*}
+    \varepsilon &= \frac{\hbar k^2}{2m}
+\end{align*}
+verglichen.
+Die effektive Masse ergibt sich somit zu
+
+
+
+
+\subsection{Zirkulare Doppelbrechung}
+\label{sub:Doppelbrechung}
+Zirkuläre Doppelbrechung ist die Fähigkeit eines Kristalls, die Polarisationsebene eines linear polarisierten Lichtstrahls bei der Transmission
+zu drehen. Ein Kristall mit dieser Fähigkeit wird optisch anisotrop oder optisch aktiv genannt.
+
+Bei einem optisch aktiven Medium unterscheiden sich aufgrund der Materialstruktur die Phasengeschwindigkeiten für rechts- und linkszirkular
+polarisiertes Licht.
+Jede linear polarisierte Welle kann gemäß
+\begin{equation}
+    \vec{E}(z)=\frac{1}{2}(\vec{E_R}(z)+\vec{E_L}(z))
+    \label{eqn:E}   
+\end{equation}
+als Überlagerung zweier entgegengesetzt, zirkular polarisierten Wellen mit gleicher Frequenz dargestellt werden. Dabei gilt
+\begin{equation*}
+    \vec{E_{L/R}}=(E_0\vec{x}_0\pm \text{i}E_0\vec{y})\exp{\text{i}k_{L/R}z},
+\end{equation*}
+sodass die Polarisation der Welle beim Eintritt in den Kristall parallel zur $\vec{x}$-Richtung liegt.
+
+Mit den Definitionen der Phase
+\begin{align*}
+    \Psi  &\coloneqq \frac{L}{2}(k_R+k_L)\\
+    \shortintertext{und des Winkels}
+    \theta&\coloneqq \frac{L}{2}(k_R-k_L)
+\end{align*}
+ergibt sich nach \autoref{eqn:E} ein Ausdruck des aus dem Kristall der Länge $z=L$ austretenden Lichts zu 
+\begin{equation*}
+    \vec{E}(L)=E_0 \exp(\text{i}\Psi)\left(\cos(\vartheta) \vec{x}_0 + \sin(\vartheta)\vec{y}_0\right).
+\end{equation*}
+
+
+Die Polarisationsebene wurde demnach um den Winkel $\theta$ bezüglich der Ausgangslage $\vec{x}_0$ verdreht. Durch
+Berücksichtigung von $k=\frac{n \omega}{c}$ mit dem Brechungsindex $n$ und der Kreisfrequenz der Welle $\omega$,
+kann $\theta$ auch durch 
+\begin{equation*}
+    \theta=\frac{L\omega}{2c}(n_R-n_L)
+\end{equation*}
+ausgedrückt werden. Die Drehung der Polarisationsebene um den Winkel $\theta$ ist in \autoref{fig:Doppelbrechung} dargestellt.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Abbildungen/Doppelbrechung.png}
+    \caption{.\cite{V46_Anhang}}
+    \label{fig:Doppelbrechung}
+\end{figure}
+
+Mikroskopisch lässt sich die zirkulare Doppelbrechung durch elektrische Dipole beschreiben, die in dem Material durch das 
+Magentfeld induziert werden. Die durch die Dipole erzeugte Polarisation des Kristalls 
+\begin{equation*}
+    \vec{P}=\varepsilon_0\chi\vec{E}
+\end{equation*}
+ist abhängig von der dielektrischen Suszeptibilität des Stoffes. Hierbei ist $\varepsilon_0$ die Influenzkonstante und $\chi$ die
+dielektrische Suszeptibilität, welche in anisotropen Kristallen als Tensor $\overline{\overline{\chi}}$ geschrieben wird.
+Ein Material ist doppelbrechend, wenn
+\begin{equation}
+    \overline{\overline{\chi}}=
+    \left[
+        \begin{array}{ccc}
+        \chi_{xx}          & +i\chi_{xy} & 0         \\ 
+        -i\chi_{xy}   & \chi_{yy}        & 0         \\
+        0                  & 0                & \chi_{zz}
+    \end{array}
+    \right]
+    \label{eqn:chi}
+\end{equation}
+gilt.
+Wenn die Suszeptibilität jedoch keine komplexen Matrixeinträge aufweist, so tritt keine Doppelbrechung auf.
+Ein solches Material wird als optisch isotrop beziehungsweise optisch inaktiv bezeichnet. 
+Durch Anlegen eines Magnetfeldes kann auch ein optisch isotropes Material doppelbrechend werden.
+
+\subsection{Der Faraday-Effekt für optisch inaktive Materie}
+\label{sub:Faraday}
+
+
+
+
