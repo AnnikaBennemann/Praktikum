@@ -3,7 +3,7 @@
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.35]{Abbildungen/Aufbau.pdf}
+    \includegraphics[scale=0.8]{Abbildungen/Aufbau.pdf}
     \caption{Schematischer Aufbau des Versuchs.\cite{V46}}
     \label{fig:aufbau}
 \end{figure}
@@ -35,15 +35,41 @@ Die entstehenden Signale gelangen nun an einen Differenzverstärker, dessen Ausg
 ist und somit verschwindet, wenn beide Eingangsspannungen in Betrag und Phase übereinstimmen.
 Der darauf folgende Selektivverstärker wird auf die durch den Lichtzerhacker erzeugte
 Modulationsfrequenz abgestimmt, sodass Störfrequenzen bestmöglich herausgefiltert werden.
+Zur Darstellung der Signalamplitude ist dem Selektivverstärker ein Oszilloskop nachgeschaltet.
 
 \subsection{Justage des Versuchsaufbaus}
 \label{sub:Justage}
 
-\subsection{Messung zur Bestimmung der Drehwinkel}
-\label{sub:Drehwinkel}
+Die Apparatur wird vor der eigentlichen Messung justiert. Dafür werden zunächst die Probe und der Interferenzfilter aus dem Strahlengang
+entfernt. Zur Justage wird sichtbares Licht verwendet.
+Im nächsten Schritt wird die Polarisationsvorrichtung überprüft. Die Prismen sollten so gedreht werden, dass das Licht senkrecht auf ihre Oberfläche fällt.
+Außerdem wird überprüft ob das Licht auf den Sensitivbereich der jeweiligen Photodioden fällt und gegebenenfalls angepasst.
+fallen. Das Licht soll so auf die Detektoren treffen, dass bei geeigneter Drehung des Polarisationsprimsas die Lichtintensität an einem der Detektoren verschwindet und beim anderen maximal wird.
+Der Lichtzerhacker wird in Bewegung gesetzt und eine Frequenz von $\qty{450}{\hertz}$ eingestellt.
+Die Verstärkerfrequenz des Selektivverstärkers wird nun so variiert, dass die Signalamplitude am Oszilloskop maximal wird.
+
+
+
 
 \subsection{Messung zur Bestimmung der Magnetfeldstärke}
 \label{sub:Magnetfeld}
+
+Im ersten Teil der Messung wird die Kraftflussdichte $B(z)$ mittels einer Hall-Sonde gemessen.
+Der Feldstrom wird hierfür auf einen Maximalwert geregelt. Mit der Sonde wird dann für verschiedene Abstände $x$ der zugehörige
+Wert des Magnetfelds bestimmt. Es soll besonders der Bereich des Luftspaltes, wo eigentlich die Probe steht, untersucht werden.
+
+
+\subsection{Messung zur Bestimmung der Drehwinkel}
+\label{sub:Drehwinkel}
+
+Für die eigentliche Messung wird eine Probe und ein Interferenzfilter in den Aufbau eingesetzt. Bei eingeschaltetem Magnetfeld wird das erste Glan-Thompson-Prisma
+so gedreht, dass die auf dem Oszilloskop angezeigte Signalamplitude minimal wird und am Goniometer wird der Winkel $\theta_1$ abgelesen.
+Nun wird das Feld umgepolt, wieder ein Nullabgleich durchgeführt und der Winkel $\theta_2$ am Goniometer abgelesen.
+Mit diesem Verfahren werden jeweils zwei Winkel pro Interferenzfilter aufgenommen. Die Messung wird für 9 verschiedene Interferenzfilter
+an zwei n-dotierten und einer hochreinen Galliumarsenidprobe wiederholt.
+Um den Selektivverstärker nicht zu überlasten wird beim Wechsel der Proben und der Interferenzfilter der Lichtstrahl blockiert.
+
+
 
 
 

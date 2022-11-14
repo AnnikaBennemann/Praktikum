@@ -1,12 +1,67 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
-  \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
+
+\subsection{Bestimmung der Kraftflussdichte}
+\label{sub:Kraftflussdichte}
+
+Als erstes werden die aufgenommenen Daten der Magnetfeldstärke gegen den Ort aufgetragen.
+Dies ist in
+%\autoref{fig:plot1}
+dargestellt.
 
 
-Siehe \autoref{fig:plot}!
+Die maximale Kraftflussdichte entspricht der Feldstärke am Ort der Probe.
+Somit liegt die Feldstärke im Bereich der Probe bei 
+\begin{align*}
+  B &= \qty{}{\tesla}
+\end{align*}
+
+\subsection{Bestimmung der effektiven Masse}
+\label{sub:effektiveMasse}
+
+Zur Bestimmung der effektiven Masse werden die durch die Messung bestimmten Winkel unter denen ein Minimum der Signalamplitude gefunden wurde
+normiert, also durch die Länge $L$ der Probe geteilt.
+Dadurch, dass das Feld bei der Umpolung um insgesamt $\num{2}B$ geändert wird, ergibt sich der Winkel $\theta$ um den die Polarisationsebene
+gedreht wurde zu
+\begin{align}
+  \theta &= \frac{1}{2L}(\lvert \theta_1-\theta_2 \rvert).
+\end{align}
+Die Dicken der Proben entsprechen der Durchlauflänge $L$ und betragen für die verwendeten Proben
+\begin{align*}
+  L_{\text{undotiert}}&= \qty{}{\milli\meter}\\
+  L_{1,2}&= \qty{}{\milli\meter}\\
+  L_{2,8}&= \qty{}{\milli\meter}.
+\end{align*}
+
+In
+%\autoref{fig:plot2}
+sind die normierten Winkel der hochreinen Probe gegen das Quadrat der Wellenlängen der verwendeten Interferenzfilter aufgetragen.
+
+Um die durch die Leitungselektronen bedingte Faraday-Rotation $\theta_{\text{frei}}$ zu bestimmen, wird von den normierten Winkeln der dotierten Proben jeweils
+die Faraday-Rotation der undotierten Probe abgezogen.
+Die so berechneten Werte sind in
+%\autoref{fig:plot3}
+wiederum gegen die quadrierten Wellenlängen der Interferenzfilter aufgetragen. Außerdem wird für beide Dotierungen ein Fit der Form
+\begin{align*}
+  \theta_{\text{frei}} &= A \cdot \lambda^2
+\end{align*}
+hinzugefügt, wobei $A$ zu
+\begin{align*}
+  A_{1,2}&= \\
+  \shortintertext{und}\\
+  A_{2,8}&= 
+\end{align*}
+ermittelt wird.
+Aus der Steigung $A$ kann nun durch Umstellen von \autoref{eqn:drehwinkel} die effektive Masse nach
+\begin{align*}
+  m^* &= \sqrt{\frac{e_0^3\cdot N \cdot B}{A\cdot 8\pi^2\varepsilon_0 c^3 \cdot n }} 
+\end{align*}
+umgestellt werden.
+Der Brechungsindex $n$ beträgt hierbei $n_{\text{GaAs}}=\num{3.4}$ QUELLE EINFÜGEN.
+Somit berechnet sich die effektive Masse zu
+\begin{align*}
+  m^*_{1,2}&=\\
+  \shortintertext{und}\\
+  m^*_{2,8}&=.
+\end{align*}
