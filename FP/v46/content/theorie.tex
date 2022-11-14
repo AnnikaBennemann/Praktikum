@@ -95,7 +95,7 @@ Jede linear polarisierte Welle kann gemäß
 \end{equation}
 als Überlagerung zweier entgegengesetzt, zirkular polarisierten Wellen mit gleicher Frequenz dargestellt werden. Dabei gilt
 \begin{equation*}
-    \vec{E_{L/R}}=(E_0\vec{x}_0\pm \text{i}E_0\vec{y})\exp{\text{i}k_{L/R}z},
+    \vec{E_{L/R}}=(E_0\vec{x}_0\pm \text{i}E_0\vec{y})\exp{(\text{i}k_{L/R}z)},
 \end{equation*}
 sodass die Polarisation der Welle beim Eintritt in den Kristall parallel zur $\vec{x}$-Richtung liegt.
 
@@ -154,16 +154,23 @@ Ein solches Material wird als optisch isotrop beziehungsweise optisch inaktiv be
 \label{sub:Faraday}
 Durch Anlegen eines Magnetfeldes kann auch ein optisch isotropes Material doppelbrechend werden.
 Dieses Phänomen wird Faraday-Effekt genannt.
-
+durch die Betrachtung
+Die gebundenen Elektronen im Magnetfeld, welche zusätzlich durch ein elektrisches
+Feld (verursacht durch die Lichtwelle) gestört werden, können durch die Bewegungsgleichung
 \begin{align}
-    m\ddot{\vec{r}}+K\vec{r}&=-\text{e}\vec{E}(\vec{r})_0-\text{e}\dot{\vec{r}}\times\vec{B}
+    m\ddot{\vec{r}}+K\vec{r}&=-\text{e}_0\vec{E}(\vec{r})-\text{e}_0\dot{\vec{r}}\times\vec{B}
     \label{eqn:klassische_Bewegungsgleichung}
 \end{align}
+beschrieben werden.
+Die Auslenkung des Elektrons aus der Gleichgewichtslage wird hierbei durch $\vec{r}$ beschrieben, die
+Konstante K bezeichnet die Bindung des Elektrons an seine Umgebung und die Elementarladung ist gegeben durch e0.
+$\vec{E}$ stellt die Feldstärke der einfallenden Lichtwelle dar.
 
-Daraus wird : (Bedingungen noch aufschreiben, bei Magische Miesmuschel relativ verständlich)
-
+Der Ausdruck für den Drehwinkel der Polarisationsebene $\theta$ 
 \begin{align}
    \frac{\theta}{L}& \approx \frac{\text{e}_0^3\lambda^2 NB}{8\pi^2\varepsilon_0\text{c}_0^3}\frac{1}{m^2 \cdot n} = \frac{\text{e}_0^3\lambda^2 NB}{8\pi^2\varepsilon_0\text{c}_0^3}\frac{1}{m^{*2} \cdot n}\\
     \label{eqn:drehwinkel}
 \end{align}
+kann aus \autoref{eqn:klassische_Bewegungsgleichung} hergeleitet werden, wenn davon ausgegangen wird, dass
+BEDINGUNGEN NOCH EINFÜGEN
 Nach \autoref{sub:effektiv} darf $m$ in der Gleichung durch $m^*$ ersetzt werden.
