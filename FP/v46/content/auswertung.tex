@@ -6,13 +6,11 @@
 \label{sub:Kraftflussdichte}
 
 Als erstes werden die aufgenommenen Daten der Magnetfeldstärke gegen den Ort aufgetragen.
-Dies ist in
-%\autoref{fig:plot1}
-dargestellt.
+Dies ist in \autoref{fig:plot1} dargestellt.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{build/plot1.pdf}
-  \caption {.}
+  \caption {Magnetfeldstärke in Abhängigkeit der Position der Hall-Sonde.}
   \label{fig:plot1}
 \end{figure}
 
@@ -39,12 +37,18 @@ Die Dicken der Proben entsprechen der Durchlauflänge $L$ und betragen für die 
   L_{1,2}&= \qty{1.36}{\milli\meter}\\
   L_{2,8}&= \qty{1.296}{\milli\meter}.
 \end{align*}
+Die Dotierungen der Proben betragen
+\begin{align*}
+  N_{1.2}&= \qty{1.2 e24}{\per\cubic\meter}\\
+  \shortintertext{und}\\
+  N_{2.8}= \qty{2.8 e24}{\per\cubic\meter}.
+\end{align*}
 
 In \autoref{fig:plot2} sind die normierten Winkel der hochreinen Probe gegen das Quadrat der Wellenlängen der verwendeten Interferenzfilter aufgetragen.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{build/plot2.pdf}
-  \caption {.}
+  \caption {Die normierten Drehwinkel der Faraday-Rotation in Abhängigkeit von der quadrierten Wellenlänge der Interferenzfilter bei der Messung der undotierten Probe.}
   \label{fig:plot2}
 \end{figure}
 
@@ -55,9 +59,10 @@ wiederum gegen die quadrierten Wellenlängen der Interferenzfilter aufgetragen.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{build/plot3.pdf}
-  \caption {.}
+  \caption {Der durch die Leitungselektronen hervorgerufene normierte Drehwinkel der Faraday-Rotation in Abhängigkeit von der quadrierten Wellenlänge der Interferenzfilter bei der Messung der dotierten Proben.}
   \label{fig:plot3}
 \end{figure}
+Die in orange und hellblau markierten Messwerte weichen vom Verlauf stark ab und werden daher für die Rechnung vernachlässigt.
 Außerdem wird für beide Dotierungen ein Fit der Form
 \begin{align*}
   \theta_{\text{frei}} &= A \cdot \lambda^2+b
