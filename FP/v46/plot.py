@@ -53,13 +53,13 @@ plt.grid()
 plt.legend(loc='best')
 plt.savefig('build/plot2.pdf') 
 
-l12_plot= np.delete(l12, [4,5]) #DAtenpunkte löschen die hässlich sind
+l12_plot= np.delete(l12, [7,8]) #DAtenpunkte löschen die hässlich sind
 dt12= t12-tu
-dt12_plot = np.delete(t12-tu,[4,5]) 
+dt12_plot = np.delete(t12-tu,[7,8]) 
 
-l28_plot= np.delete(l28, [7])
+l28_plot= np.delete(l28, [7,8])
 dt28 = t28-tu
-dt28_plot= np.delete(t28-tu, [7])
+dt28_plot= np.delete(t28-tu, [7,8])
 
 #Fit
 def fit(x ,a, b):
@@ -86,10 +86,11 @@ plt.figure(3)
 plt.plot(l28_plot**2, dt28_plot,'bx', label='Messdaten dotiert, N_(2.8)')
 plt.plot(z2, fit(z2,*params2),'b-', label='Regression dotiert, N_(2.8)')
 plt.plot(l28[7]**2, dt28[7],color='darkcyan', marker='x')
+plt.plot(l28[8]**2, dt28[8],color='darkcyan', marker='x')
 plt.plot(l12_plot**2, dt12_plot,'ro', label='Messdaten dotiert, N_(1.2)')
 plt.plot(z, fit(z,*params1),'r-', label='Regression dotiert, N_(1.2)')
-plt.plot(l12[4]**2,dt12[4],color='orange',marker='o')
-plt.plot(l12[5]**2,dt12[5],color='orange',marker='o')
+plt.plot(l12[7]**2,dt12[7],color='orange',marker='o')
+plt.plot(l12[8]**2,dt12[8],color='orange',marker='o')
 plt.xlabel(r'$\lambda ^2 / \si{\square\micro\meter}$')
 plt.ylabel(r'$\Delta \theta / \si{\radian\per\meter}$')
 plt.grid()
@@ -109,3 +110,10 @@ meff28 = unp.sqrt((const.e**3 * N_28 * B)/(a2*10**12* 8*np.pi**2 *const.epsilon_
 print('m*_12= ', meff12)
 print('m*_28= ', meff28)
 print('m*= ', 0.067* const.m_e)
+
+meff12= ufloat(0.052,0.010)
+meff28= ufloat(0.072,0.008)
+abw12 = (meff12-0.067)/0.067*100
+abw28 = (meff28-0.067)/0.067*100
+print('abw12 = ', f'{abw12:.2f}')
+print('abw28 = ', f'{abw28:.2f}')
