@@ -4,6 +4,7 @@ from scipy.signal import find_peaks
 import uncertainties.unumpy as unp
 from uncertainties import ufloat
 from scipy.optimize import curve_fit
+import scipy.constants as const
 
 #Magnetfeld Grafik
 x, B = np.genfromtxt('content/Magnetfeld.txt', unpack=True)
@@ -95,3 +96,16 @@ plt.grid()
 plt.legend(loc='best')
 plt.savefig('build/plot3.pdf') 
 
+
+#Variablen definieren
+B = 435 *10**(-3)
+N_12= 1.2*10**(18) *10**(6)
+N_28= 2.8*10**(18) *10**(6)
+n = 3.3
+
+
+meff12 = unp.sqrt((const.e**3 * N_12 * B)/(a1*10**12* 8*np.pi**2 *const.epsilon_0 *const.c**3 * n ))/ const.m_e
+meff28 = unp.sqrt((const.e**3 * N_28 * B)/(a2*10**12* 8*np.pi**2 *const.epsilon_0 *const.c**3 * n ))/ const.m_e
+print('m*_12= ', meff12)
+print('m*_28= ', meff28)
+print('m*= ', 0.063* const.m_e)
