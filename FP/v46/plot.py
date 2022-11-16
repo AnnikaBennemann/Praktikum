@@ -25,6 +25,9 @@ lu,t1u, t2u  = np.genfromtxt('content/undotiert.txt', unpack=True)
 l12,t112, t212  = np.genfromtxt('content/12.txt', unpack=True)
 l28,t128, t228  = np.genfromtxt('content/28.txt', unpack=True)
 
+#Wellenlänge berechnen
+lm = np.mean(lu)
+
 #l Größenordung anpassen
 #lu = lu * 10**(-6)
 #l12 = l12 * 10**(-6)
