@@ -80,3 +80,7 @@ plt.ylabel(r'$\Delta \theta / \si{\radian\per\meter}$')
 plt.grid()
 plt.legend(loc='best')
 plt.savefig('build/plot3.pdf') 
+
+#Wellenlänge berechnen
+lm = np.mean(lu)
+print('lm =' , lm)
