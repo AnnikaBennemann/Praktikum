@@ -108,4 +108,4 @@ meff12 = unp.sqrt((const.e**3 * N_12 * B)/(a1*10**12* 8*np.pi**2 *const.epsilon_
 meff28 = unp.sqrt((const.e**3 * N_28 * B)/(a2*10**12* 8*np.pi**2 *const.epsilon_0 *const.c**3 * n ))/ const.m_e
 print('m*_12= ', meff12)
 print('m*_28= ', meff28)
-print('m*= ', 0.063* const.m_e)
+print('m*= ', 0.067* const.m_e)
