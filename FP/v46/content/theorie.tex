@@ -1,31 +1,34 @@
 \section{Zielsetzung}
 \label{sec:Zielsetzung}
 
-Ziel des Versuches ist es, die effektive Masse der Leitungselektronen in n-dotiertem Galliumarsenid (n-GaAs)
+Ziel des Versuches ist es, die effektive Masse der Leitungselektronen in Galliumarsenid (n-GaAs)
 mit Hilfe des Faraday-Effekts zu bestimmen.
 
 \section{Theorie}
 \label{sec:Theorie}
 
 Durch den Faraday-Effekts können die elektromagnetischen Eigenschaften einer Lichtwelle bewiesen werden.
+Darauf aufbauend wird zunächst die allgemeine Bandstruktur und die Dotierung von Hableitern erklärt. 
+Anschließend wird der Begriff der effektiven Masse eingeführt, damit die Elktronen als freie Teilchen anzunehmen sind.
+Zuletzt wird die zirkuläre Doppelbrechung erklärt und den Faraday-Effekt bei optisch inaktiver Materie.
 
 \subsection{Bandstruktur}
 \label{sub:Bandstruktur}
 Die elektronischen Energiezustände in einem Kristall können durch das Bändermodell beschrieben werden.
 Jedes Atom besitzt ein diskretes Energiespektrum. Wenn mehrere Atome angenähert werden und miteinander
-wechselwirken überlappen sich diese Spektren. In Kristallen können die Energieniveaus als breite Bänder angenommen werden.
-Das Bändermodell besagt, dass jeder Körper ein Valenzband besitzt, dessen Zustände voll mit Elektronen besetzt sind.
+wechselwirken, überlappen sich diese Spektren. In Kristallen können die Energieniveaus als breite Bänder angenommen werden.
+Nach dem Bändermodell besitzt jeder Körper ein Valenzband, dessen Zustände voll mit Elektronen besetzt sind.
 Energetisch darüber liegt das Leitungsband, welches freie Zustände für Elektronen besitzt.
 Die Besetzung des Leitungsbandes, sowie die Differenz der Energieniveaus der beiden Bänder, die sogenannte Bandlücke,
 beeinflussen die Leitfähigkeit eines Materials.
 Es werden drei Formen unterschieden:
 Im Metall (Leiter) überlappen das Leitungs- und das Valenzband. Die Bandlücke verschwindet somit und das Leitungsband ist mit Elektronen besetzt.
-Im Isolator (Nichtleiter) ist die Bandlücke so groß, dass sie von den Elektronen im Valenzband nicht überwunden werden kann. Es gibt somit keine
+Im Isolator (Nichtleiter) ist die Bandlücke über $\qty{4.1}{\eV}$, dass sie von den Elektronen im Valenzband nicht überwunden werden kann. Es gibt somit keine
 besetzten Zustände im Leitungsband.
-Im Halbleiter ist eine Bandlücke vorhanden, diese kann jedoch, anders als beim Isolator von den Elektronen überwunden werden, wenn diese angeregt werden.
+Im Halbleiter ist eine Bandlücke von ca. $\qty{0.1}{\eV}$ bis $\qty{3.1}{\eV}$ vorhanden, diese kann jedoch, anders als beim Isolator von den Elektronen überwunden werden, wenn diese angeregt werden.
 Diese Anregung kann über zugefügte Energie in Form von Wärme entstehen.
 Wird keine Energie hinzugefügt, befinden sich die Elektronen im Valenzband in einer festen Bindung und können die Lücke
-nicht überwinden, der Stoff ist somit nicht leitend.
+nicht überwinden, der Isolator ist somit nicht leitend.
 Gelangt bei einem Halbleiter ein Elektron in das Leitungsband, entsteht durch das fehlende Elektron ein Loch in dem Valenzband, sodass zwei freie 
 Ladungsträger entstehen.
 Zusätzlich zur thermischen Anregung können bei Halbleitern durch Dotierung auch gezielt Ladungsträger eingebracht werden.
@@ -35,11 +38,16 @@ Zusätzlich zur thermischen Anregung können bei Halbleitern durch Dotierung auc
 
 Eine Dotierung von Halbleitern mit Fremdatomen erhöht die Anzahl der elektrischen Ladungsträger im Kristall.
 Somit kann durch die Dotierung die Leitfähigkeit eines Halbleiters beeinflusst werden.
-Man unterscheidet zwischen der p- und der n-Dotierung. Die Auswirkungen der Dotierung sind schematisch in \autoref{fig:Dotierung} dargestellt.
+Es wird unterscheiden zwischen der p- und der n-Dotierung. Die Auswirkungen der Dotierung sind schematisch in \autoref{fig:Dotierung} dargestellt.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.45]{Abbildungen/Dotierung.png}
-    \caption{Schematische Skizze zur Dotierung von Halbleitern.\cite{Dotierung}}
+    \caption{Schematische Skizze zur Dotierung von Halbleitern.\cite{Dotierung}\\
+    Dabei zeigt Bild a den Aufabu der n-Dotierung und p-Dotierung im Kristall, wobei das fünfwertige Atom ein zusätzlich locker gebundenes Elektron hinzufügt.
+    Das dreiwertige Atom führt jedoch zu einer ungesettigten Bindung und einem fehlenden Elektron.\\
+    Bild b zeigt die Anhebung in das Leutungsband über den Donator bze. Akzeptor.\\
+    Bild c lässt den Hintergund der neutralen Grundsubstanz außer Betracht und zeigt nur die zusätzlichen Teilchen.\\
+    Bild d zeigt die energetische Verbindung vom valenzband zum Leitungsband.}
     \label{fig:Dotierung}
 \end{figure}
 Bei der p-Dotierung wird ein Akzeptor, also ein Atom mit weniger Valenzelektronen als der Halbleiter, in den Kristall eingebracht.
@@ -85,31 +93,31 @@ Die effektive Masse ergibt sich somit zu
 
 \subsection{Zirkulare Doppelbrechung}
 \label{sub:Doppelbrechung}
-Zirkuläre Doppelbrechung ist die Fähigkeit eines Kristalls, die Polarisationsebene eines linear polarisierten Lichtstrahls bei der Transmission
+Zirkulare Doppelbrechung ist die Fähigkeit eines Kristalls, die Polarisationsebene eines linear polarisierten Lichtstrahls bei der Transmission
 zu drehen. Ein Kristall mit dieser Fähigkeit wird optisch anisotrop oder optisch aktiv genannt.
 
 Bei einem optisch aktiven Medium unterscheiden sich aufgrund der Materialstruktur die Phasengeschwindigkeiten für rechts- und linkszirkular
 polarisiertes Licht.
 Jede linear polarisierte Welle kann gemäß
 \begin{equation}
-    \vec{E}(z)=\frac{1}{2}(\vec{E_R}(z)+\vec{E_L}(z))
+    \vec{E}(z)=\frac{1}{2}(\vec{E_{\text{R}}}(z)+\vec{E_{\text{L}}}(z))
     \label{eqn:E}   
 \end{equation}
 als Überlagerung zweier entgegengesetzt, zirkular polarisierten Wellen mit gleicher Frequenz dargestellt werden. Dabei gilt
 \begin{equation*}
-    \vec{E_{L/R}}=(E_0\vec{x}_0\pm \text{i}E_0\vec{y})\exp{(\text{i}k_{L/R}z)},
+    \vec{E_{\text{L/R}}}=(E_0\vec{x}_0\pm \text{i}E_0\vec{y})\exp{(\text{i}k_{\text{L/R}}z)},
 \end{equation*}
 sodass die Polarisation der Welle beim Eintritt in den Kristall parallel zur $\vec{x}$-Richtung liegt.
 
 Mit den Definitionen der Phase
 \begin{align*}
-    \Psi  &\coloneqq \frac{L}{2}(k_R+k_L)\\
+    \Psi  &\coloneqq \frac{L}{2}(k_{\text{R}}+k_{\text{L}})\\
     \shortintertext{und des Winkels}
-    \theta&\coloneqq \frac{L}{2}(k_R-k_L)
+    \theta&\coloneqq \frac{L}{2}(k_{\text{R}}-k_{\text{L}})
 \end{align*}
 ergibt sich nach \autoref{eqn:E} ein Ausdruck des aus dem Kristall der Länge $z=L$ austretenden Lichts zu 
 \begin{equation*}
-    \vec{E}(L)=E_0 \exp(\text{i}\Psi)\left(\cos(\vartheta) \vec{x}_0 + \sin(\vartheta)\vec{y}_0\right).
+    \vec{E}(L)=E_0 \exp(\text{i}\Psi)\left(\cos(\theta) \vec{x}_0 + \sin(\theta)\vec{y}_0\right).
 \end{equation*}
 
 
@@ -124,7 +132,7 @@ ausgedrückt werden. Die Drehung der Polarisationsebene um den Winkel $\theta$ i
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{Abbildungen/Doppelbrechung.png}
-    \caption{Schematische Darstellung der zirkulären Doppelbrechung.\cite{V46_Anhang}}
+    \caption{Schematische Darstellung der zirkularen Doppelbrechung.\cite{V46_Anhang}}
     \label{fig:Doppelbrechung}
 \end{figure}
 
@@ -133,7 +141,7 @@ Magentfeld induziert werden. Die durch die Dipole erzeugte Polarisation des Kris
 \begin{equation*}
     \vec{P}=\varepsilon_0\chi\vec{E}
 \end{equation*}
-ist abhängig von der dielektrischen Suszeptibilität des Stoffes. Hierbei ist $\varepsilon_0$ die Influenzkonstante und $\chi$ die
+ist abhängig von der dielektrischen Suszeptibilität des Stoffes. Hierbei ist $\varepsilon_0$ die Dielektrizitätskonstante und $\chi$ die
 dielektrische Suszeptibilität, welche in anisotropen Kristallen als Tensor $\overline{\chi}$ geschrieben wird.
 Ein Material ist doppelbrechend, wenn
 \begin{equation}
@@ -148,7 +156,7 @@ Ein Material ist doppelbrechend, wenn
     \label{eqn:chi}
 \end{equation}
 gilt.
-Wenn die Suszeptibilität jedoch keine komplexen Matrixeinträge aufweist, so tritt keine Doppelbrechung auf.
+Wenn die Suszeptibilität jedoch keine komplexen Nichtdiagonalelemente des Tensors aufweist, so tritt keine Doppelbrechung auf.
 Ein solches Material wird als optisch isotrop beziehungsweise optisch inaktiv bezeichnet. 
 
 
@@ -156,7 +164,6 @@ Ein solches Material wird als optisch isotrop beziehungsweise optisch inaktiv be
 \label{sub:Faraday}
 Durch Anlegen eines Magnetfeldes kann auch ein optisch isotropes Material doppelbrechend werden.
 Dieses Phänomen wird Faraday-Effekt genannt.
-durch die Betrachtung
 Die gebundenen Elektronen in der Probe, welche zusätzlich durch ein magnetisches
 Feld gestört werden, können durch die Bewegungsgleichung
 \begin{align}
@@ -165,7 +172,7 @@ Feld gestört werden, können durch die Bewegungsgleichung
 \end{align}
 beschrieben werden.
 Die Auslenkung des Elektrons aus der Gleichgewichtslage wird hierbei durch $\vec{r}$ beschrieben, die
-Konstante K bezeichnet die Bindung des Elektrons an seine Umgebung und die Elementarladung ist gegeben durch $e_0$.
+Konstante $K$ bezeichnet die Bindung des Elektrons an seine Umgebung und die Elementarladung ist gegeben durch $e_0$.
 $\vec{E}$ stellt die Feldstärke der einfallenden Lichtwelle dar.
 
 Der Ausdruck für den Drehwinkel der Polarisationsebene $\theta$ 
