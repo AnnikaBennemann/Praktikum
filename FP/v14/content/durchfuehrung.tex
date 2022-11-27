@@ -30,3 +30,52 @@ Anschließend wird die Messung mit jeweils einem der vier Würfel durchgeführt 
 Es wird nur die mittlere Schicht des Würfels untersucht, aufgrund von Zeitgründen.
 Bei den homogenen Würfeln wird aus vier Richtungen gemessen, der Würfel mit den verschiedenen 
 Elementarwürfeln wird aus allen 12 Richtungen gemessen(siehe \autoref{fig:Ausrichtung}).
+
+\section{Vorbereitung}
+\label{sec:Vorbereitung}
+Zur Bestimmung des Abschwächungskoeffizient wird die Matrix $A$ benötigt, welche die Informationen der Wegstrecke enthält. \autoref{eqn:muMatrix} lässt sich schreiben zu
+\begin{equation}
+    d \cdot
+    \begin{pmatrix}[r]
+        1 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 \\
+        0 & 1 & 0 & 0 & 1 & 0 & 0 & 1 & 0 \\
+        0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 1 \\
+        1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 \\
+        0 & \sqrt{2} & 0 & 0 & 0 & \sqrt{2} & 0 & 0 & 0 \\
+        \sqrt{2} & 0 & 0 & 0 & \sqrt{2} & 0 & 0 & 0 & \sqrt{2} \\
+        0 & 0 & 0 & \sqrt{2} & 0 & 0 & 0 & \sqrt{2} & 0 \\
+        0 & 0 & 0 & 0 & 0 & \sqrt{2} & 0 & \sqrt{2} & 0 \\
+        0 & 0 & \sqrt{2} & 0 & \sqrt{2} & 0 & \sqrt{2} & 0 & 0 \\
+        0 & \sqrt{2} & 0 & \sqrt{2} & 0 & 0 & 0 & 0 & 0 
+    \end{pmatrix}
+    \cdot
+    \begin{pmatrix}
+        \mu_1 \\
+        \mu_2 \\
+        \mu_3 \\
+        \mu_4 \\
+        \mu_5 \\
+        \mu_6 \\
+        \mu_7 \\
+        \mu_8 \\
+        \mu_9 
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        I_1 \\
+        I_2 \\
+        I_3 \\
+        I_4 \\
+        I_5 \\
+        I_6 \\
+        I_7 \\
+        I_8 \\
+        I_9 \\
+        I_{10} \\
+        I_{11} \\
+        I_{12} 
+    \end{pmatrix}
+    .
+\end{equation}

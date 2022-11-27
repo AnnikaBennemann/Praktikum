@@ -21,6 +21,7 @@ bestimmt werden, wobei $I_0$ die Anfangsintensität, $\mu_i$ der Absorptionskoef
 Diese Formel kann umgestellt werden zu
 \begin{equation}
     \sum_i \mu_i d_i = \text{ln}\biggl(\frac{I_0}{I_j}\biggr),
+    \label{eqn:mu}
 \end{equation}
 welche die Möglichkeit schafft ein Gleichungssystem zu bilden mit dessen Hilfe die Verteilung verschiedener Materialien in einem nicht einsehbaren Körper bestimmt werden kann.
 Dafür wird die Messung verschiedener Intensitäten $I_j$ und eine geschickte Auswahl von Strahlwegen benötigt.
@@ -68,18 +69,45 @@ Beim Comptoneffekt wird die Energie nur teilweise an das Elektron übertragen. D
 
 \subsection{Messung der Absorptionskoeffizienten}
 \label{subsec:Absorptionskoeffizient}
+Um ein dreidimensionales Bild zu erzeugen, werden verschiedene Projektionen aus unterschiedlichen Richtungen benötigt. Im Folgenden wird mit der Matrixschreibweise gearbeitet, wobei
+\autoref{eqn:mu} zu
+\begin{equation}
+    A \vec{\mu} = \vec{I}
+    \label{eqn:muMatrix}
+\end{equation}
+umgeschrieben. Dabei ist $\vec{\mu}$ der bestimmende Vektor der Absorptionskoeffizienten, $A$ ist die Matrix, die Informationen über die Wegstrecken enthält und $\vec{I}$ ist der Vektor 
+der gemessenen Intensitäten gemäß der rechten Seite von \autoref{eqn:mu}.\\
+Der Durchführung vorwegnehmend wird ein Würfel bestehend aus $3 \times 3 \times 3$ Elementarwürfeln und umgeben von einer Aluminiumhülle benutzt. Es wird aus Zeitgründen nur eine Schicht
+untersucht, daraus folgt, dass neun Absorptionskoeffizienten bestimmt werden muss. Somit hat der Vektor für die Absorptionskoeffizienten $n = 9$ Dimensionen und die Matrix $A$ besitzt die 
+Dimension $m \times n$. Dabei ist $m$ die Dimension des Vektors $\vec{I}$, also die Anzahl der durchgeführten Messungen. Um das lineare Gleichungssystem mit einem klassischen Ansatz lösen 
+zu können, sind mindestens $n$ unterschiedliche Projektionen zu wählen, wobei sichergestellt werden muss, dass die resultierende Matrix $A$ nicht singulär ist. 
+Es empfiehlt sich jedoch zu Gunsten einer besseren Statistik mehr Messungen bzw. Projektionen durchzuführen.
+Dabei zeigt \autoref{fig:Ausrichtung} die zwölf ausgewählten Projektionen zur Untersuchung einer Schicht des Würfels.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Abbildungen/Ausrichtung.png}
+    \caption{Darstellung der zwölf gewählten Projektionen für die mittlere 3 × 3 Schicht eines zu untersuchenden Würfels..\cite{V14}}
+    \label{fig:Ausrichtung}
+\end{figure}
 
-
-Abschnitte:
-
-Tomographie
-
-Gammastrahlung und Caesium Zerfall
-
-Wechselwirkungen von Gamma Strahlung mit Materie
-
-Berechnung des Schwächungskoeffizienten 
+Mit der Methoede der kleinsten Quadrate kann \autoref{eqn:muMatrix} umgeschrieben werden zu
+\begin{equation}
+    W \,A \,\vec{\mu} = W \,\vec{I},
+\end{equation}
+wobei $W$ die Gewichtungsmatrix
+\begin{equation}
+    W = V[I]^{-1}
+\end{equation}
+ist, welche über die Inverse Varianz der Intensität definiert ist. Daraus ergibt sich für $\vec{\mu}$ die Relation
+\begin{equation}
+    \vec{\mu} = \biggl(A^T\, W \,A\biggr)^{-1} \biggl(A^T \,W \,\vec{I}\biggr)
+\end{equation}
+und die Unsicherheit ergibt sich aufgrund des Poissonfehler zu
+\begin{equation}
+    V[\mu] = \biggl(A^T\, W \,A\biggr)^{-1}.
+    \label{eqn:Unsicherheit}
+\end{equation}
 
 
 
