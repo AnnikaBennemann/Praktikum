@@ -1,0 +1,3 @@
+#Projektion Net Area Fehler
+2       52459   251
+5       52300   249

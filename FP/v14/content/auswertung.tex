@@ -1,24 +1,144 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Die Auswertung erfolgt nach dem Verlauf der Durchführung (\autoref{sec:Durchführung})
+Die Auswertung erfolgt nach dem Verlauf der Durchführung (\autoref{sec:Durchführung}).
 Sie wird in 4 Teile gegliedert, die sich mit dem Spektrum der Quelle und den drei durchstrahlten Würfeln befassen.
 
 \subsection{Spektrum von Caesium}
 \label{sub:Spektrum}
 
 In
-%\autoref{fig:spektrum}
+\autoref{fig:spektrum}
 ist das aufgenommene Spektrum der verwendeten $\ce{^{137}C}$-Quelle dargestellt.
 Hierbei werden die gezählten Impulse nach den zugehörigen Channels aufgetragen.
 
-HIER KÖNNTE IHR PLOT STEHEN!!! Schlagen sie jetzt zu und mieten sie diese Werbefläche!!
-Die Messdaten sind Poissonverteilt, weshalb als Fehler immer die Wurzel der Anzahl der
-Count verwendet wird.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=1]{build/plot1.pdf}
+    \caption{Messdaten des Caesiumspektrums.}
+    \label{fig:spektrum}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \caption{Messergebnisse der Leermessung.}
+    \label{tab:runds}
+    \sisetup{table-format=2.2}
+    \begin{tabular}{l S[table-format=2.2] S[table-format=5.0] @{${}\pm{}$} S[table-format=3.0]}
+      \toprule
+      {Projektion} & {Peak} & \multicolumn{2}{c}{Net Area}\\
+      \midrule
+        {$I_0$} & 71.60 & 54433 & 255 \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+
+
 \subsection{Würfel 1}
 \label{sub:1}
+
+
+\begin{table}[H]
+  \centering
+  \caption{Messergebnisse des ersten Würfels.}
+  \label{tab:runds}
+  \sisetup{table-format=2.2}
+  \begin{tabular}{l S[table-format=2.2] S[table-format=5.0] @{${}\pm{}$} S[table-format=3.0]}
+    \toprule
+    {Projektion} & {Peak} & \multicolumn{2}{c}{Net Area}\\
+    \midrule
+    $I_2$ & 0 & 52459 & 251 \\ 
+    $I_5$ & 0 & 52300 & 249 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Der Würfel hat eine Wandstärke von $\qty{1}{\milli\meter}$.
+Zur Berechnung des Absorptionskoeffizienten von Aluminium wird \autoref{eqn:mu} nach $\mu$ umgestellt.
+Da die Wand des Würfels zwei Mal durchstrahlt wird, gilt hier $d=\qty{2}{\milli\meter}$.
+Der Mittelwert der Net Area wird nach 
+\begin{align*}
+  \bar{I}=\frac{1}{n} \sum_{i=1}^n I_i \label{eqn:Mittelwert}
+\end{align*}
+berechnet zu 
+\begin{align*}
+  \bar{I}_{\text{Alu}} &=  52379.5.
+\end{align*}
+Der Fehler berechnet sich analog zu
+\begin{align*}
+  \Delta \bar{I}_{\text{Alu}} &=  250.0.
+\end{align*}
+
+Da mit fehlerbehafteten Größen gerechnet wird ergeben sich die weiteren Fehler mithilfe der Gausschen Fehlerfortpflanzung
+\begin{equation*}
+  \Delta f=\sqrt{\sum_{j=1}^n \left(\frac{\partial f}{\partial x_j}\Delta x_j \right)^{2}}.\label{eqn:Gauß}
+\end{equation*}
+
+$\mu_{\text{Alu}}$ ergibt sich somit zu 
+\begin{align*}
+  \mu_{\text{Alu}} &= \qty{0.192 \pm 0.527}{\per\centi\meter}
+\end{align*}
+
 
 \subsection{Würfel 2}
 \label{sub:2}
 
-\subsection{Würfel 3}
-\label{sub:3}
+Da die weiteren Würfel auch von einer Aluminiumhülle umgeben sind, gilt im Weiteren $I_0 = I_{\text{Alu}}$.
+\begin{table}[H]
+    \centering
+    \caption{Messergebnisse des zweiten Würfels.}
+    \label{tab:runds}
+    \sisetup{table-format=2.2}
+    \begin{tabular}{l S[table-format=2.2] S[table-format=5.0] @{${}\pm{}$} S[table-format=3.0]}
+      \toprule
+      {Projektion} & {Peak} & \multicolumn{2}{c}{Net Area}\\
+      \midrule
+      $I_1$ & 71.13 & 43944 & 229 \\
+      $I_2$ & 71.61 & 44379 & 231 \\
+      $I_3$ & 71.59 & 44547 & 231 \\
+      $I_4$ & 71.09 & 43508 & 228 \\
+      $I_5$ & 71.60 & 43877 & 230 \\
+      $I_6$ & 71.59 & 44438 & 231 \\ 
+      $I_7$ & 71.58 & 43523 & 227 \\
+      $I_8$ & 70.64 & 42419 & 225 \\
+      $I_9$ & 71.59 & 45609 & 234 \\ 
+      $I_{10}$& 71.63 & 45974 & 235 \\
+      $I_{11}$& 70.95 & 42547 & 225 \\
+      $I_{12}$& 71.61 & 43347 & 228 \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+mu_2 =  [[0.05299755 0.07652535 0.0472577  0.06164421 0.04451271 0.057353
+  0.06011059 0.03907943 0.05651745]] +- [0.00460037 0.00341143 0.00459599 0.003406   0.00358656 0.00340129
+ 0.00459367 0.00339408 0.00459228]
+mu_4 =  [[0.07994867 0.9085538  0.0869508  0.16159825 0.91330119 0.1748935
+  0.17845199 0.69149193 0.21111067]] +- [0.00651977 0.00555979 0.00661559 0.0051716  0.00578365 0.00522895
+ 0.00657183 0.00518344 0.00650554]
+
+\subsection{Würfel 4}
+\label{sub:4}
+
+\begin{table}[H]
+    \centering
+    \caption{Messergebnisse des vierten Würfels.}
+    \label{tab:runds}
+    \sisetup{table-format=2.2}
+    \begin{tabular}{l S[table-format=2.2] S[table-format=5.0] @{${}\pm{}$} S[table-format=3.0]}
+      \toprule
+      {Projektion} & {Peak} & \multicolumn{2}{c}{Net Area}\\
+      \midrule
+      $I_1 $ & 71.63 & 41637 & 224 \\
+      $I_2 $ & 71.50 & 8834  & 105 \\
+      $I_3 $ & 71.70 & 39639 & 217 \\
+      $I_4 $ & 71.54 & 14257 & 131 \\
+      $I_5 $ & 71.48 & 12719 & 129 \\
+      $I_6 $ & 71.47 & 14133 & 131 \\
+      $I_7 $ & 71.47 & 8664  & 102 \\
+      $I_8 $ & 71.45 & 7798  & 98  \\
+      $I_9 $ & 71.49 & 12978 & 124 \\
+      $I_{10}$ & 71.44 & 15357 & 136 \\
+      $I_{11}$ & 71.46 & 8195  & 99  \\
+      $I_{12}$ & 71.44 & 11507 & 118 \\
+      \bottomrule
+    \end{tabular}
+\end{table}
