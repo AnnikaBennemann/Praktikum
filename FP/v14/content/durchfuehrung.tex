@@ -89,3 +89,21 @@ Zur Bestimmung des Abschwächungskoeffizient wird die Matrix $A$ benötigt, welc
 
 In \autoref{tab:abs_literatur} sind die Absorptionskoeffizienten für die möglichen Materialien der Elementarwürfel aufgeslistet.
 Durch den Vergleich der errechneten Absorptionskoeffizienten kann so bestimmt werden, aus welchen Materialien die Würfel bestehen.
+
+\begin{table}[H]
+    \centering
+    \caption{Literaturwerte für den Massenschwächungskoeffizient \cite{NIST2} und der Dchte \cite{Chemie.de} und die draus berechneten Absorptionskoeffizienten.}
+    \label{tab:abs_literatur}
+    \sisetup{table-format=1.3}
+    \begin{tabular}{c S S[table-format=2.2] S}
+        \toprule
+       {Material}& {$\frac{\mu}{\rho}$ $/ 10^{-2}\frac{\si{\centi\meter^2}}{\si{\g}}$} & {$\rho$ $/ \frac{\si{\g}}{\si{\centi\meter^3}}$} & {$\mu$ $/ \si{\per\centi\meter}$} \\
+        \midrule
+        {Aluminium} & 7.466 & 2.70 & 0.202 \\
+        {Blei} & 0.110 & 11.34 & 1.249\\
+        {Eisen} & 7.346 & 7.87 & 0.578 \\ 
+        {Messing} & 7.282 & 8.40 & 0.612 \\ 
+        {Delrin} & 8.231 & 1.43 & 0.118 \\  
+        \bottomrule
+    \end{tabular}
+  \end{table}
