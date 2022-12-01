@@ -22,7 +22,7 @@ Hierbei werden die gezählten Impulse nach den zugehörigen Channels aufgetragen
     \caption{Messergebnisse der Leermessung.}
     \label{tab:0}
     \sisetup{table-format=2.2}
-    \begin{tabular}{l S[table-format=2.2] S[table-format=5.0] @{${}\pm{}$} S[table-format=3.0]}
+    \begin{tabular}{c S[table-format=2.2] S[table-format=5.0] @{${}\pm{}$} S[table-format=3.0]}
       \toprule
       {Projektion} & {Peak} & \multicolumn{2}{c}{Net Area}\\
       \midrule
@@ -42,7 +42,7 @@ Hierbei werden die gezählten Impulse nach den zugehörigen Channels aufgetragen
   \caption{Messergebnisse des ersten Würfels.}
   \label{tab:1}
   \sisetup{table-format=2.2}
-  \begin{tabular}{l S[table-format=2.2] S[table-format=5.0] @{${}\pm{}$} S[table-format=3.0]}
+  \begin{tabular}{c S[table-format=2.2] S[table-format=5.0] @{${}\pm{}$} S[table-format=3.0]}
     \toprule
     {Projektion} & {Peak} & \multicolumn{2}{c}{Net Area}\\
     \midrule
@@ -78,6 +78,9 @@ $\mu_{\text{Alu}}$ ergibt sich somit zu
   \mu_{\text{Alu}} &= \qty{0.192 \pm 0.527}{\per\centi\meter}
 \end{align*}
 
+Im Folgenden werden die Mittelwerte, sowie die Fehler und weitere Berechnungen mithilfe der Pythonmodule Matplotlib\cite{matplotlib},
+Uncertainties\cite{uncertainties} und Numpy\cite{numpy} durchgeführt.
+
 
 \subsection{Würfel 2}
 \label{sub:2}
@@ -88,7 +91,7 @@ Da die weiteren Würfel auch von einer Aluminiumhülle umgeben sind, gilt im Wei
     \caption{Messergebnisse des zweiten Würfels.}
     \label{tab:2}
     \sisetup{table-format=2.2}
-    \begin{tabular}{l S[table-format=2.2] S[table-format=5.0] @{${}\pm{}$} S[table-format=3.0]}
+    \begin{tabular}{c S[table-format=2.2] S[table-format=5.0] @{${}\pm{}$} S[table-format=3.0]}
       \toprule
       {Projektion} & {Peak} & \multicolumn{2}{c}{Net Area}\\
       \midrule
@@ -108,15 +111,18 @@ Da die weiteren Würfel auch von einer Aluminiumhülle umgeben sind, gilt im Wei
     \end{tabular}
 \end{table}
 
+In \autoref{tab:2} sind die gemessenen Werte für den zweiten Würfel dargestellt.
+Mithilfe von \autoref{eqn:mu_gleichung} werden die Absorptionskoeffizienten für die einzelnen Elementarwürfel berechnet.
+Die errechneten Werte sind in \autoref{tab:abs2} aufgeführt.
 
 \begin{table}[H]
   \centering
   \caption{Absorptionskoeffizienten des zweiten Würfels.}
   \label{tab:abs2}
   \sisetup{table-format=1.3}
-  \begin{tabular}{l S @{${}\pm{}$} S}
+  \begin{tabular}{c S @{${}\pm{}$} S}
     \toprule
-    {Absorptionskoeffizienten} & \multicolumn{2}{c}{Wert in $\si{\per\centi\meter}$}\\
+    {Absorptionskoeffizient} & \multicolumn{2}{c}{Wert in $\si{\per\centi\meter}$}\\
     \midrule
     $\mu_1 $ & 0.053 & 0.005\\
     $\mu_2 $ & 0.077 & 0.003\\
@@ -135,19 +141,23 @@ Da die Elementarwürfel des zweiten Würfels alle aus einem Material bestehen, w
 gebildet.
 Dieser beträgt 
 \begin{align*}
- \mu &= \qty{0.055 \pm 0.004}{\per\centi\meter}.
+  \bar{\mu} &= \qty{0.055 \pm 0.004}{\per\centi\meter}.
 \end{align*}
+Der Wert stimmt mit keinem der Literaturwerte in \autoref{tab:abs_literatur} überein. 
+
 
 
 \subsection{Würfel 4}
 \label{sub:4}
+Die Bestimmung der Messwerte und die Berechnung der Absorptionskoeffizienten für den vierten Würfel erfolgt analog zu \autoref{sub:2}.
+Die Messwerte sind in \autoref{tab:4} dargestellt.
 
 \begin{table}[H]
     \centering
     \caption{Messergebnisse des vierten Würfels.}
     \label{tab:4}
     \sisetup{table-format=2.2}
-    \begin{tabular}{l S[table-format=2.2] S[table-format=5.0] @{${}\pm{}$} S[table-format=3.0]}
+    \begin{tabular}{c S[table-format=2.2] S[table-format=5.0] @{${}\pm{}$} S[table-format=3.0]}
       \toprule
       {Projektion} & {Peak} & \multicolumn{2}{c}{Net Area}\\
       \midrule
@@ -167,25 +177,40 @@ Dieser beträgt
     \end{tabular}
 \end{table}
 
+Die Absorptionskoeffizienten der Elementarwürfel sind in \autoref{tab:abs4} dargestellt. Zudem werden die Werte mit den Literaturwerten in
+\autoref{tab:abs_literatur} verglichen und die jeweiligen Materialien der Elementarwürfel bestimmt.
 
-%\begin{table}[H]
-%  \centering
-%  \caption{Absorptionskoeffizienten des vierten Würfels.}
-%  \label{tab:abs4}
-%  \sisetup{table-format=1.3}
-%  \begin{tabular}{l S @{${}\pm{}$} S c}
-%    \toprule
-%    {Absorptionskoeffizienten} & \multicolumn{2}{c}{Wert in $\si{\per\centi\meter}$} & {Material}\\
-%    \midrule
-%    $\mu_1 $ & 0.080 & 0.007 & {} \\
-%    $\mu_2 $ & 0.909 & 0.006 & {} \\
-%    $\mu_3 $ & 0.087 & 0.007 & {} \\
-%    $\mu_4 $ & 0.162 & 0.005 & {} \\
-%    $\mu_5 $ & 0.913 & 0.006 & {} \\
-%    $\mu_6 $ & 0.175 & 0.005 & {} \\
-%    $\mu_7 $ & 0.178 & 0.007 & {} \\
-%    $\mu_8 $ & 0.691 & 0.005 & {} \\
-%    $\mu_9 $ & 0.211 & 0.007 & {} \\
-%    \bottomrule
-%  \end{tabular}
-%\end{table}
+\begin{table}[H]
+  \centering
+  \caption{Absorptionskoeffizienten des vierten Würfels.}
+  \label{tab:abs4}
+  \sisetup{table-format=1.3}
+  \begin{tabular}{c S @{${}\pm{}$} S}
+    \toprule
+    {Absorptionskoeffizient} & \multicolumn{2}{c}{Wert in $\si{\per\centi\meter}$}\\
+    \midrule
+    $\mu_1$ & 0.080 & 0.007 \\
+    $\mu_2$ & 0.909 & 0.006 \\
+    $\mu_3$ & 0.087 & 0.007 \\
+    $\mu_4$ & 0.162 & 0.005 \\
+    $\mu_5$ & 0.913 & 0.006 \\
+    $\mu_6$ & 0.175 & 0.005 \\
+    $\mu_7$ & 0.178 & 0.007 \\
+    $\mu_8$ & 0.691 & 0.005 \\
+    $\mu_9$ & 0.211 & 0.007 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Es ist anzumerken, dass die Werte für $\mu_2$, $\mu_5$ und $\mu_8$ deutlich höher sind als die restlichen Absorptionskoeffiienten.
+Die Verteilung der Materialien innerhalb der mittleren Schicht von Würfel vier gleicht demnach der dargestellten Verteilung in \autoref{fig:verteilung}.
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.7]{Abbildungen/Verteilung.png}
+  \caption{Verteilung der Materialien In Würfel 4.}
+  \label{fig:Verteilung}
+\end{figure}
+
+
+Zudem werden die Werte mit den Literaturwerten in
+\autoref{tab:abs_literatur} verglichen und die jeweiligen Materialien der Elementarwürfel bestimmt.

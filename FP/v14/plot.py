@@ -81,4 +81,6 @@ print('mu_2 = ', mu_2, '+-', err_mu_2 ) #da kommen komische Werte raus, ich wei√
 print('mu_4 = ', mu_4, '+-', err_mu_4 )
 
 print ('Mmu_2 = ', np.mean(mu_2) ,'+-', np.mean(err_mu_2))
-#print ('Mmu_4 = ', np.mean(mu_4) ,'+-', np.mean(err_mu_4))
+
+#mu_41=np.array(mu_4[2],mu_4[5],mu_4[8])
+#print ('Mmu_4 = ', np.mean(mu_41) ,'+-', np.mean(err_mu_41))
