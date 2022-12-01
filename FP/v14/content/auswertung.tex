@@ -6,8 +6,7 @@ Sie wird in 4 Teile gegliedert, die sich mit dem Spektrum der Quelle und den dre
 \subsection{Spektrum von Caesium}
 \label{sub:Spektrum}
 
-In
-\autoref{fig:spektrum}
+In \autoref{fig:spektrum}
 ist das aufgenommene Spektrum der verwendeten $\ce{^{137}C}$-Quelle dargestellt.
 Hierbei werden die gezählten Impulse nach den zugehörigen Channels aufgetragen.
 
@@ -21,7 +20,7 @@ Hierbei werden die gezählten Impulse nach den zugehörigen Channels aufgetragen
 \begin{table}[H]
     \centering
     \caption{Messergebnisse der Leermessung.}
-    \label{tab:runds}
+    \label{tab:0}
     \sisetup{table-format=2.2}
     \begin{tabular}{l S[table-format=2.2] S[table-format=5.0] @{${}\pm{}$} S[table-format=3.0]}
       \toprule
@@ -41,7 +40,7 @@ Hierbei werden die gezählten Impulse nach den zugehörigen Channels aufgetragen
 \begin{table}[H]
   \centering
   \caption{Messergebnisse des ersten Würfels.}
-  \label{tab:runds}
+  \label{tab:1}
   \sisetup{table-format=2.2}
   \begin{tabular}{l S[table-format=2.2] S[table-format=5.0] @{${}\pm{}$} S[table-format=3.0]}
     \toprule
@@ -87,7 +86,7 @@ Da die weiteren Würfel auch von einer Aluminiumhülle umgeben sind, gilt im Wei
 \begin{table}[H]
     \centering
     \caption{Messergebnisse des zweiten Würfels.}
-    \label{tab:runds}
+    \label{tab:2}
     \sisetup{table-format=2.2}
     \begin{tabular}{l S[table-format=2.2] S[table-format=5.0] @{${}\pm{}$} S[table-format=3.0]}
       \toprule
@@ -108,12 +107,53 @@ Da die weiteren Würfel auch von einer Aluminiumhülle umgeben sind, gilt im Wei
       \bottomrule
     \end{tabular}
 \end{table}
+<<<<<<< HEAD
 %mu_2 =  [[0.05299755 0.07652535 0.0472577  0.06164421 0.04451271 0.057353
 %  0.06011059 0.03907943 0.05651745]] +- [0.00460037 0.00341143 0.00459599 0.003406   0.00358656 0.00340129
 % 0.00459367 0.00339408 0.00459228]
 %mu_4 =  [[0.07994867 0.9085538  0.0869508  0.16159825 0.91330119 0.1748935
 %  0.17845199 0.69149193 0.21111067]] +- [0.00651977 0.00555979 0.00661559 0.0051716  0.00578365 0.00522895
 % 0.00657183 0.00518344 0.00650554]
+||||||| 34f9dde
+mu_2 =  [[0.05299755 0.07652535 0.0472577  0.06164421 0.04451271 0.057353
+  0.06011059 0.03907943 0.05651745]] +- [0.00460037 0.00341143 0.00459599 0.003406   0.00358656 0.00340129
+ 0.00459367 0.00339408 0.00459228]
+mu_4 =  [[0.07994867 0.9085538  0.0869508  0.16159825 0.91330119 0.1748935
+  0.17845199 0.69149193 0.21111067]] +- [0.00651977 0.00555979 0.00661559 0.0051716  0.00578365 0.00522895
+ 0.00657183 0.00518344 0.00650554]
+=======
+
+
+\begin{table}[H]
+  \centering
+  \caption{Absorptionskoeffizienten des zweiten Würfels.}
+  \label{tab:abs2}
+  \sisetup{table-format=1.3}
+  \begin{tabular}{l S @{${}\pm{}$} S}
+    \toprule
+    {Absorptionskoeffizienten} & \multicolumn{2}{c}{Wert in $\si{\per\centi\meter}$}\\
+    \midrule
+    $\mu_1 $ & 0.053 & 0.005\\
+    $\mu_2 $ & 0.077 & 0.003\\
+    $\mu_3 $ & 0.047 & 0.005\\
+    $\mu_4 $ & 0.062 & 0.003\\
+    $\mu_5 $ & 0.045 & 0.004\\
+    $\mu_6 $ & 0.057 & 0.003\\
+    $\mu_7 $ & 0.060 & 0.005\\
+    $\mu_8 $ & 0.039 & 0.003\\
+    $\mu_9 $ & 0.057 & 0.005\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Da die Elementarwürfel des zweiten Würfels alle aus einem Material bestehen, wird der Mittelwert aus den berechneten Werten in \autoref{tab:abs2}
+gebildet.
+Dieser beträgt 
+\begin{align*}
+  \mu &= qty{0.055 \pm 0.004}{\per\centi\meter}.
+\end{align*}
+
+>>>>>>> d2124c5c0714142bafd46d5d60ec89e064eafe15
 
 \subsection{Würfel 4}
 \label{sub:4}
@@ -121,7 +161,7 @@ Da die weiteren Würfel auch von einer Aluminiumhülle umgeben sind, gilt im Wei
 \begin{table}[H]
     \centering
     \caption{Messergebnisse des vierten Würfels.}
-    \label{tab:runds}
+    \label{tab:4}
     \sisetup{table-format=2.2}
     \begin{tabular}{l S[table-format=2.2] S[table-format=5.0] @{${}\pm{}$} S[table-format=3.0]}
       \toprule
@@ -141,4 +181,27 @@ Da die weiteren Würfel auch von einer Aluminiumhülle umgeben sind, gilt im Wei
       $I_{12}$ & 71.44 & 11507 & 118 \\
       \bottomrule
     \end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+  \centering
+  \caption{Absorptionskoeffizienten des vierten Würfels.}
+  \label{tab:abs4}
+  \sisetup{table-format=1.3}
+  \begin{tabular}{l S @{${}\pm{}$} S c}
+    \toprule
+    {Absorptionskoeffizienten} & \multicolumn{2}{c}{Wert in $\si{\per\centi\meter}$} & {Material}\\
+    \midrule
+    $\mu_1 $ & 0.080 & 0.007 & {} \\
+    $\mu_2 $ & 0.909 & 0.006 & {} \\
+    $\mu_3 $ & 0.087 & 0.007 & {} \\
+    $\mu_4 $ & 0.162 & 0.005 & {} \\
+    $\mu_5 $ & 0.913 & 0.006 & {} \\
+    $\mu_6 $ & 0.175 & 0.005 & {} \\
+    $\mu_7 $ & 0.178 & 0.007 & {} \\
+    $\mu_8 $ & 0.691 & 0.005 & {} \\
+    $\mu_9 $ & 0.211 & 0.007 & {} \\
+    \bottomrule
+  \end{tabular}
 \end{table}
