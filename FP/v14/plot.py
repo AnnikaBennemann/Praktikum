@@ -80,4 +80,5 @@ mu_4, err_mu_4 = kleinsteQuadrate(I_4, W=W_4, A=A)
 print('mu_2 = ', mu_2, '+-', err_mu_2 ) #da kommen komische Werte raus, ich weiß nur nicht ganz warum weil die Rechnug eigentlich passen sollte
 print('mu_4 = ', mu_4, '+-', err_mu_4 )
 
-print (np.mean(I2))
+print ('Mmu_2 = ', np.mean(mu_2) ,'+-', np.mean(err_mu_2))
+print ('Mmu_4 = ', np.mean(mu_4) ,'+-', np.mean(err_mu_4))
