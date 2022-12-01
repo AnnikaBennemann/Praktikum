@@ -82,5 +82,9 @@ print('mu_4 = ', mu_4, '+-', err_mu_4 )
 
 print ('Mmu_2 = ', np.mean(mu_2) ,'+-', np.mean(err_mu_2))
 
-#mu_41=np.array(mu_4[2],mu_4[5],mu_4[8])
-#print ('Mmu_4 = ', np.mean(mu_41) ,'+-', np.mean(err_mu_41))
+mu_41= np.array([0.07994867  , 0.0869508,  0.16159825 , 0.1748935, 0.17845199 , 0.21111067])
+mu_42 = np.array([0.9085538,0.91330119,0.69149193])
+err_mu_41 = np.array([0.00651977 ,0.00661559, 0.0051716  , 0.00522895, 0.00657183,  0.00650554])
+err_mu_42 = np.array([0.00555979, 0.00578365 ,0.00518344])
+print ('Mmu_41 = ', np.mean(mu_41) ,'+-', np.mean(err_mu_41))
+print ('Mmu_42 = ', np.mean(mu_42) ,'+-', np.mean(err_mu_42))

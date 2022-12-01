@@ -17,8 +17,15 @@ Hierbei werden die gezählten Impulse nach den zugehörigen Channels aufgetragen
     \label{fig:spektrum}
 \end{figure}
 
-In der Kurve ist ein starkes Maximum zu erkennen. Dies ist der Full-Energy-Peak, welcher durch die vollständige Energieabgabe des Photons an das Elektron im Detektor
-entsteht.
+Die Diskriminatorschwelle führt dazu, dass die Untergrundstrahlung minimiert wird, da nur Signale oberhalb der Schwelle weitergeleitet werden.
+Das Compton-Plateau ist ein kontinuierliches Spektrum, da die abgegebene Energie im Compton-Effekt abhängig vom Streuwinkel ist.
+Bei einem Streuwinkel von $\qty{180}{\degree}$ ist eine scharfe Kante, die Comptonkante, zu erkennen. Dort ist die abgegebene Energie beim Compton-Effekt maximal.
+Der Peak am Beginn des Compton-Plateaus wird Rückstreupeak genannt und entsteht, wenn Photonen mit Atomen außerhalb des Kristalls, also beispielsweise
+mit der Halterung wechselwirken und die Comptonphotonen dann vom Detektor detektiert werden.
+Im weiteren Verlauf der Kurve ist ein starkes Maximum zu erkennen. Dies ist der Full-Energy-Peak beziehungsweise Photopeak, welcher durch die vollständige
+Energieabgabe des Photons an ein Elektron im Detektor beim Photoeffekt entsteht. Der Peak ähnelt einer Poisson-Verteilung.
+Das Integral des Photopeaks kann zur Bestimmung der Absorptionskoeffizienten, durch den Vergleich verschiedener Materialien verwendet werden.
+Die Werte für den Photopeak sind in \autoref{tab:0} dargestellt.
 
 \begin{table}[H]
     \centering
@@ -39,6 +46,9 @@ entsteht.
 \subsection{Würfel 1}
 \label{sub:1}
 
+Nach \autoref{sec:Durchführung} wird nun die Messung mit einem Würfel im Strahlengang durchgeführt.
+Da es sich beim ersten Würfel nur um die Aluminiumhülle handelt, wird dieser nur in zwei verschiedenen Projektionsrichtungen durchstrahlt.
+Die Werte für den Photopeak sind in \autoref{tab:1} aufgeführt.
 
 \begin{table}[H]
   \centering
@@ -146,7 +156,9 @@ Dieser beträgt
 \begin{align*}
   \bar{\mu} &= \qty{0.055 \pm 0.004}{\per\centi\meter}.
 \end{align*}
-Der Wert stimmt mit keinem der Literaturwerte in \autoref{tab:abs_literatur} überein. 
+Der Wert stimmt mit keinem der Literaturwerte in \autoref{tab:abs_literatur} exakt überein, jedoch liegt der Literaturwert von Delrin mit
+$\mu_{\text{Delrin}}=\qty{0.118}{\per\centi\meter}$ am nächsten am berechneten Wert. Daraus lässt soch schließen, dass der zweite Würfel
+aus Delrin besteht. 
 
 
 
@@ -180,8 +192,7 @@ Die Messwerte sind in \autoref{tab:4} dargestellt.
     \end{tabular}
 \end{table}
 
-Die Absorptionskoeffizienten der Elementarwürfel sind in \autoref{tab:abs4} dargestellt. Zudem werden die Werte mit den Literaturwerten in
-\autoref{tab:abs_literatur} verglichen und die jeweiligen Materialien der Elementarwürfel bestimmt.
+Die Absorptionskoeffizienten der Elementarwürfel sind in \autoref{tab:abs4} dargestellt. 
 
 \begin{table}[H]
   \centering
@@ -214,6 +225,15 @@ Die Verteilung der Materialien innerhalb der mittleren Schicht von Würfel vier 
   \label{fig:Verteilung}
 \end{figure}
 
+Da die Information gegeben ist, dass der Würfel aus zwei der in \autoref{tab:abs_literatur} gegebenen Materialien besteht, wird der
+Mittelwert der in \autoref{fig:Verteilung} pink dargestellten Werte und der in blau dargestellten Werte berechnet.
+Die Mittelwerte ergeben sich zu
+\begin{align*}
+ \mu_{\mathrm{pink}} &= \qty{0.149 \pm 0.006}{\per\centi\meter} \\
+  \shortintertext{und}
+ \mu_{\text{blau}} &= \qty{0.838 \pm 0.006}{\per\centi\meter}.
+\end{align*}
 
 Zudem werden die Werte mit den Literaturwerten in
 \autoref{tab:abs_literatur} verglichen und die jeweiligen Materialien der Elementarwürfel bestimmt.
+Es wird vermutet, dass es sich bei den pink markierten Elementarwürfeln um Delrin und bei den blau markierten Würfeln um Messing handelt.
