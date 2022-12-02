@@ -6,7 +6,8 @@ Hierbei wird Gammastrahlung verwendet.
 \section{Theorie}
 \label{sec:Theorie}
 In diesem Abschnitt wird die Theorie des Versuchs erklärt, indem zuerst allgemein erklärt wird, was genau die Tomographie ist und wie der Absorptionskoeffizient bestimmt wird.
-Anschließend wird die Gammastrahlung betrachtet mit einem besonderem Augenmerk auf dem Zerfall von Caesium und den verschiedenen Wechselwirkungen von Gammastrahlung mit Materie . 
+Anschließend wird die Gammastrahlung betrachtet mit einem besonderem Augenmerk auf dem Zerfall von Caesium und den verschiedenen
+Wechselwirkungen von Gammastrahlung mit Materie. 
 
 \subsection{Tomographie}
 \label{subsec:Tomographie}
@@ -70,7 +71,7 @@ Der Caesium-Zerfall ist in \autoref{fig:Zerfall} dargestellt.
     \centering
     \includegraphics[scale=0.7]{Abbildungen/Caesiumzerfall.png}
     \caption{Schematische Darstellung des Caesium-Zerfalls.\cite{Gammaspektrum}}
-    \label{fig:Gammaspektrum}
+    \label{fig:Zerfall}
 \end{figure}
 
 
@@ -84,7 +85,7 @@ Im Folgenden wird mit der Matrixschreibweise gearbeitet, wobei
     A \vec{\mu} = \vec{I}
     \label{eqn:muMatrix}
 \end{equation}
-umgeschrieben wird. Dabei ist $\vec{\mu}$ der bestimmende Vektor der Absorptionskoeffizienten, $A$ ist die Matrix, die Informationen über die
+umgeschrieben wird. Dabei ist $\vec{\mu}$ der zu bestimmende Vektor der Absorptionskoeffizienten, $A$ ist die Matrix, die Informationen über die
 Wegstrecken enthält und $\vec{I}$ ist der Vektor der gemessenen Intensitäten gemäß der rechten Seite von \autoref{eqn:mu}.\\
 Der Durchführung vorwegnehmend wird ein Würfel bestehend aus $3 \times 3 \times 3$ Elementarwürfeln und umgeben von einer Aluminiumhülle benutzt.
 Es wird aus Zeitgründen nur eine Schicht untersucht. Daraus folgt, dass neun Absorptionskoeffizienten bestimmt werden.
@@ -115,7 +116,7 @@ ist, welche über die Inverse Varianz der Intensität definiert ist. Daraus ergi
     \vec{\mu} = \biggl(A^T\, W \,A\biggr)^{-1} \biggl(A^T \,W \,\vec{I}\biggr)
     \label{eqn:mu_gleichung}
 \end{equation}
-und die Unsicherheit ergibt sich aufgrund des Poissonfehler zu
+und die Unsicherheit ergibt sich aufgrund des Poissonfehlers zu
 \begin{equation}
     V[\mu] = \biggl(A^T\, W \,A\biggr)^{-1}.
     \label{eqn:Unsicherheit}

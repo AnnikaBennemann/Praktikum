@@ -9,7 +9,7 @@ Der Versuchsaufbau ist in \autoref{fig:Aufbau} dargestellt und besteht hauptsäc
 \end{figure}
 Die Gammaquelle sendet einen kollimierten Strahl aus, welcher auf einen Würfel trifft. 
 Jeder Würfel ist $\qty{3}{\centi\meter} \times \qty{3}{\centi\meter} \times \qty{3}{\centi\meter}$ groß und besteht aus $3 \times 3 \times 3$
-Elementarwürfeln, die eime Seitenlänge von $\qty{1}{\centi\meter}$ besitzen. Die Elementarwürfel werden von einer Aluminiumhülle mit einer
+Elementarwürfeln, die eine Seitenlänge von $\qty{1}{\centi\meter}$ besitzen. Die Elementarwürfel werden von einer Aluminiumhülle mit einer
 Wandstärke von $\qty{1}{\milli\meter}$ umgeben.\\
 Es gibt vier unterschiedliche Ausführungen von diesem Würfel. Der erste Würfel besteht nur aus der Aluminiumhülle.
 Beim zweiten und dritten Würfel bestehen alle in der Aluminiumhülle enthaltenen Elementarwürfel nur aus einem Material. Der vierte Würfel besteht aus
@@ -29,18 +29,19 @@ werden über den Computer und das Programm MAESTRO durchgeführt.
 \section{Durchführung}
 \label{sec:Durchführung}
 Zuerst wird das Spektrum der Quelle bestimmt, ohne Abschwächung des Strahls, also ohne einen Würfel im Strahlengang.
-Dabei sollen alle Prozesse des Spektrums identifiziert werden.
+Dabei sollen alle charakteristischen Merkmale des Spektrums identifiziert werden.
 Es wird bei allen Messungen über einem Zeitraum von jeweils $t = \qty{300}{\second}$ gemessen.
 
 Anschließend wird die Messung an jeweils einem der vier Würfel durchgeführt und die Werte aufgenommen.
 Es wird nur die mittlere Schicht des Würfels untersucht, aufgrund von Zeitgründen.
-Der Würfel 1 wird entlang der $I_2$ Richtung durchstrahlt und die Werte des Photopeaks aufgenommen.
+Der Würfel 1 wird entlang von zwei Richtungen durchstrahlt und die Werte des Photopeaks aufgenommen.
 Bei den homogenen Würfeln wird aus vier Richtungen gemessen, der Würfel mit den verschiedenen 
 Elementarwürfeln wird aus allen 12 Richtungen durchstrahlt(siehe \autoref{fig:Ausrichtung}).
+Es wird nur einer der homogenen Würfel untersucht.
 
 \section{Vorbereitung}
 \label{sec:Vorbereitung}
-Zur Bestimmung des Abschwächungskoeffizient wird die Matrix $A$ benötigt, welche die Informationen der Wegstrecke enthält. \autoref{eqn:muMatrix} lässt sich schreiben zu
+Zur Bestimmung des Abschwächungskoeffizienten wird die Matrix $A$ benötigt, welche die Informationen der Wegstrecke enthält. \autoref{eqn:muMatrix} lässt sich schreiben zu
 \begin{equation}
     d \cdot
     \begin{pmatrix}
@@ -87,12 +88,12 @@ Zur Bestimmung des Abschwächungskoeffizient wird die Matrix $A$ benötigt, welc
     .
 \end{equation}
 
-In \autoref{tab:abs_literatur} sind die Absorptionskoeffizienten für die möglichen Materialien der Elementarwürfel aufgeslistet.
+In \autoref{tab:abs_literatur} sind die Absorptionskoeffizienten für die möglichen Materialien der Elementarwürfel aufgelistet.
 Durch den Vergleich der errechneten Absorptionskoeffizienten kann so bestimmt werden, aus welchen Materialien die Würfel bestehen.
 
 \begin{table}[H]
     \centering
-    \caption{Literaturwerte für den Massenschwächungskoeffizient \cite{NIST2} und der Dchte \cite{Chemie.de} und die draus berechneten Absorptionskoeffizienten.}
+    \caption{Literaturwerte für den Massenschwächungskoeffizient \cite{NIST2} und der Dichte \cite{Chemie.de} und die daraus berechneten Absorptionskoeffizienten.}
     \label{tab:abs_literatur}
     \sisetup{table-format=1.3}
     \begin{tabular}{c S S[table-format=2.2] S}
