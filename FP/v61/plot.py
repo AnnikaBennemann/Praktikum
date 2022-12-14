@@ -5,9 +5,43 @@ import uncertainties.unumpy as unp
 from uncertainties import ufloat
 from scipy.optimize import curve_fit
 
-#Streuparameter plot
+####################################Stabilisierung
+
+def gg(L,r1,r2):
+    return 1 - L *(r1+r2)/(r1*r2)+ L**2/(r1*r2)
 
 
+def gg2(L, r):
+    return 1-L/r
+
+L= np.linspace(0,3,500)
+
+plt.figure(1)
+plt.plot(L, gg(L, 1.4, 1.4), 'r-',label='konkav, konkav')
+plt.plot(L, gg2(L, 1.4), 'g-',label='plan, konkav')
+plt.xlabel(r'Resonatorlänge $L \mathbin{/} \unit{\meter}$')
+plt.ylabel(r'Stabilitätsbedingung $g1 \cdot g2$')
+plt.legend(loc='best')
+plt.grid()
+plt.tight_layout()
+plt.savefig('build/Stabi.pdf')
+
+
+Lkk, Ikk = np.genfromtxt('content/kk.txt', unpack=True)
+Lpk, Ipk = np.genfromtxt('content/pk.txt', unpack=True)
+Ipk= Ipk+0.00021 #Grundintensität abziehen
+Ikk= Ikk+0.00021 #Grundintensität abziehen
+
+
+plt.figure(2)
+plt.plot(Lkk, Ikk, 'rx',label='Messwerte konkav, konkav')
+plt.plot(Lpk, Ipk, 'gx',label='Messwerte plan, konkav')
+plt.xlabel(r'Resonatorlänge $L \mathbin{/} \unit{\centi\meter}$')
+plt.ylabel(r'Intensität $I \mathbin{/} \unit{\milli\watt}$')
+plt.legend(loc='best')
+plt.grid()
+plt.tight_layout()
+plt.savefig('build/kkpk.pdf')
 
 ##################################################################################TEM00
 
@@ -32,7 +66,7 @@ print('w01 =', params1[2], '±', errors1[2])
 
 z = np.linspace(np.min(r00), np.max(r00), 500)
 
-plt.figure(1)
+plt.figure(3)
 plt.plot(r00, I00, 'rx',label='Messwerte')
 plt.plot(z, Tem0(z,*params1),'-', label='Regressionsgerade')
 plt.xlabel(r'Abstand $r \mathbin{/} \unit{\milli\meter}$')
@@ -64,7 +98,7 @@ print('w02 =', params2[2], '±', errors2[2])
 
 z2 = np.linspace(np.min(r10), np.max(r10), 500)
 
-plt.figure(2)
+plt.figure(4)
 plt.plot(r10, I10, 'rx',label='Messwerte')
 plt.plot(z2, Tem1(z2,*params2),'-', label='Regressionsgerade')
 plt.xlabel(r'Abstand $r \mathbin{/} \unit{\milli\meter}$')
@@ -97,7 +131,7 @@ print('w03 =', params3[2], '±', errors3[2])
 
 z3 = np.linspace(np.min(r20), np.max(r20), 500)
 
-plt.figure(3)
+plt.figure(5)
 plt.plot(r20, I20, 'rx',label='Messwerte')
 plt.plot(z3, Tem2(z3,*params3),'-', label='Regressionsgerade')
 plt.xlabel(r'Abstand $r \mathbin{/} \unit{\milli\meter}$')
@@ -106,3 +140,38 @@ plt.legend(loc='best')
 plt.grid()
 plt.tight_layout()
 plt.savefig('build/TEM20.pdf')
+
+
+
+
+###########################################################Polarisation
+
+phi, Ip= np.genfromtxt('content/Polarisation.txt', unpack=True)
+
+Ip= Ip+0.00021 #Grundintensität abziehen
+
+def Pol(x ,I0, phi0):
+    return I0 * np.cos((x - phi0) * 2*np.pi / 360)**2
+
+params4, cov4= curve_fit(Pol, phi, Ip)
+errors4 = np.sqrt(np.diag(cov4))
+I0p= ufloat(params4[0],errors4[0])
+phi0p= ufloat(params4[1],errors4[1])
+
+print('I0p =', params4[0], '±', errors4[0])
+print('phi0p =', params4[1], '±', errors4[1])
+
+z4 = np.linspace(np.min(phi), np.max(phi), 500)
+
+plt.figure(6)
+plt.plot(phi, Ip, 'rx',label='Messwerte')
+plt.plot(z4, Pol(z4,*params4),'-', label='Regressionsgerade')
+plt.xlabel(r'Winkel $\phi\mathbin{/} \unit{\degree}$')
+plt.ylabel(r'Intensität $I \mathbin{/} \unit{\milli\watt}$')
+plt.legend(loc='best')
+plt.grid()
+plt.tight_layout()
+plt.savefig('build/Pol.pdf')
+
+
+
