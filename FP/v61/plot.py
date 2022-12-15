@@ -34,16 +34,8 @@ Ikk= Ikk+0.00021 #Grundintensität abziehen
 
 
 plt.figure(2)
-<<<<<<< HEAD
-plt.plot(Lkk, Ikk, 'springgreen',label='Messwerte konkav, konkav')
-plt.plot(Lpk, Ipk, 'forestgreen',label='Messwerte plan, konkav')
-||||||| b648f6c
-plt.plot(Lkk, Ikk, 'rx',label='Messwerte konkav, konkav')
-plt.plot(Lpk, Ipk, 'gx',label='Messwerte plan, konkav')
-=======
 plt.plot(Lkk, Ikk,'x', color='indianred',label='Messwerte konkav, konkav')
 plt.plot(Lpk, Ipk,'x', color='maroon',label='Messwerte plan, konkav')
->>>>>>> 10bd027d990c666295b4cd69ecbb38f135010bf2
 plt.xlabel(r'Resonatorlänge $L \mathbin{/} \unit{\centi\meter}$')
 plt.ylabel(r'Intensität $I \mathbin{/} \unit{\milli\watt}$')
 plt.legend(loc='best')
@@ -127,13 +119,7 @@ I20 = I20+0.21      #Grundintensität abziehen
 def Tem2(x ,I0, r0, w):
     return I0 * np.exp(-(x-r0)**2/(2*w**2)) *( (64 *(x-r0)**4)/w**4 -(32*(x-r0)**2)/w**2 +4)#Ausgleichsfunktion TEM20
 
-<<<<<<< HEAD
-params3, cov3= curve_fit(Tem2, r20, I20) #passt irgendwie noch nicht so ganz
-||||||| b648f6c
-params3, cov3= curve_fit(Tem2, r20, I20) #passt irgendwie noch nciht so ganz
-=======
 params3, cov3= curve_fit(Tem2, r20, I20, bounds=([0.00026,0,4],np.inf))#passt irgendwie noch nciht so ganz
->>>>>>> 10bd027d990c666295b4cd69ecbb38f135010bf2
 errors3 = np.sqrt(np.diag(cov3))
 I03= ufloat(params3[0],errors3[0])
 r03= ufloat(params3[1],errors3[1])
@@ -224,6 +210,18 @@ print('lam2 = ', np.mean(lam2)*1e9,'+-',np.std(lam2)*1e9)
 print('lam3 = ', np.mean(lam3)*1e9,'+-',np.std(lam3)*1e9)
 print('lam4 = ', np.mean(lam4)*1e9,'+-',np.std(lam4)*1e9)
 print('lam = ', np.mean(lam) *1e9,'+-',np.std(lam)*1e9)
+
+#######################################Modendifferenzen
+
+M1= np.array([248,243,248,244])
+M2= np.array([206,207,202,206])
+M3= np.array([139,135,135,135])
+M4= np.array([281,282,281,281])
+print('M1= ', np.mean(M1), '+-', np.std(M1))
+print('M2= ', np.mean(M2), '+-', np.std(M2))
+print('M3= ', np.mean(M3), '+-', np.std(M3))
+print('M4= ', np.mean(M4), '+-', np.std(M4))
+
 
 
 
