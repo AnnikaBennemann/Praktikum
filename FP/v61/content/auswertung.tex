@@ -107,3 +107,63 @@ Polarisation
   \caption {Intensitätsverteilung in Abhängigkeit vom Polarisationswinkel.}
   \label{fig:Pol}
 \end{figure}
+
+
+
+
+
+
+\subsection{Longitudinale Moden}
+\label{sub:Longitudinale Moden}
+
+Die Modendifferenzen zwischen den Jeweils erstn vier Peakfrequenzen für vier verschiedene Resonatorlängen sind in \autoref{tab:Modendifferenzen}
+aufgetragen. Zusätzlich wird der Mittelwert berechnet und auch in die Tabelle eingetragen.
+
+\begin{table}[H]
+  \centering
+  \caption{Modendifferenzen zwischen den jeweils ersten vier Peakfrequenzen der Messung.}
+  \label{tab:Modendifferenzen}
+  \sisetup{table-format=3.0}
+  \begin{tabular}{S[table-format=2.1] S S S S S@{${}\pm{}$} S[table-format=3.2]}
+    \toprule
+    {$L \mathbin{/} \si{\centi\meter}$} &{$\Delta f_{0,1} \mathbin{/} \si{\mega\hertz}$} &
+    {$\Delta f_{1,2} \mathbin{/} \si{\mega\hertz}$} &{$\Delta f_{2,3} \mathbin{/} \si{\mega\hertz}$} &
+    {$\Delta f_{3,4} \mathbin{/} \si{\mega\hertz}$} & \multicolumn{2}{c}{$\bar{\Delta f} \mathbin{/} \si{\mega\hertz}$}\\
+    \midrule
+       61.6  & 248 & 243 & 248 & 244 & 245.75 & 2.28\\
+       72.8  & 206 & 207 & 202 & 206 & 205.25 & 1.92\\
+      110.0  & 139 & 135 & 135 & 135 & 136.00 & 1.73\\
+      160.0  & 281 & 282 & 281 & 281 & 281.25 & 0.43\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Die theoretischen Modendifferenzen ergeben sich nach
+
+\begin{align*}
+  \Delta f_{\text{theo}} &= \frac{c}{2 \cdot L}
+\end{align*}
+zu 
+\begin{align*}
+  L &= \SI{ 61.6}{\centi\meter}: & \Delta f_\text{theo} &= \SI{243.33}{\mega\hertz}\, , \\  
+  L &= \SI{ 72.8}{\centi\meter}: & \Delta f_\text{theo} &= \SI{205.91}{\mega\hertz}\, , \\  
+  L &= \SI{110.0}{\centi\meter}: & \Delta f_\text{theo} &= \SI{136.27}{\mega\hertz}\, , \\
+  L &= \SI{160.0}{\centi\meter}: & \Delta f_\text{theo} &= \SI{93.69}{\mega\hertz}\, . 
+\end{align*}
+wobei $c$ die Lichtgeschwindigkeit ist.
+
+Die Dopplerverbreiterung des Neon-Übergangs lässt sich mithilfe von 
+\begin{align*}
+  \partial f_D &= \frac{2f_0}{c} \sqrt{\frac{2RT\: \text{ln}(2)}{M}} \\
+  &= \num{7.16e-7}\sqrt{\frac{\si{\gram\per\mol}}{\si{\kelvin}}} \cdot f_0 \cdot \sqrt{\frac{T}{M}}
+\end{align*}
+zu 
+\begin{align*}
+  \partial f_D &= \SI{1.314}{\giga\hertz} = \SI{1314}{\mega\hertz}
+\end{align*}
+berechnen, wobei $R$ die allgemeine Gaskonstante ist, die Molmasse
+$M = \SI{20}{\gram\per\mol}$ beträgt und $T=\qty{300}{\kelvin}$ als Raumtemperatur angenommen wird.
+$f_0$ ist die Laserfrequenz und beträgt $f_0= \frac{\lambda}{c} = \SI{4.74e5}{\giga\hertz}$.
+
+Die Dopplerverbreiterung
+

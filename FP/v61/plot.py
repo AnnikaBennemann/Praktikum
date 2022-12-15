@@ -211,5 +211,17 @@ print('lam3 = ', np.mean(lam3)*1e9,'+-',np.std(lam3)*1e9)
 print('lam4 = ', np.mean(lam4)*1e9,'+-',np.std(lam4)*1e9)
 print('lam = ', np.mean(lam) *1e9,'+-',np.std(lam)*1e9)
 
+#######################################Modendifferenzen
+
+M1= np.array([248,243,248,244])
+M2= np.array([206,207,202,206])
+M3= np.array([139,135,135,135])
+M4= np.array([281,282,281,281])
+print('M1= ', np.mean(M1), '+-', np.std(M1))
+print('M2= ', np.mean(M2), '+-', np.std(M2))
+print('M3= ', np.mean(M3), '+-', np.std(M3))
+print('M4= ', np.mean(M4), '+-', np.std(M4))
+
+
 
 
