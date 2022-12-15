@@ -1,6 +1,19 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
+Im Folgenden werden die Mittelwerte, sowie die Fehler und weitere Berechnungen mithilfe der Pythonmodule Matplotlib\cite{matplotlib},
+Uncertainties\cite{uncertainties} und Numpy\cite{numpy} durchgeführt.
+
+\subsection{Stabilitätsbedingung des Lasers}
+\label{subsec:Stabilitätsbedingung}
+Die maximal mögliche Resonatorlänge $L$ lässt sich für verschiedene Spiegelkonfigurationen aus der Stabilitätsbedingung
+\begin{align*}
+  0 \leq g_1 g_2 &< 1 & \text{mit}& & g_i = 1 - \frac{L}{r_i}
+\end{align*}
+bestimmen. In diesem Versuch wird eine Kombination aus zwei konkaven Spiegeln und einem planen Spiegel und einem konkaven Spiegel.
+Der Krümmungsradius der konkaven Spiegeln ist bei beiden $r_k = \qty{1400}{\milli\meter}$ und bei dem planen Spiegel gilt $r_p \to \infty$
+
+
 \begin{figure}[H]
   \centering
   \includegraphics[scale=1]{build/Stabi.pdf}

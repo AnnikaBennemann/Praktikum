@@ -34,8 +34,8 @@ Ikk= Ikk+0.00021 #Grundintensität abziehen
 
 
 plt.figure(2)
-plt.plot(Lkk, Ikk, 'rx',label='Messwerte konkav, konkav')
-plt.plot(Lpk, Ipk, 'gx',label='Messwerte plan, konkav')
+plt.plot(Lkk, Ikk, 'springgreen',label='Messwerte konkav, konkav')
+plt.plot(Lpk, Ipk, 'forestgreen',label='Messwerte plan, konkav')
 plt.xlabel(r'Resonatorlänge $L \mathbin{/} \unit{\centi\meter}$')
 plt.ylabel(r'Intensität $I \mathbin{/} \unit{\milli\watt}$')
 plt.legend(loc='best')
@@ -119,7 +119,7 @@ I20 = I20+0.21      #Grundintensität abziehen
 def Tem2(x ,I0, r0, w):
     return I0 * np.exp(-(x-r0)**2/(2*w**2)) *( (64 *(x-r0)**4)/w**4 -(32*(x-r0)**2)/w**2 +4)#Ausgleichsfunktion TEM20
 
-params3, cov3= curve_fit(Tem2, r20, I20) #passt irgendwie noch nciht so ganz
+params3, cov3= curve_fit(Tem2, r20, I20) #passt irgendwie noch nicht so ganz
 errors3 = np.sqrt(np.diag(cov3))
 I03= ufloat(params3[0],errors3[0])
 r03= ufloat(params3[1],errors3[1])
