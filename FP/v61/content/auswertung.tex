@@ -25,7 +25,15 @@ Kombination aus dem konkave und dem planen Spiegel eine Gerade, welche die Stabi
 beschreibt eine Parabel mit der Stabilitätsbedingung $0 \leq L \leq 2 r_k$.
 Die theoretischen maximalen Resonatorlängen bestimmen sich zu
 \begin{align}
-  \text{plan und konkav:} && L_{pk,theo} &= 1.4
+  \text{plan und konkav:} && L_{pk,theo} &= 1.4 \si{\meter},\\
+  \text{konkav und konkav:}&& L_{kk,theo} & = 2.8 \si{\meter}.
+  \label{eqn:Länge_theo}
+\end{align}
+Mit den gemessenen Werten aus \autoref{fig:kkpk} bestimmt sich die maximale Länge zu
+\begin{align}
+  \text{plan und konkav:} && L_{pk,theo} &= 1.244 \si{\meter},\\
+  \text{konkav und konkav:}&& L_{kk,theo} & = 2.105 \si{\meter}.
+  \label{eqn:Länge_gem}
 \end{align}
 
 \begin{figure}[H]
@@ -35,10 +43,17 @@ Die theoretischen maximalen Resonatorlängen bestimmen sich zu
   \label{fig:kkpk}
 \end{figure}
 
-TEM$_{00}$-Mode
-%I01 &= 28.09± 0.18
-%r01 &= -0.78 ± 0.03
-%w01 &= 4.43 ± 0.03
+\subsection{Beobachtung der TEM-Moden}
+\label{subsec:Moden_aus}
+Im Folgendem weden die $\text{Tem}_{00}$-, die $\text{Tem}_{10}$- und die $\text{Tem}_{20}$-Mode untersucht.
+
+\subsubsection{TEM$_{00}$-Mode}
+\label{subsubsec:00Mode}
+Die Messdaten der, senkrecht zur optischen Achse gemessenen, Intensitätsverteilung der Grundmode sind in \autoref{fig:TEM00} mit einer Regressionsgrade dargestellt.
+Dabei hat die Regressionsgrade die Form
+\begin{align*}
+  I_{00}(r) = I_0 \text{exp}\Biggl(\frac{-(x-r_0)^2}{2 w^2}\Biggr).
+\end{align*}
 
 \begin{figure}[H]
   \centering
@@ -46,6 +61,16 @@ TEM$_{00}$-Mode
   \caption {Intensitätsverteilung der TEM$_{00}$-Mode in Abhängigkeit vom Abstand zur Modenmitte.}
   \label{fig:TEM00}
 \end{figure}
+
+Es ergeben sich die Parameter zu
+\begin{align*}
+  I_{0} &= (28.09 \pm 0.18) \si{\micro\W},\\
+  r_0 &= (-0.78 \pm 0.03) \si{\milli\meter},\\
+  w_0 &= (4.43 \pm 0.03) \si{\milli\meter}.
+\end{align*}
+
+
+
 
 TEM$_{10}$-Mode
 %I02 &= 0.92 ± 0.01
