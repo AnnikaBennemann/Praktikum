@@ -55,7 +55,7 @@ Im Folgenden werden die $\text{Tem}_{00}$-, die $\text{Tem}_{10}$- und die $\tex
 Die Messdaten der, senkrecht zur optischen Achse gemessenen, Intensitätsverteilung der Grundmode sind in \autoref{fig:TEM00} mit einer Regressionsgrade dargestellt.
 Dabei hat die Regressionsgrade die Form
 \begin{align*}
-  I_{00}(r) = I_0 \text{exp}\Biggl(\frac{-(x-r_0)^2}{2 w^2}\Biggr).
+  I_{00}(r) = I_0 \text{exp}\Biggl(\frac{-(r-r_0)^2}{2 w^2}\Biggr).
 \end{align*}
 
 \begin{figure}[H]
@@ -80,6 +80,9 @@ TEM$_{10}$-Mode
 %I02 &= 0.92 ± 0.01
 %r02 &= -0.01 ± 0.05
 %w02 &= 4.58 ± 0.04
+\begin{align*}
+  I_{10}(r) = I_0 \cdot \frac{8(r-r_0)^2}{w^2} \cdot \text{exp}\Biggl(\frac{-(r-r_0)^2}{2 w^2}\Biggr).
+\end{align*}
 
 \begin{figure}[H]
   \centering
@@ -95,6 +98,10 @@ TEM$_{20}$-Mode
 %I03 &= 0.00082 ± 0.00
 %r03 &= 1.03 ± 0.45
 %w03 &= 0.67 ± 0.21
+\begin{align*}
+  I_{20}(r) = I_0 \cdot \Biggl(\frac{64(r-r_0)^4}{w^4}-\frac{32(r-r_0)^2}{w^2}+4\Biggr) \cdot \text{exp}\Biggl(\frac{-(x-r_0)^2}{2 w^2}\Biggr).
+\end{align*}
+
 
 \begin{figure}[H]
   \centering
