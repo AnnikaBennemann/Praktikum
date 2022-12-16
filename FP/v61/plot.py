@@ -5,7 +5,10 @@ import uncertainties.unumpy as unp
 from uncertainties import ufloat
 from scipy.optimize import curve_fit
 
-####################################Stabilisierung
+
+#########ich hab alles was print macht auskommentiert damit der nicht so lange rechnet.
+
+####################################Stabilisierung 
 
 def gg(L,r1,r2):
     return 1 - L *(r1+r2)/(r1*r2)+ L**2/(r1*r2)
@@ -60,9 +63,9 @@ I01= ufloat(params1[0],errors1[0])
 r01= ufloat(params1[1],errors1[1])
 w01= ufloat(params1[2],errors1[2])
 
-print('I01 =', params1[0], '±', errors1[0])
-print('r01 =', params1[1], '±', errors1[1])
-print('w01 =', params1[2], '±', errors1[2])
+#print('I01 =', params1[0], '±', errors1[0])
+#print('r01 =', params1[1], '±', errors1[1])
+#print('w01 =', params1[2], '±', errors1[2])
 
 z = np.linspace(np.min(r00), np.max(r00), 500)
 
@@ -92,9 +95,9 @@ I02= ufloat(params2[0],errors2[0])
 r02= ufloat(params2[1],errors2[1])
 w02= ufloat(params2[2],errors2[2])
 
-print('I02 =', params2[0], '±', errors2[0])
-print('r02 =', params2[1], '±', errors2[1])
-print('w02 =', params2[2], '±', errors2[2])
+#print('I02 =', params2[0], '±', errors2[0])
+#print('r02 =', params2[1], '±', errors2[1])
+#print('w02 =', params2[2], '±', errors2[2])
 
 z2 = np.linspace(np.min(r10), np.max(r10), 500)
 
@@ -125,9 +128,9 @@ I03= ufloat(params3[0],errors3[0])
 r03= ufloat(params3[1],errors3[1])
 w03= ufloat(params3[2],errors3[2])
 
-print('I03 =', params3[0], '±', errors3[0])
-print('r03 =', params3[1], '±', errors3[1])
-print('w03 =', params3[2], '±', errors3[2])
+#print('I03 =', params3[0], '±', errors3[0])
+#print('r03 =', params3[1], '±', errors3[1])
+#print('w03 =', params3[2], '±', errors3[2])
 
 z3 = np.linspace(np.min(r20), np.max(r20), 500)
 
@@ -158,8 +161,8 @@ errors4 = np.sqrt(np.diag(cov4))
 I0p= ufloat(params4[0],errors4[0])
 phi0p= ufloat(params4[1],errors4[1])
 
-print('I0p =', params4[0], '±', errors4[0])
-print('phi0p =', params4[1], '±', errors4[1])
+#print('I0p =', params4[0], '±', errors4[0])
+#print('phi0p =', params4[1], '±', errors4[1])
 
 z4 = np.linspace(np.min(phi), np.max(phi), 500)
 
@@ -202,14 +205,14 @@ lam3 = lam(n3, d3, l3, g3)
 lam4 = lam(n4, d4, l4, g4)
 
 lam = np.array((np.mean(lam1),np.mean(lam2),np.mean(lam3),np.mean(lam4)))
-print(lam)
-
-print('lam1 = ', np.mean(lam1)*1e9,'+-',np.std(lam1)*1e9)
-
-print('lam2 = ', np.mean(lam2)*1e9,'+-',np.std(lam2)*1e9)
-print('lam3 = ', np.mean(lam3)*1e9,'+-',np.std(lam3)*1e9)
-print('lam4 = ', np.mean(lam4)*1e9,'+-',np.std(lam4)*1e9)
-print('lam = ', np.mean(lam) *1e9,'+-',np.std(lam)*1e9)
+#print(lam)
+#
+#print('lam1 = ', np.mean(lam1)*1e9,'+-',np.std(lam1)*1e9)
+#
+#print('lam2 = ', np.mean(lam2)*1e9,'+-',np.std(lam2)*1e9)
+#print('lam3 = ', np.mean(lam3)*1e9,'+-',np.std(lam3)*1e9)
+#print('lam4 = ', np.mean(lam4)*1e9,'+-',np.std(lam4)*1e9)
+#print('lam = ', np.mean(lam) *1e9,'+-',np.std(lam)*1e9)
 
 #######################################Modendifferenzen
 
@@ -217,10 +220,10 @@ M1= np.array([248,243,248,244])
 M2= np.array([206,207,202,206])
 M3= np.array([139,135,135,135])
 M4= np.array([281,282,281,281])
-print('M1= ', np.mean(M1), '+-', np.std(M1))
-print('M2= ', np.mean(M2), '+-', np.std(M2))
-print('M3= ', np.mean(M3), '+-', np.std(M3))
-print('M4= ', np.mean(M4), '+-', np.std(M4))
+#print('M1= ', np.mean(M1), '+-', np.std(M1))
+#print('M2= ', np.mean(M2), '+-', np.std(M2))
+#print('M3= ', np.mean(M3), '+-', np.std(M3))
+#print('M4= ', np.mean(M4), '+-', np.std(M4))
 
 
 
