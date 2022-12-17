@@ -45,15 +45,16 @@ bestimmte maximale Länge zu
 
 \subsection{Beobachtung der TEM-Moden}
 \label{subsec:Moden_aus}
-Im Folgenden werden die $\text{Tem}_{00}$-, die $\text{Tem}_{10}$- und die $\text{Tem}_{20}$-Mode untersucht. Von allen Werten wird die Untergrundintensität $I = \qty{-20}{\micro\watt}$ abgezogen.
+Im Folgenden werden die $\text{Tem}_{00}$-, die $\text{Tem}_{10}$- und die $\text{Tem}_{20}$-Mode untersucht. Von allen Werten wird die Untergrundintensität $I = \qty{-0.21}{\micro\watt}$ abgezogen.
 
 \subsubsection{TEM$_{00}$-Mode}
 \label{subsubsec:00Mode}
-Die Messdaten der, senkrecht zur optischen Achse gemessenen, Intensitätsverteilung der Grundmode sind in \autoref{fig:TEM00} mit einer Regressionsgrade dargestellt.
-Dabei hat die Regressionsgrade die Form
+Die Messdaten der, senkrecht zur optischen Achse gemessenen, Intensitätsverteilung der Grundmode sind in \autoref{fig:TEM00} dargestellt.
+Zusätzlich ist eine Regressionsfunktion der Form
 \begin{align*}
-  I_{00}(r) = I_0 \text{exp}\Biggl(\frac{-(r-r_0)^2}{2 w^2}\Biggr).
+  I_{00}(r) = I_0 \text{exp}\Biggl(\frac{-(r-r_0)^2}{2 w^2}\Biggr)
 \end{align*}
+dargestellt.
 
 \begin{figure}[H]
   \centering
@@ -62,7 +63,7 @@ Dabei hat die Regressionsgrade die Form
   \label{fig:TEM00}
 \end{figure}
 
-Es ergeben sich die Parameter zu
+Es ergeben sich die Parameter der Regressionsfunktion zu
 \begin{align*}
   I_{0} &= (28.09 \pm 0.18) \si{\micro\W},\\
   r_0 &= (-0.78 \pm 0.03) \si{\milli\meter},\\
@@ -73,7 +74,7 @@ Es ergeben sich die Parameter zu
 
 \subsubsection{TEM$_{10}$-Mode}
 \label{subsubsec:10Mode}
-In \autoref{fig:TEM10} ist die Intensitätsverteilung der TEM$_{10}$-Mode gegenüber des Abstands zur Modenmitte dargestellt. Zusätzlich ist eine Regressionsgrade der Form
+In \autoref{fig:TEM10} ist die Intensitätsverteilung der TEM$_{10}$-Mode gegenüber des Abstands zur Modenmitte dargestellt. Zusätzlich ist eine Regressionsfunktion der Form
 
 \begin{align*}
   I_{10}(r) = I_0 \cdot \frac{8(r-r_0)^2}{w^2} \cdot \text{exp}\Biggl(\frac{-(r-r_0)^2}{2 w^2}\Biggr).
@@ -94,7 +95,7 @@ eingefügt. Die Parameter berechnen sich zu
 
 \subsubsection{TEM$_{20}$-Mode}
 \label{subsubsec:20Mode}
-Die Regressionsgrade der Form
+Die Regressionsfunktion der Form
 \begin{align*}
   I_{20}(r) = I_0 \cdot \Biggl(\frac{64(r-r_0)^4}{w^4}-\frac{32(r-r_0)^2}{w^2}+4\Biggr) \cdot \text{exp}\Biggl(\frac{-(x-r_0)^2}{2 w^2}\Biggr)
 \end{align*}
@@ -113,9 +114,23 @@ Die Parameter berechnen sich zu
   w_0 &= (0.67 \pm 0.21) \si{\milli\meter}.
 \end{align*}
 
-Polarisation
-%I0p &= 2.90 ± 0.07
-%phi0p &= 88.73 ± 0.12
+\subsection{Polarisation}
+\label{sub:Polarisation}
+
+Die Messung der Intensität in Abhängigkeit vom Polarisationswinkel wird gemäß \autoref{subsec:Polarisation}
+in Schritten von $\qty{10}{\degree}$ durchgeführt und die Messwerte sind in
+\autoref{fig:Pol} dargestellt.
+
+Zusätzlich wird eine Ausgleichsfunktion der Form
+\begin{equation}
+  I_P(\phi) = I_0 \cdot \text{cos}^2 \left((\phi  + \phi_0)\cdot \frac{2\pi}{\SI{360}{\degree}}\right)
+\end{equation}
+eingefügt, deren Parameter sich zu 
+\begin{align*}
+  I_0 &= \SI{2.90 \pm 0.07}{\milli\watt},\\ 
+  \phi_0 &= \SI{88.73 \pm 0.12}{\degree}.
+\end{align*}
+berechnen.
 
 \begin{figure}[H]
   \centering
@@ -123,11 +138,6 @@ Polarisation
   \caption {Intensitätsverteilung in Abhängigkeit vom Polarisationswinkel.}
   \label{fig:Pol}
 \end{figure}
-
-
-
-
-
 
 \subsection{Longitudinale Moden}
 \label{sub:Longitudinale Moden}
@@ -140,7 +150,7 @@ aufgetragen. Zusätzlich wird der Mittelwert berechnet und auch in die Tabelle e
   \caption{Modendifferenzen zwischen den jeweils ersten vier Peakfrequenzen der Messung.}
   \label{tab:Modendifferenzen}
   \sisetup{table-format=3.0}
-  \begin{tabular}{S[table-format=2.1] S S S S S@{${}\pm{}$} S[table-format=3.2]}
+  \begin{tabular}{S[table-format=3.1] S S S S S[table-format=3.2]@{${}\pm{}$} S[table-format=1.2]}
     \toprule
     {$L \mathbin{/} \si{\centi\meter}$} &{$\Delta f_{0,1} \mathbin{/} \si{\mega\hertz}$} &
     {$\Delta f_{1,2} \mathbin{/} \si{\mega\hertz}$} &{$\Delta f_{2,3} \mathbin{/} \si{\mega\hertz}$} &
