@@ -23,15 +23,15 @@ Kombination aus dem konkaven und dem planen Spiegel eine Gerade, welche die Stab
 beschreibt eine Parabel mit der Stabilitätsbedingung $0 \leq L \leq 2 r_k$.
 Die theoretischen maximalen Resonatorlängen bestimmen sich zu
 \begin{align*}
-  \text{plan und konkav:} && L_{pk,theo} &= 1.4 \si{\meter},\\
-  \text{konkav und konkav:}&& L_{kk,theo} & = 2.8 \si{\meter}.
+  \text{plan und konkav:} && L_{pk,theo} &= \qty{1.4}{\meter},\\
+  \text{konkav und konkav:}&& L_{kk,theo} & = \qty{2.8}{\meter}.
   %\label{eqn:Länge_theo}
 \end{align*}
 Mit den gemessenen Werten der Intensität in Abhängigkeit von der Resonatorlänge aus \autoref{fig:kkpk} ergibt sich die experimentell
 bestimmte maximale Länge zu
 \begin{align*}
-  \text{plan und konkav:} && L_{pk,theo} &= 1.244 \si{\meter},\\
-  \text{konkav und konkav:}&& L_{kk,theo} & = 2.105 \si{\meter}.
+  \text{plan und konkav:} && L_{pk,theo} &= \qty{1.244}{\meter},\\
+  \text{konkav und konkav:}&& L_{kk,theo} & = \qty{2.105}{\meter}.
   %\label{eqn:Länge_gem}
 \end{align*}
 
@@ -77,7 +77,7 @@ Es ergeben sich die Parameter der Regressionsfunktion zu
 In \autoref{fig:TEM10} ist die Intensitätsverteilung der TEM$_{10}$-Mode gegenüber des Abstands zur Modenmitte dargestellt. Zusätzlich ist eine Regressionsfunktion der Form
 
 \begin{align*}
-  I_{10}(r) = I_0 \cdot \frac{8(r-r_0)^2}{w^2} \cdot \text{exp}\Biggl(\frac{-(r-r_0)^2}{2 w^2}\Biggr).
+  I_{10}(r) = I_0 \cdot \frac{8(r-r_0)^2}{w^2} \cdot \text{exp}\Biggl(\frac{-(r-r_0)^2}{2 w^2}\Biggr)
 \end{align*}
 eingefügt. Die Parameter berechnen sich zu
 \begin{align*}
@@ -99,7 +99,7 @@ Die Regressionsfunktion der Form
 \begin{align*}
   I_{20}(r) = I_0 \cdot \Biggl(\frac{64(r-r_0)^4}{w^4}-\frac{32(r-r_0)^2}{w^2}+4\Biggr) \cdot \text{exp}\Biggl(\frac{-(x-r_0)^2}{2 w^2}\Biggr)
 \end{align*}
-und die Messwerte der Intensitätsverteilung zu dem Abstand zur Modenmitte ist in \autoref{fig:TEM02} dargestellt.
+und die Messwerte der Intensitätsverteilung zu dem Abstand zur Modenmitte ist in \autoref{fig:TEM20} dargestellt.
 \begin{figure}[H]
   \centering
   \includegraphics[scale=1]{build/TEM20.pdf}
@@ -123,7 +123,7 @@ in Schritten von $\qty{10}{\degree}$ durchgeführt und die Messwerte sind in
 
 Zusätzlich wird eine Ausgleichsfunktion der Form
 \begin{equation}
-  I_P(\phi) = I_0 \cdot \text{cos}^2 \left((\phi  + \phi_0)\cdot \frac{2\pi}{\SI{360}{\degree}}\right)
+  I_P(\phi) = I_0 \cdot \text{cos}^2 \left((\phi  - \phi_0)\cdot \frac{2\pi}{\SI{360}{\degree}}\right)
 \end{equation}
 eingefügt, deren Parameter sich zu 
 \begin{align*}
@@ -189,7 +189,7 @@ zu
 \end{align*}
 berechnen, wobei $R$ die allgemeine Gaskonstante ist, die Molmasse
 $M = \SI{20}{\gram\per\mol}$ beträgt und $T=\qty{300}{\kelvin}$ als Raumtemperatur angenommen wird.
-$f_0$ ist die Laserfrequenz und beträgt $f_0= \frac{\lambda}{c} = \SI{4.74e5}{\giga\hertz}$.
+$f_0$ ist die Laserfrequenz und beträgt $f_0= \frac{c}{\lambda} = \SI{4.74e5}{\giga\hertz}$.
 
 
 \subsection{Wellenlänge}
