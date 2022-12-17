@@ -6,13 +6,10 @@ Uncertainties\cite{uncertainties} und Numpy\cite{numpy} durchgeführt.
 
 \subsection{Stabilitätsbedingung des Lasers}
 \label{subsec:Stabilitätsbedingung}
-Die maximal mögliche Resonatorlänge $L$ lässt sich für verschiedene Spiegelkonfigurationen aus der Stabilitätsbedingung
-\begin{align*}
-  0 \leq g_1 g_2 &< 1 & \text{mit}& & g_i = 1 - \frac{L}{r_i}
-\end{align*}
+Die maximal mögliche Resonatorlänge $L$ lässt sich für verschiedene Spiegelkonfigurationen aus der Stabilitätsbedingung (\autoref{eqn:Stabilitätsbedingung})
 bestimmen. In diesem Versuch wird eine Kombination aus zwei konkaven Spiegeln und eine Kombination aus einem planen Spiegel und einem konkaven
 Spiegel untersucht.
-Der Krümmungsradius der konkaven Spiegeln ist bei beiden $r_k = \qty{1400}{\milli\meter}$ und bei dem planen Spiegel gilt $r_p \to \infty$.
+Der Krümmungsradius der konkaven Spiegel ist bei beiden $r_k = \qty{1400}{\milli\meter}$ und bei dem planen Spiegel gilt $r_p \to \infty$.
 
 \begin{figure}[H]
   \centering
@@ -28,15 +25,15 @@ Die theoretischen maximalen Resonatorlängen bestimmen sich zu
 \begin{align*}
   \text{plan und konkav:} && L_{pk,theo} &= 1.4 \si{\meter},\\
   \text{konkav und konkav:}&& L_{kk,theo} & = 2.8 \si{\meter}.
-  \label{eqn:Länge_theo}
+  %\label{eqn:Länge_theo}
 \end{align*}
 Mit den gemessenen Werten der Intensität in Abhängigkeit von der Resonatorlänge aus \autoref{fig:kkpk} ergibt sich die experimentell
 bestimmte maximale Länge zu
-\begin{align}
+\begin{align*}
   \text{plan und konkav:} && L_{pk,theo} &= 1.244 \si{\meter},\\
   \text{konkav und konkav:}&& L_{kk,theo} & = 2.105 \si{\meter}.
-  \label{eqn:Länge_gem}
-\end{align}
+  %\label{eqn:Länge_gem}
+\end{align*}
 
 
 \begin{figure}[H]
@@ -178,5 +175,46 @@ zu
 berechnen, wobei $R$ die allgemeine Gaskonstante ist, die Molmasse
 $M = \SI{20}{\gram\per\mol}$ beträgt und $T=\qty{300}{\kelvin}$ als Raumtemperatur angenommen wird.
 $f_0$ ist die Laserfrequenz und beträgt $f_0= \frac{\lambda}{c} = \SI{4.74e5}{\giga\hertz}$.
+
+
+\subsection{Wellenlänge}
+\label{sub:Wellenlänge}
+
+Die Wellenlänge des Lasers kann durch die Analyse von den Interferenzspektren verschiedener Gitter bestimmt werden, durch die der Laserstrahl fällt.
+
+Die Abstände zwischen Schirm und Gitter $l$, sowie die Gitterkonstanten $g$ und die nach
+\begin{equation*}
+  \lambda = \frac{\text{sin}\left(\text{arctan}\left(\frac{d_n}{l}\right)\right)}{n \cdot g}\\
+  \label{eqn:Wellenlänge}
+\end{equation*}
+berechneten Wellenlängen sind in \autoref{tab:Wellenlänge} dargestellt. In der Gleichung steht $n$ für die Ordnung des Interferenzmaximums und
+$d_n$ für den Abstand des jeweiligen Maximums vom 0.Maximum.
+Die mit den verschiedenen Gittern bestimmten Wellenlängen werden in \autoref{tab:Wellenlänge} bereits gemittelt.
+
+
+\begin{table}[H]
+  \centering
+  \caption{Messwerte zur Berechnung der Wellenlänge.}
+  \label{tab:Wellenlänge}
+  \sisetup{table-format=4.0}
+  \begin{tabular}{S[table-format=2.1] S S[table-format=3.2]@{${}\pm{}$} S[table-format=2.2]}
+    \toprule
+    {$l \mathbin{/} \si{\centi\meter}$} &{$g \mathbin{/} \si{\milli\meter\tothe{-1}}$}& \multicolumn{2}{c}{$\lambda \mathbin{/} \si{\nano\meter}$}\\
+    \midrule
+      87.0  & 80   & 569.77 & 1.18 \\
+      92.0  & 100  & 641.45 & 5.69\\
+      86.3  & 600  & 520.99 & 0.00\\
+      42.7  & 1200 & 631.00 & 0.00\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Der Mittelwert der berechneten Wellenlängen beträgt
+\begin{align*}
+  \bar{\lambda} &= \qty{590.80 \pm 48.73}{\nano\meter}.
+\end{align*}
+
+
+
 
 

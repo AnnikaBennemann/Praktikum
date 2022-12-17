@@ -197,7 +197,7 @@ g3= 600* 1e3
 g4= 1200* 1e3
 
 def lam(n,d,l,g):
-    return unp.sin(unp.tan(d/l))/ (g*n)
+    return unp.sin(unp.arctan(d/l))/ (g*n)
 
 lam1 = lam(n1, d1, l1, g1)
 lam2 = lam(n2, d2, l2, g2)
@@ -207,13 +207,13 @@ lam4 = lam(n4, d4, l4, g4)
 lam = np.array((np.mean(lam1),np.mean(lam2),np.mean(lam3),np.mean(lam4)))
 #print(lam)
 #
-#print('lam1 = ', np.mean(lam1)*1e9,'+-',np.std(lam1)*1e9)
-#
-#print('lam2 = ', np.mean(lam2)*1e9,'+-',np.std(lam2)*1e9)
-#print('lam3 = ', np.mean(lam3)*1e9,'+-',np.std(lam3)*1e9)
-#print('lam4 = ', np.mean(lam4)*1e9,'+-',np.std(lam4)*1e9)
-#print('lam = ', np.mean(lam) *1e9,'+-',np.std(lam)*1e9)
+print('lam1 = ', np.mean(lam1)*1e9,'+-',np.std(lam1)*1e9)
 
+print('lam2 = ', np.mean(lam2)*1e9,'+-',np.std(lam2)*1e9)
+print('lam3 = ', np.mean(lam3)*1e9,'+-',np.std(lam3)*1e9)
+print('lam4 = ', np.mean(lam4)*1e9,'+-',np.std(lam4)*1e9)
+print('lam = ', np.mean(lam) *1e9,'+-',np.std(lam)*1e9)
+lam= ufloat(np.mean(lam) *1e9,np.std(lam)*1e9)
 #######################################Modendifferenzen
 
 M1= np.array([248,243,248,244])
@@ -224,7 +224,25 @@ M4= np.array([281,282,281,281])
 #print('M2= ', np.mean(M2), '+-', np.std(M2))
 #print('M3= ', np.mean(M3), '+-', np.std(M3))
 #print('M4= ', np.mean(M4), '+-', np.std(M4))
+M1= ufloat(np.mean(M1),np.std(M1))
+M2= ufloat(np.mean(M2),np.std(M2))
+M3= ufloat(np.mean(M3),np.std(M3))
+M4= ufloat(np.mean(M4),np.std(M4))
 
+M1theo= 243.33
+M2theo=205.91
+M3theo=136.27
+M4theo=93.69
+######################Abweichungen
 
+def abw(theo, exp):
+    return abs(exp-theo)/abs(theo)*100
 
+print(f'abw_lambda = {abw(632.8, lam):.2f}')
+print(f'abw_M1 = {abw(M1theo,M1) :.2f}')
+print(f'abw_M2 = {abw(M2theo,M2) :.2f}')
+print(f'abw_M3 = {abw(M3theo,M3) :.2f}')
+print(f'abw_M4 = {abw(M4theo,M4) :.2f}')
 
+print(f'abw_Lpk = {abw(140,124.4) :.2f}')
+print(f'abw_Lkk = {abw(280,210) :.2f}')
